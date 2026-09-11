@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="990" viewBox="0 0 760 990" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="760" height="990" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333333"/>
+    </marker>
+    <marker id="arrowLight" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#777777"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Which obligations depend on the classification question, and which do not</text>
+  <text x="380" y="52" text-anchor="middle" font-size="12.5" font-style="italic" fill="#555555">Regulation (EU) 2024/1689, consolidated to 27 July 2026</text>
+
+  <!-- GATE 0 -->
+  <rect x="130" y="72" width="500" height="78" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.6"/>
+  <text x="148" y="94" font-size="13.5" font-weight="bold" fill="#1a1a1a">GATE 0 — which regime?</text>
+  <text x="148" y="114" font-size="12" fill="#333333">Internal cyber-capability evaluation is not an Annex I or Annex III use case,</text>
+  <text x="148" y="131" font-size="12" fill="#333333">so Art. 73 does not bite. The live duty is at the <tspan font-weight="bold">model</tspan> level: Chapter V.</text>
+  <text x="148" y="146" font-size="11" font-style="italic" fill="#777777">Art. 75(1a), inserted by the Omnibus, would import Art. 73's day-counts — but only for high-risk systems.</text>
+
+  <line x1="380" y1="150" x2="380" y2="182" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- GATE 0.5 — the resolvable one -->
+  <rect x="100" y="184" width="560" height="128" rx="6" fill="#e9f3ec" stroke="#2d6a4f" stroke-width="2.4"/>
+  <text x="118" y="208" font-size="13.5" font-weight="bold" fill="#1a3d2c">GATE 0.5 — scope and declaration&#160;&#160;·&#160;&#160;Arts. 51, 52(1), 53(1)(a)</text>
+  <text x="118" y="230" font-size="12" fill="#1a3d2c">Run per model. Two models are implicated and they are not in the same position.</text>
+  <text x="118" y="252" font-size="12" fill="#1a3d2c">Art. 51(2): presumed high-impact above 10²⁵ FLOP. Art. 52(1): notify the Commission</text>
+  <text x="118" y="270" font-size="12" font-weight="bold" fill="#1a3d2c">within two weeks — triggered by capability, not market placement.</text>
+  <text x="118" y="292" font-size="11.5" font-style="italic" fill="#2d6a4f">The only determinate deadline in the GPAI chapter. Resolvable by a single document.</text>
+  <text x="118" y="307" font-size="11" font-style="italic" fill="#2d6a4f">Does not depend on Gate 1.</text>
+
+  <line x1="380" y1="312" x2="380" y2="346" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- GATE 1 — the contested one -->
+  <rect x="100" y="348" width="560" height="132" rx="6" fill="#fdf4e5" stroke="#9a6a00" stroke-width="2.2"/>
+  <text x="118" y="372" font-size="13.5" font-weight="bold" fill="#6b4a00">GATE 1 — is it a 'serious incident'?&#160;&#160;·&#160;&#160;Art. 3, point (49)</text>
+  <text x="118" y="393" font-size="12" fill="#5c4000">Four disjunctive limbs. Causal standard: "directly <tspan font-style="italic">or indirectly</tspan> leads to".</text>
+  <text x="118" y="414" font-size="12" fill="#5c4000">(b) critical infrastructure — requires serious <tspan font-weight="bold">and irreversible</tspan>; rebuilding defeats it.</text>
+  <text x="118" y="434" font-size="12" fill="#5c4000">(d) serious harm to property — <tspan font-weight="bold">no irreversibility requirement.</tspan> The stronger limb.</text>
+  <text x="118" y="458" font-size="11.5" font-style="italic" fill="#9a6a00">Verdict: the disclosed record does not resolve this — for either episode.</text>
+  <text x="118" y="473" font-size="11" font-style="italic" fill="#9a6a00">A boundary the instrument does not draw, not a question the parties answered differently.</text>
+
+  <!-- Branch split -->
+  <line x1="380" y1="480" x2="380" y2="506" stroke="#333333" stroke-width="1.6"/>
+  <line x1="215" y1="506" x2="545" y2="506" stroke="#333333" stroke-width="1.6"/>
+
+  <!-- left branch: to Gate 2 -->
+  <line x1="215" y1="506" x2="215" y2="548" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="225" y="526" font-size="11.5" font-style="italic" fill="#333333">yes / arguable</text>
+
+  <!-- right branch: bypass -->
+  <line x1="545" y1="506" x2="545" y2="700" stroke="#777777" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrowLight)"/>
+  <text x="555" y="526" font-size="11.5" font-style="italic" fill="#777777">no / unresolved</text>
+
+  <!-- GATE 2 — conditional -->
+  <rect x="70" y="550" width="380" height="126" rx="6" fill="#f6f6f6" stroke="#666666" stroke-width="1.6"/>
+  <text x="86" y="573" font-size="13" font-weight="bold" fill="#333333">GATE 2 — Art. 55(1), point (c)</text>
+  <text x="86" y="593" font-size="11.5" font-style="italic" fill="#666666">Reached only from Gate 1. Analysed in the alternative.</text>
+  <text x="86" y="614" font-size="12" fill="#333333">Three verbs, separately testable:</text>
+  <text x="86" y="632" font-size="12" font-weight="bold" fill="#333333">keep track of&#160;&#160;·&#160;&#160;document&#160;&#160;·&#160;&#160;report</text>
+  <text x="86" y="651" font-size="12" fill="#333333">…without undue delay — <tspan font-weight="bold">no period specified</tspan></text>
+  <text x="86" y="669" font-size="12" fill="#333333">…and "possible corrective measures to address them"</text>
+
+  <line x1="260" y1="676" x2="260" y2="700" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- GATE 3 — reached either way -->
+  <rect x="70" y="702" width="620" height="146" rx="6" fill="#eef2f9" stroke="#2b4c7e" stroke-width="2.4"/>
+  <text x="88" y="726" font-size="13.5" font-weight="bold" fill="#1c3557">GATE 3 — obligations that do not depend on the Art. 3(49) classification</text>
+  <text x="88" y="749" font-size="12" fill="#1c3557"><tspan font-weight="bold">55(1)(a)</tspan> evaluation per standardised protocols, incl. <tspan font-style="italic">documented</tspan> adversarial testing</text>
+  <text x="88" y="770" font-size="12" fill="#1c3557"><tspan font-weight="bold">55(1)(b)</tspan> systemic risk <tspan font-style="italic">at Union level, including their sources</tspan> — expressly not single-provider</text>
+  <text x="88" y="791" font-size="12" fill="#1c3557"><tspan font-weight="bold">55(1)(d)</tspan> cybersecurity — Recital 115 enumerates: "circumvention of safety measures"</text>
+  <text x="88" y="812" font-size="12" fill="#1c3557"><tspan font-weight="bold">55(2)</tspan> Code of Practice branch, or "alternative adequate means" — either way, artifacts exist</text>
+  <text x="88" y="836" font-size="11.5" font-style="italic" fill="#2b4c7e">Reached on either branch. These are the rows that cannot be argued away — build them first.</text>
+
+  <line x1="380" y1="848" x2="380" y2="878" stroke="#333333" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- GATE 4 — instrument -->
+  <rect x="130" y="880" width="500" height="92" rx="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="2.2"/>
+  <text x="148" y="903" font-size="13.5" font-weight="bold" fill="#1a1a1a">GATE 4 — the instrument&#160;&#160;·&#160;&#160;Art. 91 request for information</text>
+  <text x="148" y="924" font-size="12" fill="#333333">91(1) own-initiative&#160;&#160;·&#160;&#160;91(3) on a qualified alert from the <tspan font-weight="bold">scientific panel</tspan></text>
+  <text x="148" y="944" font-size="12" fill="#333333">91(4) required form: legal basis · purpose · information · period · Art. 101 fines</text>
+  <text x="148" y="963" font-size="11.5" font-style="italic" fill="#555555">Every unresolved row above is already a question with a settlement condition attached.</text>
+</svg>
