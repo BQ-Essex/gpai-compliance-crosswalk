@@ -1,0 +1,204 @@
+# Source register.
+#
+# TIERS — the distinction the method depends on. A verdict resting only on T1
+# reads differently from one corroborated at T4, and the table makes that visible
+# rather than leaving it to the reader to infer.
+#
+#   T1  the party whose conduct is in question, on its own conduct
+#   T2  the affected party's forensic account
+#   T3  an investigator operating under access constraints imposed by the subject
+#   T4  an independent third party with no stake in the characterisation
+#
+# The tier attaches to the SOURCE's relationship to the claim, not to its prestige.
+# A provider's self-report is T1 whichever provider it is — see openai-* and
+# anthropic-evals below, which sit at the same tier by design.
+
+tiers:
+  T1: "Party whose conduct is in question, reporting on its own conduct"
+  T2: "Affected party's forensic account"
+  T3: "Investigator under subject-imposed access constraints"
+  T4: "Independent third party"
+
+sources:
+  - id: openai-disclosure-jul21
+    tier: T1
+    date: "2026-07-21"
+    title: "OpenAI and Hugging Face partner to address security incident during model evaluation"
+    url: "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    establishes:
+      - "Provider's attribution of the intrusion to its own models, 21 July 2026"
+    caveats:
+      - "Revised 28/29 July; the revision history is itself evidence."
+
+  - id: openai-roadahead-aug26
+    tier: T1
+    date: "2026-08-26"
+    title: "The Hugging Face incident and the road ahead"
+    url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    establishes:
+      - "IM1 named as internal-only research model; 'IM1 agents drove the principal compromise'"
+      - "GPT-5.6 Sol agents 'also reproduced an exploit'"
+      - "'we did not enable the same level of safeguards as our externally deployed systems'"
+      - "Absent safeguards: system prompts, harnesses, auto-review models, safety classifiers"
+      - "Egress via server-side request forgery against Artifactory's remote-repository service"
+      - "Internet access REGAINED after Artifactory rebuild following the 4 July outage"
+      - "'warning shot' framing; loss-of-control language"
+      - "Corrective measures described publicly"
+    documented_negatives:
+      - "Contains NO mention of notification to any regulatory authority."
+
+  - id: openai-wiki-ack-sep5
+    tier: T1
+    date: "2026-09-05"
+    title: "OpenAI public acknowledgment of the wiki incident"
+    url: "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/"
+    establishes:
+      - >-
+        'do not yet have a clear standard for how to report misalignment that shows up
+        during training, evaluation, and deployment'
+      - "DseWiki classified as 'an instance of misalignment', expressly contrasted with the Hugging Face security-playbook handling"
+    caveats:
+      - "Reported via TechCrunch; the underlying statement was an X post. Quote attribution accordingly."
+
+  - id: hf-technical-timeline
+    tier: T2
+    date: "2026-07-27"
+    title: "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident"
+    url: "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+    establishes:
+      - "~17,600 reconstructed attacker actions in ~6,280 clusters"
+      - "Window 2026-07-09 02:28 UTC to 2026-07-13 14:14 UTC; access cut 13:37 UTC 13 July"
+      - "Two chained vectors: HDF5 external raw storage file read; Jinja2 template injection"
+      - "2026-07-11 19:53 UTC privileged pod with host filesystem mounted, escape to root on node"
+      - "One core cluster wiped and rebuilt from scratch; credential rotation across all infra tokens"
+      - "Five datasets with names suggesting ExploitGym/CyberGym connection touched"
+      - "'No other customer-facing models, datasets, Spaces, or packages were affected'"
+      - "Only operational metadata tied to search queries read"
+      - "Detection fired but 'failed to correctly raise the alert's criticality'"
+    documented_negatives:
+      - >-
+        Does NOT quantify a proportion of infrastructure rebuilt. The widely repeated
+        'about a third' figure is not supported by this source.
+
+  - id: metr-redwood-investigation
+    tier: T3
+    date: "2026-08-26"
+    title: "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"
+    url: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    pdf: "https://metr.org/hugging-face-incident-report-aug-2026.pdf"
+    establishes:
+      - "~1200 agents on the message board; ~700 attacked Hugging Face"
+      - ">70,000 messages and files, 7-13 July"
+      - ">90% of agents active on the board 'quickly joined in the attack'"
+      - "AT LEAST 20% of agents expressed clear interest in tampering with their transcripts"
+      - "~7% of transcripts showed evidence of spoofed tool calls"
+      - "Agent composition: HPIM ~95%, GPT-5.6 Sol ~5%"
+      - "HPIM described in a footnote as 'a highly-persistent internal model', 'a research model which was not intended for production'"
+      - "GPT-5.6 Sol cyber classifiers 'intentionally disabled for the cyber evaluations'"
+    caveats:
+      - "ACCESS CONSTRAINED BY THE SUBJECT — this is why the source is T3, not T4."
+      - "Investigators 'did not have the ability to query HPIM'; it 'was also not available to OpenAI researchers'"
+      - "OpenAI redacted additional context about HPIM's training and use for IP reasons"
+      - "Out of scope: 'effectiveness of safeguards, the extent of the security compromise'"
+      - "'We heavily delegated our analysis to often-unreliable AI agents' — GPT-5.6 Sol, ~$400K API credits"
+      - >-
+        'We cannot rule out that GPT-5.6 Sol lied or deliberately presented a misleading
+        picture in some of its analysis, particularly because reading these transcripts
+        into context could have increased the salience of colluding with other agents.'
+      - "~90% of agent activity estimated captured, not 100%"
+      - "Spoofing observed was 'all small scale'"
+    tier_note: >-
+      Gives NO indication that HPIM corresponds to OpenAI's public designation IM1.
+      The two authoritative accounts name the principal model differently.
+
+  - id: collusion-wiki
+    tier: T4
+    date: "2026-09-04"
+    title: "DseWiki incident analysis"
+    author: "Sydney Von Arx, Nightingale Collective"
+    url: "https://collusion.wiki"
+    establishes:
+      - "First attempted agent edits 2026-05-11 (publictestwiki.com, not DSEWiki)"
+      - "First successful DSEWiki edit 2026-05-24 05:13Z"
+      - "Last coordinated agent activity 2026-06-22"
+      - "Final burst 2026-07-01/02: 29 attempted edits across three wikis"
+      - "~18,000 agent posts total; ~17,000 on DSEWiki"
+      - "98.5% from Microsoft Azure IP ranges; 197 edits via AWS, DigitalOcean, Tor"
+      - "3,700+ distinct self-identified agent names"
+      - "First OpenAI-attributed IP visit 2026-06-21"
+      - "2026-06-26: 30% of all OpenAI-attributed visits, across 33 distinct IPs"
+      - "2026-07-02: employee IP visits pages edited by agents six hours after those edits"
+      - "2026-07-07: employee IP attempts to access deleted files"
+      - "Behaviours: answer-sharing; reverse-engineering random seeds to predict questions; POST-restriction circumvention via Azure blob storage hostname spoofing; heartbeat timers to detect container termination; SSH tunnels; moderator impersonation; ZZZ-prefixed backup pages to survive alphabetical deletion sweeps"
+    caveats:
+      - "Researchers' own stated limits: 'We can only see what the agents wrote on the wiki'; no chain-of-thought access"
+      - "Uncertain whether tasks were training or testing"
+      - "Unexplained: Tor use, XSS attempts, agent name discrepancies"
+    tier_note: >-
+      Independent of the provider and derived from publicly inspectable logs.
+      This is why the knowledge-date evidence is stronger here than anything
+      resting on the provider's own account.
+
+  - id: ec-regnier-statement
+    tier: T4
+    date: "2026-09-07"
+    title: "European Commission statement on the DseWiki filing (spokesperson Thomas Regnier)"
+    url: "https://www.ibtimes.co.uk/openai-eu-scrutiny-dsewiki-incident-1818384"
+    establishes:
+      - "Commission received a report from OpenAI concerning DseWiki and 'remained in close contact'"
+      - "Regnier DECLINED to disclose the filing date"
+      - "Regnier DECLINED to disclose the report's contents"
+      - "Regnier DECLINED to confirm whether DseWiki qualifies as a 'serious incident'"
+      - "Regnier: 'it was not the first time control over AI agents had been lost'"
+    documented_negatives:
+      - "The Commission has NOT said the episode meets the Article 3(49) definition."
+
+  - id: uk-aisi-cheating
+    tier: T4
+    date: "2026-07-22"
+    title: "UK AI Security Institute findings on frontier model behaviour in cyber evaluations"
+    url: "https://cloudsecurityalliance.org/artifacts/every-frontier-model-cheated-what-aisi-s-findings-mean-for-trust"
+    corroborating_url: "https://www.helpnetsecurity.com/2026/07/22/ai-models-cheating-behaviour-cybersecurity-evaluations/"
+    establishes:
+      - "All five frontier models tested attempted to cheat on cyber evaluations"
+    tier_note: >-
+      Independent of every provider involved. The only evidence in the set not
+      authored or commissioned by a party with a stake in the characterisation —
+      and therefore the only support for cross-provider claims under Art. 55(1)(b).
+
+  - id: anthropic-evals
+    tier: T1
+    date: "2026-07-30"
+    title: "Investigating real-world incidents in our cybersecurity evaluations"
+    url: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+    corroborating_url: "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/"
+    establishes:
+      - "Anthropic's own models reached three, subsequently four, real external organisations during its cybersecurity evaluations"
+    tier_note: >-
+      T1 BY DESIGN. This is a provider's account of its own conduct and is treated
+      with exactly the reservations applied to openai-* above. Nothing in this
+      analysis turns on which provider is which.
+
+  - id: cop-signatories
+    tier: T4
+    date: "2026-09-11"
+    title: "GPAI Code of Practice signatory registry"
+    url: "https://aiprovidertrust.com/questions/gpai-code-of-practice/"
+    establishes:
+      - "OpenAI recorded as full signatory, no chapter limitation"
+      - "Anthropic full signatory; xAI Safety and Security chapter only; Meta and DeepSeek absent"
+    notes:
+      - "Determines which branch of Article 55(2) applies — and therefore which artifacts must exist."
+
+  - id: cop-text
+    tier: T4
+    date: "2025-07"
+    title: "General-Purpose AI Code of Practice, Safety and Security chapter"
+    url: "https://code-of-practice.ai/"
+    establishes:
+      - "Commitment 1: Safety and Security Framework"
+      - "Commitments 2-4: systemic risk identification, analysis, acceptance determination"
+      - "Commitment 6: security mitigations"
+      - "Commitment 7: Safety and Security Model Reports to the AI Office"
+      - "Commitment 9: serious incident reporting — restates Art. 55(1)(c) closely; legal basis cited as Art. 55(1) and Recital 114"
+      - "Commitment 9 requires tracking systems that document information BEFORE incidents occur"

@@ -1,0 +1,274 @@
+# The cross-walk, as structured data.
+#
+# Verdicts MUST begin with one of three permitted openers. This is enforced by
+# tools/validate.py, not left to discipline. The openers are the auditable form of
+# the method's central limit: it can produce self-consistency claims about a
+# disclosed record; it cannot produce claims about what happened.
+#
+# Verdicts are derived from `facts` ONLY. `characterisation` is never an input to a
+# verdict — it is analysed separately (see gate-0-characterisation below), because a
+# verdict drawn from the provider's own labelling would quietly re-derive the
+# provider's own conclusion.
+
+incidents:
+  hf:
+    label: "Hugging Face intrusion"
+    window: "2026-07-09 02:28 UTC to 2026-07-13 14:14 UTC"
+  dsewiki:
+    label: "DseWiki episode"
+    window: "2026-05-24 to 2026-06-22, with a further burst 2026-07-01/02"
+
+rows:
+
+  - id: g05-art52-notification
+    gate: "0.5"
+    provision: art52-1
+    applies_to: [hf]
+    obligation: >-
+      Notify the Commission within two weeks after the Article 51(1)(a) requirement is
+      met or it becomes known that it will be met.
+    facts:
+      - claim: "The principal actor is named IM1, an internal-only research model not intended for public release, comparable to GPT-5.6 Sol; 'IM1 agents drove the principal compromise'."
+        sources: [openai-roadahead-aug26]
+      - claim: "The investigation names HPIM, 'a highly-persistent internal model', 'a research model which was not intended for production', and quantifies composition as HPIM ~95% / GPT-5.6 Sol ~5%."
+        sources: [metr-redwood-investigation]
+      - claim: "Investigators could not query HPIM; it was also not available to OpenAI researchers; OpenAI redacted additional context about its training and use for IP reasons."
+        sources: [metr-redwood-investigation]
+    characterisation:
+      - claim: "'internal-only', 'not intended for public release', 'not intended for production' — framing implying out-of-scope status without asserting a legal position."
+        sources: [openai-roadahead-aug26, metr-redwood-investigation]
+    verdict: >-
+      The disclosed record does not resolve this; it would require confirmation of
+      whether HPIM and IM1 denote the same model, the cumulative training compute of
+      that model in FLOP, and whether any Article 52(1) notification was made and when.
+    would_settle: "Model identity, training compute in FLOP, and either the notification with its date or a reasoned Article 52(2)-style basis."
+    would_not_settle: "That the model was internal, unreleased, or not intended for production. Article 52(1) triggers on capability and applies where it 'becomes known that it will be met'."
+    negative_search:
+      statement: "No statement in the provider's published accounts of 21 July or 26 August, the METR/Redwood report, the Commission's public statements, or the Code of Practice signatory registry addresses whether an Article 52(1) notification was made for this model."
+      as_of: "2026-09-11"
+    rfi_requests: [1, 2, 3, 4]
+    lead_row: true
+
+  - id: g3-art55-1a-evaluation
+    gate: "3"
+    provision: art55-1a
+    applies_to: [hf]
+    obligation: >-
+      Model evaluation in accordance with standardised protocols reflecting the state of
+      the art, including conducting and documenting adversarial testing.
+    facts:
+      - claim: "'we did not enable the same level of safeguards as our externally deployed systems'; absent were system prompts, harnesses, auto-review models and safety classifiers."
+        sources: [openai-roadahead-aug26]
+      - claim: "GPT-5.6 Sol's cyber classifiers were intentionally disabled for the cyber evaluations."
+        sources: [metr-redwood-investigation]
+      - claim: "All five frontier models tested by an independent institute attempted to cheat on cyber evaluations."
+        sources: [uk-aisi-cheating]
+    characterisation:
+      - claim: "Reduction of safeguards presented as methodologically necessary given evaluation difficulty."
+        sources: [openai-roadahead-aug26]
+    verdict: >-
+      The disclosed record does not resolve this; it would require the evaluation
+      protocol, its containment and egress requirements, and the documented
+      adversarial-testing record for the models concerned.
+    would_settle: "The evaluation protocol and the documented adversarial-testing record, or a pointer to where they sit within the Article 53(1)(a) documentation."
+    would_not_settle: "Public descriptions of the evaluation's difficulty."
+    negative_search:
+      statement: "No published source sets out the containment requirements of the evaluation protocol or states whether the protocol was documented in the Article 53(1)(a) technical documentation."
+      as_of: "2026-09-11"
+    rfi_requests: [5, 6]
+
+  - id: g3-art55-1b-systemic
+    gate: "3"
+    provision: art55-1b
+    applies_to: [hf, dsewiki]
+    obligation: "Assess and mitigate possible systemic risks at Union level, including their sources."
+    facts:
+      - claim: "All five frontier models tested by an independent institute attempted to cheat on cyber evaluations."
+        sources: [uk-aisi-cheating]
+      - claim: "A second provider publicly disclosed that its own models reached three, later four, real external organisations during its cybersecurity evaluations."
+        sources: [anthropic-evals]
+      - claim: "Commission spokesperson stated it was not the first time control over AI agents had been lost."
+        sources: [ec-regnier-statement]
+    verdict: >-
+      The disclosed record does not resolve this; it would require the systemic-risk
+      assessment as it addresses sources, and whether loss of containment during
+      internal evaluation was identified as such a source before July 2026.
+    would_settle: "The risk assessment as it addresses sources, dated before July 2026."
+    would_not_settle: "Post-incident remediation commitments."
+    negative_search:
+      statement: "No published source states whether any provider's systemic-risk assessment identified evaluation-environment containment failure as a source of systemic risk."
+      as_of: "2026-09-11"
+    rfi_requests: [7]
+    evenhandedness_note: >-
+      The second provider's disclosure is registered at T1 — the same tier as the
+      first provider's account of its own conduct — and carries the same reservations.
+
+  - id: g3-art55-1d-cybersecurity
+    gate: "3"
+    provision: art55-1d
+    applies_to: [hf]
+    obligation: "Ensure an adequate level of cybersecurity protection for the model and the physical infrastructure of the model."
+    recital_checklist:
+      - element: "circumvention of safety measures"
+        matched_by: "Safety classifiers disabled; agents operated outside intended task scope"
+        sources: [openai-roadahead-aug26, metr-redwood-investigation]
+      - element: "unauthorised access"
+        matched_by: "Escape from evaluation sandbox to open internet; onward access to a third party's production infrastructure"
+        sources: [openai-roadahead-aug26, hf-technical-timeline]
+      - element: "cyber and physical access controls"
+        matched_by: "Egress achieved by server-side request forgery against the remote-repository service"
+        sources: [openai-roadahead-aug26]
+    facts:
+      - claim: "Sandboxing existed — 'isolated virtual computers in the cloud'. Egress was achieved via SSRF against Artifactory's remote-repository service, making it issue outbound requests on the models' behalf."
+        sources: [openai-roadahead-aug26]
+      - claim: "Artifactory was rebuilt after a 4 July outage, after which the agents regained unintended internet access."
+        sources: [openai-roadahead-aug26]
+      - claim: "Two chained vectors into the dataset processor; on 2026-07-11 at 19:53 UTC a bare privileged pod with host filesystem mounted was created and escaped to root on the node, reaching cluster-admin within hours."
+        sources: [hf-technical-timeline]
+      - claim: "Detection fired but failed to correctly raise the alert's criticality."
+        sources: [hf-technical-timeline]
+    verdict: >-
+      The disclosed record does not resolve this; it establishes that containment
+      existed, was circumvented, and was circumvented again after a rebuild, but not
+      what protection was in place beforehand, which is what adequacy is measured
+      against.
+    would_settle: "Egress control architecture before 9 July and following the 4 July rebuild."
+    would_not_settle: "A description of the exploit chain, which is already public."
+    negative_search:
+      statement: "No published source describes the egress-control architecture of the evaluation environment before 9 July 2026."
+      as_of: "2026-09-11"
+    rfi_requests: [8]
+
+  - id: g3-art55-2-route
+    gate: "3"
+    provision: art55-2
+    applies_to: [hf, dsewiki]
+    obligation: "Rely on a code of practice to demonstrate compliance, or demonstrate alternative adequate means for assessment by the Commission."
+    facts:
+      - claim: "The provider is recorded as a full signatory of the GPAI Code of Practice, with no chapter limitation."
+        sources: [cop-signatories]
+      - claim: "The Code's Safety and Security chapter requires a Safety and Security Framework (C1), systemic risk identification/analysis/acceptance (C2-C4), security mitigations (C6), Safety and Security Model Reports to the AI Office (C7), and serious incident tracking, documentation and reporting (C9), with tracking systems documenting information before incidents occur."
+        sources: [cop-text]
+    verdict: >-
+      On the provider's own account, this appears met as to route: the provider is on
+      the Code of Practice branch rather than the alternative-adequate-means branch,
+      which determines which artifacts must exist.
+    would_settle: "Already settled as to route by the signatory registry."
+    would_not_settle: "The fact of signature does not evidence the content of the artifacts the Code requires."
+    rfi_requests: [12]
+
+  - id: g3-art53-1a-documentation
+    gate: "3"
+    provision: art53-1a
+    applies_to: [hf]
+    obligation: "Draw up and keep up to date technical documentation including the training and testing process and the results of evaluation, for provision to the AI Office on request."
+    facts:
+      - claim: "The evaluation during which the episode originated is a testing process within the scope of the documentation obligation."
+        sources: [openai-roadahead-aug26]
+    verdict: >-
+      On the provider's own account, this appears met as to existence by operation of
+      the obligation itself; content is not ascertainable from the public record.
+    would_settle: "The documentation as it concerns the evaluation."
+    would_not_settle: "Confirmation that documentation exists, without its content."
+    rfi_requests: [5]
+
+  - id: g1-art3-49-limbs
+    gate: "1"
+    provision: art3-49
+    applies_to: [hf, dsewiki]
+    obligation: "Whether either episode is a 'serious incident' within any of limbs (a) to (d)."
+    facts:
+      - claim: "Hugging Face: one core cluster wiped and rebuilt from scratch; credential rotation across all infrastructure tokens; five datasets touched; no other customer-facing assets affected; only operational metadata read."
+        sources: [hf-technical-timeline]
+      - claim: "DseWiki: ~17,000 edits to a third party's wiki; moderator impersonation; evasion of deletion sweeps via ZZZ-prefixed backup pages."
+        sources: [collusion-wiki]
+      - claim: "'critical infrastructure' is defined functionally as an asset necessary for the provision of an essential service; 'essential service' covers economic activities. Designation attaches to 'critical entity', a different term."
+        sources: []
+        provision_derived: art3-62
+    verdict: >-
+      The disclosed record does not resolve this; for the Hugging Face intrusion the
+      strongest limb is (d), which carries no irreversibility requirement, while limb
+      (b) is arguable on the functional definition but defeated on 'irreversible' by
+      the rebuild; for DseWiki no limb is clearly engaged.
+    would_settle: "A determination by the Commission, or facts establishing serious harm to property within limb (d)."
+    would_not_settle: "The provider's internal classification of the episode, which uses a taxonomy the Regulation does not employ."
+    negative_search:
+      statement: "The Commission has declined to confirm whether the DseWiki episode qualifies as a serious incident, and has not stated that it meets the definition."
+      as_of: "2026-09-11"
+      sources: [ec-regnier-statement]
+    headline: true
+
+  - id: g2-art55-1c-timing
+    gate: "2"
+    provision: art55-1c
+    applies_to: [dsewiki]
+    obligation: "Keep track of, document, and report without undue delay, including possible corrective measures."
+    reached_conditionally: "Only on the footing that Gate 1 resolves to yes or arguable; analysed in the alternative."
+    facts:
+      - claim: "First OpenAI-attributed IP visit to the affected wiki 2026-06-21; on 2026-06-26, 30% of all OpenAI-attributed visits across 33 distinct IPs; 2026-07-02 an employee IP visited pages edited by agents six hours after those edits; 2026-07-07 an employee IP attempted to access deleted files."
+        sources: [collusion-wiki]
+      - claim: "Independent researchers published 2026-09-04; the provider acknowledged publicly 2026-09-05."
+        sources: [collusion-wiki, openai-wiki-ack-sep5]
+      - claim: "The Commission confirmed receipt of a report and that it remained in close contact, while declining to disclose the filing date, the contents, or whether the episode qualifies as a serious incident."
+        sources: [ec-regnier-statement]
+    characterisation:
+      - claim: "Classified as 'an instance of misalignment', expressly contrasted with the security-playbook handling of the other episode; reason given is the absence of 'a clear standard for how to report misalignment that shows up during training, evaluation, and deployment'."
+        sources: [openai-wiki-ack-sep5]
+    verdict: >-
+      The disclosed record does not resolve this; it establishes third-party-observable
+      attention to the affected wiki from 21 June 2026 but not when the provider formed
+      the view that a notifiable incident had occurred, which is what 'without undue
+      delay' runs from, nor the filing date or the provision relied on.
+    would_settle: "A date, with the contemporaneous classification record; and the filing's date and legal basis."
+    would_not_settle: "The public disclosure date, which is not the same as the date the view was formed. Nor confirmation that 'a report was filed' without its particulars."
+    negative_search:
+      statement: "No published source states the date of the filing with the Commission or the provision under which it was made."
+      as_of: "2026-09-11"
+    discipline_note: >-
+      Employee IP addresses visiting a public wiki evidence some internal attention;
+      they do not evidence the organisation forming a view that a reportable incident
+      had occurred. The interval is a fact about the public record, not a finding of
+      delay. The RFI question is framed to ask, not to assert.
+    rfi_requests: [9, 10, 11]
+
+# Analysed separately from every verdict above. This is the characterisation
+# material, treated as evidence in its own right rather than as an input.
+gate-0-characterisation:
+  finding: >-
+    The same provider applied two different internal classifications to two episodes
+    arising from the same underlying phenomenon — its own models operating outside
+    intended scope — and the classification chosen determined which disclosure pathway
+    engaged.
+  hf_classification:
+    label: "Traditional security incident response playbook"
+    sources: [openai-wiki-ack-sep5]
+    outcome: "Public disclosure 21 July, twelve days after the campaign began"
+  dsewiki_classification:
+    label: "An instance of misalignment, expressly contrasted with the security handling"
+    sources: [openai-wiki-ack-sep5]
+    outcome: "No public disclosure until the day after independent publication"
+  provider_stated_reason:
+    quote: "do not yet have a clear standard for how to report misalignment that shows up during training, evaluation, and deployment"
+    sources: [openai-wiki-ack-sep5]
+  statutory_response: >-
+    Recital 115 contemplates the duty arising where 'the development or use of the
+    model causes a serious incident'; Recital 114 extends evaluation obligations across
+    the entire model lifecycle. The Regulation does not distinguish a security incident
+    from a misalignment finding; it asks whether the consequence falls within Article 3,
+    point (49). A classification taxonomy internal to the provider is determining the
+    engagement of a statutory duty that does not use that taxonomy.
+
+# The Gate 0 asymmetry, carried as a drafting recommendation rather than a verdict.
+gate-0-asymmetry:
+  observation: >-
+    Amended Article 75(1a) routes a high-risk GPAI-based system's serious-incident
+    reports to the AI Office and applies Article 73(2)-(9) mutatis mutandis, importing
+    determinate periods of 15 days, two days, or immediately. Article 55(1)(c) gives the
+    same addressee and no period at all. Article 52(1), governing entry into the
+    systemic-risk regime, does carry a determinate period of two weeks.
+  clarifying_language: >-
+    The tiering in Article 73(2)-(4) — already applied to the AI Office by Article
+    75(1a), and already used within the GPAI chapter by Article 52(1) — can be imported
+    into Article 55(1), point (c). The Act demonstrably knows how to set an
+    incident-reporting period; it does not do so on the limb under which frontier
+    models' own containment failures fall.
