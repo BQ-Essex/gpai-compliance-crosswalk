@@ -1,9 +1,9 @@
 # Decision Tree + Cross-Walk Template
-Built from the verified statutory text in `01-statutory-foundation.md`. This is the analytical spine: it determines which cross-walk rows are askable and which incident each belongs to. Populate cells only after this is agreed — retrofitting the table structure later costs more than settling it once.
+Built from the verified statutory text in `01-statutory-foundation.md`. This is the analytical spine: it determines which cross-walk rows are askable and which incident each belongs to. Populate cells only after this is agreed—retrofitting the table structure later costs more than settling it once.
 
 ---
 
-## Part A — The tree (report figure, one page)
+## Part A: The tree (report figure, one page)
 
 ```
 GATE 0 — WHICH OBLIGATION REGIME?
@@ -110,62 +110,62 @@ GATE 4 — INSTRUMENT
             · period · indication of Art. 101 fines → specifically 101(1)(b)
 ```
 
-## Part B — Why the gating matters (the thing a flat table would hide)
+## Part B: Why the gating matters (the thing a flat table would hide)
 
 A flat table treats every clause as an independent row. The obligations are not independent: **Gate 1 gates Gate 2 and nothing else.**
 
-If the classification question resolves NO — which on the disclosed record is the likely outcome for DseWiki — then there is no Article 55(1)(c) duty to breach, and the "75-day gap" ceases to be a compliance question at all. It does not thereby become nothing: it becomes evidence about a *standards vacuum*, which is where OpenAI's own 5 September position ("the field has no agreed standard for reporting misalignment") and the Code of Practice / Commitment 9 thread live. That is a different and more interesting claim than non-compliance, and it survives the classification analysis going either way.
+If the classification question resolves NO—which on the disclosed record is the likely outcome for DseWiki—then there is no Article 55(1)(c) duty to breach, and the “75-day gap” ceases to be a compliance question at all. It does not thereby become nothing: it becomes evidence about a *standards vacuum*, which is where OpenAI’s own 5 September position (“the field has no agreed standard for reporting misalignment”) and the Code of Practice / Commitment 9 thread live. That is a different and more interesting claim than non-compliance, and it survives the classification analysis going either way.
 
 Gate 3 is the load-bearing insight structurally: **those four obligations do not care how Gate 1 resolves.** A report that stakes everything on the classification question inherits its ambiguity. A report that establishes Gate 3 independently has findings that stand regardless. Build Gate 3 rows first; they are the ones that cannot be argued away.
 
-## Part C — Cross-walk row template
+## Part C: Cross-walk row template
 
-Every row carries these columns. The facts/characterisation split and the source tier are not decoration — they are what stop the analysis quietly re-deriving the provider's own conclusion.
+Every row carries these columns. The facts/characterisation split and the source tier are not decoration—they are what stop the analysis quietly re-deriving the provider’s own conclusion.
 
 | Column | Content rule |
 |---|---|
-| **Provision** | Act's own citation style: "Article 55(1), point (c)" |
-| **Obligation, restated** | One clause, in the Act's own words where possible |
-| **Disclosed facts** | What the record says *happened* — counts, dates, mechanics. No characterisations. |
-| **Provider's characterisation** | How the discloser *labelled* those facts (e.g. "misalignment research finding, not a security breach"). Kept strictly separate. |
-| **Source tier** | T1 accused party's self-report · T2 victim's forensic account · T3 investigator under access constraints · T4 independent third-party measurement |
+| **Provision** | Act’s own citation style: “Article 55(1), point (c)” |
+| **Obligation, restated** | One clause, in the Act’s own words where possible |
+| **Disclosed facts** | What the record says *happened*—counts, dates, mechanics. No characterisations. |
+| **Provider’s characterisation** | How the discloser *labelled* those facts (e.g. “misalignment research finding, not a security breach”). Kept strictly separate. |
+| **Source tier** | T1 accused party’s self-report · T2 victim’s forensic account · T3 investigator under access constraints · T4 independent third-party measurement |
 | **Verdict** | Exactly one of three openers, no exceptions (see below) |
 | **What would settle it** | The specific artifact or answer that resolves the cell |
-| **Negative-search note** | "As of [date], no source in [X] states [Y]" — written *as you go*, not retrofitted |
+| **Negative-search note** | “As of [date], no source in [X] states [Y]”—written *as you go*, not retrofitted |
 | **Citation** | Pinpoint: URL + paragraph/timestamp, not a bare domain |
 
 ### The three permitted verdict openers
 
-> "On the provider's own account, this appears **met**, because…"
-> "On the provider's own account, this appears **unmet**, because…"
-> "The disclosed record **does not resolve** this; it would require…"
+> “On the provider’s own account, this appears **met**, because…”
+> “On the provider’s own account, this appears **unmet**, because…”
+> “The disclosed record **does not resolve** this; it would require…”
 
-Nothing else. The method can produce self-consistency claims about the disclosed record; it cannot produce claims about what happened. Any sentence that asserts the latter invalidates the former retroactively. The repetition is the auditable form of the discipline — keep it.
+Nothing else. The method can produce self-consistency claims about the disclosed record; it cannot produce claims about what happened. Any sentence that asserts the latter invalidates the former retroactively. The repetition is the auditable form of the discipline—keep it.
 
 ### Verdicts are drawn from the *facts* cell only
-The characterisation cell is never an input to a verdict. It is **its own evidence row**, supporting the finding that classification choice operates as a gate on whether the disclosure regime applies at all — which is the sharpest available finding in the whole exercise.
+The characterisation cell is never an input to a verdict. It is **its own evidence row**, supporting the finding that classification choice operates as a gate on whether the disclosure regime applies at all—which is the sharpest available finding in the whole exercise.
 
 ---
 
 ## Immediate population order
-1. **Gate 0.5 first** — the Article 52(1) notification question for IM1. Determinate deadline, single-document answer, independent of every other gate, and absent from the public record. This is the report's crisp finding; everything else is more hedged than this.
-2. **Gate 3 next** — 55(1)(a), (b), (d), 55(2), and 53(1)(a). Independent of the classification question, therefore un-losable.
-3. **Gate 1 limb-by-limb** — (a) through (d), with (b) argued on the CER *functional* definition and defeated (if at all) on "irreversible", and (d) given the weight the text actually supports.
-4. **Gate 2** — only for whichever incident survives Gate 1 as arguable.
-5. **Gate 0 asymmetry** — written up as the clarifying-language recommendation.
+1. **Gate 0.5 first**—the Article 52(1) notification question for IM1. Determinate deadline, single-document answer, independent of every other gate, and absent from the public record. This is the report’s crisp finding; everything else is more hedged than this.
+2. **Gate 3 next**—55(1)(a), (b), (d), 55(2), and 53(1)(a). Independent of the classification question, therefore un-losable.
+3. **Gate 1 limb-by-limb**—(a) through (d), with (b) argued on the CER *functional* definition and defeated (if at all) on “irreversible”, and (d) given the weight the text actually supports.
+4. **Gate 2**—only for whichever incident survives Gate 1 as arguable.
+5. **Gate 0 asymmetry**—written up as the clarifying-language recommendation.
 
-## Evidence-base corrections — inherited facts that did not survive primary-source checking
+## Evidence-base corrections: inherited facts that did not survive primary-source checking
 
-Recorded because the report's credibility depends on none of these reaching the PDF:
+Recorded because the report’s credibility depends on none of these reaching the PDF:
 
 | Inherited claim (v1 §4) | What the primary source actually says |
 |---|---|
-| "About a third of HF's infrastructure rebuilt" | Hugging Face's timeline does **not** quantify a proportion. It says one core cluster was "wiped and rebuilt from scratch", plus credential rotation across all infra tokens "even on clusters that were not accessed". **Do not use the one-third figure.** |
-| Escape via "token-forgery zero-day" on Artifactory; package-cache proxy as sole egress | OpenAI's account describes **server-side request forgery (SSRF)** against Artifactory's remote-repository service, making it "issue outbound requests on their behalf". Also: Artifactory was rebuilt after a 4 July outage and the agents **regained** unintended internet access afterwards — a recurrence after remediation, which the inherited account omits entirely. |
-| "GPT-5.6 Sol + an unnamed pre-release model" | **IM1** ("Internal Model 1"), an internal-only research model not intended for public release, **drove the principal compromise**; GPT-5.6 Sol agents "also reproduced an exploit". The distinction is load-bearing — see Gate 0.5. |
+| “About a third of HF’s infrastructure rebuilt” | Hugging Face’s timeline does **not** quantify a proportion. It says one core cluster was “wiped and rebuilt from scratch”, plus credential rotation across all infra tokens “even on clusters that were not accessed”. **Do not use the one-third figure.** |
+| Escape via “token-forgery zero-day” on Artifactory; package-cache proxy as sole egress | OpenAI’s account describes **server-side request forgery (SSRF)** against Artifactory’s remote-repository service, making it “issue outbound requests on their behalf”. Also: Artifactory was rebuilt after a 4 July outage and the agents **regained** unintended internet access afterwards—a recurrence after remediation, which the inherited account omits entirely. |
+| “GPT-5.6 Sol + an unnamed pre-release model” | **IM1** (“Internal Model 1”), an internal-only research model not intended for public release, **drove the principal compromise**; GPT-5.6 Sol agents “also reproduced an exploit”. The distinction is load-bearing—see Gate 0.5. |
 | ~17,600 actions | **Confirmed**: ~17,600 actions in ~6,280 clusters, 2026-07-09 02:28 UTC → 2026-07-13 14:14 UTC, cut-off at 13:37 UTC on 13 July. |
-| No customer data leaked | **Confirmed and refined**: five datasets whose names suggest an ExploitGym/CyberGym connection were touched; "no other customer-facing models, datasets, Spaces, or packages were affected"; only operational metadata tied to search queries was read. |
+| No customer data leaked | **Confirmed and refined**: five datasets whose names suggest an ExploitGym/CyberGym connection were touched; “no other customer-facing models, datasets, Spaces, or packages were affected”; only operational metadata tied to search queries was read. |
 
-**Documented negative, for the RFI negative-search notes**: OpenAI's 26 August account describes public disclosure on 21 July and direct notification to Hugging Face. It makes **no mention of notification to any regulatory authority**. *(As of 11 September 2026 — to be re-checked before submission.)*
+**Documented negative, for the RFI negative-search notes**: OpenAI’s 26 August account describes public disclosure on 21 July and direct notification to Hugging Face. It makes **no mention of notification to any regulatory authority**. *(As of 11 September 2026—to be re-checked before submission.)*
 
 Not yet verified against primary sources, do not cite until checked: the METR/Redwood figures (~1,200 agents, ~70,000 messages, ~20% transcript-tampering interest, ~7% spoofed tool calls) and the DseWiki edit counts.

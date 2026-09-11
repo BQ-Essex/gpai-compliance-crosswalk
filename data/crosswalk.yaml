@@ -20,34 +20,65 @@ incidents:
 
 rows:
 
-  - id: g05-art52-notification
-    gate: "0.5"
-    provision: art52-1
+  - id: g0-scope-research-exclusion
+    gate: "0"
+    provision: art3-63
     applies_to: [hf]
     obligation: >-
-      Notify the Commission within two weeks after the Article 51(1)(a) requirement is
-      met or it becomes known that it will be met.
+      Threshold question. Whether the obligations in Articles 51-55 attach at all to the
+      model principally involved, given that Article 3, point (63) excludes from the
+      definition of 'general-purpose AI model' those models used for research, development
+      or prototyping before being placed on the market, and Article 2(8) excludes
+      pre-market research, testing and development activity save for testing in real-world
+      conditions.
     facts:
-      - claim: "The principal actor is named IM1, an internal-only research model not intended for public release, comparable to GPT-5.6 Sol; 'IM1 agents drove the principal compromise'."
+      - claim: "The provider describes the principal actor as IM1, an 'internal-only research model', 'not intended for public release', and states 'IM1 agents drove the principal compromise'."
         sources: [openai-roadahead-aug26]
       - claim: "The investigation names HPIM, 'a highly-persistent internal model', 'a research model which was not intended for production', and quantifies composition as HPIM ~95% / GPT-5.6 Sol ~5%."
         sources: [metr-redwood-investigation]
-      - claim: "Investigators could not query HPIM; it was also not available to OpenAI researchers; OpenAI redacted additional context about its training and use for IP reasons."
-        sources: [metr-redwood-investigation]
+      - claim: "The evaluation was conducted in a sandboxed environment; real-world exposure followed an escape rather than an elected testing modality."
+        sources: [openai-roadahead-aug26]
     characterisation:
-      - claim: "'internal-only', 'not intended for public release', 'not intended for production' — framing implying out-of-scope status without asserting a legal position."
+      - claim: "'internal-only', 'not intended for public release', 'not intended for production' — a description of status, not a stated legal position under Article 3, point (63)."
         sources: [openai-roadahead-aug26, metr-redwood-investigation]
     verdict: >-
-      The disclosed record does not resolve this; it would require confirmation of
-      whether HPIM and IM1 denote the same model, the cumulative training compute of
-      that model in FLOP, and whether any Article 52(1) notification was made and when.
-    would_settle: "Model identity, training compute in FLOP, and either the notification with its date or a reasoned Article 52(2)-style basis."
-    would_not_settle: "That the model was internal, unreleased, or not intended for production. Article 52(1) triggers on capability and applies where it 'becomes known that it will be met'."
+      The disclosed record does not resolve this; on the face of Articles 2(8), 3(3) and
+      3(63) there is a substantial argument that the obligations do not attach to a model
+      used for research before being placed on the market, and resolving it would require
+      the model's identity, its training compute, and the provider's own reasoned position
+      on its status.
+    would_settle: "The provider's reasoned position on Article 3, point (63) and Article 2(8), with dates; model identity; training compute in FLOP."
+    would_not_settle: "A description of the model as internal or unreleased, without the reasoning and dates that make it a position. Equally, an assertion that Recital 115 brings development-stage conduct into scope — a recital cannot derogate from enacting terms."
     negative_search:
-      statement: "No statement in the provider's published accounts of 21 July or 26 August, the METR/Redwood report, the Commission's public statements, or the Code of Practice signatory registry addresses whether an Article 52(1) notification was made for this model."
+      statement: "No published source states the provider's position on whether the research model falls within the Article 3, point (63) exception, nor whether any Article 52(1) notification was made for it."
       as_of: "2026-09-11"
-    rfi_requests: [1, 2, 3, 4]
+    rfi_requests: [1, 2, 3, 4, 5]
     lead_row: true
+    note: >-
+      Supersedes an earlier row that led on the Article 52(1) two-week notification period
+      without consulting Articles 2(8), 3(3) or 3(63). See docs/correction-scope.md.
+
+  - id: g0-scope-art2-8-exception
+    gate: "0"
+    provision: art3-57
+    applies_to: [hf]
+    obligation: >-
+      Whether the Article 2(8) exception for 'testing in real-world conditions' returns the
+      conduct to scope.
+    facts:
+      - claim: "Article 3, point (57) defines the term as temporary testing of an AI system for its intended purpose outside a laboratory or otherwise simulated environment, subject to the conditions in Article 57 or 60."
+        sources: []
+        provision_derived: art3-57
+      - claim: "Sandboxing was in place and egress occurred through exploitation of a package registry service; the provider describes the environment as isolated virtual computers in the cloud."
+        sources: [openai-roadahead-aug26]
+    verdict: >-
+      On the provider's own account, this appears unmet, because every element of the
+      Article 3, point (57) definition describes an elected activity — temporary, for an
+      intended purpose, conducted outside a laboratory by design — and the disclosed
+      real-world exposure followed an escape from a simulated environment.
+    would_settle: "Already settled on the face of the definition, unless the provider asserts the Evaluation met Article 57 or 60 conditions."
+    would_not_settle: "That the effects were real-world in fact. The exception turns on the character of the testing, not the location of its consequences."
+    rfi_requests: [4]
 
   - id: g3-art55-1a-evaluation
     gate: "3"
