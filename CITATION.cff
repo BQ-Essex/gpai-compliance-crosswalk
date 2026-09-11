@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: >-
+  GPAI Compliance Cross-Walk: testing EU AI Act obligations against a public
+  disclosure record
+message: >-
+  If you use this method, the cross-walk data, or the model instrument, please cite
+  it as below.
+type: software
+authors:
+  - given-names: Bradley
+    family-names: Quinlan
+    affiliation: University of Essex
+repository-code: "https://github.com/REPLACE-WITH-USERNAME/gpai-compliance-crosswalk"
+abstract: >-
+  A replicable protocol for testing a frontier model provider's obligations under
+  Regulation (EU) 2024/1689 against a public disclosure record, with a worked example
+  drawn from two 2026 agentic containment failures and a model Article 91 request for
+  information generated from the unresolved rows. The method's claim is deliberately
+  narrow: it establishes whether a discloser's own account, on its own terms, resolves
+  a given obligation, and does not purport to establish what occurred. That limit is
+  enforced mechanically by an included validator rather than left to authorial
+  discipline.
+keywords:
+  - EU AI Act
+  - general-purpose AI models
+  - systemic risk
+  - incident reporting
+  - AI governance
+  - regulatory compliance
+  - AI incident response
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+date-released: "2026-09-13"
+version: "0.1.0"
