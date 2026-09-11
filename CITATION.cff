@@ -10,7 +10,7 @@ authors:
   - given-names: Bradley
     family-names: Quinlan
     affiliation: University of Essex
-repository-code: "https://github.com/REPLACE-WITH-USERNAME/gpai-compliance-crosswalk"
+repository-code: "https://github.com/BQ-Essex/gpai-compliance-crosswalk"
 abstract: >-
   A replicable protocol for testing a frontier model provider's obligations under
   Regulation (EU) 2024/1689 against a public disclosure record, with a worked example
