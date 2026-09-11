@@ -17,8 +17,11 @@ Everything here is built to hold that line. Verdicts may only take one of three 
 The constraint is also **machine-checked**, because a discipline that depends on a tired human at hour forty is a discipline that fails at hour forty:
 
 ```bash
+pip install pyyaml          # the validator's only dependency
 python3 tools/validate.py
 ```
+
+`tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library.
 
 ## The method caught itself being wrong, which is the point
 
@@ -38,8 +41,8 @@ Track 3 asks whether a regulator could use the output with light edits. A non-la
 protocol/     the method, abstracted from this incident — reusable on the next one
 data/         provisions, sources and cross-walk rows as structured YAML
 instrument/   the model Article 91 request for information
-tools/        validate.py — enforces the discipline; render.py — regenerates tables
-docs/         the worked example as narrative
+tools/        validate.py — enforces the verdict discipline; housestyle.py — prose conventions
+docs/         worked example, comparative regimes, the correction record and review findings
 ```
 
 ### `data/provisions.yaml`
