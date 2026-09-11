@@ -42,7 +42,7 @@
 
 5. The Commission has **not** formed a view that either episode constitutes a serious incident within the meaning of Article 3, point (49), that any obligation under the Regulation applies to any particular model, or that any obligation has been contravened. The purpose of this request is to obtain the information necessary to assess those questions, which the public record does not resolve.
 
-6. **The threshold question is one of scope.** Article 3, point (63) excludes from the definition of ‘general-purpose AI model’ those models “used for research, development or prototyping activities before they are placed on the market”, and Article 2(8) provides that the Regulation does not apply to research, testing or development activity prior to placing on the market or putting into service, save for testing in real-world conditions within the meaning of Article 3, point (57). Public accounts describe the model principally involved in the episode at paragraph 4(a) as an internal research model not intended for release. The Commission therefore asks the Provider to state its own position on that question first, at Section I.
+6. **The threshold question is one of scope.** Article 3, point (63) excludes from the definition of ‘general-purpose AI model’ those models “used for research, development or prototyping activities before they are placed on the market”, and Article 2(8) provides that the Regulation does not apply to research, testing or development activity prior to placing on the market or putting into service, save for testing in real-world conditions within the meaning of Article 3, point (57). Public accounts describe the model principally involved in the episode at paragraph 4(a) as an internal research model not intended for release. Recital 97 provides that a model integrated into its provider’s own AI system made available on the market or put into service is to be considered placed on the market, subject to three cumulative conditions the third of which is unavailable to a model with systemic risk. The Commission therefore asks the Provider to state its own position on these questions first, at Section I.
 
 ## Part C: Defined terms
 
@@ -75,6 +75,8 @@
 **Request 3.** State the Provider’s position on whether the Research Model falls within the exception in **Article 3, point (63)** for “AI models that are used for research, development or prototyping activities before they are placed on the market”, together with the reasons for that position and the date from which it is said to apply.
 
 **Request 4.** State the Provider’s position on whether the Evaluation constituted research, testing or development activity within **Article 2(8)**, and whether any part of it constituted **testing in real-world conditions** within Article 3, point (57).
+
+**Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use. If so, state when. If the Provider contends the model nonetheless falls outside the obligations for models, state which of the three conditions set out in Recital 97 it relies on, having regard to the position that those conditions are cumulative and that the third is unavailable to a general-purpose AI model with systemic risk.
 
 **Request 5.** State whether the Provider has made any notification to the Commission under **Article 52(1)** in respect of either the Research Model or the Deployed Model, and if so its date; or, if not, the basis on which it considers no such obligation arose.
 
@@ -131,7 +133,7 @@
 | # | Provision | A responsive answer consists of | What would **not** settle it |
 |---|---|---|---|
 | 1–2 | Art. 51 | Model identity; training compute in FLOP | Descriptions of intended use or release status |
-| 3–4 | Arts. 2(8), 3(57), 3(63) | A reasoned position on scope, with dates | A description of the model as internal, without the reasoning or dates that make it a position |
+| 3–4a | Arts. 2(8), 3(11), 3(57), 3(63), Rec. 97 | A reasoned position on scope and on deemed placement, with dates; and if the internal-use exception is relied on, which condition | A description of the model as internal, without the reasoning or dates that make it a position |
 | 5 | Art. 52(1) | The notification and its date, or the basis on which none was required | Silence on whether the question was considered |
 | 6–7 | Arts. 53(1)(a), 55(1)(a) | The evaluation protocol and documented adversarial-testing record | Public descriptions of the evaluation’s difficulty |
 | 8 | Art. 55(1)(b) | The risk assessment as it addresses **sources**, dated before July 2026 | Post-incident remediation commitments |

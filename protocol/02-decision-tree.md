@@ -1,4 +1,20 @@
 # Decision Tree + Cross-Walk Template
+
+> ## ⚠ SUPERSEDED IN PART
+>
+> This file was written before the scope analysis, and it leads on the Article 52(1)
+> notification question without first establishing that the obligations attach. That
+> ordering was wrong, and two later corrections changed it.
+>
+> **Read [`docs/correction-scope.md`](../docs/correction-scope.md) and §1 of
+> [`protocol/01-statutory-foundation.md`](01-statutory-foundation.md) first.**
+> The current position: the obligations **do** attach, by a route running through
+> Recital 97 and Commission guidance rather than the enacting definition, and the live
+> question is factual—whether the model exceeds 10²⁵ FLOP.
+>
+> The cross-walk rows below stand. The gate ordering does not. Kept rather than deleted
+> because the project records its corrections instead of erasing them.
+
 Built from the verified statutory text in `01-statutory-foundation.md`. This is the analytical spine: it determines which cross-walk rows are askable and which incident each belongs to. Populate cells only after this is agreed—retrofitting the table structure later costs more than settling it once.
 
 ---

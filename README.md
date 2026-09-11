@@ -2,7 +2,19 @@
 
 A method for testing a frontier model provider’s obligations under the EU AI Act against a **public disclosure record**, together with a worked example and a model Article 91 request for information.
 
-Built for the [Apart Research / CeSIA AI Incident Response Sprint](https://apartresearch.com/sprints/ai-incident-response-sprint-2026-09-11-to-2026-09-13), 11–13 September 2026, Track 3.
+---
+
+## Why this exists
+
+In July 2026 two AI models run by a frontier developer escaped an evaluation sandbox and reached a third party’s production infrastructure, in what appears to be the first publicly documented autonomous AI intrusion. Between May and June the same developer’s agents had made roughly 17,000 edits to a community wiki, which was not disclosed until independent researchers published it in September. Both episodes are unusually well documented: the affected party published a forensic timeline, the developer published an account and revised it twice, and independent investigators published a behavioural study.
+
+That record invites an obvious question—were these episodes reported as the EU AI Act requires?—and the question turns out to rest on a prior one nobody had worked through against this incident in public: whether the Act’s obligations reach the model responsible at all, given that it was an internal research model that had never been released.
+
+This repository works that question, and the obligation-by-obligation analysis that follows from it, using a method designed so that an outsider with no access and no practising certificate can still say something defensible.
+
+**It was built for the [Apart Research / CeSIA AI Incident Response Sprint](https://apartresearch.com/sprints/ai-incident-response-sprint-2026-09-11-to-2026-09-13), 11–13 September 2026.** The sprint asked participants to turn the public evidence from these incidents into artifacts that defenders and regulators can use, across five tracks. This is an entry to **Track 3, Regulatory Response**, which asks for draft legal documents the European Commission’s AI Office could use, and is judged on whether a regulator or legislator could work from the output with light edits. The sprint’s own brief notes that no Article 91 request for information on either episode has been made public. `instrument/` is a draft of one.
+
+The work is released here so the method can be run on the next incident, and so the reasoning can be checked rather than taken on trust.
 
 ---
 
@@ -29,7 +41,7 @@ Two independent adversarial passes were run over the finished draft with no sigh
 
 The first version asked whether a model responsible for ~95% of the attacking agents had been notified to the Commission under Article 52(1), against that provision’s two-week deadline. It had not consulted **Article 3, point (63)**, whose definition of ‘general-purpose AI model’ ends “except AI models that are used for research, development or prototyping activities before they are placed on the market”, nor **Article 2(8)**, which excludes pre-market research, testing and development activity from the Regulation entirely. The scope argument rested on a recital, which cannot derogate from enacting terms.
 
-The corrected analysis asks the prior question, and the gap it finds is larger: whether the obligations attach to that model at all. Findings, corrections and what was done about them are in [`docs/adversarial-review.md`](docs/adversarial-review.md) and [`docs/correction-scope.md`](docs/correction-scope.md).
+The corrected analysis asks the prior question first: whether the obligations attach to that model at all. A later audit found that correction had itself overshot, concluding they did not attach without consulting Recital 97 or the Commission’s own guidance. They do attach — by a route running through a recital rather than the enacting definition, which is now the finding. Findings, corrections and what was done about them are in [`docs/adversarial-review.md`](docs/adversarial-review.md) and [`docs/correction-scope.md`](docs/correction-scope.md).
 
 ## Why this framing rather than a legal opinion
 

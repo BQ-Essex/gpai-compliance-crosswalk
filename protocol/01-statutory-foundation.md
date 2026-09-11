@@ -16,7 +16,8 @@ Three errors were found by adversarial review of the finished draft and are reco
 |---|---|
 | Article 73(4) recorded as “immediately” for incidents involving death | **“not later than 10 days”**. Tiering is 15 days / two days / 10 days, with “immediately” as the floor in each, not the limit |
 | “Critical infrastructure” said to turn on Member State designation | Designation attaches to **‘critical entity’** (CER Art. 2(1)). The Act imports Art. 2(**4**), which is **functional** |
-| **Scope treated as settled; Articles 2(8), 3(3) and 3(63) never consulted** | See §1. The research/development exclusion is inside the definition of ‘general-purpose AI model’ itself, and it changes which obligations can attach at all |
+| **Scope treated as settled; Articles 2(8), 3(3) and 3(63) never consulted** | See §1. The research/development exclusion sits inside the definition of ‘general-purpose AI model’ itself |
+| **Scope then treated as resolved in the provider’s favour; Recital 97, Article 2(1)(a), Article 3 points (9)–(11) and the Commission’s Q&A never consulted** | See §1.5–1.7. Recital 97 deems a model integrated into the provider’s own system put into service to be placed on the market, and its internal-use exception is expressly unavailable to models with systemic risk. **The obligations attach.** The live question is factual: does the model exceed 10²⁵ FLOP? |
 
 ---
 
@@ -26,7 +27,7 @@ Three errors were found by adversarial review of the finished draft and are reco
 
 > ‘general-purpose AI model’ means an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, **except AI models that are used for research, development or prototyping activities before they are placed on the market**;
 
-A model used for research, development or prototyping before market placement is **not a ‘general-purpose AI model’ within the meaning of the Regulation**. Not exempted from particular obligations—outside the term on which the whole of Chapter V operates. Articles 51, 52, 53 and 55 cannot attach to it, and Article 91 cannot reach its documentation.
+On the face of it, a model used for research, development or prototyping before market placement is **not a ‘general-purpose AI model’ within the meaning of the Regulation**—not exempted from particular obligations, but outside the term on which Chapter V operates. Note what the enacting text does **not** say: there is no “sole purpose” qualifier, and no condition about internal processes or systemic risk. Recital 97 and the Commission’s guidance supply all three. See §1.6.
 
 ### 1.2 Article 2(8): the operative scope exclusion, and its one way back in
 
@@ -48,22 +49,43 @@ Every element describes a **deliberate, conditioned, elected** activity: tempora
 
 Article 52(1) binds “the relevant **provider**”. The *temporal trigger* in Article 52(1) is capability (“or it becomes known that it will be met”); **standing** is not. A developer may not be a provider of a model it never places on the market.
 
-### 1.5 The gap this produces
+### 1.5 The asymmetry in Article 2(1), point (a), and why it is not the end of the matter
 
-Read together, Articles 2(8), 3(63) and 3(3) mean the Regulation assumes a model is either:
+> **Article 2(1)(a)**: This Regulation applies to: providers **placing on the market or putting into service AI systems** or **placing on the market general-purpose AI models** in the Union …
 
-- in pre-market research and development, and **excluded**; or
-- placed on the market, and **covered**;
+The two halves differ, and the difference is in the enacting text. AI *systems* are caught by placing on the market **or putting into service**—and ‘putting into service’ at Article 3, point (11) expressly includes supply “**for own use** in the Union for its intended purpose”. General-purpose AI *models* are caught **only** on placing on the market, which Article 3, point (9) defines as first making available, and Article 3, point (10) ties to supply “in the course of a **commercial activity**”.
 
-and assumes real-world exposure arises only through **deliberate** testing in real-world conditions under Articles 57 or 60.
+Read alone, that asymmetry plus Article 3(63) would put an internal, unreleased research model outside Chapter V. **It does not survive Recital 97 or the Commission’s own guidance.**
 
-**A model that reaches third-party production infrastructure by escaping containment during excluded development activity occupies a category the Regulation does not contemplate.** It is not in the market-facing regime, and the exception that would pull development-stage activity back in is drafted for elected exposure.
+### 1.6 Recital 97 and the deemed-placement rule, which decides it
 
-### 1.6 What survives, and it is the right hook
+> **Recital 97 (extracts)**: … It should be understood that the obligations for the providers of general-purpose AI models should apply **once the general-purpose AI models are placed on the market**. **When the provider of a general-purpose AI model integrates an own model into its own AI system that is made available on the market or put into service, that model should be considered to be placed on the market** and, therefore, the obligations in this Regulation for models should continue to apply in addition to those for AI systems. The obligations laid down for models **should in any case not apply when an own model is used for purely internal processes that are not essential for providing a product or a service to third parties and the rights of natural persons are not affected**. Considering their potential significantly negative effects, **the general-purpose AI models with systemic risk should always be subject to the relevant obligations** under this Regulation. The definition should not cover AI models used before their placing on the market **for the sole purpose of** research, development and prototyping activities …
 
-**Article 55(1), point (b)** obliges providers of marketed systemic-risk models to assess and mitigate systemic risks at Union level, including their sources, “that may stem from **the development**, the placing on the market, or the use” of such models. **“Development” is in the enacting text, not a recital.**
+The Commission’s own Q&A on general-purpose AI models consolidates this into an operative test:
 
-So: the development *activity* is outside the Regulation by Article 2(8); the duty to assess systemic risk *stemming from* development is inside it by Article 55(1)(b), for any provider of a marketed systemic-risk model. A containment failure during internal evaluation is therefore not reachable as an *incident*, but is squarely relevant as a **risk source** the provider was obliged to have assessed.
+> “a general-purpose AI model is **also considered to be placed on the market** if that model’s provider **integrates the model into its own AI system which is made available on the market or put into service**, unless the model is (a) used for purely internal processes that are not essential for providing a product or a service to third parties, (b) the rights of natural persons are not affected, and (c) **the model is not a general-purpose AI model with systemic risk**.”
+
+The three conditions are cumulative, and condition (c) is decisive: **the internal-use exception is unavailable to a model with systemic risk.**
+
+The same Q&A states that obligations “explicitly or implicitly pertain to the **development phase**”, naming the duty to “notify the Commission that their general-purpose AI model **meets or will meet** the training compute threshold” (Articles 51–52), to “document information about training and testing” (Article 53), and to “assess and mitigate systemic risk” (Article 55).
+
+### 1.7 Where that leaves scope, stated precisely
+
+**The obligations attach**, on the Commission’s reading, provided the model is one with systemic risk. The route runs: model integrated into the provider’s own AI system put into service → deemed placed on the market (Recital 97) → internal-use exception unavailable because the model carries systemic risk → Chapter V applies, including the development-phase duties the Q&A names.
+
+**The live question is therefore factual, not legal**: does the model exceed the 10²⁵ FLOP threshold at Article 51(2)? If it does, Article 52(1)’s two-week notification duty was engaged during development, and Articles 53 and 55 apply.
+
+**Three qualifications belong in any honest statement of this.**
+
+1. **The route runs through a recital and non-binding guidance, not the enacting definition.** Article 3(63) excludes research models with no “sole purpose” qualifier and none of the three conditions; Recital 97 supplies both. The principle that a recital cannot derogate from enacting terms (*Nilsson* C‑162/97; *Manfredi* C‑308/97; *Tyson Parketthandel* C‑134/08) cuts against relying on a recital to create coverage the definition withholds, just as it cut against the earlier draft’s attempt to rely on Recital 115.
+2. **The Q&A disclaims its own authority**: “This Q&A does not constitute an official position of the Commission … Only the Court of Justice of the European Union is competent to authoritatively interpret the AI Act.”
+3. **A provider could run the textual argument.** It is the strongest position available to it, and the analysis should say so rather than pretend the question is closed.
+
+### 1.8 The independent hook, which needs none of the above
+
+**Article 55(1), point (b)** obliges providers of general-purpose AI models with systemic risk to assess and mitigate systemic risks at Union level, including their sources, “that may stem from **the development**, the placing on the market, or the use” of such models. **“Development” is in the enacting text, not a recital.**
+
+This matters because it holds whichever way the scope argument goes. Even on the provider-favourable reading—research model outside the definition—the *deployed* model is indisputably within it, and its provider owed a duty to assess systemic risk stemming from development. A containment failure during internal evaluation is squarely a **risk source** that duty reaches.
 
 ### 1.7 A bridging problem to state rather than paper over
 

@@ -1,4 +1,20 @@
 # Cross-Walk: populated
+
+> ## ⚠ SUPERSEDED IN PART
+>
+> This file was written before the scope analysis, and it leads on the Article 52(1)
+> notification question without first establishing that the obligations attach. That
+> ordering was wrong, and two later corrections changed it.
+>
+> **Read [`docs/correction-scope.md`](../docs/correction-scope.md) and §1 of
+> [`protocol/01-statutory-foundation.md`](../protocol/01-statutory-foundation.md) first.**
+> The current position: the obligations **do** attach, by a route running through
+> Recital 97 and Commission guidance rather than the enacting definition, and the live
+> question is factual—whether the model exceeds 10²⁵ FLOP.
+>
+> The cross-walk rows below stand. The gate ordering does not. Kept rather than deleted
+> because the project records its corrections instead of erasing them.
+
 Built on the verified statutory text (`01`) and the gating logic (`02`). Every verdict uses one of the three permitted openers. Verdicts are drawn from the *facts* column only; the *characterisation* column is never an input to a verdict and is analysed separately in §6.
 
 **Source tiers**: **T1** provider’s own account · **T2** affected party’s forensic account · **T3** investigator operating under provider-imposed access constraints · **T4** independent third party
