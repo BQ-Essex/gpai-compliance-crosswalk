@@ -116,7 +116,11 @@ sources:
     date: "2026-09-04"
     title: "DseWiki incident analysis"
     author: "Sydney Von Arx, Nightingale Collective"
-    url: "https://collusion.wiki"
+    url: "https://collusion.wiki/#timeline"
+    additional_urls:
+      - "https://collusion.wiki/#key-facts"
+      - "https://collusion.wiki/explorer/"          # agent activity by day, edits, names
+      - "https://collusion.wiki/additional-findings"
     establishes:
       - "First attempted agent edits 2026-05-11 (publictestwiki.com, not DSEWiki)"
       - "First successful DSEWiki edit 2026-05-24 05:13Z"
@@ -194,7 +198,8 @@ sources:
     tier: T4
     date: "2025-07"
     title: "General-Purpose AI Code of Practice, Safety and Security chapter"
-    url: "https://code-of-practice.ai/"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+    mirror_url: "https://code-of-practice.ai/"
     establishes:
       - "Commitment 1: Safety and Security Framework"
       - "Commitments 2-4: systemic risk identification, analysis, acceptance determination"
