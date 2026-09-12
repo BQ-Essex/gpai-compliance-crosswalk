@@ -39,6 +39,27 @@ PERMITTED_OPENERS = (
 # owes the reader both a route to settlement and proof we actually looked.
 UNRESOLVED_OPENER = "The disclosed record does not resolve this"
 
+# The openers are an allowlist. This is the matching blocklist, and it guards a
+# different failure: a verdict that stays in register while smuggling a
+# CONCLUSION OF LAW into a cell whose whole warrant is that it only describes a
+# record. Whether obligations attach is a question of law; a row can only say
+# what the record establishes about the facts that question turns on. The list is
+# explicitly not exhaustive and is not meant to be — it catches the formulations
+# this analysis actually reached for, having caught itself using one.
+LEGAL_CONCLUSIONS = (
+    "the obligations attach",
+    "the obligations do not attach",
+    "obligations therefore attach",
+    "is within scope",
+    "is outside scope",
+    "falls outside the regulation",
+    "is not a general-purpose ai model within the meaning",
+    "was infringed",
+    "infringed the",
+    "is unlawful",
+    "is in breach",
+)
+
 VALID_TIERS = {"T1", "T2", "T3", "T4"}
 
 DATA = Path(__file__).resolve().parent.parent / "data"
@@ -131,6 +152,17 @@ def check_the_verdicts(crosswalk, provision_ids, source_ids):
                 f"matters most — a verdict that drifts into asserting what happened "
                 f"retroactively undoes the method it rests on."
             )
+
+        lowered = verdict.lower()
+        for formula in LEGAL_CONCLUSIONS:
+            if formula in lowered:
+                complaints.append(
+                    f"[{rid}] verdict contains {formula!r}, which is a conclusion of law.\n"
+                    f"      A row says what the disclosed record establishes. Whether the "
+                    f"law reaches these facts is argued in the analysis and recorded in "
+                    f"the row's conclusion_of_law field, where a reader can see it is "
+                    f"reasoning rather than evidence."
+                )
 
         provision = row.get("provision")
         if provision and provision not in provision_ids:

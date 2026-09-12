@@ -84,6 +84,7 @@ The rows. Each separates **disclosed facts** from the **provider’s characteris
 ## What the validator checks
 
 - Every verdict opens with one of the three permitted registers
+- **And no verdict carries a conclusion of law.** The openers are an allowlist, which governs how a sentence starts and says nothing about what it goes on to do. A verdict reading “this appears met: the obligations attach” keeps register while borrowing the record’s authority for an argument no record can support. Whether the law reaches the facts belongs in a field of its own, where a reader can see it is reasoning. The threshold row said exactly that, through two rebuilds, until a blocklist was written to sit beside the allowlist
 - Every provision and source reference resolves
 - Every source carries a tier, a date, and a **pinpoint** URL (bare domains are flagged)
 - Every row states facts to derive its verdict from

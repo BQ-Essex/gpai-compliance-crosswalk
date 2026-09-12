@@ -183,7 +183,7 @@ It carries a provenance header and explicit placeholders rather than plausible r
 
 The method’s ceiling is real. Nothing here establishes that any obligation was contravened, and several rows would resolve against documents no member of the public can see.
 
-The author is not a lawyer, and this draft was materially wrong twice before review. It led first on a notification duty without establishing that the obligations attached; the correction then concluded they did not attach, without consulting Recital 97 or the Commission’s guidance. Both corrections are in the repository, with the review prompts and findings.
+The author is not a lawyer, and this draft was materially wrong twice before review, and once more afterwards in a way review had missed: the threshold row stated a conclusion of law inside a verdict cell whose whole warrant is that it describes only a disclosed record. A checker written after the reviews found it. It led first on a notification duty without establishing that the obligations attached; the correction then concluded they did not attach, without consulting Recital 97 or the Commission’s guidance. Both corrections are in the repository, with the review prompts and findings.
 
 The central question is contested, and a specialist has published on the other side of part of it (Pistillo, 2025). This report agrees with his conclusion and differs on where the weight sits.
 

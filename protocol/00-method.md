@@ -115,6 +115,10 @@ The characterisation column is not discarded. It is analysed separately, and it 
 
 Repetitive on purpose. The repetition is what makes the discipline auditable instead of aspirational, and it is checked mechanically by `tools/validate.py` rather than trusted.
 
+**And keep conclusions of law out of the cell entirely, which is harder than it sounds.** The registers make claims about a disclosed record. Whether the law reaches the facts is a different kind of claim, and it cannot be established by a record at all. A row may say what the record shows about the facts a legal question turns on; the legal question is argued in the analysis and recorded in a field of its own, so a reader can see which of the two they are being offered.
+
+The failure mode is not a verdict that breaks register. It is a verdict that keeps register while carrying a legal conclusion inside it—“this appears met: the obligations attach”—which borrows the record’s authority for an argument the record does not support. This analysis wrote exactly that sentence, kept it through a rebuild, and found it only when the checker was given a blocklist of legal-conclusion formulations to sit alongside its allowlist of openers. An allowlist tells you how a sentence starts. It says nothing about what the sentence goes on to do.
+
 ## Step 6: Prove absences rather than asserting them
 
 Any unresolved row carries:

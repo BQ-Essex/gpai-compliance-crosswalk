@@ -10,7 +10,7 @@
 
 ## 0. Corrections log
 
-Three errors were found by adversarial review of the finished draft and are recorded rather than silently fixed.
+Five errors have been found in this analysis—four by adversarial review of the finished draft, the fifth by a checker written afterwards. All are recorded rather than silently fixed.
 
 | Error | Correction |
 |---|---|
@@ -18,6 +18,7 @@ Three errors were found by adversarial review of the finished draft and are reco
 | “Critical infrastructure” said to turn on Member State designation | Designation attaches to **‘critical entity’** (CER Art. 2(1)). The Act imports CER Art. 2(**4**), which is **functional** |
 | **Scope treated as settled; Articles 2(8), 3(3) and 3(63) never consulted** | See §1. The research/development exclusion sits inside the definition of ‘general-purpose AI model’ itself |
 | **Scope then treated as resolved in the provider’s favour; Recital 97, Article 2(1)(a), Article 3 points (9)–(11) and the Commission’s Q&A never consulted** | See §1.5–1.7. Recital 97 deems a model integrated into the provider’s own system put into service to be placed on the market, and its internal-use exception is expressly unavailable to models with systemic risk. **The obligations attach.** The live question is factual: does the model exceed 10²⁵ FLOP? |
+| **A verdict cell carried a conclusion of law while keeping a permitted opener** | The threshold row read “On the provider’s own account, this appears met: the obligations attach”. The three registers make claims about a *disclosed record*; whether Chapter V reaches these facts is not something a record can establish. The record verdict and the conclusion of law are now separate fields, and `tools/validate.py` refuses the formulation. Found by a checker, not by review. |
 
 ---
 

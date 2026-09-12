@@ -42,11 +42,24 @@ rows:
       - claim: "'internal-only', 'not intended for public release', 'not intended for production' — a description of status, not a stated legal position under Article 3, point (63)."
         sources: [openai-roadahead-aug26, metr-redwood-investigation]
     verdict: >-
-      The disclosed record does not resolve this; on the face of Articles 2(8), 3(3) and
-      3(63) there is a substantial argument that the obligations do not attach to a model
-      used for research before being placed on the market, and resolving it would require
-      the model's identity, its training compute, and the provider's own reasoned position
-      on its status.
+      The disclosed record does not resolve this; it establishes the model's internal
+      status, its share of the attacking agents and the sandboxed setting of the
+      evaluation, but not whether the model was integrated into an own AI system made
+      available on the market or put into service, not its training compute, and not the
+      provider's own position on its status. Each of those is a fact the threshold
+      question turns on, and none of them is public.
+    conclusion_of_law: >-
+      Reasoning, not evidence, and recorded separately for that reason. The obligations
+      attach on the Commission's reading: a model integrated into its provider's own AI
+      system put into service is deemed placed on the market (Recital 97; Guidelines
+      C(2025) 7719 final, para. 54), essential internal use is itself an example of
+      placement (para. 51), development forms part of the same model's lifecycle (para.
+      22), and the internal-use exception is unavailable to a model with systemic risk
+      (Commission Q&A). The route runs through a recital and guidance that disclaims its
+      own authority rather than through the enacting definition, and the textual
+      counter-argument available to a provider is set out at
+      protocol/01-statutory-foundation.md sections 1.1 to 1.5 and docs/report-draft.md
+      section 4.1. Argued there; not established by this row.
     would_settle: "The provider's reasoned position on Article 3, point (63) and Article 2(8), with dates; model identity; training compute in FLOP."
     would_not_settle: "A description of the model as internal or unreleased, without the reasoning and dates that make it a position. Equally, an assertion that Recital 115 brings development-stage conduct into scope — a recital cannot derogate from enacting terms."
     negative_search:
@@ -56,7 +69,10 @@ rows:
     lead_row: true
     note: >-
       Supersedes an earlier row that led on the Article 52(1) two-week notification period
-      without consulting Articles 2(8), 3(3) or 3(63). See docs/correction-scope.md.
+      without consulting Articles 2(8), 3(3) or 3(63). See docs/correction-scope.md. The
+      verdict was then rewritten a second time: it had kept a permitted opener while
+      carrying a conclusion of law inside it, which is the failure the verdict registers
+      exist to prevent. validate.py now refuses that formulation.
 
   - id: g0-scope-art2-8-exception
     gate: "0"
