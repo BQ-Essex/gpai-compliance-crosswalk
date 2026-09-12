@@ -338,16 +338,35 @@ sources:
         It records that for HIGH-RISK AI SYSTEMS the Commission had already published
         draft guidance and a separate reporting template, open for feedback to
         7 November 2025 - a different instrument for a different regime.
+    document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_121268.pdf"
+    sha256: "ac0004e887783bd1b743c429e9ce64684478afb527a20fcb57e0ac680f6730f4"
+    establishes_from_the_template_itself:
+      - >-
+        Its opening line: the template "serves as a means to demonstrate compliance with
+        Article 55(1), point (c), of the AI Act as part of Commitment 9 of the Safety and
+        Security Chapter of the General-Purpose AI Code of Practice."
+      - >-
+        Ten numbered fields over two pages. Fields 1-9 track Measure 9.2 closely. Field 10,
+        "Submitter information", has no counterpart in Measure 9.2: provider / authorised
+        representative / other, organisation, contact name, email and phone.
+      - >-
+        Field 5 asks for the "evidence available" setting out the model's involvement
+        where Measure 9.2 asks for the "material available". Evidence is the stronger word.
+    documented_negatives:
+      - >-
+        THE FORM NEVER ASKS WHEN THE PROVIDER BECAME AWARE. The words "aware",
+        "awareness", "deadline" and "timeline" do not occur in the template at all, and
+        the only dates it requests are the start and end of the incident (field 1). There
+        is no field for the date of submission either. Every period in Measure 9.3 runs
+        from the date the signatory becomes aware of its model's involvement, and the
+        Commission Opinion at para. 33 describes Measure 9.3 as setting out what "without
+        undue delay" typically requires. So the official form for demonstrating compliance
+        with Art. 55(1)(c) contains no field from which compliance with its own timeliness
+        standard could be computed. See docs/appendix-forms.md section 3.
     caveats:
       - >-
-        NEITHER DOCUMENT HAS BEEN READ. Only the landing page has. docs/appendix-forms.md
-        therefore fills the field list from Measure 9.2 of the Code, which this register
-        holds and has verified and which the Commission's own page treats as
-        operationalising the obligation. When the template itself is held, the appendix
-        should be re-filled against its actual fields and this caveat removed.
-      - >-
-        The DOCX/PDF attribution above is inferred from link order on the page, not from
-        the files.
+        The DOCX counterpart (document 121270) is held but has not been parsed; the PDF is
+        the version read and hashed.
 
   - id: ec-cop-adequacy-opinion
     tier: T4
