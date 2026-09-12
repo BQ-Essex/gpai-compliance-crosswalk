@@ -239,16 +239,57 @@ sources:
   - id: cop-text
     tier: T4
     date: "2025-07"
-    title: "General-Purpose AI Code of Practice, Safety and Security chapter"
+    retrieved: "2026-09-12"
+    title: "Code of Practice for General-Purpose AI Models — Safety and Security Chapter"
     url: "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
-    mirror_url: "https://code-of-practice.ai/"
+    document_url: "https://ec.europa.eu/newsroom/dae/redirection/document/118119"
+    document: "Code_of_Practice_for_GeneralPurpose_AI_Models_Safety_and_Security_Chapter_118119.pdf"
+    sha256: "d879f9b54c6068aae57ebaead9d90ddaa46f2503312b9185367a724fa8da2f4a"
     establishes:
-      - "Commitment 1: Safety and Security Framework"
-      - "Commitments 2-4: systemic risk identification, analysis, acceptance determination"
-      - "Commitment 6: security mitigations"
-      - "Commitment 7: Safety and Security Model Reports to the AI Office"
-      - "Commitment 9: serious incident reporting — restates Art. 55(1)(c) closely; legal basis cited as Art. 55(1) and Recital 114"
-      - "Commitment 9 requires tracking systems that document information BEFORE incidents occur"
+      - >-
+        COMMITMENT 9, SERIOUS INCIDENT REPORTING, states its own legal basis as "Article
+        55(1), and recitals 114 and 115 AI Act", and commits Signatories to keeping track
+        of, documenting and reporting relevant information "without undue delay ... along
+        the entire model lifecycle".
+      - >-
+        MEASURE 9.3 SUPPLIES THE PERIODS ARTICLE 55(1), POINT (c) DOES NOT, running from
+        the date the Signatory "become[s] aware of the involvement of their model": two
+        days for a serious and irreversible disruption of the management or operation of
+        critical infrastructure; FIVE DAYS for "a serious cybersecurity breach, including
+        the (self-)exfiltration of model weights and cyberattacks"; 10 days for a death;
+        15 days for serious harm to health, an infringement of Union-law fundamental-rights
+        obligations, or serious harm to property or the environment.
+      - >-
+        THE TRIGGER THRESHOLD IS LOW. Each period runs where the Signatory establishes "or
+        suspect[s] with reasonable likelihood" the causal relationship between the model
+        and the event.
+      - >-
+        Intermediate reports at least every four weeks while an incident is unresolved; a
+        final report within 60 days of resolution; documentation retained at least five
+        years (Measures 9.3 and 9.4).
+      - >-
+        Measure 9.2 lists nine items the initial report must cover, including the chain of
+        events that "(directly or indirectly)" led to the incident, the model involved, and
+        a root cause analysis naming "any failures or circumventions of systemic risk
+        mitigations".
+      - >-
+        RECITAL (a), PRINCIPLE OF APPROPRIATE LIFECYCLE MANAGEMENT: Signatories recognise
+        that providers "should continuously assess and mitigate systemic risks, taking
+        appropriate measures along the entire model lifecycle (INCLUDING DURING DEVELOPMENT
+        THAT OCCURS BEFORE AND AFTER A MODEL HAS BEEN PLACED ON THE MARKET)".
+    documented_negatives:
+      - >-
+        As of 12 September 2026, in the chapter as held: it contains no definition of
+        'serious incident' and does not cite Article 3, point (49) anywhere. The Measure
+        9.3 categories are stated in their own terms, and the second of them - a serious
+        cybersecurity breach including (self-)exfiltration of model weights and
+        cyberattacks - has no counterpart among the four limbs of Article 3, point (49).
+    tier_note: >-
+      A voluntary instrument drawn up by independent experts in a multi-stakeholder process,
+      not Union legislation. Its significance here is not that it binds but that a Signatory
+      has adopted it: Article 55(2) makes adherence a way of demonstrating compliance, and
+      Article 56(6) as amended obliges the Commission to assess whether the codes cover the
+      Article 53 and 55 obligations and to publish that assessment.
 
   - id: ec-gpai-guidelines
     tier: T4

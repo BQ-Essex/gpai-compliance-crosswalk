@@ -30,7 +30,7 @@
 
 2. In the alternative, where the Commission prefers to proceed on the initiative of the scientific panel, this request may be issued under **Article 91(3)**, on a duly substantiated request from that panel, the information sought being necessary and proportionate for the fulfilment of its tasks. *(The cross-reference in Article 91(3) is to Article 68(2); the panel’s tasks are set out at Article 68(3). The reference is reproduced as enacted.)* The drafting below serves either pathway without amendment.
 
-3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b).
+3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b). The Code of Practice for General-Purpose AI Models, Safety and Security Chapter, is relevant to Requests 11a and 12 by operation of Article 55(2).
 
 ## Part B: Purpose
 
@@ -102,6 +102,8 @@
 
 **Request 11.** For each episode, state the date on which the Provider first formed the view that the episode had occurred, and the date on which it first considered whether the episode constituted a serious incident within Article 3, point (49), with the record of that consideration and its outcome; and state whether any report has been made to the Commission, the AI Office or any national competent authority, with its date and the provision relied on.
 
+**Request 11a.** Where the Provider adheres to the Code of Practice, state for each episode **the date on which it became aware of the involvement of its model**, that being the date from which the periods in Measure 9.3 of the Safety and Security Chapter run, and the date on which it first established or suspected with reasonable likelihood a causal relationship between its model and the event. State which of the four categories in Measure 9.3 it assigned to each episode, **including whether either was treated as “a serious cybersecurity breach, including the (self-)exfiltration of model weights and cyberattacks”**, and provide the initial, intermediate and final reports submitted under that Measure, or state that none were submitted and on what basis.
+
 > *Responsive answer*: a date and the contemporaneous record. Publicly observable indicators of the Provider’s attention to the episode at paragraph 4(b), including access to the affected wiki from IP ranges attributed to the Provider from 21 June 2026, do not establish when the Provider formed the relevant view. That is the matter on which the Provider’s own record is required.
 
 **Request 12.** State whether the Provider relies on the Code to demonstrate compliance under **Article 55(2)** or on alternative adequate means; and provide, as applicable, the Safety and Security Framework and the Safety and Security Model Report insofar as either bears on the episodes at paragraph 4.
@@ -139,6 +141,7 @@
 | 8 | Art. 55(1)(b) | The risk assessment as it addresses **sources**, dated before July 2026 | Post-incident remediation commitments |
 | 9 | Art. 55(1)(d) | Egress architecture before 9 July and after the 4 July rebuild | A description of the exploit chain, which is already public |
 | 10–11 | Art. 55(1)(c) | Contemporaneous tracking records; a classification date; report date and provision relied on | The public disclosure date, which is not the same thing |
+| 11a | Code, Measure 9.3 | The date of awareness, the category assigned, and the reports submitted | That the episodes were considered internally, without the dates the periods run from |
 | 12 | Art. 55(2), Code | The Framework and Model Report as they bear on these episodes | The fact of signature to the Code |
 
 ## Annex II: provisions relied on

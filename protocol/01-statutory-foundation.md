@@ -229,6 +229,35 @@ Article 56 is also the **only** provision inside Chapter V that the Omnibus touc
 
 ---
 
+## 5a. The Code of Practice supplies the period Article 55(1), point (c) does not
+
+Article 55(1), point (c) requires reporting “without undue delay” and fixes no period. The Safety and Security Chapter of the GPAI Code of Practice does fix periods, and a provider on the Article 55(2) Code branch has undertaken them.
+
+**Commitment 9, Serious incident reporting**, states its own legal basis as “Article 55(1), and recitals 114 and 115 AI Act”, and commits Signatories to keeping track of, documenting and reporting relevant information “without undue delay ... **along the entire model lifecycle**”.
+
+**Measure 9.3, Reporting timelines.** An initial report covering points (1) to (7) of Measure 9.2 is due, running from the date the Signatory becomes aware of the involvement of its model:
+
+| Trigger | Period |
+|---|---|
+| Serious and **irreversible** disruption of the management or operation of critical infrastructure | **2 days** |
+| **A serious cybersecurity breach, including the (self-)exfiltration of model weights and cyberattacks** | **5 days** |
+| A death of a person | 10 days |
+| Serious harm to health, infringement of Union-law fundamental-rights obligations, or serious harm to property or the environment | 15 days |
+
+Three things follow.
+
+**The second trigger has no counterpart in Article 3, point (49).** The Act’s four limbs are death or serious health harm, serious and irreversible disruption of critical infrastructure, infringement of fundamental-rights obligations, and serious harm to property. A serious cybersecurity breach is not among them. The Code adds it, and a model escaping containment and reaching a third party’s production infrastructure sits inside it far more comfortably than inside limb (d).
+
+**That reverses the tiering problem this analysis recorded earlier.** An earlier draft proposed importing the Article 73(4) tiering and found the proposal self-defeating, because the facts sat in the property limb and so attracted the slowest tier. On the Code’s own scheme they sit in the cybersecurity limb, and the period is **five days**.
+
+**The threshold for starting the clock is low.** Each period runs where the Signatory establishes “**or suspect[s] with reasonable likelihood**” the causal relationship between its model and the event—not where it concludes one.
+
+Intermediate reports follow at least every four weeks while an incident is unresolved, a final report within 60 days of resolution, and documentation is retained at least five years (Measures 9.3, 9.4).
+
+**Recorded as a negative finding**: as of 12 September 2026, the chapter contains no definition of ‘serious incident’ and does not cite Article 3, point (49) anywhere. Its triggers stand in their own terms. For a Signatory, that sidesteps the bridging problem at §5 rather than solving it—the gap in the Act remains, but it stops being the operative question.
+
+**And Recital (a) of the Code answers the scope question from the industry side.** Signatories recognise that providers “should continuously assess and mitigate systemic risks, taking appropriate measures along the entire model lifecycle **(including during development that occurs before and after a model has been placed on the market)**”. That is not the Commission interpreting the Act, and it is not a recital of the Act. It is the providers’ own undertaking, and for a Signatory it makes the development-phase question one of commitment rather than construction.
+
 ## 6. Article 101(1), point (b): fines (unamended)
 
 > The Commission may impose … fines not exceeding **3 % of … annual total worldwide turnover … or EUR 15 000 000, whichever is higher**, when the Commission finds that the provider intentionally or negligently: … (b) **failed to comply with a request for a document or for information pursuant to Article 91**, or supplied incorrect, incomplete or misleading information;

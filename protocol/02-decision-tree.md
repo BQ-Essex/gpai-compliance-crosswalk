@@ -105,6 +105,13 @@ SEPARATE GATE — only for the reporting limb at Art. 55(1)(c)
   ⮕ Bridging gap to state, not assume away: Art. 3(49) is defined by reference to an
     AI SYSTEM (Art. 3(1)); Art. 55(1)(c) binds providers of MODELS.
   ⮕ And 55(1)(c) supplies no period at all — only "without undue delay".
+  ⮕ BUT the Code of Practice does, for a Signatory. Measure 9.3: 2 days (critical
+    infrastructure), 5 DAYS (serious cybersecurity breach, incl. (self-)exfiltration
+    of model weights and cyberattacks), 10 days (death), 15 days (health, rights,
+    property). The 5-day limb has NO counterpart in Art. 3(49). Clock runs from
+    awareness, on "establish OR SUSPECT with reasonable likelihood".
+  ⮕ The Code does not define 'serious incident' and does not cite Art. 3(49) at all,
+    so for a Signatory the bridging gap above stops being the operative question.
                               │
                               ▼
 THE INSTRUMENT — Art. 91 request for information, issued by THE COMMISSION
