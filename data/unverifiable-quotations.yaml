@@ -1,0 +1,65 @@
+# Quotations this project cannot verify against a held document, each with the reason.
+#
+# tools/quotecheck.py checks every quotation attributed to a document in _sources/.
+# Some quotations legitimately cannot be checked that way, and the honest response is
+# to name them here rather than either loosen the checker until it stops noticing or
+# leave a permanent red result that everyone learns to ignore. An exception that has to
+# be written down, with a reason, in a file someone reviews is a different thing from
+# an exception the tool quietly makes for itself.
+#
+# Three kinds appear below and only three should. If a fourth kind starts appearing,
+# that is a sign the analysis is quoting things it has not read.
+#
+#   own-words      this project quoting its own earlier draft, usually in a corrections
+#                  log. The "source" is the repository's own git history.
+#   source-unheld  a genuine quotation from a document not held as a file — the incident
+#                  record, a foreign statute. Verifiable only by following the citation.
+#   method-text    the method's own language, such as the three permitted verdict
+#                  openers, quoted as a form of words rather than from anywhere.
+#
+# Every entry needs `quote`, `kind` and `why`. quotecheck.py matches on a normalised
+# prefix, so an entry survives light editing of the surrounding sentence.
+
+exceptions:
+  - quote: "resolvable … against a **fixed statutory period**"
+    kind: own-words
+    why: >-
+      This analysis quoting an earlier draft of itself in the adversarial-review record.
+      The words are in the git history, not in any source.
+
+  - quote: "resolvable … against a fixed statutory period"
+    kind: own-words
+    why: >-
+      The same phrase in docs/correction-scope.md, quoted when recording what the earlier
+      draft had claimed.
+
+  - quote: "expressed in general terms rather than by reference to particular provisions"
+    kind: own-words
+    why: >-
+      The register's own retracted characterisation of the Commission Opinion, preserved
+      verbatim in the corrections log so the ninth correction records what was actually
+      said rather than a tidied version of it.
+
+  - quote: "Trigger is capability, not market placement"
+    kind: own-words
+    why: >-
+      A finding from this project's own adversarial review pass, quoted in the record of
+      that pass.
+
+  - quote: "a research model which was not intended for production"
+    kind: source-unheld
+    why: >-
+      The independent investigation's description of the model, tier T3. Held as a URL
+      with an archived capture, not as a file in _sources/.
+
+  - quote: "system prompts, harnesses, and control mechanisms such as our auto-review models and safety classifiers"
+    kind: source-unheld
+    why: >-
+      The provider's own account of the safeguards not applied in the evaluation
+      environment, tier T1. Held as a URL with an archived capture, not as a file.
+
+  - quote: "deceptive techniques… subverting developer controls"
+    kind: source-unheld
+    why: >-
+      Californian statutory language quoted in the comparative section. The register holds
+      Regulation (EU) 2024/1689 and the instruments it imports, not foreign statutes.

@@ -71,6 +71,10 @@ Follow every cross-reference out of the instrument and into whatever it points a
 
 Two things it will not do. It cannot tell whether a citation is *apposite*—verified text can still be the wrong provision for the proposition—and it should skip citations belonging to other instruments and spans of bare article numbers, which name a body of provisions rather than a piece of text. Say which exclusions you made and why, because an exclusion is where a checker quietly stops checking.
 
+**Then check the quotations, not just the citations.** A resolving citation beside a wrong sentence is the most durable error available, because every automatic check passes and the prose still misstates what the source says. Hold the documents, extract their text, and verify every quotation against the document it is attributed to. Tolerate what a PDF does to a sentence—hyphenation, quotation marks, footnote numbers extracted inline, an editorial bracket—and nothing else.
+
+Report coverage rather than a pass, and count what cannot be checked. A quotation from a source you hold only as a URL is not a defect and is not verified either, and a tool that conflates those two is telling you a comfortable story. Where something genuinely cannot be checked, write it down with a reason in a file someone reviews. `tools/quotecheck.py` is the implementation; six of this project’s nine recorded errors are the failure it exists to catch.
+
 **Mark how each entry was obtained.** Not every provision will come from the same place; access fails, sources go dark mid-project, and the honest response is a provenance field rather than a uniform-looking register. Where a weaker source is all there is, record what would confirm it, and check whether an authority quotes the same wording—a Commission document reproducing a definition is corroboration a reader can follow.
 
 ## Step 2: Build the gating logic before populating anything

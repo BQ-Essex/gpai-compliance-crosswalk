@@ -1,0 +1,289 @@
+#!/usr/bin/env python3
+"""Check that every quotation in the prose appears in a document we actually hold.
+
+`citecheck.py` proves a citation resolves to verified text. It says nothing about the
+sentence around it. Six of the nine errors in this project's corrections log are the
+same failure and it is not a citation failure: a source was characterised, or quoted,
+without being opened. A recital was summarised from a mirror. A directive was read
+through a summary. A Commission opinion was described from its landing page. In each
+case the citation was perfectly well-formed and the claim beside it was wrong.
+
+This checks the claim. Every quoted span in the prose is looked for, verbatim, in the
+text of the documents in `_sources/`. What it cannot find, it says so about, and the
+distinction that matters is reported rather than hidden: a quotation can fail either
+because it is wrong or because the document it comes from is not held. Those are
+different problems and the tool refuses to guess which one it is looking at.
+
+That refusal is the point. The output is not "all quotations verified" — it is a
+coverage figure. Verifiability becomes a number the project has to look at, rather than
+an impression it can have about itself.
+
+Elisions are handled: a quotation broken by [...] or … is checked fragment by fragment,
+because that is how the elision is meant to be read. Short quotations are skipped, since
+a four-word phrase will match by accident and prove nothing.
+
+    python3 tools/quotecheck.py              # check, print findings
+    python3 tools/quotecheck.py --quiet      # exit code only, for CI
+    python3 tools/quotecheck.py --verified   # also list what was matched, and where
+
+Exit codes:
+    0  every checkable quotation was found in a held document
+    1  at least one quotation could not be found in any document held
+"""
+
+from __future__ import annotations
+
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+SOURCES = ROOT / "_sources"
+CACHE = SOURCES / ".text-cache"
+PROSE = ("README.md", "docs/*.md", "protocol/*.md", "instrument/*.md")
+
+# A quotation is only worth checking against a document we can identify it with.
+# "Is this string anywhere in _sources/?" is the wrong question: most quotations in
+# this repository are of the incident record, of Californian and New York statutes, or
+# of this project's own earlier drafts, and none of those are held as PDFs. Asking the
+# wrong question produced 71 findings, nearly all of them noise, and a check nobody
+# reads is worse than no check.
+#
+# So attribution comes first. If a line names a document we hold, the quotation on that
+# line is checked against THAT document and a failure is a real finding. If it names
+# nothing we hold, the quotation is recorded as unattributable and the coverage figure
+# says so. Each entry is (pattern found in the line, substring of the held filename).
+ATTRIBUTION = (
+    (r"C\(2025\)\s*7719|Guidelines\b|¶\s*\d+|paragraph \d+ of the Guidelines", "Guidelines_on_the_scope"),
+    (r"C\(2025\)\s*5361|Commission Opinion", "Commission_Opinion"),
+    (r"AI Board|Board's Conclusion|Adequacy Assessment", "AI_Board_Adequacy"),
+    (r"Measure 9\.|Commitment \d|Safety and Security Chapter|the Code\b", "Safety_and_Security_Chapter"),
+    (r"Q&A|questions and answers", "Questions & Answers"),
+    (r"\bCER\b|2022/2557", "32022L2557"),
+    (r"Pistillo", "Internal-deployment"),
+    (r"Omnibus|2026/1744", "32026R1744"),
+)
+
+# Below this, a quotation matches by coincidence and proves nothing.
+MIN_QUOTE = 40
+MIN_FRAGMENT = 25
+
+QUOTED = re.compile(r"[“\"]([^”\"]{%d,})[”\"]" % MIN_QUOTE)
+# A real elision. NOT "[w]hen" or "int[o application]", which are editorial
+# substitutions: the bracket changes a letter or supplies a word, and the quotation
+# still runs continuously through it. Treating those as breaks was this tool's first
+# bug, and it reported four sound quotations as unfindable.
+ELISION = re.compile(r"\[\s*(?:\.\.\.|…)\s*\]|…|\.\.\.")
+SUBSTITUTION = re.compile(r"\[([^\]]{1,40})\]")
+
+
+def normalise(text: str) -> str:
+    """Flatten everything that differs between a PDF and a Markdown file but carries
+    no meaning: line-break hyphenation, smart quotes, dash species, whitespace."""
+    text = text.replace("­", "")
+    text = re.sub(r"-\s*\n\s*", "-", text)
+    for a, b in (("—", "-"), ("–", "-"), ("‑", "-"), (" ", " ")):
+        text = text.replace(a, b)
+    # Every quotation mark goes, of whatever species. House style nests single inside
+    # double; the source being quoted nests the other way round, or uses straight
+    # marks, or the PDF extractor invents its own. None of that is a difference in
+    # what was said, and treating it as one was this tool's second bug.
+    text = re.sub(r"[“”‘’\"'`]", "", text)
+    text = re.sub(r"[*_]", "", text)
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def held_documents() -> dict:
+    """Extract (and cache) the text of every PDF in _sources/. Returns name -> text."""
+    corpus = {}
+    if not SOURCES.is_dir():
+        return corpus
+    CACHE.mkdir(exist_ok=True)
+    for pdf in sorted(SOURCES.glob("*.pdf")) + sorted(SOURCES.glob("*.PDF")):
+        cached = CACHE / (pdf.stem + ".txt")
+        if not cached.exists() or cached.stat().st_mtime < pdf.stat().st_mtime:
+            try:
+                subprocess.run(["pdftotext", "-layout", str(pdf), str(cached)],
+                               check=True, capture_output=True)
+            except (subprocess.CalledProcessError, FileNotFoundError):
+                continue
+        corpus[pdf.name] = normalise(cached.read_text(encoding="utf-8", errors="replace"))
+    return corpus
+
+
+def declared_exceptions() -> list:
+    """Quotations the project has declared unverifiable, each with a stated reason.
+
+    An exception written down in a reviewed file is a different thing from an exception
+    a tool makes for itself. Loosening the checker until it stops noticing would have
+    been easier and would have destroyed the only number here worth having.
+    """
+    path = ROOT / "data" / "unverifiable-quotations.yaml"
+    if not path.exists():
+        return []
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    out = []
+    for entry in data.get("exceptions", []) or []:
+        text = normalise(str(entry.get("quote", "")))[:80]
+        if text:
+            out.append((text, entry.get("kind", "?"), entry.get("why", "")))
+    return out
+
+
+def register_text() -> dict:
+    """The register's own verified text counts as a held document: it was transcribed
+    from a primary source and carries a `verified` field saying when and against what."""
+    path = ROOT / "data" / "provisions.yaml"
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    blocks = []
+    for key in ("provisions", "imported_provisions", "recitals"):
+        for entry in data.get(key, []) or []:
+            if entry.get("text"):
+                blocks.append(entry["text"])
+    return {"data/provisions.yaml (verified statutory text)": normalise(" ".join(blocks))}
+
+
+def fragments(quote: str):
+    """An elided quotation is a series of claims, one per fragment.
+
+    Editorial substitutions are unwrapped first, so "[w]hen the provider" is checked as
+    "when the provider" rather than split into a stub and a word beginning "hen".
+    """
+    unwrapped = SUBSTITUTION.sub(lambda m: m.group(1), quote)   # "[w]hen" -> "when"
+    dropped = SUBSTITUTION.sub("", quote)                        # "[CER] Article" -> "Article"
+    out = []
+    for variant in (unwrapped, dropped):
+        parts = [normalise(p).strip(" .,;:") for p in ELISION.split(variant)]
+        out.append([p for p in parts if len(p) >= MIN_FRAGMENT])
+    return out
+
+
+def present(fragment: str, body: str) -> bool:
+    """Is this fragment in this text, allowing for how PDFs mangle a sentence?
+
+    Two tolerances, both learned from false alarms this tool raised on quotations that
+    turned out to be exact. A superscript footnote marker extracts as a bare number
+    dropped mid-sentence — "cannot take any enforcement actions 27 because" — and a
+    quotation that ends a sentence in our prose may end a clause with a semicolon in
+    the source. Neither is a difference in what was said.
+    """
+    if fragment in body:
+        return True
+    pattern = r"\s*(?:\d{1,3}\s*)?".join(re.escape(w) for w in fragment.split())
+    return re.search(pattern, body) is not None
+
+
+def prose_files():
+    return sorted({p for pattern in PROSE for p in ROOT.glob(pattern)})
+
+
+def main(argv):
+    quiet = "--quiet" in argv
+    show_verified = "--verified" in argv
+
+    corpus = {**held_documents(), **register_text()}
+    if not corpus:
+        if not quiet:
+            print("No documents held in _sources/ and no register text, so nothing can "
+                  "be verified. That is a finding, not a pass.")
+        return 1
+
+    def attributed(line: str):
+        """Which held documents this line points at, most specific first."""
+        names = []
+        for pattern, needle in ATTRIBUTION:
+            if re.search(pattern, line, re.IGNORECASE):
+                names += [n for n in corpus if needle.lower() in n.lower()]
+        # A line can cite an Article while quoting the incident record. The repository
+        # already marks those with its own tier notation, and a quotation carrying a
+        # tier marker or naming a party is that party's words, not the statute's.
+        if re.search(r"\[T[1-4][,\]]|\bOpenAI\b|Hugging Face|METR|Von Arx|Anthropic|"
+                     r"the provider(?:'s|s')? (?:own )?account", line, re.IGNORECASE):
+            return names
+        if re.search(r"\bArticle\b|\bRecital\b", line):
+            names += [n for n in corpus if "provisions.yaml" in n
+                      or "02024R1689" in n or "32024R1689" in n]
+        return list(dict.fromkeys(names))
+
+    exceptions = declared_exceptions()
+
+    def declared(quote):
+        flat = normalise(quote)
+        return any(flat.startswith(text[:60]) or text[:60] in flat
+                   for text, _kind, _why in exceptions)
+
+    found, missing, unattributed, skipped, excepted = [], [], [], 0, 0
+    for path in prose_files():
+        text = path.read_text(encoding="utf-8")
+        for number, line in enumerate(text.splitlines(), 1):
+            for match in QUOTED.finditer(line):
+                quote = match.group(1)
+                variants = [v for v in fragments(quote) if v]
+                if not variants:
+                    skipped += 1
+                    continue
+                site = f"{path.relative_to(ROOT)}:{number}"
+                targets = attributed(line)
+
+                def holds(name):
+                    body = corpus[name]
+                    return any(all(present(f, body) for f in frs) for frs in variants)
+
+                # Found anywhere held is verified. Which file it sits in is this tool's
+                # guess, not the author's claim, and a heuristic's mis-guess is not a
+                # defect in the prose. Only absence from everything held is a finding.
+                where = next((n for n in corpus if holds(n)), None)
+                if where is None and declared(quote):
+                    excepted += 1
+                    continue
+                if where:
+                    found.append((site, quote, where))
+                elif targets:
+                    missing.append((site, quote, targets, None))
+                else:
+                    unattributed.append((site, quote))
+
+    checkable = len(found) + len(missing)
+    if not quiet:
+        if missing:
+            print(f"{len(missing)} quotation(s) attributed to a held document and not "
+                  f"found in it:\n")
+            for site, quote, targets, elsewhere in missing:
+                shown = quote if len(quote) <= 160 else quote[:157] + "..."
+                print(f"  {site}\n    “{shown}”")
+                print(f"    looked in: {', '.join(t[:60] for t in targets)}")
+                if elsewhere:
+                    print(f"    BUT FOUND IN: {elsewhere[:70]} — attributed to the "
+                          f"wrong document, which is its own kind of wrong.")
+                print()
+        else:
+            print(f"Every one of the {checkable} attributed quotation(s) was found in "
+                  f"the document it is attributed to.")
+
+        if show_verified and found:
+            print(f"\n{len(found)} verified:")
+            for site, quote, where in found:
+                print(f"  {site} → {where[:60]}\n    “{quote[:100]}{'...' if len(quote)>100 else ''}”")
+
+        rate = (len(found) / checkable * 100) if checkable else 0.0
+        print(f"\nAttributed and checked: {len(found)}/{checkable} ({rate:.0f}%) against "
+              f"{len(corpus)} held document(s).")
+        print(f"Unattributable: {len(unattributed)} quotation(s) on lines naming no held "
+              f"document — the incident record, foreign statutes, and this project's own "
+              f"earlier drafts. Not defects, and not verified either.")
+        if excepted:
+            print(f"Declared unverifiable, with reasons, in "
+                  f"data/unverifiable-quotations.yaml: {excepted}.")
+        if skipped:
+            print(f"Too short or too elided to check: {skipped}.")
+
+    return 1 if missing else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

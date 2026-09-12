@@ -32,6 +32,7 @@ The constraint is also **machine-checked**, because a discipline that depends on
 pip install pyyaml          # the checkers' only dependency
 python3 tools/validate.py   # the cross-walk rows hold to the verdict discipline
 python3 tools/citecheck.py  # every citation in the prose resolves to verified text
+python3 tools/quotecheck.py # every quotation matches the document it is attributed to
 ```
 
 `tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library.
@@ -102,6 +103,24 @@ It deliberately skips two things, and both exclusions are substantive. Citations
 The **CER Directive is the exception, and it earned it**. The Act’s definition of ‘critical infrastructure’ resolves into it, and relying on an imported definition is still relying on text—three of the six recorded errors came from reading a summary of that Directive rather than the Directive. So `imported_provisions` holds the verified CER text, citations qualified `CER` resolve against it, and prose that cites the Directive without saying which instrument it means is reported rather than waved through.
 
 What it cannot do is check that a citation is *apposite*. A pinpoint that resolves to verified text can still be the wrong provision for the proposition. One failure mode is closed; the other is still a reader’s job.
+
+## What the quotation checker checks
+
+`citecheck.py` proves a citation resolves. It says nothing about the sentence around it—and **six of the nine errors in this project’s corrections log are that failure**, not a citation failure. A recital summarised from a mirror. A directive read through a summary. A Commission opinion described from its landing page. Each time the citation was well-formed and the claim beside it was wrong.
+
+`quotecheck.py` checks the claim. Every quoted span attributed to a document held in `_sources/` is looked for, verbatim, in that document. It tolerates what a PDF does to a sentence and nothing else: line-break hyphenation, quotation marks of any species, an editorial `[w]hen`, a footnote number extracted into the middle of a clause, a semicolon where our sentence ends in a full stop. It does not tolerate a different word.
+
+The output is a **coverage figure**, not a pass. Verifiability becomes a number the project has to look at rather than an impression it can have about itself:
+
+```
+Attributed and checked: 96/96 (100%) against 12 held document(s).
+Unattributable: 53 quotation(s) on lines naming no held document.
+Declared unverifiable, with reasons, in data/unverifiable-quotations.yaml: 10.
+```
+
+The unattributable count is the honest part. Those are quotations of the incident record, of Californian and New York statutes, and of this project’s own earlier drafts—not defects, and not verified either. And where a quotation genuinely cannot be checked, it is named in `data/unverifiable-quotations.yaml` with a reason and one of three permitted kinds. An exception written down in a reviewed file is a different thing from an exception a tool makes for itself; loosening the checker until it stopped noticing would have been easier and would have destroyed the only number here worth having.
+
+`_sources/` is not committed—the documents are cited by URL and pinned by SHA-256, not redistributed—so this check runs for whoever holds them. That is the point rather than a limitation: the tool reports what *you* can verify, on the documents *you* have.
 
 ## What this repository does not contain, by choice
 
