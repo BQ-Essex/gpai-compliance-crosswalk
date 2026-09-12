@@ -287,3 +287,26 @@ inferences:
     strength: strong
     load_bearing: false
     stated_at: "docs/report-draft.md §4.3"
+
+  - id: inf-annex-xiii-evidence
+    claim: >-
+      The public record already evidences Annex XIII criterion (e) - the model's level of
+      autonomy and scalability and the tools it has access to - in unusual detail, and
+      since Annex XIII directs the Commission to "take into account" the criteria rather
+      than satisfy all of them, a designation under Article 51(1), point (b) could rest on
+      the incident record itself without the training-compute figure.
+    type: application to facts
+    function: graded
+    premises: [annex-xiii, art51, art52-1, metr-redwood-investigation, hf-technical-timeline, collusion-wiki]
+    depends_on: [inf-designation-route]
+    defeater: >-
+      A reading on which "equivalent to those set out in Article 51(1), point (a)" imports
+      the compute presumption's magnitude and so requires (c) after all, or a view that
+      demonstrated autonomy in one adversarial episode is not a "benchmark or evaluation
+      of capabilities" within (e). The second is the more serious: (e) speaks of benchmarks
+      and evaluations, and an escape is neither - though it is evidence of what such an
+      evaluation would find, and the episode did occur during an evaluation.
+    strength: moderate
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.3"
+

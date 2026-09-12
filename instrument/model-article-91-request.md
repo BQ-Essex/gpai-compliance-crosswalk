@@ -72,6 +72,8 @@
 
 **Request 2.** For the Research Model, state the cumulative amount of computation used for its training, measured in floating-point operations, and whether that amount exceeds 10²⁵ FLOP for the purposes of the presumption in Article 51(2).
 
+**Request 2a.** Independently of the figure sought at Request 2, state the Provider’s position on each of the criteria in **Annex XIII** as they apply to the Research Model, and in particular criterion (e): the benchmarks and evaluations of its capabilities, including the number of tasks performed without additional training, its adaptability to new and distinct tasks, **its level of autonomy and scalability, and the tools to which it had access** during the Evaluation. This request is made because Article 51(1), point (b) and Annex XIII provide a route to classification that does not depend on the figure sought at Request 2, and the Commission is not obliged to await it.
+
 **Request 3.** State the Provider’s position on whether the Research Model falls within the exception in **Article 3, point (63)** for “AI models that are used for research, development or prototyping activities before they are placed on the market”, together with the reasons for that position and the date from which it is said to apply.
 
 **Request 4.** State the Provider’s position on whether the Evaluation constituted research, testing or development activity within **Article 2(8)**, and whether any part of it constituted **testing in real-world conditions** within Article 3, point (57). If the Provider contends that it did, identify which of the conditions in Article 57 or Article 60 it says were fulfilled, and in respect of which system.
@@ -141,6 +143,7 @@
 | 8 | Art. 55(1)(b) | The risk assessment as it addresses **sources**, dated before July 2026 | Post-incident remediation commitments |
 | 9 | Art. 55(1)(d) | Egress architecture before 9 July and after the 4 July rebuild | A description of the exploit chain, which is already public |
 | 10–11 | Art. 55(1)(c) | Contemporaneous tracking records; a classification date; report date and provision relied on | The public disclosure date, which is not the same thing |
+| 2a | Annex XIII, (e) | The Provider’s own account of the model’s autonomy, scalability and tool access | A statement that the compute figure at Request 2 answers the question; Annex XIII criterion (c) is one factor among seven |
 | 11a | Code, Measure 9.3 | The date of awareness, the category assigned, and the reports submitted | That the episodes were considered internally, without the dates the periods run from |
 | 12 | Art. 55(2), Code | The Framework and Model Report as they bear on these episodes | The fact of signature to the Code |
 
