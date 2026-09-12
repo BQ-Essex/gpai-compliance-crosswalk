@@ -316,6 +316,61 @@ sources:
       Article 56(6) as amended obliges the Commission to assess whether the codes cover the
       Article 53 and 55 obligations and to publish that assessment.
 
+  - id: ec-art73-draft-guidance
+    tier: T4
+    date: "2025-09-26"
+    retrieved: "2026-09-12"
+    title: "AI Act: Commission issues draft guidance and reporting template on serious AI incidents, and seeks stakeholders' feedback"
+    url: "https://digital-strategy.ec.europa.eu/en/consultations/ai-act-commission-issues-draft-guidance-and-reporting-template-serious-ai-incidents-and-seeks"
+    document_urls:
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/119624"
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/119623"
+    establishes:
+      - >-
+        A SEPARATE regime and a SEPARATE form. "Draft Guidance article 73 AI Act -
+        incident reporting" and "Incident report for serious incidents under the AI Act
+        (High-risk AI systems)" are distinct documents from the GPAI template at
+        ec-incident-template. The Commission maintains two serious-incident forms: one for
+        models, one for systems.
+      - >-
+        The page states the draft guidance "clarifies definitions, offers practical
+        examples, and explains how the new rules relate to other legal obligations", and
+        that the approach "seeks alignment with international initiatives, such as the
+        OECD's AI Incidents Monitor and Common Reporting Framework".
+    documented_negatives:
+      - >-
+        As of 12 September 2026 the page is dated last-updated 4 November 2025, still
+        offers both documents as DRAFT, and links no final version. The consultation
+        closed 7 November 2025, ten months earlier. A plausible reading is that the
+        Omnibus deferred the high-risk obligations these documents serve - to 2 December
+        2027 and 2 August 2028 - and took the urgency with it.
+        BOUNDED: this is the absence of a final version FROM THIS PAGE. The site's own
+        search endpoint is unusable for a recency sweep - a query for "serious incident
+        reporting" returned events from 2020 - so a final version published elsewhere
+        would not necessarily have been found.
+    tier_note: >-
+      Neither document has been read. Held here as a pointer, because comparing the
+      high-risk form against the GPAI form is the direct test of this analysis's bridging
+      gap: the same phrase, two regimes, two forms, and whatever one asks that the other
+      does not.
+
+  - id: ec-eu-send-guidance
+    tier: T4
+    date: "2026-04-28"
+    retrieved: "2026-09-12"
+    title: "Technical guidance for submitting documents via EU SEND"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"
+    document_url: "https://ec.europa.eu/newsroom/dae/redirection/document/118672"
+    establishes:
+      - >-
+        The only document the GPAI guidelines policy page now links is technical guidance
+        on submitting documents to the Commission via EU SEND. Not read.
+    tier_note: >-
+      Recorded because it is the CHANNEL. A notification under Art. 52(1), a serious
+      incident report under Art. 55(1)(c) and a response to an Art. 91 request all have to
+      arrive somewhere, and the existence of a named submission system is a fact an
+      instrument can use - and a fact against which "no filing is public" can be tested.
+
   - id: ec-incident-template
     tier: T4
     date: "2025-11-04"
@@ -464,6 +519,17 @@ sources:
     reference: "C(2025) 7719 final"
     url: "https://digital-strategy.ec.europa.eu/en/library/guidelines-scope-obligations-providers-general-purpose-ai-models-under-ai-act"
     retrieved: "2026-09-12"
+    currency_check: >-
+      Checked 12 September 2026 against the Commission's own library page for this
+      document. The page records publication 18 July 2025 and last update 20 April 2026,
+      and it still serves document 118340 - the file held here. The April update added a
+      block of roughly a dozen further document ids, consistent with the 24 official
+      language versions the page advertises, rather than a revision of the English text.
+      So the paragraph-level citations in this analysis are to the document the Commission
+      currently serves.
+      ONE DISCREPANCY LEFT OPEN: the library page gives publication as 18 July 2025 while
+      the document itself is headed C(2025) 7719 final, Brussels, 19.11.2025. Both are
+      recorded; neither is resolved here, and the paragraph citations are to the file.
     document: "Guidelines_on_the_scope_of_the_obligations_for_generalpurpose_AI_models_established_by_AI_Act_English.PDF"
     sha256: "13481bd90108505c477165c8aefb13dbe7a83847bad0e983e09115f78aeefe78"
     pinpoint_note: >-
