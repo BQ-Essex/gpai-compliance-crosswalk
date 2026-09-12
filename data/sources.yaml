@@ -25,6 +25,8 @@ sources:
     date: "2026-07-21"
     title: "OpenAI and Hugging Face partner to address security incident during model evaluation"
     url: "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    archived_url: "https://web.archive.org/web/20260912161640/https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    archived: "2026-09-12"
     establishes:
       - "Provider's attribution of the intrusion to its own models, 21 July 2026"
     caveats:
@@ -64,6 +66,8 @@ sources:
     date: "2026-09-05"
     title: "OpenAI public acknowledgment of the wiki incident"
     url: "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/"
+    archived_url: "https://web.archive.org/web/20260912161652/https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/"
+    archived: "2026-09-12"
     establishes:
       - >-
         'do not yet have a clear standard for how to report misalignment that shows up
@@ -217,6 +221,8 @@ sources:
     date: "2026-07-30"
     title: "Investigating real-world incidents in our cybersecurity evaluations"
     url: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+    archived_url: "https://web.archive.org/web/20260912133952/https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+    archived: "2026-09-12"
     corroborating_url: "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/"
     establishes:
       - "Anthropic's own models reached three, subsequently four, real external organisations during its cybersecurity evaluations"
