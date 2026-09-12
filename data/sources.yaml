@@ -293,12 +293,46 @@ sources:
     retrieved: "2026-09-11"
     title: "General-purpose AI models in the AI Act: questions and answers"
     url: "https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers"
+    document: "General-Purpose AI Models in the AI Act - Questions & Answers.pdf (page capture, 12 September 2026 12:17)"
+    sha256: "2a0faddeff0c8cd558ade3204f85cac048dd07ee614b95e8a2abd9d3fb16fb3f"
+    capture_note: >-
+      An undated page revised in place, so a capture is the only citable form of it. The
+      copy hashed here was printed from the live page on 12 September 2026 at 12:17, the
+      timestamp being printed into the page furniture by the browser. Text rendering drops
+      the brackets from statutory citations - the capture reads "Article 28 AI Act" for
+      Article 2(8), "Article 512" for Article 51(2), "Article 551b" for Article 55(1),
+      point (b) - so quotations below restore them in square brackets rather than silently.
     establishes:
-      - "Consolidates the deemed-placement rule into a three-condition internal-use exception, the third condition being that the model is NOT a GPAI model with systemic risk"
-      - "States that notification (Arts. 51-52), documentation (Art. 53) and systemic-risk assessment (Art. 55) duties pertain to the development phase"
-      - "Notification duty applies where the model 'meets or will meet' the training compute threshold"
+      - >-
+        THE THREE-CONDITION TEST, verbatim: "a general-purpose AI model is also considered
+        to be placed on the market if that model's provider integrates the model into its
+        own AI system which is made available on the market or put into service, unless the
+        model is (a) used for purely internal processes that are not essential for providing
+        a product or a service to third parties, (b) the rights of natural persons are not
+        affected, and (c) the model is not a general-purpose AI model with systemic risk
+        (recital 97 AI Act)." It attributes the test to Recital 97 and to no enacting
+        provision, and cross-refers to section 3 of the Guidelines.
+      - >-
+        IT ANSWERS THE ARTICLE 2(8) OBJECTION DIRECTLY, under the heading "Do the
+        obligations for providers of general-purpose AI models apply in the development
+        phase?": Article 2[(8)] applies "as a general matter", but "certain obligations for
+        providers of general-purpose AI models (with and without systemic risk) explicitly
+        or implicitly pertain to the development phase of models intended for, but prior
+        to, the placing on the market" - naming notification under Articles 51 and 52,
+        documentation under Article 53, and assessment and mitigation of systemic risk
+        under Article 55, and quoting Article 55(1), point (b) in terms.
+      - "Notification duty applies where the model 'meets or will meet' the training compute threshold laid down in Article 51(2)"
     caveats:
-      - "Self-disclaims: 'does not constitute an official position of the Commission'; only the CJEU may authoritatively interpret."
+      - >-
+        Self-disclaims, in the opening words of the page: "With this Q&A, the AI Office
+        seeks to facilitate the interpretation of certain provisions of the AI Act. This
+        Q&A does not constitute an official position of the Commission, and it is without
+        prejudice to any decision or position of the Commission. Only the Court of Justice
+        of the European Union is competent to authoritatively interpret the AI Act."
+      - >-
+        Note what that means for the finding. The clearest statement that Chapter V reaches
+        the development phase, and the only consolidated statement of the three-condition
+        test, both sit in a document that disclaims being the Commission's position at all.
 
   - id: pistillo-internal-deployment
     tier: T4
