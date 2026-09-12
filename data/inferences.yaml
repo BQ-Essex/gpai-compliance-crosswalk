@@ -186,8 +186,10 @@ inferences:
     premises: [cop-text, art3-49]
     depends_on: [inf-opinion-construes, inf-cyber-covered]
     defeater: >-
-      The provider's own classification, if it assigned a different category. Request 11a
-      of the instrument asks which category was assigned. This is a judgement about facts
+      The provider's own classification, if it assigned a different category, or its
+      taking the guidelines' para. (100) route instead, which reaches the same conduct
+      without passing through Measure 9.3's categories at all. Requests 11a and 11b
+      of the instrument ask which category was assigned and which route was taken. This is a judgement about facts
       and is deliberately kept out of the verdict cells for that reason.
     strength: moderate
     load_bearing: false

@@ -108,6 +108,10 @@
 
 > *Responsive answer*: a date and the contemporaneous record. Publicly observable indicators of the Provider’s attention to the episode at paragraph 4(b), including access to the affected wiki from IP ranges attributed to the Provider from 21 June 2026, do not establish when the Provider formed the relevant view. That is the matter on which the Provider’s own record is required.
 
+**Request 11b.** State, for each episode, whether the Provider treated the episode as falling within Article 55(1), point (c) **as a serious cybersecurity breach related to the model or its physical infrastructure**, within the meaning given at paragraph (100) of the Commission guidelines of 19 November 2025 (C(2025) 7719 final), that reading being anchored in Article 55(1), points (b) and (d) and not requiring any of the events listed in Article 3, point (49); or, alternatively, as an incident or malfunctioning of the model leading directly or indirectly to an event listed in Article 3, point (49), points (a) to (d); or on some other basis, which should be stated. Where the Provider considers that no such route applies, state the reasoning.
+
+> *Responsive answer*: the route relied on and the reasoning, whichever route that is. A statement that the episode was handled under an internal security process is not responsive: the question is what view the Provider took of Article 55(1), point (c), not what process it used. This request is put separately from Request 11 because the guidelines’ first route does not pass through Article 3, point (49) at all, and a Provider answering only the Article 3, point (49) question could answer it accurately and leave the operative question untouched.
+
 **Request 12.** State whether the Provider relies on the Code to demonstrate compliance under **Article 55(2)** or on alternative adequate means; and provide, as applicable, the Safety and Security Framework and the Safety and Security Model Report insofar as either bears on the episodes at paragraph 4.
 
 ---

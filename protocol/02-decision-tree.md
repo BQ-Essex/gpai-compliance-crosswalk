@@ -112,6 +112,15 @@ SEPARATE GATE — only for the reporting limb at Art. 55(1)(c)
     awareness, on "establish OR SUSPECT with reasonable likelihood".
   ⮕ The Code does not define 'serious incident' and does not cite Art. 3(49) at all,
     so for a Signatory the bridging gap above stops being the operative question.
+  ⮕ AND THE AI OFFICE BRIDGES IT IN GUIDANCE. Guidelines C(2025) 7719 final, para.
+    (100): Art. 55(1)(c) ITSELF covers serious cybersecurity breaches related to the
+    model or its physical infrastructure, incl. (self-)exfiltration of model
+    parameters and cyberattacks - anchored in Art. 55(1)(b) and (d), NOT in Art.
+    3(49). Apart from that, a serious incident is any model incident or
+    malfunctioning "directly or indirectly" leading to an Art. 3(49)(a)-(d) event.
+  ⮕ So there are TWO routes in, and the Art. 3(49) limb analysis above is the
+    alternative rather than the only one. Ask which route the provider took:
+    instrument Request 11b.
   ⮕ AND THE COMMISSION HAS SAID WHAT THE PHRASE MEANS. Opinion C(2025) 5361 final,
     1 Aug 2025, para. 33: Measure 9.3 sets out "what 'without undue delay' typically
     requires of reporting timelines"; para. 38: the Safety and Security Chapter
