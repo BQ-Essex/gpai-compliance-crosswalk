@@ -150,6 +150,19 @@ So enumerate them. Each argumentative step gets an entry: the claim stated so it
 
 Two disciplines make this more than bookkeeping. **Name a defeater or drop the claim**: an author who cannot say what would show a step wrong has usually not tested it. And **rank your own steps by weakness, then publish the ranking weakest first**. That feels like handing over the soft point, and it is. The alternative is a reader who attacks the easiest claim rather than the most important one, which is worse for everybody, and an analysis that would rather be attacked well should say where to aim.
 
+## Step 6c: Fill the regulator’s own form, if one exists
+
+Where the regime publishes a reporting template, fill it from the public record before drafting anything. Two things come out of it, and the second was not expected.
+
+The first is a presentation. A cross-walk row is an analysis a reader may disagree with; the same row in the regulator’s own form, with the field left blank, argues for itself. A form completed from public sources shows at a glance which of the regime’s own questions the record can answer and which it cannot, and who the answers come from—which in this project turned out to be everyone except the party the form addresses.
+
+The second is a test of the form. A template encodes what the regulator believes it needs to know. Set it against the obligation it says it evidences, field by field, and ask what the obligation requires that no field captures. Here the answer was the date of awareness: every reporting period in the Code runs from it, the form has no field for it, and so a perfectly completed report cannot show whether it was late. That finding did not come from the analysis. It came from trying to fill the form and running out of boxes.
+
+Two rules make it reliable.
+
+1. **Read every rendition the regulator publishes.** Where a form is issued as both an editable document and a PDF, read the document’s stored field labels rather than a text layer’s rendering of them. Otherwise an absence you report is a property of your extraction rather than of the form, which is the first thing a drafter will say.
+2. **Bound the negative search as Step 6 requires.** “The form does not ask X” is a claim about a document you hold, which makes it the cheapest negative search in the method to state properly: the corpus is the form. Then say what was *not* searched—accompanying guidance, the submission channel, correspondence—because a requirement carried outside the form would answer the point.
+
 ## Step 7: Let the instrument fall out of the unresolved rows
 
 Every unresolved row is already a question with a settlement condition attached. Drafting the request is then assembly rather than invention.
@@ -185,7 +198,10 @@ The structure is regime-agnostic. To apply it to a different instrument or a dif
 2. Redraw the gate tree—the gating relationships are specific to each regime, and this is the step that cannot be skipped or inherited.
 3. Rebuild `data/sources.yaml`, tiering by relationship to the claim.
 4. Populate rows, unconditional obligations first.
-5. Run `tools/validate.py`. It is regime-agnostic; it checks the discipline, not the law.
-6. Draft the instrument from the unresolved rows, in the form the target regime’s own procedural provision specifies.
+5. Fill the target regime’s own reporting form, if it publishes one, and record what it does not ask.
+6. Run `python3 tools/check.py`. It is regime-agnostic; it checks the discipline, not the law.
+7. Draft the instrument from the unresolved rows, in the form the target regime’s own procedural provision specifies.
 
-The validator is the portable part. The law changes; the failure modes—dangling citations, unproven absences, verdicts that drift into assertion, a provider’s framing smuggled in as a finding—do not.
+The checkers are the portable part, and there are five of them behind one command. `validate.py` polices the verdict discipline. `citecheck.py` resolves every citation in the prose against whatever `provisions.yaml` holds. `quotecheck.py` matches every attributed quotation against the documents you hold, and reports coverage rather than pretending to completeness. `infercheck.py` checks that the inference register’s premises resolve, that each step names a defeater and that the graph is acyclic, and `--attack` prints the load-bearing steps weakest first. `housestyle.py` is the only one that knows anything about this project, and even there the checks for a repeated paragraph and for a count that has drifted from the register it describes carry over unchanged.
+
+The law changes; the failure modes—dangling citations, unproven absences, verdicts that drift into assertion, a count nobody rechecked, a cross-reference to something that was never written, a provider’s framing smuggled in as a finding—do not.
