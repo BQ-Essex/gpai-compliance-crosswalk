@@ -21,6 +21,13 @@
 #   strength      strong | moderate | contestable — and contestable is not a confession,
 #                 it is a direction to the reader
 #   load_bearing  true if the report's conclusion changes when this step fails
+#   function      step | graded — whether the provision behaves as a threshold or a
+#                 spectrum. The Act is genuinely both, and the distinction is not
+#                 cosmetic: a step inference is brittle, flipping wholly on one fact
+#                 (10^25 FLOP, 2 August 2026, "serious AND IRREVERSIBLE"), while a
+#                 graded one degrades — a reader who disagrees with it moves the
+#                 conclusion rather than breaking it. Marking them tells a reader which
+#                 of these conclusions a single new fact could overturn.
 #
 # strength is the author's own estimate and is the softest thing here. It is recorded
 # anyway, because an unranked list of claims invites a reader to attack the easiest
@@ -33,6 +40,7 @@ inferences:
       service, but general-purpose AI models on placing on the market alone, and that
       difference is on the face of the enacting text rather than an artefact of reading.
     type: textual
+    function: step
     premises: [art2-1a, art3-9, art3-10, art3-11]
     depends_on: []
     defeater: >-
@@ -49,6 +57,7 @@ inferences:
       to an AI SYSTEM and the conditions it defers to are Article 57's national sandboxes
       and Article 60, which is confined on its face to HIGH-RISK AI SYSTEMS.
     type: textual
+    function: step
     premises: [art2-8, art3-57, art57, art60]
     depends_on: []
     defeater: >-
@@ -65,6 +74,7 @@ inferences:
       that the development was never activity 'prior to' placing on the market and Article
       2(8) never engages.
     type: harmonising construction
+    function: step
     premises: [recital-97, art2-8, recital-25]
     depends_on: [inf-carveback-unreachable]
     defeater: >-
@@ -83,6 +93,7 @@ inferences:
       Two recitals presupposing a category the definitions withhold is evidence that the
       asymmetry is an artefact of drafting rather than a considered choice.
     type: inference to the best explanation
+    function: graded
     premises: [recital-25, recital-97, art2-1a, art3-11]
     depends_on: [inf-asymmetry]
     defeater: >-
@@ -101,6 +112,7 @@ inferences:
       careless, and a reader supplying it from Recital 97 supplies a term the enacting
       text declined.
     type: expressio unius
+    function: graded
     premises: [art2-6, art3-63, recital-97]
     depends_on: []
     defeater: >-
@@ -116,6 +128,7 @@ inferences:
       'product-oriented' research within Recital 25 rather than scientific research within
       Article 2(6), so the research provisions postpone rather than exempt.
     type: characterisation of facts
+    function: graded
     premises: [recital-25, art2-6]
     depends_on: []
     defeater: >-
@@ -132,6 +145,7 @@ inferences:
       model, by deemed placement under Recital 97 with the internal-use exception
       unavailable to a model carrying systemic risk.
     type: conclusion of law
+    function: step
     premises: [recital-97, art2-1a, art3-63, ec-gpai-guidelines, ec-gpai-qa]
     depends_on: [inf-relocation, inf-product-oriented]
     defeater: >-
@@ -149,6 +163,7 @@ inferences:
       the statutory phrase in Article 55(1), point (c) requires, not merely describing what
       Commitment 9 contains.
     type: reading of a document
+    function: graded
     premises: [ec-cop-adequacy-opinion, art55-1c, cop-text]
     depends_on: []
     defeater: >-
@@ -167,6 +182,7 @@ inferences:
       the (self-)exfiltration of model weights and cyberattacks' more naturally than within
       the serious-harm-to-property category, so the applicable period is five days.
     type: characterisation of facts
+    function: graded
     premises: [cop-text, art3-49]
     depends_on: [inf-opinion-construes]
     defeater: >-
@@ -182,6 +198,7 @@ inferences:
       Limb (b) of Article 3, point (49) fails on these facts because the affected service
       was rebuilt, so the disruption was not irreversible.
     type: application to facts
+    function: step
     premises: [art3-49, cer-2-4, hf-technical-timeline]
     depends_on: []
     defeater: >-
@@ -197,6 +214,7 @@ inferences:
       while Article 55(1), point (c) binds providers of models, and the Act does not
       expressly bridge the two.
     type: textual
+    function: step
     premises: [art3-49, art3-1, art3-66, art55-1c]
     depends_on: []
     defeater: >-
@@ -212,6 +230,7 @@ inferences:
       July 2026 carries no exposure under Article 101(1), point (a), while point (b) is
       unaffected because a request would be issued now.
     type: temporal
+    function: step
     premises: [art113, art101-1a, art101-1b, art91]
     depends_on: []
     defeater: >-
@@ -221,3 +240,50 @@ inferences:
     strength: strong
     load_bearing: false
     stated_at: "docs/report-draft.md §5; instrument Part G paragraph 14"
+
+  - id: inf-scaffolding-attribution
+    claim: >-
+      The conduct in the incident is attributable to the general-purpose AI MODEL and so
+      to its provider, rather than to downstream scaffolding - the harness, memory,
+      execution loop and tool access - which is where agentic behaviour largely resides
+      and which may be another actor's.
+    type: attribution
+    function: graded
+    premises: [art3-1, art3-63, art3-66, art55-1b, openai-roadahead-aug26]
+    depends_on: [inf-attach]
+    defeater: >-
+      THE STRONGEST OBJECTION AVAILABLE TO THE PROVIDER, and it attacks attribution
+      rather than definition, so it survives even if scope resolves against them.
+      Persistent goal-seeking, memory and tool invocation are properties of scaffolding
+      rather than of raw weights; if the scaffolding was built by a different actor, the
+      conduct may not be the model provider's at all. What blunts it here, and only
+      partly, is that the provider's own account describes the evaluation environment as
+      its own and names the absent safeguards as its own - "system prompts, harnesses,
+      and control mechanisms" - so on these facts the scaffolding appears to be the same
+      undertaking's. That is a fact about this incident, not a general answer, and a
+      cross-walk run on a different incident should expect this to be the first thing a
+      provider says.
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.2"
+
+  - id: inf-designation-route
+    claim: >-
+      The Commission is not dependent on the provider answering the compute question. The
+      closing sentence of Article 52(1) lets it designate a model as one with systemic
+      risk where it becomes aware of a model presenting systemic risks of which it has not
+      been notified, and Article 51(1), point (b) supplies the criteria by reference to
+      Annex XIII.
+    type: textual
+    function: step
+    premises: [art51, art52-1, art90]
+    depends_on: []
+    defeater: >-
+      A reading on which the designation power requires the compute figure first. The
+      sentence does not say so: it is triggered by the Commission becoming aware of a
+      model PRESENTING systemic risks, and Art. 51(1), point (b) is an alternative to
+      point (a) rather than a gloss on it. Art. 52(2) then puts the burden on the provider
+      to rebut, which is the opposite of the burden this analysis had assumed throughout.
+    strength: strong
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.3"

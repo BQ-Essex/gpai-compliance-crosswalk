@@ -16,7 +16,7 @@ weakest ones the easiest to find. What can then be checked mechanically is real:
   · every inference names something that would defeat it
   · the dependency graph is acyclic, and nothing depends on what is not there
   · every stated_at reference points at a heading that exists in the file it names
-  · an inference marked contestable is not silently load-bearing without saying so
+  · every inference says whether the provision behind it is a step or a graded one
 
 None of that makes an argument sound. It makes an unsound one findable, which is the
 only thing that has ever worked here.
@@ -46,7 +46,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
 STRENGTHS = ("strong", "moderate", "contestable")
-REQUIRED = ("claim", "type", "premises", "depends_on", "defeater", "strength")
+REQUIRED = ("claim", "type", "premises", "depends_on", "defeater", "strength", "function")
+FUNCTIONS = ("step", "graded")
 
 
 def load():
@@ -82,6 +83,10 @@ def check(entries, known):
         for dep in entry.get("depends_on", []) or []:
             if dep not in ids:
                 complaints.append(f"[{eid}] depends on {dep!r}, which is not an inference here.")
+
+        function = entry.get("function")
+        if function and function not in FUNCTIONS:
+            complaints.append(f"[{eid}] function is {function!r}; use one of {list(FUNCTIONS)}.")
 
         strength = entry.get("strength")
         if strength and strength not in STRENGTHS:
@@ -143,7 +148,8 @@ def main(argv):
         for entry in entries:
             deps = ", ".join(entry.get("depends_on") or []) or "—"
             flag = " [load-bearing]" if entry.get("load_bearing") else ""
-            print(f"  {entry['id']:<26} {entry.get('strength','?'):<12} ← {deps}{flag}")
+            print(f"  {entry['id']:<26} {entry.get('strength','?'):<12} "
+                  f"{entry.get('function','?'):<7} ← {deps}{flag}")
         print()
 
     if "--attack" in argv:
@@ -151,9 +157,10 @@ def main(argv):
         ranked = sorted((e for e in entries if e.get("load_bearing")),
                         key=lambda e: order.get(e.get("strength"), 9))
         print("The load-bearing steps, weakest first. If this analysis is wrong, it is "
-              "most likely wrong here.\n")
+              "most likely wrong here.\nA STEP inference flips wholly on one fact; a "
+              "GRADED one moves the conclusion rather than breaking it.\n")
         for entry in ranked:
-            print(f"  [{entry['strength'].upper()}] {entry['id']}")
+            print(f"  [{entry['strength'].upper()} / {entry.get('function','?')}] {entry['id']}")
             print(f"    {' '.join(entry['claim'].split())}")
             print(f"    would be defeated by: {' '.join(entry['defeater'].split())}")
             print(f"    stated at: {entry.get('stated_at','—')}\n")

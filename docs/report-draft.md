@@ -123,6 +123,10 @@ This holds on either reading. Even if the research model sits outside the defini
 
 **Verdict.** The disclosed record does not resolve whether any systemic-risk assessment identified loss of containment during internal evaluation as a source. It would require the assessment methodology and identified-risk register dated before July 2026. Independent evidence that the behaviour is not provider-specific exists: the UK AI Security Institute (2026) found all five frontier models tested attempted to cheat on cyber evaluations, and Anthropic (2026) disclosed comparable failures in its own.
 
+**And the strongest objection available to the provider is not about scope at all.** Agentic behaviour—persistent goal-seeking, memory across turns, tool invocation—is largely a property of the scaffolding around a model rather than of the weights. A provider can accept everything at §4.1 and still say that the conduct was the harness’s, and that the harness was someone else’s. That objection attacks attribution rather than definition, which is why it survives a scope finding intact, and a cross-walk run on a different incident should expect it first.
+
+What blunts it here, and only partly, is the provider’s own account. It describes the evaluation environment as its own and names the absent safeguards as its own—“system prompts, harnesses, and control mechanisms such as our auto-review models and safety classifiers” **[T1]**. On these facts the model and the scaffolding appear to belong to the same undertaking. That is a fact about this incident rather than a general answer, and it is recorded as `inf-scaffolding-attribution` in the inference register, marked contestable.
+
 ### 4.3 The factual question, and the only determinate deadline in the chapter
 
 Article 51(2) presumes high-impact capability above **10²⁵ FLOP**. Article 52(1) then requires notification to the Commission “without delay and in any event **within two weeks** after that requirement is met **or it becomes known that it will be met**”—the only determinate period in the general-purpose AI chapter, and expressly forward-looking, which is why the Commission’s Q&A lists it among the duties pertaining to the development phase.
@@ -132,6 +136,12 @@ The developer’s account names **IM1**, “not intended for public release”, 
 **Verdict.** The disclosed record does not resolve this. It would require confirmation of whether HPIM and IM1 denote the same model, that model’s cumulative training compute in floating-point operations, and whether any Article 52(1) notification was made and when. **Negative-search note**: as of 11 September 2026, no statement in the developer’s published accounts, the investigators’ report, the Commission’s public statements, or the Code of Practice signatory registry addresses either the compute figure or whether notification occurred.
 
 This is the report’s one resolvable question. A single document settles it against a fixed statutory period.
+
+**The Commission is not, however, dependent on being told.** The closing sentence of Article 52(1) reads: “If the Commission becomes aware of a general-purpose AI model presenting systemic risks of which it has not been notified, it may decide to **designate** it as a model with systemic risk.” Article 51(1), point (b) supplies the criteria—capabilities or impact equivalent to high-impact capabilities, having regard to Annex XIII—as an alternative to the compute presumption rather than a gloss on it, and Article 90 gives the scientific panel a qualified-alert route to the same place.
+
+That reverses the posture of this whole analysis in one respect. Everything above treats the training-compute figure as a fact only the provider holds, and the instrument asks for it. It remains the cleanest route. But the Act does not require the Commission to wait for an answer: on a public record of a model that escaped containment and reached a third party’s production infrastructure, the designation power is available, and Article 52(2) then places the burden on the provider to show that its model nonetheless presents no systemic risk—with Article 52(3) providing that if those arguments are rejected, the model is treated as one with systemic risk.
+
+For a regulator, that is the practically important observation in this report. The unanswerable question is a reason to use a power, not a reason to be stuck.
 
 ### 4.4 Article 3(49) does not resolve, and the strongest limb is not the obvious one
 
