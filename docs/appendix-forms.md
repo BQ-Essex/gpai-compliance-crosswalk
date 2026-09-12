@@ -92,3 +92,42 @@ Read against this form, the trigger matters more than the period—and the EU fo
 | 1 and 10, dates and submitter | Request 11a | The date the provider became aware of its model’s involvement, and whether a report was submitted |
 
 Nothing here requires model weights, source code, or anything a provider could reasonably refuse on trade-secret grounds—and Article 78, with Article 55(3), covers what is supplied. The instrument asks for documents the Regulation already requires to exist.
+
+---
+
+## 7. The same phrase, two regimes, two forms
+
+The Commission drafts a serious-incident form twice. Once for **general-purpose AI models with systemic risk**, published 4 November 2025, and once for **high-risk AI systems**, issued in draft on 26 September 2025 with guidance alongside it. The guidance says at its paragraph (4) that it is “not dealing with the obligation to report such serious incidents of general-purpose AI models with systemic risk”, so the separation is a choice rather than an oversight.
+
+Setting the two side by side is the cheapest test available of everything above, because it holds the drafter constant.
+
+| | General-purpose models | High-risk systems |
+|---|---|---|
+| Length | 2 pages, 1,884 characters | 7 pages, five sections |
+| Status | Published | Draft, consultation closed 7 November 2025 |
+| Date of submission |—| **1.2(a)**, YYYY-MM-DD |
+| Date of incident | Field 1, “or best approximations thereof” | **1.2(b)**, with a range |
+| Date of detection |—| **1.2(c)**, date and time |
+| Date of awareness |—| **1.2(d)**, “Manufacturer awareness date of reportability” |
+| Report type |—| **1.2(e)**: initial / follow-up / combined / final reportable / final non-reportable |
+| Next report expected |—| **1.2(f)** |
+| Classification of the incident |—| **1.2(g)**, tick-box against the Article 3(49) limbs |
+| Already reported elsewhere |—| **1.3.5**, with “Under Regulation/Law” |
+| Rationale if not reportable |—| **4.2(b)** |
+| Risk assessment reviewed, still adequate |—| **4.2(c)** |
+| Affirmation and disclaimer |—| Section 5, over a date |
+| Structured identification of the subject | Field 4, free text | **Section 2**: database id, brand name, model, catalogue number, serial number, lot, software and firmware version |
+| Sub-divided fields | Only the submitter’s contact details | Throughout |
+
+**The regime the Act treats as capable of Union-level harm has the lighter instrument.** Every date the general-purpose form omits, the high-risk form asks for. Every structural feature that makes a report auditable—a report-type cycle, a classification, a cross-regime field, a stated rationale for not reporting, a review of the risk assessment, an affirmation—is in one form and absent from the other.
+
+**The recommendation is therefore a harmonisation, not a proposal.** The two fields §3 asks for exist already, in the Commission’s own drafting, in the register it maintains for the neighbouring regime. What is needed is not new drafting but the same drafting.
+
+**One difference should not be papered over.** Field 1.2(d) asks for the “Manufacturer awareness date of reportability”. That tracks Article 73(2), whose clock runs from the provider having “established a causal link between the AI system and the serious incident or the reasonable likelihood of such a link”. Measure 9.3 runs instead from awareness of the model’s *involvement*. The two are close and not identical, and a field imported without adjusting its wording would evidence the wrong date.
+
+**Two smaller things the comparison settles.**
+
+Field 1.2(g) is the Commission’s own unpacking of Article 3, point (49): death; harm to health; disruption of the management of critical infrastructure; disruption of the operation of critical infrastructure; infringement of fundamental-rights obligations; harm to property; harm to environment; and “all other reportable incidents”. There is **no cybersecurity category**, which confirms from the Commission’s own drafting what §4.7 of the report argues from the text: Measure 9.3’s cybersecurity trigger has no counterpart in the Act’s definition. The AI Office reaches that conduct by a different route, at paragraph (100) of the Guidelines, and not through Article 3, point (49) at all.
+
+The high-risk form says “Manufacturer” once, where it says “provider” ten times. The guidance’s own footnote 4 reaches for the Medical Device Regulation’s definition of ‘incident’ when defining its own—Regulation (EU) 2017/745, cited there by article and point, and not verified here because nothing in this analysis rests on its wording. The vigilance-reporting lineage is on the face of the documents rather than inferred from their shape—which is worth knowing, because the medical-device regime is where reporting forms have had thirty years to acquire the fields this one has and the general-purpose form lacks.
+

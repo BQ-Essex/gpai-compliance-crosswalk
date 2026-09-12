@@ -134,7 +134,7 @@ The unattributable count is the honest part. Those are quotations of the inciden
 
 Soundness is not a decidable property and no tool here will ever say an argument is good. But the reason this analysis’s thirteen errors survived was not that a script could not adjudicate them. It was that they sat in prose, where nobody was reading them as claims.
 
-`data/inferences.yaml` gives reasoning the treatment this repository already gives evidence and legal conclusions: its own cell, so the failure can be looked at. Seventeen argumentative steps, each stated so it could be denied, each resting on premises that must resolve to the register, each naming **what would defeat it**, and each ranked `strong`, `moderate` or `contestable` by its own author.
+`data/inferences.yaml` gives reasoning the treatment this repository already gives evidence and legal conclusions: its own cell, so the failure can be looked at. Eighteen argumentative steps, each stated so it could be denied, each resting on premises that must resolve to the register, each naming **what would defeat it**, and each ranked `strong`, `moderate` or `contestable` by its own author.
 
 `infercheck.py` verifies the structure—premises resolve, defeaters are named and are conditions rather than gestures, the dependency graph is acyclic, and no load-bearing step fails to say where in the prose it is stated. It does not verify that anything follows, and says so on every clean run.
 

@@ -184,7 +184,7 @@ inferences:
     type: characterisation of facts
     function: graded
     premises: [cop-text, art3-49]
-    depends_on: [inf-opinion-construes]
+    depends_on: [inf-opinion-construes, inf-cyber-covered]
     defeater: >-
       The provider's own classification, if it assigned a different category. Request 11a
       of the instrument asks which category was assigned. This is a judgement about facts
@@ -218,8 +218,15 @@ inferences:
     premises: [art3-49, art3-1, art3-66, art55-1c]
     depends_on: []
     defeater: >-
-      Any provision applying the Article 3, point (49) definition to models. None found;
-      the Code sidesteps the question by stating its own triggers rather than resolving it.
+      Any ENACTING provision applying the Article 3, point (49) definition to models. None
+      found, and the claim is about the Act. Read it, though, with what has since been
+      found outside the Act. The Commission's Article 73 draft guidance says at para. (50)
+      that the term "is defined in Article 3(49) AI Act only in relation to AI systems",
+      which is this claim in the Commission's own words. And the GPAI Guidelines at para.
+      (100) bridge the gap in guidance, treating a model incident that "directly or
+      indirectly leads to" an Article 3(49), points (a) to (d) event as a serious incident.
+      An earlier version of this defeater said the Code "sidesteps the question", which was
+      true of the Code and was not the whole of the record.
     strength: strong
     load_bearing: false
     stated_at: "docs/report-draft.md §4.4; protocol/01-statutory-foundation.md §1.9"
@@ -349,4 +356,24 @@ inferences:
       losing the recommendation.
     strength: moderate
     load_bearing: false
+    stated_at: "docs/report-draft.md §4.7"
+
+  - id: inf-cyber-covered
+    claim: >-
+      A serious cybersecurity breach involving a model with systemic risk falls within the
+      Article 55(1), point (c) obligation itself, and not only within the Code, because the
+      AI Office says so at paragraph (100) of the GPAI Guidelines and anchors it in Article
+      55(1), points (b) and (d).
+    type: reading of a document
+    function: step
+    premises: [ec-gpai-guidelines, art55-1c, art55-1b, art55-1d]
+    depends_on: []
+    defeater: >-
+      That the Guidelines bind nobody and disclaim authority to interpret the Act, which
+      their own para. 9 says in terms. What survives that objection is enforcement posture:
+      the body that would bring proceedings has published the reading on which it will act.
+      A holding that Article 55(1), point (c) is confined to Article 3(49) events would
+      defeat it outright, and nothing in the enacting text compels the wider reading.
+    strength: strong
+    load_bearing: true
     stated_at: "docs/report-draft.md §4.7"
