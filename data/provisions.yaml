@@ -9,19 +9,18 @@
 # amended_by_omnibus is recorded from the EUR-Lex change markers themselves
 # (▼M1 = amended, ▼B = base text), not inferred from commentary.
 #
-# TWO PROVENANCE CLASSES, and the difference matters. Entries marked
+# PROVENANCE is recorded per entry because it was not uniform while this was built.
+# Entries marked
 #   provenance: consolidated
-# were read from the EUR-Lex consolidated text named above, change markers and
-# all. Entries marked
-#   provenance: reproduction
-# were read from a published reproduction of the authentic text after the
-# consolidated version proved unreachable from the machine this was prepared on;
-# for those, amended_by_omnibus is recorded as "unverified" rather than guessed,
-# and a reader should treat the wording as accurate to the 2024 text and
-# unconfirmed against the 2026 amendments. Where a reproduction is quoted by a
-# Commission document, corroborated_by names the paragraph, which is as close to
-# an authentic check as this analysis could get without the consolidated file.
-# Closing that gap is the first item in the repository's own limitations.
+# were read from the EUR-Lex consolidated text named above, change markers and all.
+# Fourteen entries were first taken from a published reproduction, after EUR-Lex
+# proved unreachable from the machine this was prepared on, and carried
+# amended_by_omnibus "unverified" until the consolidated PDF could be obtained. On
+# 12 September 2026 all fourteen were checked against it: thirteen matched verbatim,
+# and the fourteenth differed only by a stray full stop that turned out to be the
+# Regulation's own and has been restored. Each carries a "verified" field recording
+# that check. The gap is closed; the history is left here rather than tidied away,
+# because a register that never says how it was built is asking to be trusted.
 
 meta:
   regulation: "Regulation (EU) 2024/1689"
@@ -31,6 +30,7 @@ meta:
   amending_act: "Regulation (EU) 2026/1744"
   extracted: "2026-09-11"
   extended: "2026-09-12"
+  verified_against_consolidated: "2026-09-12"
   caveat: >-
     The EUR-Lex consolidated text carries the standing notice that it "is meant
     purely as a documentation tool and has no legal effect". Cite the
@@ -41,8 +41,9 @@ provisions:
   - id: art2-1a
     cite: "Article 2(1), point (a)"
     title: "Scope — who the Regulation binds"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       This Regulation applies to: (a) providers placing on the market or putting into
       service AI systems or placing on the market general-purpose AI models in the
@@ -62,8 +63,9 @@ provisions:
   - id: art2-6
     cite: "Article 2(6)"
     title: "Scope — scientific research and development exclusion"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       This Regulation does not apply to AI systems or AI models, including their output,
       specifically developed and put into service for the sole purpose of scientific
@@ -120,11 +122,12 @@ provisions:
   - id: art3-9
     cite: "Article 3, point (9)"
     title: "Definition — 'placing on the market'"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction; corroborated"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
     corroborated_by: >-
       Commission Guidelines C(2025) 7719 final, para. 47, which quotes this definition
       as applied to a general-purpose AI model.
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       'placing on the market' means the first making available of an AI system or a
       general-purpose AI model on the Union market;
@@ -136,10 +139,11 @@ provisions:
   - id: art3-10
     cite: "Article 3, point (10)"
     title: "Definition — 'making available on the market'"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction; corroborated"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
     corroborated_by: >-
       Commission Guidelines C(2025) 7719 final, para. 47.
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       'making available on the market' means the supply of an AI system or a
       general-purpose AI model for distribution or use on the Union market in the course
@@ -154,8 +158,9 @@ provisions:
   - id: art3-11
     cite: "Article 3, point (11)"
     title: "Definition — 'putting into service'"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       'putting into service' means the supply of an AI system for first use directly to
       the deployer or for own use in the Union for its intended purpose;
@@ -168,8 +173,9 @@ provisions:
   - id: art3-47
     cite: "Article 3, point (47)"
     title: "Definition — 'AI Office'"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       'AI Office' means the Commission's function of contributing to the implementation,
       monitoring and supervision of AI systems and general-purpose AI models, and AI
@@ -266,8 +272,9 @@ provisions:
   - id: art3-66
     cite: "Article 3, point (66)"
     title: "Definition — 'general-purpose AI system'"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       'general-purpose AI system' means an AI system which is based on a general-purpose
       AI model and which has the capability to serve a variety of purposes, both for
@@ -407,8 +414,9 @@ provisions:
   - id: art57
     cite: "Article 57"
     title: "AI regulatory sandboxes"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction (partial)"
+    amended_by_omnibus: "True"
+    provenance: "consolidated (extract)"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       [Paragraph 1, first sentence:] Member States shall ensure that their competent
       authorities establish at least one AI regulatory sandbox at national level, which
@@ -418,12 +426,19 @@ provisions:
         A sandbox under this article is a supervised national scheme that a provider
         enters. It is not a description of a developer's own evaluation environment, and
         an escape from the latter is not an event within the former.
+      - >-
+        THE ONLY ONE OF THESE PROVISIONS THE OMNIBUS TOUCHED. Paragraph 1 carries an M1
+        marker: as amended it requires at least one national sandbox operational by
+        2 August 2027, permits joint establishment with the authorities of other Member
+        States, and allows the Commission to provide technical support, advice and tools.
+        The extract above is the amended text.
 
   - id: art60
     cite: "Article 60"
     title: "Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction (partial)"
+    amended_by_omnibus: "False"
+    provenance: "consolidated (extract)"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       [Paragraph 1, first sentence:] Testing of high-risk AI systems in real world
       conditions outside AI regulatory sandboxes may be conducted by providers or
@@ -446,8 +461,9 @@ provisions:
   - id: art68-2
     cite: "Article 68(2)"
     title: "Scientific panel — composition and independence"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       The scientific panel shall consist of experts selected by the Commission on the
       basis of up-to-date scientific or technical expertise in the field of AI necessary
@@ -468,8 +484,9 @@ provisions:
   - id: art68-3
     cite: "Article 68(3)"
     title: "Scientific panel — tasks"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       The scientific panel shall advise and support the AI Office, in particular with
       regard to the following tasks: (a) supporting the implementation and enforcement of
@@ -552,8 +569,9 @@ provisions:
   - id: art78
     cite: "Article 78"
     title: "Confidentiality"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       1. The Commission, market surveillance authorities and notified bodies and any
       other natural or legal person involved in the application of this Regulation shall,
@@ -583,8 +601,9 @@ provisions:
   - id: art90
     cite: "Article 90"
     title: "Scientific panel alerts of systemic risks"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       1. The scientific panel may provide a qualified alert to the AI Office where it has
       reason to suspect that: (a) a general-purpose AI model poses concrete identifiable
@@ -637,12 +656,13 @@ provisions:
   - id: art101-1a
     cite: "Article 101(1), point (a)"
     title: "Fines for providers of general-purpose AI models — substantive infringement"
-    amended_by_omnibus: "unverified"
-    provenance: "reproduction"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
     text: >-
       The Commission may impose on providers of general-purpose AI models fines not
       exceeding 3 % of their annual total worldwide turnover in the preceding financial
-      year or EUR 15 000 000, whichever is higher, when the Commission finds that the
+      year or EUR 15 000 000, whichever is higher., when the Commission finds that the
       provider intentionally or negligently: (a) infringed the relevant provisions of this
       Regulation;
     notes:
@@ -654,6 +674,20 @@ provisions:
       - >-
         Point (b) — failure to comply with an Art. 91 request — is unaffected by that
         timing, because the request would be issued now. See art101-1b.
+      - >-
+        TRANSCRIBED AS PRINTED, stray full stop included: “whichever is higher., when the
+        Commission finds”. Earlier entries here silently tidied it, which is the small
+        version of the thing this project is against. The oddity stands in the authentic
+        OJ text at CELEX 32024R1689 and in the consolidated text at 02024R1689-20260727
+        alike, so it is the Regulation's and not an artefact of extraction.
+      - >-
+        A second and more substantive slip sits in the closing subparagraph of Article
+        101(1), which reads “The Commission shall also into account commitments made in
+        accordance with Article 93(3) or made in relevant codes of practice in accordance
+        with Article 56”. A verb is missing. Both EUR-Lex texts carry it. Nothing turns on
+        it—there is only one way to read it—but it is recorded because this analysis
+        claims to have read the enacting text rather than a summary of it, and this is
+        what that looks like.
 
   - id: art101-1b
     cite: "Article 101(1), point (b)"
@@ -662,7 +696,7 @@ provisions:
     text: >-
       The Commission may impose on providers of general-purpose AI models fines not
       exceeding 3 % of their annual total worldwide turnover in the preceding financial
-      year or EUR 15 000 000, whichever is higher, when the Commission finds that the
+      year or EUR 15 000 000, whichever is higher., when the Commission finds that the
       provider intentionally or negligently: [...] (b) failed to comply with a request
       for a document or for information pursuant to Article 91, or supplied incorrect,
       incomplete or misleading information;
