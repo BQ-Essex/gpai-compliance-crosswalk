@@ -17,11 +17,18 @@ tool removes one failure mode, and the removal should not be mistaken for the ot
 Two classes of citation are deliberately not checked, and both exclusions are
 substantive rather than convenient.
 
-Citations qualified by another instrument — the CER Directive, the Charter, the TFEU,
-the Californian and New York statutes in the comparative section — are skipped, since
-this register holds Regulation (EU) 2024/1689 alone. The qualifier is looked for in a
-short window immediately around the citation, not in the surrounding sentence, so that
-'CER Art. 2(4)' is skipped while an Act citation later in the same line is not.
+Citations qualified by another instrument — the Charter, the TFEU, the Californian and
+New York statutes in the comparative section — are skipped, since the register does not
+hold them. The qualifier is looked for in a short window immediately around the
+citation, not in the surrounding sentence, so that one foreign citation does not silence
+an Act citation later in the same line.
+
+One instrument is an exception, and it earned it. The CER Directive is imported by the
+Act's own definition of 'critical infrastructure', and relying on an imported definition
+is still relying on text: three of the six errors this analysis has recorded came from
+reading a summary of that Directive rather than the Directive. So `imported_provisions`
+in the register holds the CER text, citations qualified 'CER' resolve against it, and
+prose that cites the Directive without saying so is reported rather than waved through.
 
 Bare-number spans — 'Articles 51 to 56', 'Articles 102–110' — are skipped entirely. A
 span names a body of provisions rather than a piece of text: the claim that Chapter V
@@ -59,14 +66,18 @@ DEFAULT_GLOBS = ("README.md", "docs/*.md", "protocol/*.md", "instrument/*.md")
 # silence every Act citation sharing its line.
 FOREIGN_BEFORE = 14
 FOREIGN_AFTER = 44
+# Qualifiers naming an instrument the register DOES hold. These resolve rather than
+# skip: the key gains the instrument as its first element.
+INSTRUMENT_QUALIFIERS = {"cer ": "cer", "cer]": "cer"}
+
 FOREIGN_MARKERS = (
     "directive",
     "2022/2557",
     "2016/679",
     "2016/943",
     "2019/1020",
-    "cer ",
-    "cer]",
+    "2022/2555",
+    "910/2014",
     "tfeu",
     "charter",
     "treaty",
@@ -96,10 +107,21 @@ def strip_markup(text: str) -> str:
     return text.replace("**", "").replace("*", "").replace("`", "")
 
 
-def foreign_context(line: str, keyword_start: int, citation_end: int) -> bool:
+def classify(line: str, keyword_start: int, citation_end: int):
+    """Return ("act", None), ("instrument", key) or ("foreign", None).
+
+    An instrument qualifier is looked for only immediately before the keyword, because
+    that is where a writer puts it. A foreign marker is looked for on both sides, since
+    'Article 5 of Directive (EU) 2016/943' qualifies itself afterwards.
+    """
     before = line[max(0, keyword_start - FOREIGN_BEFORE) : keyword_start].lower()
     after = line[citation_end : citation_end + FOREIGN_AFTER].lower()
-    return any(m in before or m in after for m in FOREIGN_MARKERS)
+    for marker, key in INSTRUMENT_QUALIFIERS.items():
+        if marker in before:
+            return "instrument", key
+    if any(m in before or m in after for m in FOREIGN_MARKERS):
+        return "foreign", None
+    return "act", None
 
 
 def citations_in_line(line: str):
@@ -114,8 +136,11 @@ def citations_in_line(line: str):
             body = ART_BODY.match(line, pos)
             if not body or not body.group(1):
                 break
+            kind, instrument = classify(line, kw.start(), body.end())
             key = canonical(body.group(1), body.group(2))
-            if not foreign_context(line, kw.start(), body.end()):
+            if kind == "instrument":
+                key = (instrument,) + key[1:]
+            if kind != "foreign":
                 pending.append((key, body.group(0).strip()))
             pos = body.end()
 
@@ -142,7 +167,7 @@ def citations_in_line(line: str):
             body = re.match(r"(\d+)", line[pos:])
             if not body:
                 break
-            if not foreign_context(line, kw.start(), pos + body.end()):
+            if classify(line, kw.start(), pos + body.end())[0] == "act":
                 yield ("rec", body.group(1)), f"Recital {body.group(1)}"
             pos += body.end()
             link = LIST_LINK.match(line, pos) or SPAN_LINK.match(line, pos)
@@ -163,6 +188,18 @@ def register_keys() -> dict:
         number = re.search(r"(\d+)", entry.get("cite", ""))
         if number:
             keys[("rec", number.group(1))] = entry["id"]
+    for entry in data.get("imported_provisions", []):
+        instrument = entry.get("instrument", "").lower()
+        cite = strip_markup(entry.get("cite", ""))
+        # Only article-form citations are addressable. An Annex entry is held in the
+        # register and cited in prose by name, but there is no pinpoint grammar here
+        # that would resolve it, and pretending otherwise would put "CER Annex,
+        # sector 8" in the same key space as "CER Article 8".
+        if not ART_KEYWORD.search(cite):
+            continue
+        body = ART_BODY.search(cite)
+        if instrument and body:
+            keys[(instrument,) + canonical(body.group(1), body.group(2))[1:]] = entry["id"]
     return keys
 
 
@@ -211,10 +248,14 @@ def main(argv):
             for key in sorted(unbacked, key=lambda k: (k[0], int(k[1]), k[2:])):
                 record = unbacked[key]
                 sites = record["sites"]
-                label = record["shown"] if key[0] == "art" else record["shown"]
                 where = ", ".join(sites[:4]) + (" …" if len(sites) > 4 else "")
-                prefix = "Article " if key[0] == "art" else ""
-                print(f"  {prefix}{label}  ({len(sites)}×)  {where}")
+                if key[0] == "art":
+                    prefix = "Article "
+                elif key[0] == "rec":
+                    prefix = ""
+                else:
+                    prefix = f"{key[0].upper()} Article "
+                print(f"  {prefix}{record['shown']}  ({len(sites)}×)  {where}")
             print(
                 "\nEach of these is doing work in the prose on text nobody has verified.\n"
                 "Add the provision to data/provisions.yaml, or stop relying on it."

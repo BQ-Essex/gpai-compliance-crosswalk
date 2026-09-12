@@ -10,7 +10,7 @@
 
 ## 0. Corrections log
 
-Five errors have been found in this analysis—four by adversarial review of the finished draft, the fifth by a checker written afterwards. All are recorded rather than silently fixed.
+Six errors have been found in this analysis—four by adversarial review of the finished draft, the fifth by a checker written afterwards, the sixth by reading a cross-referenced directive instead of a summary of it. All are recorded rather than silently fixed.
 
 | Error | Correction |
 |---|---|
@@ -19,6 +19,7 @@ Five errors have been found in this analysis—four by adversarial review of the
 | **Scope treated as settled; Articles 2(8), 3(3) and 3(63) never consulted** | See §1. The research/development exclusion sits inside the definition of ‘general-purpose AI model’ itself |
 | **Scope then treated as resolved in the provider’s favour; Recital 97, Article 2(1)(a), Article 3 points (9)–(11) and the Commission’s Q&A never consulted** | See §1.5–1.7. Recital 97 deems a model integrated into the provider’s own system put into service to be placed on the market, and its internal-use exception is expressly unavailable to models with systemic risk. **The obligations attach.** The live question is factual: does the model exceed 10²⁵ FLOP? |
 | **A verdict cell carried a conclusion of law while keeping a permitted opener** | The threshold row read “On the provider’s own account, this appears met: the obligations attach”. The three registers make claims about a *disclosed record*; whether Chapter V reaches these facts is not something a record can establish. The record verdict and the conclusion of law are now separate fields, and `tools/validate.py` refuses the formulation. Found by a checker, not by review. |
+| **CER Article 5 said to require Member States to identify essential services within the Annex sectors** | It requires no such thing. CER Article 5(1) empowers **the Commission** to establish a **non-exhaustive** list of essential services by delegated act; Member States use it for risk assessments and then identify **critical entities** under CER Article 6. The Annex’s third column lists **categories of entities**, not services. Third error on this same limb, and the second of the designation/function kind. Found by reading the Directive rather than a summary of it. |
 
 ---
 
@@ -153,7 +154,13 @@ This matters because it holds whichever way the scope argument goes. Even on the
 > **CER Art. 2(5)**: ‘essential service’ means a service which is crucial for the maintenance of vital societal functions, **economic activities**, public health and safety, or the environment;
 > **CER Art. 2(1)** *(different term, for contrast)*: ‘critical entity’ means an entity **identified by a Member State in accordance with [CER] Article 6** …
 
-The imported term is **functional**; designation attaches to ‘critical entity’. But the functional test is not at large either: CER Article 5 requires Member States to identify essential services within the Annex sectors, where “digital infrastructure” covers IXPs, DNS and TLD registries, cloud providers, data centres, CDNs and trust services. **And Article 3(49)(b) requires disruption of “the management or operation of” that infrastructure**, which is a further step. Limb (b) is arguable, not comfortable, and fails independently on “irreversible” where the affected systems were rebuilt.
+The imported term is **functional**; designation attaches to ‘critical entity’. But the functional test is not at large either, and the way it is bounded is not what an earlier draft of this section said.
+
+**CER Article 5(1), as enacted**: “The Commission is empowered to adopt a delegated act, in accordance with [CER] Article 23, by 17 November 2023 to supplement this Directive by establishing a **non-exhaustive list of essential services** in the sectors and subsectors set out in the Annex. The competent authorities shall use that list of essential services for the purpose of carrying out a risk assessment … by 17 January 2026 … The competent authorities shall use Member State risk assessments for the purpose of **identifying critical entities in accordance with [CER] Article 6**”.
+
+Three things follow, and each cuts against the earlier phrasing. It is **the Commission**, not the Member States, that establishes the list. The list is **non-exhaustive**, so a service absent from it is not thereby outside CER Article 2, point (5). And what Member States identify under CER Article 6 is **critical entities**, not essential services—which is the same designation/function distinction this analysis has already corrected once, resurfacing one layer down.
+
+The **CER Annex** compounds it. Its third column is headed **“Categories of entities”**, not services. For sector 8, digital infrastructure, those categories are providers of internet exchange points; DNS service providers, excluding operators of root name servers; top-level-domain name registries; providers of cloud computing services; providers of data centre services; providers of content delivery networks; trust service providers; and providers of public electronic communications networks. That tells you which entities a Member State may designate in this sector. It does not tell you what counts as an essential service, and it is not a list this analysis can read as though it did. **And Article 3(49)(b) requires disruption of “the management or operation of” that infrastructure**, which is a further step. Limb (b) is arguable, not comfortable, and fails independently on “irreversible” where the affected systems were rebuilt.
 
 ---
 

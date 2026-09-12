@@ -51,7 +51,7 @@ Date: 11 September 2026. Both findings were then verified directly against EUR-L
 
 ### Upheld as overstated
 
-- **The CER correction over-corrected.** ‘Essential service’ is not at large: CER Article 5 requires Member States to identify essential services within the Annex sectors, where “digital infrastructure” means IXPs, DNS and TLD registries, cloud, data centres, CDNs and trust services. Article 3(49)(b) also requires disruption of “the management or operation of” that infrastructure.
+- **The CER correction over-corrected.** ‘Essential service’ is not at large. *(This bullet was itself wrong, and is corrected in the foundation’s log as error six: CER Article 5(1) empowers the Commission, not Member States, to draw up a non-exhaustive list of essential services, and the Annex’s third column lists categories of entities rather than services. The bullet’s conclusion survives; its reasoning did not.)* Article 3(49)(b) also requires disruption of “the management or operation of” that infrastructure.
 - **Limb (d) was asserted, not argued.** Whether rebuilt clusters and rotated credentials are harm to *property* rather than service disruption and remediation cost, and whether “serious”, was unanalysed.
 - **The Article 73 exclusion reached the right answer by the weaker route.** The decisive points are Article 73(1)’s “placed on the Union market” and Article 2(8), not the absence of an Annex I or III classification.
 

@@ -97,7 +97,8 @@ SEPARATE GATE — only for the reporting limb at Art. 55(1)(c)
   ├ (a) death / serious health harm ............ not engaged
   ├ (b) serious AND IRREVERSIBLE disruption of critical infrastructure
   │      'critical infrastructure' → Art. 3(62) → CER Dir. Art. 2(4): functional,
-  │      tied to essential services within the Annex sectors; then requires disruption
+  │      tied to an essential service (CER 2(5)), whose list is the Commission's and
+  │      is NON-EXHAUSTIVE (CER 5(1)); then requires disruption
   │      of "the management or operation of" it. Rebuilding defeats "irreversible".
   ├ (c) infringement of Union-law fundamental-rights obligations ... does not resolve
   └ (d) serious harm to PROPERTY — NO irreversibility requirement — does not resolve

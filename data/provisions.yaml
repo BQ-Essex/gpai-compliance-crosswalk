@@ -721,6 +721,139 @@ provisions:
         therefore falls back on the general rule in the opening line:
         APPLIES FROM 2026-08-02. Derivable from the Act alone.
 
+# Provisions of OTHER instruments that this Regulation imports by reference and that
+# the analysis relies on the text of. They are held here, and checked by
+# tools/citecheck.py, for the same reason the Act's own provisions are: a definition
+# that resolves into another instrument is still doing work, and this one has produced
+# three of the six recorded errors. Cite them in prose with the instrument qualifier —
+# "CER Article 2, point (4)" — which is both how citecheck tells them apart and how a
+# reader should have been able to tell all along.
+imported_provisions:
+  - id: cer-2-1
+    instrument: "CER"
+    cite: "CER Article 2, point (1)"
+    title: "Definition — 'critical entity'"
+    source_celex: "32022L2557"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    text: >-
+      'critical entity' means a public or private entity which has been identified by a
+      Member State in accordance with Article 6 as belonging to one of the categories set
+      out in the third column of the table in the Annex;
+    notes:
+      - >-
+        DESIGNATION ATTACHES HERE AND NOWHERE ELSE. The AI Act imports point (4), not
+        this one. Confusing the two was the second recorded error in this analysis.
+
+  - id: cer-2-4
+    instrument: "CER"
+    cite: "CER Article 2, point (4)"
+    title: "Definition — 'critical infrastructure'"
+    source_celex: "32022L2557"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    text: >-
+      'critical infrastructure' means an asset, a facility, equipment, a network or a
+      system, or a part of an asset, a facility, equipment, a network or a system, which
+      is necessary for the provision of an essential service;
+    notes:
+      - >-
+        The term Art. 3, point (62) of the AI Act imports. Purely functional: necessity to
+        an essential service, with no designation step.
+
+  - id: cer-2-5
+    instrument: "CER"
+    cite: "CER Article 2, point (5)"
+    title: "Definition — 'essential service'"
+    source_celex: "32022L2557"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    text: >-
+      'essential service' means a service which is crucial for the maintenance of vital
+      societal functions, economic activities, public health and safety, or the
+      environment;
+    notes:
+      - >-
+        'economic activities' is broad on its face, which is why the limb (b) analysis
+        does not turn on this definition but on the irreversibility requirement in the AI
+        Act's own Art. 3, point (49)(b).
+
+  - id: cer-5-1
+    instrument: "CER"
+    cite: "CER Article 5(1)"
+    title: "Risk assessment by Member States — the list of essential services"
+    source_celex: "32022L2557"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    text: >-
+      The Commission is empowered to adopt a delegated act, in accordance with Article 23,
+      by 17 November 2023 to supplement this Directive by establishing a non-exhaustive
+      list of essential services in the sectors and subsectors set out in the Annex. The
+      competent authorities shall use that list of essential services for the purpose of
+      carrying out a risk assessment ('Member State risk assessment') by 17 January 2026,
+      whenever necessary subsequently, and at least every four years. The competent
+      authorities shall use Member State risk assessments for the purpose of identifying
+      critical entities in accordance with Article 6 and assisting those critical entities
+      to take measures pursuant to Article 13. [...]
+    notes:
+      - >-
+        SOURCE OF THE SIXTH RECORDED ERROR. An earlier draft said this article required
+        MEMBER STATES to identify ESSENTIAL SERVICES within the Annex sectors. It is the
+        COMMISSION that draws up the list, the list is NON-EXHAUSTIVE, and what Member
+        States identify under Article 6 is CRITICAL ENTITIES.
+      - >-
+        'non-exhaustive' matters to the argument: a service absent from the Commission's
+        list is not thereby outside CER Art. 2, point (5).
+
+  - id: cer-6
+    instrument: "CER"
+    cite: "CER Article 6"
+    title: "Identification of critical entities"
+    source_celex: "32022L2557"
+    provenance: "not reproduced"
+    verified: "2026-09-12 — heading confirmed against OJ L 333, 27.12.2022"
+    text: >-
+      [Text not reproduced. This analysis relies on the fact that identification of
+      critical entities happens under this article, which CER Arts. 2(1) and 5(1) both
+      state in terms, and not on its wording.]
+
+  - id: cer-23
+    instrument: "CER"
+    cite: "CER Article 23"
+    title: "Exercise of the delegation"
+    source_celex: "32022L2557"
+    provenance: "not reproduced"
+    verified: "2026-09-12 — heading confirmed against OJ L 333, 27.12.2022"
+    text: >-
+      [Text not reproduced. It appears here only because CER Article 5(1) names it as the
+      procedure for the delegated act, and this analysis relies on the existence of that
+      procedure rather than on its terms.]
+
+  - id: cer-annex-8
+    instrument: "CER"
+    cite: "CER Annex, sector 8"
+    title: "Annex — digital infrastructure: categories of entities"
+    source_celex: "32022L2557"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    text: >-
+      [Third column, headed 'Categories of entities', sector 8 'Digital infrastructure':]
+      Providers of internet exchange points as defined in Article 6, point (18), of
+      Directive (EU) 2022/2555; DNS service providers as defined in Article 6, point (20),
+      of Directive (EU) 2022/2555, excluding operators of root name servers;
+      top-level-domain name registries as defined in Article 6, point (21), of Directive
+      (EU) 2022/2555; Providers of cloud computing services as defined in Article 6, point
+      (30); Providers of data centre services as defined in Article 6, point (31);
+      Providers of content delivery networks as defined in Article 6, point (32); Trust
+      service providers as defined in Article 3, point (19), of Regulation (EU) No
+      910/2014; Providers of public electronic communications networks as defined in
+      Article 2, point (8) [...]
+    notes:
+      - >-
+        THE COLUMN IS HEADED 'CATEGORIES OF ENTITIES'. It says which entities a Member
+        State may designate in this sector. It is not a list of essential services, and an
+        earlier draft of this analysis read it as though it were.
+
 recitals:
   - id: recital-97
     cite: "Recital 97"
