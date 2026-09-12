@@ -77,6 +77,8 @@ sources:
     date: "2026-07-27"
     title: "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident"
     url: "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+    archived_url: "https://web.archive.org/web/20260912133959/https://huggingface.co/blog/agent-intrusion-technical-timeline"
+    archived: "2026-09-12"
     establishes:
       - "~17,600 reconstructed attacker actions in ~6,280 clusters"
       - "Window 2026-07-09 02:28 UTC to 2026-07-13 14:14 UTC; access cut 13:37 UTC 13 July"
@@ -97,6 +99,8 @@ sources:
     date: "2026-08-26"
     title: "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"
     url: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    archived_url: "https://web.archive.org/web/20260912134011/https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    archived: "2026-09-12"
     pdf: "https://metr.org/hugging-face-incident-report-aug-2026.pdf"
     establishes:
       - "~1200 agents on the message board; ~700 attacked Hugging Face"
@@ -127,20 +131,34 @@ sources:
     tier: T4
     date: "2026-09-04"
     title: "DseWiki incident analysis"
-    author: "Sydney Von Arx, Nightingale Collective"
+    author: "Von Arx, S., Byrd, C.S., Kitts, S. and Larsen, T."
     url: "https://collusion.wiki/#timeline"
-    archived_url: "https://web.archive.org/web/20260904112052/https://collusion.wiki/"
-    archived: "2026-09-04"
+    archived_url: "https://web.archive.org/web/20260912133451/https://collusion.wiki/"
+    archived: "2026-09-12"
+    earliest_capture: "https://web.archive.org/web/20260904112052/https://collusion.wiki/"
+    date_note: >-
+      THE SOURCE'S OWN DATE MOVED, which is why this entry cites a capture rather than a
+      page. In the earliest capture, 4 September 2026 at 11:20:52Z, the byline reads
+      'Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen - 3 September
+      2026'. In the capture of 12 September at 13:34:51Z it reads 4 September and has
+      gained affiliation notes, 'Nightingale Collective' against the first author and
+      'Work done contracting for Nightingale' against the third. This register formerly
+      recorded one author and an affiliation that the page did not carry when it was
+      first captured. Both are corrected above.
     archive_note: >-
-      The most fragile source in this register, and the sole primary source for the dates
-      and volumes at section 0 of the worked example. It is a wiki: the Wayback Machine
-      holds 36 captures between 4 and 12 September 2026 across 16 distinct content
-      digests, and unlike the provider's page these are unlikely to be boilerplate. The
-      capture recorded here is the earliest, taken on the publication date this register
-      cites. OPEN ITEM, and it should not be closed by assertion: the figures in the
-      establishes list above were read from the live site and have not yet been checked
-      against a dated capture. Until they are, they are attributed to a page that has
-      changed sixteen times since.
+      OPEN ITEM NOW CLOSED, and closed the right way round. The figures in the establishes
+      list had been read from the live site, which has sixteen distinct versions in eight
+      days. They have since been checked against both captures named here and are
+      identical in each, in context and not merely by pattern: the ~18,000 total, the
+      ~17,000 on DSEWiki, the 98.5% Azure share, the 197 edits traced to AWS, DigitalOcean
+      and Tor, the 3,700+ agent names, and the 29 attempted edits of 1-2 July. The page
+      grew between the two captures, gaining sections on a package-registry attack and
+      further findings; the numbers this analysis relies on did not move.
+    denominator_note: >-
+      The two percentages have different bases and the source keeps them apart: 98.5% is
+      of the ~17,000 DSEWiki edits, while the 197 is of the ~18,000 total across all
+      wikis. An earlier draft of the worked example listed them in one series, which
+      invited a reader to take both against the same base.
     additional_urls:
       - "https://collusion.wiki/#key-facts"
       - "https://collusion.wiki/explorer/"          # agent activity by day, edits, names

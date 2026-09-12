@@ -239,7 +239,7 @@ Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 Ju
 
 UK AI Security Institute (2026) Findings on frontier model behaviour in cyber evaluations, July. Reported by Cloud Security Alliance. Available at: https://cloudsecurityalliance.org/artifacts/every-frontier-model-cheated-what-aisi-s-findings-mean-for-trust (Accessed: 11 September 2026).
 
-Von Arx, S. (2026) *DseWiki incident analysis*. Nightingale Collective, 4 September. Available at: https://collusion.wiki/ (Accessed: 11 September 2026).
+Von Arx, S. et al. (2026) *DseWiki incident analysis*. 4 September. Available at: https://collusion.wiki/ (Accessed: 11 September 2026). Archived at: https://web.archive.org/web/20260912133451/https://collusion.wiki/ (Archived: 12 September 2026). The page was bylined 3 September when first captured on 4 September 2026; the figures cited here are identical in both captures.
 
 *Pinpoint citations, source tiering and negative-search notes are held in `data/sources.yaml`.*
 

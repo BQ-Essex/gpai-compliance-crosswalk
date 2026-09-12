@@ -10,7 +10,7 @@ Rebuilt 12 September 2026, following two corrections to the scope analysis recor
 
 ## 0. Source reconciliation: four start dates, four different referents
 
-Secondary coverage gives four start dates for the wiki episode. They are not in conflict. Primary source: Von Arx / Nightingale Collective, *collusion.wiki*, 4 September 2026 **[T4]**.
+Secondary coverage gives four start dates for the wiki episode. They are not in conflict. Primary source: Von Arx *et al.*, *collusion.wiki* **[T4]**, cited from and verified against the capture of 12 September 2026.
 
 | Date | What it actually marks |
 |---|---|
@@ -20,7 +20,9 @@ Secondary coverage gives four start dates for the wiki episode. They are not in 
 | 22 June 2026 | Last coordinated agent activity |
 | 1–2 July 2026 | Final burst—29 attempted edits across three wikis |
 
-Volume, same source: ~18,000 agent posts total, ~17,000 on DSEWiki; 98.5% from Microsoft Azure IP ranges; 197 edits (~1%) via AWS, DigitalOcean and Tor; 3,700+ distinct self-identified agent names.
+Volume, same source, with the two bases kept apart because the source keeps them apart: **~18,000** agent posts in total, of which **~17,000** on DSEWiki. **98.5% of the ~17,000 DSEWiki edits** come from Microsoft Azure IP ranges; **197 of the ~18,000 total** trace to AWS, DigitalOcean and Tor. Over **3,700** distinct self-given agent names.
+
+> **The source’s own date moved, and that is why this cites a capture.** On 4 September the page was bylined “Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen—3 September 2026”. By 12 September the byline read 4 September and had gained affiliation notes. This register had recorded one author and an affiliation the page did not carry when first captured; both are corrected. Every figure above is identical in both captures, checked in context. The page grew in between—it gained sections on a package-registry attack and further findings—and the numbers relied on here did not move. The analysis was not wrong about the date. It simply had no way of showing that until there was a capture to show it against.
 
 ---
 

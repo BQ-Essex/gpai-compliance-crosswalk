@@ -96,12 +96,23 @@ def known_identifiers(provisions, sources):
     return provision_ids, recital_ids, source_ids
 
 
+# Tiers that name an interested party writing about its own conduct, or an
+# investigator working under that party's constraints. These must be pinned: the
+# analysis claims only to report what a disclosed record says, and a record that can
+# be edited after the fact cannot be checked by anyone who reads this later. T4 is
+# exempt because an independent source is not the one with a motive to revise.
+FIXING_REQUIRED = {"T1", "T2", "T3"}
+
+
 def check_the_sources(sources):
     """Confirm every source carries the metadata the tiering depends on.
 
     A source without a tier can't support a tiered verdict; a source without a date
     can't support a claim about what was known when; a source without a URL can't be
-    checked by a reader. Returns a list of complaint strings.
+    checked by a reader. And a source at T1, T2 or T3 that is not fixed in place can't
+    support anything at all for long: the tiers name interested parties writing about
+    their own conduct, and an interested party can edit its own page. Returns a list of
+    complaint strings.
     """
     complaints = []
     for entry in sources.get("sources", []):
@@ -111,6 +122,14 @@ def check_the_sources(sources):
             complaints.append(
                 f"[{sid}] tier is {tier!r} — it needs to be one of {sorted(VALID_TIERS)}, "
                 f"since the whole point of tiering is that a T1 claim reads differently from a T4 one."
+            )
+        if tier in FIXING_REQUIRED and not (entry.get("archived_url") or entry.get("sha256")):
+            complaints.append(
+                f"[{sid}] is {tier} and carries no fixed capture. Add archived_url (a "
+                f"Wayback timestamp) or sha256 (a local copy). The tier says this is a "
+                f"party writing about its own conduct; a verdict drawn from it is only "
+                f"checkable for as long as the page stays as it was, and nobody but that "
+                f"party decides how long that is."
             )
         if not entry.get("date"):
             complaints.append(f"[{sid}] has no date. Timing claims lean on these.")
