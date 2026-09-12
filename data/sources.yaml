@@ -316,6 +316,39 @@ sources:
       Article 56(6) as amended obliges the Commission to assess whether the codes cover the
       Article 53 and 55 obligations and to publish that assessment.
 
+  - id: ec-incident-template
+    tier: T4
+    date: "2025-11-04"
+    retrieved: "2026-09-12"
+    title: "AI Act: Commission publishes a reporting template for serious incidents involving general-purpose AI models with systemic risk"
+    url: "https://digital-strategy.ec.europa.eu/en/library/ai-act-commission-publishes-reporting-template-serious-incidents-involving-general-purpose-ai"
+    document_urls:
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/121270   # listed first, labelled DOCX"
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/121268   # listed second, labelled PDF"
+    establishes:
+      - >-
+        An official template exists: "Report for Serious Incidents under the AI Act
+        (General-Purpose AI Models with Systemic Risk)", published 4 November 2025.
+      - >-
+        The landing page states the template "promotes consistent and transparent
+        reporting and helps providers demonstrate compliance with the commitments set out
+        in Commitment 9 of the GPAI Code of Practice", which is the Commission tying the
+        Art. 55(1)(c) obligation to Commitment 9 in terms.
+      - >-
+        It records that for HIGH-RISK AI SYSTEMS the Commission had already published
+        draft guidance and a separate reporting template, open for feedback to
+        7 November 2025 - a different instrument for a different regime.
+    caveats:
+      - >-
+        NEITHER DOCUMENT HAS BEEN READ. Only the landing page has. docs/appendix-forms.md
+        therefore fills the field list from Measure 9.2 of the Code, which this register
+        holds and has verified and which the Commission's own page treats as
+        operationalising the obligation. When the template itself is held, the appendix
+        should be re-filled against its actual fields and this caveat removed.
+      - >-
+        The DOCX/PDF attribution above is inferred from link order on the page, not from
+        the files.
+
   - id: ec-cop-adequacy-opinion
     tier: T4
     date: "2025-08-01"

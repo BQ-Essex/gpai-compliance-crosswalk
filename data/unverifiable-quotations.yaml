@@ -69,3 +69,13 @@ exceptions:
     why: >-
       The draft's own retracted wording, preserved verbatim in the corrections log so the
       tenth entry records what was actually written rather than a tidied version of it.
+
+  - quote: "promotes consistent and transparent reporting and helps providers demonstrate compliance with the commitments set out in Commitment 9"
+    kind: source-unheld
+    why: >-
+      From the Commission's landing page for the serious-incident template, not from the
+      template itself, which is not held. Flagged rather than waved through because
+      quoting a landing page for a document one has not opened is the exact shape of the
+      ninth recorded error. The sentence is used only for what the Commission says ABOUT
+      the template's relationship to Commitment 9, which is a claim the page itself makes
+      and can be checked at the URL in the source register.
