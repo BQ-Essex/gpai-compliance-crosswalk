@@ -395,6 +395,17 @@ sources:
         7 November 2025 - a different instrument for a different regime.
     document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_121268.pdf"
     sha256: "ac0004e887783bd1b743c429e9ce64684478afb527a20fcb57e0ac680f6730f4"
+    second_rendition:
+      document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_121270.docx"
+      sha256: "ccf778dd3da3da4ea67e047d9a4382ef6acfc8f384a66ce31b98b37d83414b5a"
+      note: >-
+        Read 12 September 2026 by unpacking the OOXML and extracting every w:t run from
+        word/document.xml and word/glossary/document.xml - that is, the field labels and
+        placeholder prompts as the file stores them, not as a PDF text layer renders them.
+        The two renditions carry identical headings and identical placeholder text. They
+        differ only in the reading order of the number column and in pagination. The
+        glossary part, which holds the content-control placeholders, introduces no field
+        that the body does not show.
     establishes_from_the_template_itself:
       - >-
         Its opening line: the template "serves as a means to demonstrate compliance with
@@ -407,6 +418,23 @@ sources:
       - >-
         Field 5 asks for the "evidence available" setting out the model's involvement
         where Measure 9.2 asks for the "material available". Evidence is the stronger word.
+      - >-
+        The entire template is 1,884 characters of text: a title, one framing sentence,
+        ten field headings, ten placeholder prompts and six contact sub-fields. That is
+        the whole of what the Commission asks a provider to say about a serious incident
+        involving a model with systemic risk.
+      - >-
+        Field 1's prompt admits approximation on its face: the start and end dates "or
+        best approximations thereof if the precise dates are unclear." The only date the
+        form asks for is the one it allows you to estimate.
+      - >-
+        Fields 6 and 7 both open "What, if anything" - the response and the recommendation
+        are optional in substance, not merely in completion.
+      - >-
+        Field 10 is the only field broken into labelled sub-fields, a to f. Everything a
+        regulator would have to compute from - dates, chain of events, root cause,
+        monitoring - is a single unstructured free-text control. The form is granular
+        about who is filing and unstructured about everything else.
     documented_negatives:
       - >-
         THE FORM NEVER ASKS WHEN THE PROVIDER BECAME AWARE. The words "aware",
@@ -418,10 +446,17 @@ sources:
         undue delay" typically requires. So the official form for demonstrating compliance
         with Art. 55(1)(c) contains no field from which compliance with its own timeliness
         standard could be computed. See docs/appendix-forms.md section 3.
-    caveats:
-      - >-
-        The DOCX counterpart (document 121270) is held but has not been parsed; the PDF is
-        the version read and hashed.
+        BOUNDED, and the bound is unusually tight for a negative search. The corpus is the
+        complete text of BOTH published renditions of the form: the PDF's text layer
+        (document 121268) and every w:t run in the DOCX's word/document.xml and
+        word/glossary/document.xml (document 121270). The searched terms were "aware",
+        "awareness", "deadline", "timeline", "undue delay", "submission" and "days"; all
+        return zero in both. "date" returns two hits, both inside field 1. Because the
+        DOCX search runs against the field labels and placeholders as the file stores
+        them, the absence is a property of the form itself and not of a PDF extraction.
+        What this does not bound: instructions carried outside the form - on the library
+        page, in the EU SEND channel, or in correspondence - have not been searched for a
+        date-of-awareness requirement, and the landing page does not state one.
 
   - id: ec-cop-adequacy-opinion
     tier: T4

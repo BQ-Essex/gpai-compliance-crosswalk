@@ -12,6 +12,8 @@ This is not new research. Every cell below is a cross-walk row already in `data/
 
 Ten numbered fields across two pages. Fields 1 to 9 track Measure 9.2 of the Code almost exactly; field 10 has no counterpart there.
 
+The Commission publishes it in two renditions, DOCX and PDF, and both were read for this appendix—the DOCX by unpacking the file and taking its field labels and placeholder prompts as it stores them rather than as a text layer renders them. They are the same form: identical headings, identical prompts, differing only in pagination and in where the number column falls in the reading order. The whole of it comes to 1,884 characters, being a title, one framing sentence, ten headings, ten prompts and six contact sub-fields. That is everything the Commission asks a provider to say about a serious incident involving a model with systemic risk.
+
 ---
 
 ## 2. The ten fields, filled
@@ -39,11 +41,19 @@ Ten numbered fields across two pages. Fields 1 to 9 track Measure 9.2 of the Cod
 
 **The template never asks when the provider became aware.** The words “aware”, “awareness”, “deadline” and “timeline” do not appear in it. It asks for the start and end dates of the *incident* (field 1) and for nothing else temporal—no date of awareness, no date of submission.
 
+That is a negative search, so what was searched should be on the record. The corpus is the complete text of both published renditions: the PDF’s text layer, and every text run in the DOCX’s document and glossary parts. “aware”, “awareness”, “deadline”, “timeline”, “undue delay”, “submission” and “days” return zero in both. “date” returns two hits, both inside field 1. Because the DOCX search runs against the labels as the file stores them, the absence belongs to the form and not to an extraction. What it does not cover: instructions carried outside the form, whether on the library page, in the submission channel or in correspondence, have not been searched, and the library page states none.
+
 Measure 9.3 of the same Code runs every one of its periods—two days, five days, ten days, fifteen days—from the date the signatory “become[s] aware of the involvement of their model”. The Commission Opinion describes that Measure as setting out “what ‘without undue delay’ typically requires of reporting timelines”.
 
 So the official form for demonstrating compliance with Article 55(1), point (c) contains no field from which compliance with its own timeliness standard could be computed. A completed report shows what happened and when it happened. It does not show when the provider knew, and therefore does not show whether the report was late. A regulator holding a perfectly completed form still has to ask.
 
 That is not a drafting nicety. Timeliness is the only part of Article 55(1), point (c) with any determinate content, and it arrives entirely through the Code; the form built to evidence the obligation omits the one date the Code’s own clock depends on.
+
+**The only date the form asks for is the one it lets you estimate.** Field 1’s prompt reads “The start and end dates of the serious incident, or best approximations thereof if the precise dates are unclear”. Approximation is right for an intrusion window nobody fully observed. It is not right for the date a provider’s own staff concluded its model was involved, which the provider knows exactly and which the form does not ask for.
+
+**Two of the ten fields are optional in substance.** Fields 6 and 7 open “What, if anything”—what, if anything, the provider intends to do in response; what, if anything, it recommends the AI Office do. A provider that answers “nothing” to both has completed the form.
+
+**The form is granular about who is filing and unstructured about everything else.** Field 10 is the only field broken into labelled sub-fields: capacity, organisation, contact’s first name, last name, email, phone. Fields 1 to 9—dates, harm, chain of events, model, evidence, response, recommendation, root cause, monitoring patterns—are nine free-text boxes. Six labelled boxes for the contact details, one box each for everything a regulator would have to compute from.
 
 **Recommendation.** Add two fields: the date the provider became aware of its model’s involvement, and the date of submission. Both are known to the provider at the moment of filing, neither is burdensome, and together they make the Measure 9.3 periods checkable on the face of the document. This is a one-line change to a two-page form.
 
