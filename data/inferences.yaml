@@ -310,3 +310,43 @@ inferences:
     load_bearing: false
     stated_at: "docs/report-draft.md §4.3"
 
+  - id: inf-form-cannot-evidence
+    claim: >-
+      The Commission's serious-incident template cannot evidence compliance with the Code's
+      own reporting periods, because the template states on its face that it demonstrates
+      compliance with Article 55(1), point (c) "as part of Commitment 9", every period in
+      Measure 9.3 runs from the date a Signatory becomes aware of its model's involvement,
+      and the template asks for no date but the incident's own start and end.
+    type: textual
+    function: step
+    premises: [ec-incident-template, cop-text, art55-1c]
+    depends_on: []
+    defeater: >-
+      A field, an instruction or accompanying guidance requiring the date of awareness. The
+      form was searched in both published renditions, at the level of the DOCX's own stored
+      field labels rather than a PDF text layer, and the library page was read; neither
+      contains one. The EU SEND submission channel has NOT been seen, and a portal could
+      capture a receipt timestamp the form does not - which would answer the date of
+      submission but still not the date of awareness.
+    strength: strong
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.7; docs/appendix-forms.md §3"
+
+  - id: inf-form-statutory
+    claim: >-
+      The template therefore cannot evidence compliance with the STATUTORY standard either,
+      Article 55(1), point (c)'s "without undue delay" being what Measure 9.3 sets out.
+    type: conclusion of law
+    function: step
+    premises: [ec-incident-template, ec-cop-adequacy-opinion, art55-1c, cop-text]
+    depends_on: [inf-opinion-construes]
+    defeater: >-
+      The competing reading of paragraph (33) of the Commission Opinion, on which it
+      summarises a chapter of the Code rather than construing the Act. This inference
+      inherits that entire risk. It is stated separately from inf-form-cannot-evidence for
+      exactly that reason: the recommendation to add two fields follows from the narrower
+      claim alone, and a reader who rejects inf-opinion-construes loses this step without
+      losing the recommendation.
+    strength: moderate
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.7"
