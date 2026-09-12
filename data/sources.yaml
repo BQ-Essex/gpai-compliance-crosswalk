@@ -35,6 +35,18 @@ sources:
     date: "2026-08-26"
     title: "The Hugging Face incident and the road ahead"
     url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    archived_url: "https://web.archive.org/web/20260827003206/https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    archived: "2026-08-27"
+    archive_note: >-
+      Cite the capture, not the live page. The Wayback Machine holds 42 captures of this
+      URL between 26 August and 10 September 2026 and 37 distinct content digests, which
+      looks at first like a heavily revised account and is not. The body text of the
+      captures at 2026-08-27 00:32:06Z and 2026-08-31 21:22:34Z is word-for-word
+      identical; the capture at 2026-09-10 13:34:01Z differs only in site furniture, its
+      navigation gaining a model name and its topic tags gaining one entry. The digests
+      change because the page's boilerplate does. Recorded because a digest count is the
+      obvious thing to reach for when arguing a source has moved, and here it would have
+      been wrong.
     establishes:
       - "IM1 named as internal-only research model; 'IM1 agents drove the principal compromise'"
       - "GPT-5.6 Sol agents 'also reproduced an exploit'"
@@ -117,6 +129,18 @@ sources:
     title: "DseWiki incident analysis"
     author: "Sydney Von Arx, Nightingale Collective"
     url: "https://collusion.wiki/#timeline"
+    archived_url: "https://web.archive.org/web/20260904112052/https://collusion.wiki/"
+    archived: "2026-09-04"
+    archive_note: >-
+      The most fragile source in this register, and the sole primary source for the dates
+      and volumes at section 0 of the worked example. It is a wiki: the Wayback Machine
+      holds 36 captures between 4 and 12 September 2026 across 16 distinct content
+      digests, and unlike the provider's page these are unlikely to be boilerplate. The
+      capture recorded here is the earliest, taken on the publication date this register
+      cites. OPEN ITEM, and it should not be closed by assertion: the figures in the
+      establishes list above were read from the live site and have not yet been checked
+      against a dated capture. Until they are, they are attributed to a page that has
+      changed sixteen times since.
     additional_urls:
       - "https://collusion.wiki/#key-facts"
       - "https://collusion.wiki/explorer/"          # agent activity by day, edits, names
