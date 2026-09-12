@@ -66,6 +66,8 @@ Verified statutory text with provenance. Every provision records whether it was 
 
 Every entry carries a `provenance` field and a `verified` date, because for a while they were not all obtained the same way. Fourteen were taken from a published reproduction of the authentic text while EUR-Lex was unreachable from the machine this was built on, and carried `amended_by_omnibus: "unverified"` rather than a guess. All fourteen have since been checked against the consolidated PDF: thirteen matched verbatim, and one differed by a single stray full stop that turned out to be the Regulation’s own. The history is left in the file rather than tidied away, because a register that never says how it was built is asking to be trusted.
 
+`imported_provisions` holds provisions of other instruments that the Act imports by reference and that the analysis relies on the text of—at present the CER Directive, reached through Article 3, point (62). They are verified against the authentic Official Journal text and cited in prose with the instrument named, which is both how the checker tells them apart and how a reader should have been able to tell all along.
+
 ### `data/sources.yaml`
 Every source, tiered by its **relationship to the claim** rather than by prestige:
 
@@ -95,7 +97,9 @@ The rows. Each separates **disclosed facts** from the **provider’s characteris
 - Every Article and Recital cited anywhere in the prose resolves to text in `data/provisions.yaml`
 - Register entries nothing cites are reported, so the register does not accumulate dead weight
 
-It deliberately skips two things, and both exclusions are substantive. Citations qualified by another instrument—the CER Directive, the Charter, the Californian and New York statutes—are not this register’s to hold. And a span of bare article numbers (“Articles 51 to 56”) names a body of provisions rather than a piece of text: the claim that Chapter V runs from 51 to 56 rests on Article 113, which is verified, not on the last article in the span, which nothing quotes.
+It deliberately skips two things, and both exclusions are substantive. Citations qualified by an instrument the register does not hold—the Charter, the Californian and New York statutes—are not its to check. And a span of bare article numbers (“Articles 51 to 56”) names a body of provisions rather than a piece of text: the claim that Chapter V runs from 51 to 56 rests on Article 113, which is verified, not on the last article in the span, which nothing quotes.
+
+The **CER Directive is the exception, and it earned it**. The Act’s definition of ‘critical infrastructure’ resolves into it, and relying on an imported definition is still relying on text—three of the six recorded errors came from reading a summary of that Directive rather than the Directive. So `imported_provisions` holds the verified CER text, citations qualified `CER` resolve against it, and prose that cites the Directive without saying which instrument it means is reported rather than waved through.
 
 What it cannot do is check that a citation is *apposite*. A pinpoint that resolves to verified text can still be the wrong provision for the proposition. One failure mode is closed; the other is still a reader’s job.
 
