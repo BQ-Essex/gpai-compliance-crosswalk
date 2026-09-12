@@ -322,6 +322,23 @@ def corrections_sweep(root=None):
     return found
 
 
+def dangling_appendices(text):
+    """An "Appendix F" cited in a report whose appendices stop at E.
+
+    Cheap, and it had already happened: the forms appendix was written as its own file,
+    cited from the body as Appendix F, and never bound into the report. A cross-reference
+    is a claim that something exists, and this repository checks those.
+
+    Only files that define appendices are checked, so prose elsewhere may cite the
+    report's appendices freely.
+    """
+    defined = set(re.findall(r"^#{2,3}\s+Appendix\s+([A-Z])\b", text, re.M))
+    if not defined:
+        return []
+    cited = set(re.findall(r"\bAppendix\s+([A-Z])\b", text))
+    return sorted(cited - defined)
+
+
 def process(path, fix=False):
     """Apply the mechanical fixes to one file and report what changed or remains.
 
@@ -341,6 +358,7 @@ def process(path, fix=False):
     echoes = find_echoes(original)
     drift = count_drift(original)
     registers = register_drift(shelved, path)
+    dangling = dangling_appendices(original)
 
     if fix and revised != original:
         with open(path, "w", encoding="utf-8") as handle:
@@ -366,12 +384,16 @@ def process(path, fix=False):
               f"The corrections log drifted this way once and was made checkable. "
               f"This is the same failure one file over.")
 
+    for letter in dangling:
+        print(f"  cites Appendix {letter}, which this file does not define. A "
+              f"cross-reference is a claim that something exists.")
+
     for number, first, opening in echoes:
         print(f"  line {number}: repeats the paragraph at line {first} — “{opening}…”. "
               f"One of the two is a revision that was never deleted.")
 
     return ((revised == original or fix) and not signposts and not echoes
-            and not drift and not registers)
+            and not drift and not registers and not dangling)
 
 
 def main():

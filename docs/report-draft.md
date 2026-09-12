@@ -353,4 +353,35 @@ Sole author. B.Q. conceived the approach, selected the regime and episodes, dire
 
 ## Appendix E: Artifact
 
-Repository: method, statutory foundation with amendment status and corrections log, source register, cross-walk data, model Article 91 request, adversarial review findings, and `tools/validate.py` and `tools/housestyle.py`. Prose and data CC BY 4.0; code MIT.
+Repository: method, statutory foundation with amendment status and corrections log, source register, cross-walk data, inference register, model Article 91 request, and adversarial review findings. Five checkers run from one entry point, `tools/check.py`: `validate.py` for the verdict discipline, `citecheck.py` for citations, `quotecheck.py` for quotations against the hashed source documents, `infercheck.py` for the inference register, and `housestyle.py` for prose conventions, repeated paragraphs and drifted counts. `python3 tools/infercheck.py --attack` prints the load-bearing steps weakest first, and is what an adversarial reader should be handed instead of this report. Prose and data CC BY 4.0; code MIT.
+
+---
+
+## Appendix F: the Commission’s serious-incident template, filled from the public record
+
+Every cell below is a cross-walk row re-presented in the regulator’s own form. The form is where the gaps become legible: a reader can disagree with an analysis, but a blank required field argues for itself. Full version, with the sourcing for each cell, at `docs/appendix-forms.md`.
+
+*Report for Serious Incidents under the AI Act (General-Purpose AI Models with Systemic Risk)*, published 4 November 2025, in DOCX and PDF. Both were read. The whole form is 1,884 characters: ten headings, ten placeholder prompts, six contact sub-fields.
+
+**filled**: the record supplies it. **partial**: it supplies part, or supplies it from a source the form does not contemplate. **cannot fill**: no public source supplies it.
+
+| # | Field | What the public record gives | Status |
+|---|---|---|---|
+| 1 | Start and end dates | An intrusion window at the victim, not of the containment failure | partial |
+| 2 | Resulting harm | One cluster wiped and rebuilt, credentials rotated, five datasets touched—**from the affected party** | filled |
+| 3 | Chain of events | Two chained vectors at the victim; egress by server-side request forgery | filled |
+| 4 | Model involved | Two designations, never reconciled, and neither account says they are the same | **cannot fill** |
+| 5 | Evidence available | An independent investigation conducted under access constraints imposed by its subject | partial |
+| 6 | Serious incident response | Corrective measures described publicly; rotation performed by the victim | partial |
+| 7 | Recommendation to the AI Office | Nothing | **cannot fill** |
+| 8 | Root cause analysis | Safeguards named as not enabled, which is graver than a root cause and is not one | partial |
+| 9 | Patterns in post-market monitoring | Only the victim’s monitoring, described failing | **cannot fill** |
+| 10 | Submitter information | No filing is public, so no submitter is | **cannot fill** |
+
+Two filled, four partial, four impossible.
+
+**The fillable fields are filled by everyone except the party the form addresses.** Fields 2, 3 and 9 come substantially from the victim’s forensic timeline, field 5 from an investigator working under the subject’s constraints. A form designed to be completed by the provider is, on this record, completable only from sources the provider does not control.
+
+**The field the Act most needs is the one that cannot be filled.** Every obligation in Chapter V is indexed to a model, and field 4 is model identity. That is Request 1 of the instrument, and it is first for this reason.
+
+**And the form does not ask the one date its own clock runs from**, which is §4.7 and is the finding this exercise was not looking for.
