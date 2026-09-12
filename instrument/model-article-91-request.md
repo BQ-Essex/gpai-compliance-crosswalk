@@ -30,7 +30,7 @@
 
 2. In the alternative, where the Commission prefers to proceed on the initiative of the scientific panel, this request may be issued under **Article 91(3)**, on a duly substantiated request from that panel, the information sought being necessary and proportionate for the fulfilment of its tasks. *(The cross-reference in Article 91(3) is to Article 68(2); the panel’s tasks are set out at Article 68(3). The reference is reproduced as enacted.)* The drafting below serves either pathway without amendment.
 
-3. The provisions to which the requested information relates are **Articles 2(8), 3 points (3), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b).
+3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b).
 
 ## Part B: Purpose
 
@@ -74,7 +74,7 @@
 
 **Request 3.** State the Provider’s position on whether the Research Model falls within the exception in **Article 3, point (63)** for “AI models that are used for research, development or prototyping activities before they are placed on the market”, together with the reasons for that position and the date from which it is said to apply.
 
-**Request 4.** State the Provider’s position on whether the Evaluation constituted research, testing or development activity within **Article 2(8)**, and whether any part of it constituted **testing in real-world conditions** within Article 3, point (57).
+**Request 4.** State the Provider’s position on whether the Evaluation constituted research, testing or development activity within **Article 2(8)**, and whether any part of it constituted **testing in real-world conditions** within Article 3, point (57). If the Provider contends that it did, identify which of the conditions in Article 57 or Article 60 it says were fulfilled, and in respect of which system.
 
 **Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use. If so, state when. If the Provider contends the model nonetheless falls outside the obligations for models, state which of the three conditions set out in Recital 97 it relies on, having regard to the position that those conditions are cumulative and that the third is unavailable to a general-purpose AI model with systemic risk.
 
@@ -143,6 +143,6 @@
 
 ## Annex II: provisions relied on
 
-Regulation (EU) 2024/1689, OJ L, 2024/1689, 12.7.2024; consolidated text CELEX `02024R1689-20260727`, incorporating Regulation (EU) 2026/1744. Articles 2(8), 3 points (1), (3), (47), (49), (57), (62), (63), 51, 52, 53(1)(a), 55, 68, 73, 75, 78, 90, 91, 101, 113. Recitals 114 and 115 from the authentic Official Journal text, CELEX `32024R1689`; the consolidated text omits recitals and carries the notice that it “is meant purely as a documentation tool and has no legal effect”.
+Regulation (EU) 2024/1689, OJ L, 2024/1689, 12.7.2024; consolidated text CELEX `02024R1689-20260727`, incorporating Regulation (EU) 2026/1744. Articles 2(1), point (a), 2(8), 3 points (1), (3), (9), (10), (11), (47), (49), (57), (62), (63), (66), 51, 52, 53(1)(a), 55, 68, 73, 75, 78, 90, 91, 101, 113. Recitals 114 and 115 from the authentic Official Journal text, CELEX `32024R1689`; the consolidated text omits recitals and carries the notice that it “is meant purely as a documentation tool and has no legal effect”.
 
 Directive (EU) 2022/2557, OJ L 333, 27.12.2022, Article 2, points (1), (4) and (5), as imported by Article 3, point (62) of the Regulation.
