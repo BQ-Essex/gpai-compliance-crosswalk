@@ -209,7 +209,7 @@ sources:
         https://www.techtimes.com/articles/326933/20260908/openai-files-first-eu-ai-act-incident-report-chief-scientist-admits-monitoring-gap.htm
         (both retrieved 12 September 2026, neither held as a file).
       - >-
-        One of those outlets characterises the filing as arriving "approximately 75 days"
+        One of those outlets characterises the filing as arriving “approximately 75 days”
         after agents were detected on 21 June 2026. That is a secondary source's
         ARITHMETIC, not a date the Commission or the provider has stated, and it is
         recorded here as characterisation rather than fact.
@@ -218,8 +218,8 @@ sources:
       - >-
         THIS IS BETTER THAN AN ABSENCE AND SHOULD BE USED AS SUCH. The regulator was
         asked, on the record, and declined: the date, the contents, the provision relied
-        on, and whether the episode qualifies. A negative-search note that says "no
-        published source states X" is weaker than a source establishing that the body
+        on, and whether the episode qualifies. A negative-search note that says “no
+        published source states X” is weaker than a source establishing that the body
         which knows X was asked and would not say.
 
   - id: uk-aisi-cheating
@@ -272,21 +272,21 @@ sources:
     sha256: "d879f9b54c6068aae57ebaead9d90ddaa46f2503312b9185367a724fa8da2f4a"
     establishes:
       - >-
-        COMMITMENT 9, SERIOUS INCIDENT REPORTING, states its own legal basis as "Article
-        55(1), and recitals 114 and 115 AI Act", and commits Signatories to keeping track
-        of, documenting and reporting relevant information "without undue delay ... along
-        the entire model lifecycle".
+        COMMITMENT 9, SERIOUS INCIDENT REPORTING, states its own legal basis as “Article
+        55(1), and recitals 114 and 115 AI Act”, and commits Signatories to keeping track
+        of, documenting and reporting relevant information “without undue delay ... along
+        the entire model lifecycle”.
       - >-
         MEASURE 9.3 SUPPLIES THE PERIODS ARTICLE 55(1), POINT (c) DOES NOT, running from
-        the date the Signatory "become[s] aware of the involvement of their model": two
+        the date the Signatory “become[s] aware of the involvement of their model”: two
         days for a serious and irreversible disruption of the management or operation of
-        critical infrastructure; FIVE DAYS for "a serious cybersecurity breach, including
-        the (self-)exfiltration of model weights and cyberattacks"; 10 days for a death;
+        critical infrastructure; FIVE DAYS for “a serious cybersecurity breach, including
+        the (self-)exfiltration of model weights and cyberattacks”; 10 days for a death;
         15 days for serious harm to health, an infringement of Union-law fundamental-rights
         obligations, or serious harm to property or the environment.
       - >-
-        THE TRIGGER THRESHOLD IS LOW. Each period runs where the Signatory establishes "or
-        suspect[s] with reasonable likelihood" the causal relationship between the model
+        THE TRIGGER THRESHOLD IS LOW. Each period runs where the Signatory establishes “or
+        suspect[s] with reasonable likelihood” the causal relationship between the model
         and the event.
       - >-
         Intermediate reports at least every four weeks while an incident is unresolved; a
@@ -294,14 +294,14 @@ sources:
         years (Measures 9.3 and 9.4).
       - >-
         Measure 9.2 lists nine items the initial report must cover, including the chain of
-        events that "(directly or indirectly)" led to the incident, the model involved, and
-        a root cause analysis naming "any failures or circumventions of systemic risk
-        mitigations".
+        events that “(directly or indirectly)” led to the incident, the model involved, and
+        a root cause analysis naming “any failures or circumventions of systemic risk
+        mitigations”.
       - >-
         RECITAL (a), PRINCIPLE OF APPROPRIATE LIFECYCLE MANAGEMENT: Signatories recognise
-        that providers "should continuously assess and mitigate systemic risks, taking
+        that providers “should continuously assess and mitigate systemic risks, taking
         appropriate measures along the entire model lifecycle (INCLUDING DURING DEVELOPMENT
-        THAT OCCURS BEFORE AND AFTER A MODEL HAS BEEN PLACED ON THE MARKET)".
+        THAT OCCURS BEFORE AND AFTER A MODEL HAS BEEN PLACED ON THE MARKET)”.
     documented_negatives:
       - >-
         As of 12 September 2026, in the chapter as held: it contains no definition of
@@ -327,16 +327,20 @@ sources:
       - "https://ec.europa.eu/newsroom/dae/redirection/document/119623"
     establishes:
       - >-
-        A SEPARATE regime and a SEPARATE form. "Draft Guidance article 73 AI Act -
-        incident reporting" and "Incident report for serious incidents under the AI Act
-        (High-risk AI systems)" are distinct documents from the GPAI template at
+        A SEPARATE regime and a SEPARATE form. “Draft Guidance article 73 AI Act -
+        incident reporting” and “Incident report for serious incidents under the AI Act
+        (High-risk AI systems)” are distinct documents from the GPAI template at
         ec-incident-template. The Commission maintains two serious-incident forms: one for
         models, one for systems.
       - >-
-        The page states the draft guidance "clarifies definitions, offers practical
-        examples, and explains how the new rules relate to other legal obligations", and
-        that the approach "seeks alignment with international initiatives, such as the
-        OECD's AI Incidents Monitor and Common Reporting Framework".
+        The page states the draft guidance “clarifies definitions, offers practical
+        examples, and explains how the new rules relate to other legal obligations”, and
+        that the approach “seeks alignment with international initiatives, such as the
+        OECD's AI Incidents Monitor and Common Reporting Framework”. Those are the PAGE's
+        words and the page is not held as a file. The document itself puts it differently
+        at para. (3) - “The AI Act incident monitoring seeks to align with the OECD
+        framework wherever possible” - so the page paraphrases rather than quotes, and
+        the two should not be run together.
     documented_negatives:
       - >-
         As of 12 September 2026 the page is dated last-updated 4 November 2025, still
@@ -345,14 +349,100 @@ sources:
         Omnibus deferred the high-risk obligations these documents serve - to 2 December
         2027 and 2 August 2028 - and took the urgency with it.
         BOUNDED: this is the absence of a final version FROM THIS PAGE. The site's own
-        search endpoint is unusable for a recency sweep - a query for "serious incident
-        reporting" returned events from 2020 - so a final version published elsewhere
+        search endpoint is unusable for a recency sweep - a query for “serious incident
+        reporting” returned events from 2020 - so a final version published elsewhere
         would not necessarily have been found.
+    documents:
+      - file: "Draft_Guidance_article_73_AI_Act__incident_reporting_119624.pdf"
+        sha256: "f1d58ecf69004b361d2201ea44e6219f00c27ba249ad5011965152de9167686d"
+        pages: 13
+      - file: "Incident_report_for_serious_incidents_under_the_AI_Act_Highrisk_AI_systems_119623.pdf"
+        sha256: "20f90c54a7cd0fb952d08965947dabfa6e423515cab925d9c4b9c81364ed5a82"
+        pages: 7
+        version_marker: "Reporting Template Version: 1.0.0 (SB-10407)"
+    establishes_from_the_documents_themselves:
+      - >-
+        THE HIGH-RISK FORM ASKS FOR EVERY DATE THE GPAI FORM OMITS. Section 1.2 of the
+        high-risk template, “Date, type, and classification of incident report”, has four
+        date fields: (a) “Date of report submission”, (b) “Date of incident” with a range,
+        (c) “Date and time of detection of the incident”, and (d) “Manufacturer awareness
+        date of reportability”, each “in format YYYY-MM-DD”. The two fields this analysis
+        recommends adding to the GPAI form are therefore not a proposal: the Commission has
+        already drafted them for the other regime. NOTE THE DIFFERENCE rather than
+        glossing it - (d) asks for awareness of REPORTABILITY, which tracks Art. 73(2)'s
+        “has established a causal link between the AI system and the serious incident or
+        the reasonable likelihood of such a link”,
+        whereas Measure 9.3 runs from awareness of the model's INVOLVEMENT.
+      - >-
+        Field 1.2(e) makes the report a cycle: Initial / Follow up / Combined initial and
+        final / Final (Reportable incident) / Final (Non-reportable incident), with 1.2(f)
+        asking the expected date of the next report. The GPAI form has no report-type field
+        at all, so an initial report and a final one are indistinguishable on their face.
+      - >-
+        Field 1.2(g) classifies the incident by tick-box: Death; Harm to a person's health;
+        Disruption of the management of critical infrastructure; Disruption of the operation
+        of critical infrastructure; Infringement of obligations under Union law intended to
+        protect fundamental rights; Harm to property; Harm to environment; All other
+        reportable incidents. That is Art. 3(49), points (a) to (d), unpacked by the
+        Commission itself - and there is NO CYBERSECURITY CATEGORY, which independently
+        confirms this analysis's reading that Measure 9.3's cyber trigger has no counterpart
+        in the Act's own definition.
+      - >-
+        Section 1.3.5, “Information about other incident obligations”, asks whether the
+        incident “was already reported to” another authority and “Under Regulation/Law”.
+        The GPAI form has no cross-regime field, though a serious incident involving a model
+        with systemic risk is the one most likely to be reportable in several jurisdictions
+        at once.
+      - >-
+        Section 4.2 asks the provider for a root-cause conclusion, for a “rationale for why
+        this is considered not reportable” where the report is final and non-reportable, and
+        whether “the risk assessment been reviewed” and whether it “is still adequate”. The
+        GPAI form asks for none of these. The regime governing models the Act treats as
+        capable of Union-level harm carries the LIGHTER reporting instrument: seven pages
+        against two, five sections against ten free-text boxes.
+      - >-
+        Section 5 carries a disclaimer that submission “does not represent a conclusion by
+        the provider ... that the AI system(s) listed failed in any manner”, and an
+        affirmation that the information “is correct to the best of my knowledge”, over a
+        date. The GPAI form carries neither disclaimer nor affirmation.
+      - >-
+        Field 1.2(d) says “Manufacturer”, a term the AI Act does not use for this actor;
+        the form says “provider” ten times elsewhere and “manufacturer” once. The guidance's
+        own footnote 4 cites Art. 2(64) of Regulation (EU) 2017/745, the Medical Device
+        Regulation, when defining 'incident', so the vigilance-reporting lineage is stated
+        rather than inferred.
+      - >-
+        GUIDANCE PARA. (4): “The reporting obligation of Article 73 AI Act applies to
+        serious incidents and widespread infringements of high-risk AI systems. Article
+        55 (1)(c) AI Act also lays down an obligation for providers of general-purpose AI
+        models with systemic risk to report serious incidents to the AI Office. This
+        guidance is not dealing with the obligation to report such serious incidents of
+        general-purpose AI models with systemic risk.” The separation of the two regimes is
+        the Commission's express choice, not an accident of drafting.
+      - >-
+        GUIDANCE PARA. (50), AND THIS IS THE COMMISSION STATING THIS ANALYSIS'S BRIDGING
+        GAP IN TERMS: “The term 'serious incident' is defined in Article 3(49) AI Act only
+        in relation to AI systems. For serious incidents concerning general-purpose AI
+        models with systemic risk pursuant to Article 55(1)(c) AI Act, the General-Purpose
+        AI Code of Practice facilitates demonstrating compliance by way of its Commitment 9
+        in the Safety and Security Chapter.” The bridge the Commission names is the CODE,
+        not the Act.
+      - >-
+        GUIDANCE PARA. (3): “The AI Act incident monitoring seeks to align with the OECD
+        framework wherever possible”, naming the OECD AI Incidents Monitor and Common
+        Reporting Framework.
+      - >-
+        GUIDANCE PARA. (57) reads Art. 73(9) as meaning that for Annex III point 2 systems
+        also subject to the CER Directive, “the obligation to report incidents for AI
+        systems mentioned in Annex III point 2 AI Act only applies to the violation of
+        fundamental rights”, and para. (60) does the same for NIS2, whose Art. 23(4)
+        timelines it describes as an early warning within 24 hours of becoming aware, a
+        notification within 72 hours of becoming aware, and a final report within one month.
     tier_note: >-
-      Neither document has been read. Held here as a pointer, because comparing the
-      high-risk form against the GPAI form is the direct test of this analysis's bridging
-      gap: the same phrase, two regimes, two forms, and whatever one asks that the other
-      does not.
+      Both documents read 12 September 2026, in the DRAFT versions the consultation page
+      still serves. They are draft, and the guidance says so on its face; nothing here
+      treats them as settled law. What they evidence is what the Commission asks for when
+      it drafts a serious-incident form with the time to do it properly.
 
   - id: ec-eu-send-guidance
     tier: T4
@@ -369,7 +459,7 @@ sources:
       Recorded because it is the CHANNEL. A notification under Art. 52(1), a serious
       incident report under Art. 55(1)(c) and a response to an Art. 91 request all have to
       arrive somewhere, and the existence of a named submission system is a fact an
-      instrument can use - and a fact against which "no filing is public" can be tested.
+      instrument can use - and a fact against which “no filing is public” can be tested.
 
   - id: ec-incident-template
     tier: T4
@@ -382,12 +472,12 @@ sources:
       - "https://ec.europa.eu/newsroom/dae/redirection/document/121268   # listed second, labelled PDF"
     establishes:
       - >-
-        An official template exists: "Report for Serious Incidents under the AI Act
-        (General-Purpose AI Models with Systemic Risk)", published 4 November 2025.
+        An official template exists: “Report for Serious Incidents under the AI Act
+        (General-Purpose AI Models with Systemic Risk)”, published 4 November 2025.
       - >-
-        The landing page states the template "promotes consistent and transparent
+        The landing page states the template “promotes consistent and transparent
         reporting and helps providers demonstrate compliance with the commitments set out
-        in Commitment 9 of the GPAI Code of Practice", which is the Commission tying the
+        in Commitment 9 of the GPAI Code of Practice”, which is the Commission tying the
         Art. 55(1)(c) obligation to Commitment 9 in terms.
       - >-
         It records that for HIGH-RISK AI SYSTEMS the Commission had already published
@@ -408,27 +498,27 @@ sources:
         that the body does not show.
     establishes_from_the_template_itself:
       - >-
-        Its opening line: the template "serves as a means to demonstrate compliance with
+        Its opening line: the template “serves as a means to demonstrate compliance with
         Article 55(1), point (c), of the AI Act as part of Commitment 9 of the Safety and
-        Security Chapter of the General-Purpose AI Code of Practice."
+        Security Chapter of the General-Purpose AI Code of Practice.”
       - >-
         Ten numbered fields over two pages. Fields 1-9 track Measure 9.2 closely. Field 10,
-        "Submitter information", has no counterpart in Measure 9.2: provider / authorised
+        “Submitter information”, has no counterpart in Measure 9.2: provider / authorised
         representative / other, organisation, contact name, email and phone.
       - >-
-        Field 5 asks for the "evidence available" setting out the model's involvement
-        where Measure 9.2 asks for the "material available". Evidence is the stronger word.
+        Field 5 asks for the “evidence available” setting out the model's involvement
+        where Measure 9.2 asks for the “material available”. Evidence is the stronger word.
       - >-
         The entire template is 1,884 characters of text: a title, one framing sentence,
         ten field headings, ten placeholder prompts and six contact sub-fields. That is
         the whole of what the Commission asks a provider to say about a serious incident
         involving a model with systemic risk.
       - >-
-        Field 1's prompt admits approximation on its face: the start and end dates "or
-        best approximations thereof if the precise dates are unclear." The only date the
+        Field 1's prompt admits approximation on its face: the start and end dates “or
+        best approximations thereof if the precise dates are unclear.” The only date the
         form asks for is the one it allows you to estimate.
       - >-
-        Fields 6 and 7 both open "What, if anything" - the response and the recommendation
+        Fields 6 and 7 both open “What, if anything” - the response and the recommendation
         are optional in substance, not merely in completion.
       - >-
         Field 10 is the only field broken into labelled sub-fields, a to f. Everything a
@@ -437,21 +527,21 @@ sources:
         about who is filing and unstructured about everything else.
     documented_negatives:
       - >-
-        THE FORM NEVER ASKS WHEN THE PROVIDER BECAME AWARE. The words "aware",
-        "awareness", "deadline" and "timeline" do not occur in the template at all, and
+        THE FORM NEVER ASKS WHEN THE PROVIDER BECAME AWARE. The words “aware”,
+        “awareness”, “deadline” and “timeline” do not occur in the template at all, and
         the only dates it requests are the start and end of the incident (field 1). There
         is no field for the date of submission either. Every period in Measure 9.3 runs
         from the date the signatory becomes aware of its model's involvement, and the
-        Commission Opinion at para. 33 describes Measure 9.3 as setting out what "without
-        undue delay" typically requires. So the official form for demonstrating compliance
+        Commission Opinion at para. 33 describes Measure 9.3 as setting out what “without
+        undue delay” typically requires. So the official form for demonstrating compliance
         with Art. 55(1)(c) contains no field from which compliance with its own timeliness
         standard could be computed. See docs/appendix-forms.md section 3.
         BOUNDED, and the bound is unusually tight for a negative search. The corpus is the
         complete text of BOTH published renditions of the form: the PDF's text layer
         (document 121268) and every w:t run in the DOCX's word/document.xml and
-        word/glossary/document.xml (document 121270). The searched terms were "aware",
-        "awareness", "deadline", "timeline", "undue delay", "submission" and "days"; all
-        return zero in both. "date" returns two hits, both inside field 1. Because the
+        word/glossary/document.xml (document 121270). The searched terms were “aware”,
+        “awareness”, “deadline”, “timeline”, “undue delay”, “submission” and “days”; all
+        return zero in both. “date” returns two hits, both inside field 1. Because the
         DOCX search runs against the field labels and placeholders as the file stores
         them, the absence is a property of the form itself and not of a PDF extraction.
         What this does not bound: instructions carried outside the form - on the library
@@ -469,21 +559,21 @@ sources:
     sha256: "60ef852b4bd23c7e269426f4e5254896df9a46c9945d8070934fb9efc557c94c"
     establishes:
       - >-
-        PARA. 57, THE CONCLUSION: "the Commission concludes that the General-Purpose AI
+        PARA. 57, THE CONCLUSION: “the Commission concludes that the General-Purpose AI
         Code of Practice adequately covers the obligations provided for in Articles 53 and
-        55 of the AI Act and meets the aims according to Article 56 of the AI Act."
+        55 of the AI Act and meets the aims according to Article 56 of the AI Act.”
       - >-
-        PARA. 38: "the Safety and Security Chapter of the Code adequately covers the
+        PARA. 38: “the Safety and Security Chapter of the Code adequately covers the
         obligations provided for in Article 55(1), and the parts thereof outlined in
         Article 56(2), points (c) and (d), of the AI Act, for providers of general-purpose
-        AI models with systemic risk."
+        AI models with systemic risk.”
       - >-
         PARA. 33, THE MOST IMPORTANT SENTENCE IN THIS REGISTER FOR THE TIMING QUESTION:
-        Commitment 9 "specifies how providers of general-purpose AI models with systemic
+        Commitment 9 “specifies how providers of general-purpose AI models with systemic
         risk may keep track of, document, and report relevant information about serious
         incidents ... pursuant to Article 55(1), point (c), of the AI Act. In particular,
         it sets out ... WHAT 'WITHOUT UNDUE DELAY' TYPICALLY REQUIRES OF REPORTING
-        TIMELINES (MEASURE 9.3)". The Commission is stating what the statutory phrase
+        TIMELINES (MEASURE 9.3)”. The Commission is stating what the statutory phrase
         typically requires, and pointing at the two/five/ten/fifteen-day scheme.
       - >-
         Para. 28: the Transparency and Copyright Chapters adequately cover Art. 53(1) and
@@ -491,9 +581,9 @@ sources:
         Chapter adequately covers the transparency obligations specific to systemic-risk
         model providers under Annex XI, Section 2.
       - >-
-        Para. 35: the Art. 55(1) obligations "are not isolated but complement and feed into
-        each other" - model evaluations under (a) and serious incident reporting under (c)
-        are "an essential part of" systemic risk assessment under (b), and cybersecurity
+        Para. 35: the Art. 55(1) obligations “are not isolated but complement and feed into
+        each other” - model evaluations under (a) and serious incident reporting under (c)
+        are “an essential part of” systemic risk assessment under (b), and cybersecurity
         under (d) limits the scenarios that could lead to incidents.
     tier_note: >-
       A published Commission act, C(2025) 5361 final, not a web page and not guidance that
@@ -510,12 +600,12 @@ sources:
     sha256: "8b7da6b27ff9bd88f7b689605dd7713550ec8a689de2b1ec781e0b6d43302677"
     establishes:
       - >-
-        Section 1.3: "the Board concludes that the Code covers the obligations provided for
-        in Article 53 and Article 55 of the AI Act", and covers the issues outlined in
+        Section 1.3: “the Board concludes that the Code covers the obligations provided for
+        in Article 53 and Article 55 of the AI Act”, and covers the issues outlined in
         Art. 56(2), points (a), (c) and (d), leaving point (b) to the AI Office's template.
       - >-
-        The Board "nonetheless recommends closely monitoring the effectiveness of these
-        measures" - an endorsement with a reservation attached, which the Commission
+        The Board “nonetheless recommends closely monitoring the effectiveness of these
+        measures” - an endorsement with a reservation attached, which the Commission
         Opinion does not carry in the same terms.
     tier_note: >-
       Cited alongside the Commission Opinion because the two are separate acts by separate
@@ -529,19 +619,22 @@ sources:
     url: "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content"
     establishes:
       - >-
-        Cited only as a comparator, and a close one. The page states that "On July 8, the
+        Cited only as a comparator, and a close one. The page states that “On July 8, the
         Commission concluded that the Code of Practice on Transparency of AI-generated
-        Content ADEQUATELY COVERS THE OBLIGATIONS PROVIDED FOR IN ARTICLES 50(2), (4) and
+        Content adequately covers the obligations provided for in Articles 50(2), (4) and
         (5) AI Act and facilitates their effective implementation. The following day, the
-        AI Board adopted its Adequacy Assessment code."
+        AI Board adopted its Adequacy Assessment code.” The naming of specific provisions
+        is the point of the comparison; the emphasis is this register's and has been taken
+        back out of the quotation, where an earlier version of this entry had capitalised
+        the words inside the quotation marks.
       - >-
         That is the Article 56(6) formula - assessment by reference to named provisions,
         published, with a Board adequacy assessment alongside - applied to a different code
         eight months after the GPAI opinion and days before the Omnibus entered into force.
         It shows what a provision-specific published assessment looks like in practice.
       - >-
-        It also records that "Adherence to the code does not constitute conclusive evidence
-        of compliance with these obligations."
+        It also records that “Adherence to the code does not constitute conclusive evidence
+        of compliance with these obligations.”
     tier_note: >-
       Not about general-purpose AI models. Included because it establishes the Commission's
       own practice, which is what makes the absence of a post-Omnibus equivalent for the
@@ -580,6 +673,36 @@ sources:
       - "Para. 52: examples require case-by-case assessment, read with the Blue Guide and Arts. 3(9)-(10) and Recital 97"
       - "Para. 54 (s.3.1.3): quotes Recital 97 deemed-placement rule for an own model integrated into the provider's own system made available or put into service"
       - "Para. 112: the Commission could take no enforcement action in the first year from 2 Aug 2025, its powers entering application 2 Aug 2026 — corroborates the Art. 113 derivation"
+      - >-
+        PARA. 100, FOUND ON 12 SEPTEMBER 2026 AND NOT BEFORE. See the corrections log: this
+        document was held from the first day and searched for the scope question only. It
+        answers the serious-incident question too, and does so in the ENFORCEMENT section,
+        section 5, rather than anywhere definitional. Verbatim: “Such proactive reporting is
+        without prejudice to the obligation to keep track of, document, and report relevant
+        information about 'serious incidents' under Article 55(1), point (c), AI Act. The AI
+        Office considers that this obligation covers serious cybersecurity breaches related
+        to the model or its physical infrastructure, including the (self-)exfiltration of
+        model parameters and cyberattacks, due to their possible implications for the
+        obligations provided for in Article 55(1), points (b) and (d), AI Act. Apart from
+        this, the AI Office considers a 'serious incident' in the context of Chapter V AI Act
+        as any incident or malfunctioning of a general-purpose AI model that directly or
+        indirectly leads to any of the events listed in the corresponding definition for AI
+        systems in Article 3(49), points (a) to (d), AI Act.”
+      - >-
+        Two consequences of para. 100 for this analysis. FIRST, the cybersecurity trigger is
+        not the Code's alone: the AI Office reads the STATUTORY obligation at Art. 55(1)(c)
+        as covering it, and anchors it in Art. 55(1), points (b) and (d), rather than in Art.
+        3(49). So the five-day route no longer depends on reading the Commission Opinion at
+        para. 33 as construing the Act. SECOND, the bridging gap is bridged, in guidance: the
+        AI Office applies Art. 3(49), points (a) to (d), to models by treating a model
+        incident that “directly or indirectly leads to” those events as a serious incident.
+        That is a construction the enacting text does not supply, which is the same pattern
+        as Recital 97 and the same reason Recommendation 1 exists.
+      - >-
+        Note the wording difference, which is not trivial. The Guidelines say “model
+        PARAMETERS”; Measure 9.3 of the Code says “model WEIGHTS”. Both are read here as
+        covering the same thing, but the Act uses neither term and nothing in this analysis
+        turns on their being identical.
     documented_negatives:
       - >-
         The Guidelines reproduce the Art. 3(63) research exclusion when setting out the
@@ -607,36 +730,36 @@ sources:
       An undated page revised in place, so a capture is the only citable form of it. The
       copy hashed here was printed from the live page on 12 September 2026 at 12:17, the
       timestamp being printed into the page furniture by the browser. Text rendering drops
-      the brackets from statutory citations - the capture reads "Article 28 AI Act" for
-      Article 2(8), "Article 512" for Article 51(2), "Article 551b" for Article 55(1),
+      the brackets from statutory citations - the capture reads “Article 28 AI Act” for
+      Article 2(8), “Article 512” for Article 51(2), “Article 551b” for Article 55(1),
       point (b) - so quotations below restore them in square brackets rather than silently.
     establishes:
       - >-
-        THE THREE-CONDITION TEST, verbatim: "a general-purpose AI model is also considered
+        THE THREE-CONDITION TEST, verbatim: “a general-purpose AI model is also considered
         to be placed on the market if that model's provider integrates the model into its
         own AI system which is made available on the market or put into service, unless the
         model is (a) used for purely internal processes that are not essential for providing
         a product or a service to third parties, (b) the rights of natural persons are not
         affected, and (c) the model is not a general-purpose AI model with systemic risk
-        (recital 97 AI Act)." It attributes the test to Recital 97 and to no enacting
+        (recital 97 AI Act).” It attributes the test to Recital 97 and to no enacting
         provision, and cross-refers to section 3 of the Guidelines.
       - >-
-        IT ANSWERS THE ARTICLE 2(8) OBJECTION DIRECTLY, under the heading "Do the
+        IT ANSWERS THE ARTICLE 2(8) OBJECTION DIRECTLY, under the heading “Do the
         obligations for providers of general-purpose AI models apply in the development
-        phase?": Article 2[(8)] applies "as a general matter", but "certain obligations for
+        phase?”: Article 2[(8)] applies “as a general matter”, but “certain obligations for
         providers of general-purpose AI models (with and without systemic risk) explicitly
         or implicitly pertain to the development phase of models intended for, but prior
-        to, the placing on the market" - naming notification under Articles 51 and 52,
+        to, the placing on the market” - naming notification under Articles 51 and 52,
         documentation under Article 53, and assessment and mitigation of systemic risk
         under Article 55, and quoting Article 55(1), point (b) in terms.
       - "Notification duty applies where the model 'meets or will meet' the training compute threshold laid down in Article 51(2)"
     caveats:
       - >-
-        Self-disclaims, in the opening words of the page: "With this Q&A, the AI Office
+        Self-disclaims, in the opening words of the page: “With this Q&A, the AI Office
         seeks to facilitate the interpretation of certain provisions of the AI Act. This
         Q&A does not constitute an official position of the Commission, and it is without
         prejudice to any decision or position of the Commission. Only the Court of Justice
-        of the European Union is competent to authoritatively interpret the AI Act."
+        of the European Union is competent to authoritatively interpret the AI Act.”
       - >-
         Note what that means for the finding. The clearest statement that Chapter V reaches
         the development phase, and the only consolidated statement of the three-condition
@@ -653,8 +776,8 @@ sources:
       is correct and was always correct: v1 was posted 5 December 2025, v2 on 26 January
       2026, v3 on 20 May 2026 and v4 on 10 August 2026. The copy held is v4, identified by
       byte size - 604,486 bytes, 590.3 KiB, against the 590 KB arXiv records for v4 and
-      against 199 KB for v3. The title block of v4 nonetheless reads "Submitted: May
-      2026", which matches the posting date of v3 rather than its own; the chapter's
+      against 199 KB for v3. The title block of v4 nonetheless reads “Submitted: May
+      2026”, which matches the posting date of v3 rather than its own; the chapter's
       submission date to the Commentary and its posting date are not the same thing, and
       reading the former as the latter is what produced the error.
       The first error was dating the work December 2025 while quoting a May 2026 document.

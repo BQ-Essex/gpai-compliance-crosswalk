@@ -2,7 +2,7 @@
 """Check that every quotation in the prose appears in a document we actually hold.
 
 `citecheck.py` proves a citation resolves to verified text. It says nothing about the
-sentence around it. Eight of the eleven errors in this project's corrections log are the
+sentence around it. Nine of the thirteen errors in this project's corrections log are the
 same failure and it is not a citation failure: a source was characterised, or quoted,
 without being opened. A recital was summarised from a mirror. A directive was read
 through a summary. A Commission opinion was described from its landing page. In each
@@ -43,7 +43,8 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "_sources"
 CACHE = SOURCES / ".text-cache"
-PROSE = ("README.md", "docs/*.md", "protocol/*.md", "instrument/*.md")
+PROSE = ("README.md", "docs/*.md", "protocol/*.md", "instrument/*.md",
+         "data/sources.yaml", "data/crosswalk.yaml")
 
 # A quotation is only worth checking against a document we can identify it with.
 # "Is this string anywhere in _sources/?" is the wrong question: most quotations in
@@ -65,6 +66,9 @@ ATTRIBUTION = (
     (r"\bCER\b|2022/2557", "32022L2557"),
     (r"Pistillo", "Internal-deployment"),
     (r"Omnibus|2026/1744", "32026R1744"),
+    (r"Draft Guidance|GUIDANCE PARA|Article 73 AI Act|119624", "Draft_Guidance_article_73"),
+    (r"high-risk (?:form|template)|High-risk AI systems\)|119623|Section 1\.[23]",
+     "Incident_report_for_serious_incidents"),
 )
 
 # Below this, a quotation matches by coincidence and proves nothing.
@@ -72,6 +76,10 @@ MIN_QUOTE = 40
 MIN_FRAGMENT = 25
 
 QUOTED = re.compile(r"[“\"]([^”\"]{%d,})[”\"]" % MIN_QUOTE)
+# In YAML a straight double quote is syntax, not quotation: every scalar that needs
+# escaping wears them. Only curly quotes mark a quotation there. Reading YAML with the
+# prose pattern produced twenty-two findings, every one of them a field value.
+QUOTED_YAML = re.compile(r"“([^”]{%d,})”" % MIN_QUOTE)
 # A real elision. NOT "[w]hen" or "int[o application]", which are editorial
 # substitutions: the bracket changes a letter or supplies a word, and the quotation
 # still runs continuously through it. Treating those as breaks was this tool's first
@@ -182,6 +190,38 @@ def prose_files():
     return sorted({p for pattern in PROSE for p in ROOT.glob(pattern)})
 
 
+def logical_lines(path, text):
+    """Yield (line number, text) with YAML block scalars joined into one unit.
+
+    The scanner reads a line at a time, which is right for Markdown, where a paragraph
+    is one long line. In YAML a quotation is wrapped across a block scalar, so both ends
+    never sit on the same line and the pattern never fires. The register's quotations
+    were therefore invisible to this checker for as long as it has existed - silently,
+    which is the worst way for coverage to be missing. Found by planting a wrong word in
+    a quotation and watching nothing happen.
+
+    Joining also improves attribution: the document a quotation belongs to is usually
+    named at the top of the entry, not on the line the quotation happens to start on.
+    """
+    lines = text.splitlines()
+    if not str(path).endswith((".yaml", ".yml")):
+        for number, line in enumerate(lines, 1):
+            yield number, line
+        return
+    start, buffer = None, []
+    for number, line in enumerate(lines, 1):
+        if re.match(r"^\s*(?:-\s+)?(?:[\w.-]+:|-)(?:\s|$)", line) or not line.strip():
+            if buffer:
+                yield start, " ".join(buffer)
+            start, buffer = number, [line.strip()]
+        else:
+            if start is None:
+                start = number
+            buffer.append(line.strip())
+    if buffer:
+        yield start, " ".join(buffer)
+
+
 def main(argv):
     quiet = "--quiet" in argv
     show_verified = "--verified" in argv
@@ -220,8 +260,9 @@ def main(argv):
     found, missing, unattributed, skipped, excepted = [], [], [], 0, 0
     for path in prose_files():
         text = path.read_text(encoding="utf-8")
-        for number, line in enumerate(text.splitlines(), 1):
-            for match in QUOTED.finditer(line):
+        for number, line in logical_lines(path, text):
+            pattern = QUOTED_YAML if str(path).endswith((".yaml", ".yml")) else QUOTED
+            for match in pattern.finditer(line):
                 quote = match.group(1)
                 variants = [v for v in fragments(quote) if v]
                 if not variants:

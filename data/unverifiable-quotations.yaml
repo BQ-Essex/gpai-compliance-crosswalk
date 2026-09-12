@@ -79,3 +79,30 @@ exceptions:
       ninth recorded error. The sentence is used only for what the Commission says ABOUT
       the template's relationship to Commitment 9, which is a claim the page itself makes
       and can be checked at the URL in the source register.
+
+  - quote: "On July 8, the Commission concluded that the Code of Practice on Transparency"
+    kind: source-unheld
+    why: >-
+      A quotation from the Commission's library page for the Transparency Code opinion,
+      read on 12 September 2026 and not held as a file. It is cited only as a comparator,
+      to show what a provision-specific published adequacy assessment looks like, and
+      nothing in the analysis turns on it. It became visible to quotecheck.py only when
+      coverage was extended to the register itself; before that the register's quotations
+      were not checked at all.
+
+  - quote: "seeks alignment with international initiatives, such as the OECD"
+    kind: source-unheld
+    why: >-
+      The consultation page's own summary of the draft guidance, read 12 September 2026
+      and not held as a file. The guidance document says something similar at para. (3)
+      and not the same; both are recorded in the source entry so the two are not run
+      together. quotecheck.py routed this to the guidance document, which is the right
+      guess and the wrong document, and that is how the difference was noticed.
+
+  - quote: "clarifies definitions, offers practical examples, and explains how the new rules"
+    kind: source-unheld
+    why: >-
+      The consultation page's description of the draft guidance, from the same page and
+      the same reading as the OECD line above, and not held as a file. The documents it
+      describes are now held and hashed; the page that describes them is not.
+
