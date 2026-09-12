@@ -302,23 +302,37 @@ sources:
 
   - id: pistillo-internal-deployment
     tier: T4
-    date: "2026-05"
+    date: "2026-08-10"
+    first_posted: "2025-12-05"
+    version_held: "v4"
+    doi: "10.48550/arXiv.2512.05742"
     date_note: >-
-      The document itself reads "Commentary by Matteo Pistillo | Submitted: May 2026", and
-      its own footnotes give access dates through 1 June 2026. An earlier version of this
-      entry dated it December 2025 and gave an arXiv identifier of 2512.05742, which is a
-      December 2025 number and cannot be the same document. THE IDENTIFIER IS NOT
-      CONFIRMED: arXiv was unreachable from the machine this was prepared on, so it has
-      not been checked whether 2512.05742 is an earlier preprint of this chapter, a
-      different paper, or simply wrong here. Cited below as the chapter actually held.
+      FOUR VERSIONS, AND THE REGISTER GOT THIS WRONG TWICE IN ONE DAY. arXiv 2512.05742
+      is correct and was always correct: v1 was posted 5 December 2025, v2 on 26 January
+      2026, v3 on 20 May 2026 and v4 on 10 August 2026. The copy held is v4, identified by
+      byte size - 604,486 bytes, 590.3 KiB, against the 590 KB arXiv records for v4 and
+      against 199 KB for v3. The title block of v4 nonetheless reads "Submitted: May
+      2026", which matches the posting date of v3 rather than its own; the chapter's
+      submission date to the Commentary and its posting date are not the same thing, and
+      reading the former as the latter is what produced the error.
+      The first error was dating the work December 2025 while quoting a May 2026 document.
+      The second was concluding from that mismatch that the arXiv identifier could not
+      belong to this document. Both are recorded rather than tidied. Cited as 2026 because
+      that is the version consulted; the reference list gives the history.
+    cited_version_note: >-
+      Every documented_negative below was computed against v4 as held. They do not speak
+      to v1, v2 or v3, and a work that has been revised four times in nine months should
+      not be cited without saying which version was read - which is the same discipline
+      this register applies to the incident sources, arrived at from the other direction.
     author: "Pistillo, M."
     title: "Internal deployment in the AI Act"
-    venue: "Commentary chapter, submitted May 2026"
+    venue: "arXiv pre-print; chapter for the Cambridge Commentary on EU General-Purpose AI Law"
     document: "Internal-deployment-in-the-AI-Act.pdf"
     sha256: "00436de5aaf2b77d312af1b7e517a031f1a436efae42033030578fd0ce3e7472"
     url: "https://arxiv.org/abs/2512.05742"
     url_note: >-
-      Recorded as previously held and flagged as unconfirmed. See date_note.
+      Confirmed. See date_note for the version history and for how this entry was wrong
+      about it.
     establishes:
       - "Stress-tests arguments for and against including internal deployment in the Act's scope, working Arts. 2(1)(a)-(c), 2(6) and 2(8)"
       - "Canvasses the same deemed-placement pathway this analysis runs: integration of an internal GPAI model into an internal AI system put into service, via Art. 2(1)(a) and Recital 97"
@@ -326,7 +340,7 @@ sources:
       - "Draws the scientific / product-oriented R&D distinction from Recital 25, concluding that models deployed internally for the SOLE purpose of scientific R&D are exempt under Art. 2(6) while product-oriented R&D is not"
     documented_negatives:
       - >-
-        As of 12 September 2026, in the chapter as held: the Commission's GPAI scope
+        As of 12 September 2026, in v4 as held: the Commission's GPAI scope
         Guidelines are cited once and are not worked at paragraph level; the Commission's
         Q&A does not appear; the three cumulative conditions of the internal-use exception
         do not appear, nor does the Guidelines' 'internal processes that are essential'

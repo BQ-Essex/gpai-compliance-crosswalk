@@ -10,7 +10,7 @@
 
 ## 0. Corrections log
 
-Six errors have been found in this analysis—four by adversarial review of the finished draft, the fifth by a checker written afterwards, the sixth by reading a cross-referenced directive instead of a summary of it. All are recorded rather than silently fixed.
+Seven errors have been found in this analysis—four by adversarial review of the finished draft, the fifth by a checker written afterwards, the sixth by reading a cross-referenced directive instead of a summary of it, and the seventh by looking at a pre-print’s version history instead of its title page. All are recorded rather than silently fixed.
 
 | Error | Correction |
 |---|---|
@@ -20,6 +20,7 @@ Six errors have been found in this analysis—four by adversarial review of the 
 | **Scope then treated as resolved in the provider’s favour; Recital 97, Article 2(1)(a), Article 3 points (9)–(11) and the Commission’s Q&A never consulted** | See §1.5–1.7. Recital 97 deems a model integrated into the provider’s own system put into service to be placed on the market, and its internal-use exception is expressly unavailable to models with systemic risk. **The obligations attach.** The live question is factual: does the model exceed 10²⁵ FLOP? |
 | **A verdict cell carried a conclusion of law while keeping a permitted opener** | The threshold row read “On the provider’s own account, this appears met: the obligations attach”. The three registers make claims about a *disclosed record*; whether Chapter V reaches these facts is not something a record can establish. The record verdict and the conclusion of law are now separate fields, and `tools/validate.py` refuses the formulation. Found by a checker, not by review. |
 | **CER Article 5 said to require Member States to identify essential services within the Annex sectors** | It requires no such thing. CER Article 5(1) empowers **the Commission** to establish a **non-exhaustive** list of essential services by delegated act; Member States use it for risk assessments and then identify **critical entities** under CER Article 6. The Annex’s third column lists **categories of entities**, not services. Third error on this same limb, and the second of the designation/function kind. Found by reading the Directive rather than a summary of it. |
+| **A cited pre-print declared mis-identified, on a reading of its own title block** | The register dated Pistillo December 2025 while holding a document whose title block read “Submitted: May 2026”, then concluded from that mismatch that the arXiv identifier could not belong to it. The identifier was always right. The work has **four versions**—5 December 2025, 26 January 2026, 20 May 2026, 10 August 2026—and the copy held is v4, identified by byte size. A submission date is not a posting date. Both the original error and the correction of it were published before this was caught. |
 
 ---
 
