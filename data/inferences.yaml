@@ -258,7 +258,7 @@ inferences:
       and which may be another actor's.
     type: attribution
     function: graded
-    premises: [art3-1, art3-63, art3-66, art55-1b, openai-roadahead-aug26]
+    premises: [art3-1, art3-63, art3-66, art55-1b, art75-1, art75-1a, openai-roadahead-aug26]
     depends_on: [inf-attach]
     defeater: >-
       THE STRONGEST OBJECTION AVAILABLE TO THE PROVIDER, and it attacks attribution
@@ -269,7 +269,22 @@ inferences:
       partly, is that the provider's own account describes the evaluation environment as
       its own and names the absent safeguards as its own - "system prompts, harnesses,
       and control mechanisms" - so on these facts the scaffolding appears to be the same
-      undertaking's. That is a fact about this incident, not a general answer, and a
+      undertaking's.
+      ARTICLE 75(1), POINT (a) BLUNTS IT FURTHER, AND NOT COMPLETELY. The AI Office is
+      exclusively competent for the supervision and enforcement of AI systems "based on
+      general-purpose AI models where the model and the system are developed by the same
+      provider, or by providers forming part of the same undertaking as that provider", and
+      Art. 75(1a) routes those systems' serious-incident reports to the AI Office with Art.
+      73(2) to (9) applying mutatis mutandis. So the Act already contemplates model plus own
+      scaffolding as a regulated unit under one authority, and the "same undertaking" limb
+      defeats the corporate-structure version of the objection, where a subsidiary built the
+      harness. BE PRECISE ABOUT WHAT THAT DOES: it is a JURISDICTIONAL answer, not an
+      ATTRIBUTION one. It shows the objection opens no regulatory gap - the provider cannot
+      say "that was the system, not the model" and thereby leave the AI Office's competence.
+      It does not show that the scaffolded system's conduct is the model's for Art. 55
+      purposes. And where the scaffolding IS a third party's, Art. 75(1), point (a) says so
+      by its own terms and the objection keeps its full force.
+      That is a fact about this incident, not a general answer, and a
       cross-walk run on a different incident should expect this to be the first thing a
       provider says.
     strength: contestable
