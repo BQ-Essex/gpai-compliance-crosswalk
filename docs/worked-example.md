@@ -144,7 +144,7 @@ Causal standard throughout: “directly **or indirectly**”. Limbs disjunctive.
 |---|---|
 | **keep track of** | Freestanding. Code of Practice Commitment 9 requires tracking systems that document *before* incidents occur. **Does not resolve**; artifacts necessarily exist. |
 | **document** | Freestanding, likewise. **Does not resolve.** |
-| **report … without undue delay** | No determinate period **in the Act**. Measure 9.3 of the Code supplies one for a Signatory: **five days** for “a serious cybersecurity breach, including the (self-)exfiltration of model weights and cyberattacks”, running from awareness of the model’s involvement. See below. |
+| **report … without undue delay** | No determinate period **in the Act**. Measure 9.3 of the Code supplies one for a Signatory: **five days** for “a serious cybersecurity breach, including the (self-)exfiltration of model weights and cyberattacks”, running from awareness of the model’s involvement. See below. Commission Opinion C(2025) 5361 final, ¶33, describes Measure 9.3 as setting out “what ‘without undue delay’ typically requires of reporting timelines”, and at ¶38 finds the Safety and Security Chapter adequately covers Article 55(1). |
 | **“and possible corrective measures to address them”** | Corrective measures were described publicly **[T1]**; whether they were conveyed to the AI Office, and when, **does not resolve**. |
 
 **On timing, for the wiki episode**—the only one for which a filing is publicly known:

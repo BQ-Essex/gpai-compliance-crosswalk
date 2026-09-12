@@ -112,6 +112,12 @@ SEPARATE GATE — only for the reporting limb at Art. 55(1)(c)
     awareness, on "establish OR SUSPECT with reasonable likelihood".
   ⮕ The Code does not define 'serious incident' and does not cite Art. 3(49) at all,
     so for a Signatory the bridging gap above stops being the operative question.
+  ⮕ AND THE COMMISSION HAS SAID WHAT THE PHRASE MEANS. Opinion C(2025) 5361 final,
+    1 Aug 2025, para. 33: Measure 9.3 sets out "what 'without undue delay' typically
+    requires of reporting timelines"; para. 38: the Safety and Security Chapter
+    "adequately covers the obligations provided for in Article 55(1)"; para. 57: the
+    Code "adequately covers the obligations provided for in Articles 53 and 55".
+    A published Commission act under Art. 56 - not guidance that disclaims itself.
                               │
                               ▼
 THE INSTRUMENT — Art. 91 request for information, issued by THE COMMISSION
