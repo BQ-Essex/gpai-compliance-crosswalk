@@ -28,7 +28,7 @@
 
 1. This request is made under **Article 91(1)** of Regulation (EU) 2024/1689 (“the Regulation”), which empowers the Commission to request from the provider of a general-purpose AI model “the documentation drawn up by the provider in accordance with Articles 53 and 55, or any additional information that is necessary for the purpose of assessing compliance of the provider with this Regulation”.
 
-2. In the alternative, where the Commission prefers to proceed on the initiative of the scientific panel, this request may be issued under **Article 91(3)**, on a duly substantiated request from that panel, the information sought being necessary and proportionate for the fulfilment of its tasks. *(The cross-reference in Article 91(3) is to Article 68(2); the panel’s tasks are set out at Article 68(3). The reference is reproduced as enacted.)* The drafting below serves either pathway without amendment.
+2. No alternative basis is stated. Article 91(3) is not another label for the same act: it requires a duly substantiated request from the scientific panel, already made, and a finding that access is necessary and proportionate for the fulfilment of that panel’s tasks. Those conditions either exist on the date of signature or they do not, and a request that reserves the choice states no basis at all. Where the scientific panel has made such a request, a separate instrument should be issued under Article 91(3) reciting it and its date.
 
 3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b). The Code of Practice for General-Purpose AI Models, Safety and Security Chapter, is relevant to Requests 11a and 12 by operation of Article 55(2).
 
@@ -56,13 +56,17 @@
 
    **“the Code”** means the General-Purpose AI Code of Practice.
 
-## Part D: Why a formal request rather than structured dialogue
+## Part D: Information required
 
-8. Article 91(2) permits the AI Office to initiate a structured dialogue before a request for information is sent. A formal request is considered appropriate because the information sought consists principally of documentation the Regulation already requires to be drawn up and kept up to date, and because a documented and dated record of the Provider’s position on the scope question at Section I serves both parties. The Commission remains willing to supplement this request with structured dialogue.
+**Before the requests, four things that govern all of them.**
 
----
+*Nothing here requires an admission.* The Commission has formed no view that any obligation has been contravened. Where a request below asks the Provider to state a position on the legal characterisation of facts—whether a model falls within Article 3, point (63), whether activity fell within Article 2(8), which of the conditions in Recital 97 it relies on—the Provider may answer or decline, no adverse inference will be drawn from declining, and nothing in this request requires the Provider to admit any infringement. The facts and documents requested are required; the reasoning about them is invited.
 
-## Part E: Information required
+*Applicability does not limit production.* Where the Provider considers that a provision does not apply to a model, it shall nonetheless provide the internal documentation it holds covering the matters that provision describes, and may state its position on applicability separately. The scope of a request is not conditional on that position.
+
+*Legal professional privilege is preserved.* Nothing in this request requires production of communications protected by legal professional privilege as recognised in the case-law of the Court of Justice. Where the Provider withholds a document on that ground it shall provide a schedule identifying the document, its date, the category of author and recipient, and the basis of the claim, without disclosing the privileged content. Privilege is not a ground for withholding the underlying facts, or the dates on which steps were taken.
+
+*No structured dialogue has been initiated* under Article 91(2) in respect of these matters. The Commission remains willing to engage with the Provider in addition to this request.
 
 > *Each request identifies the provision to which it relates and states what would be regarded as a responsive answer. Where the Provider considers a request founded on a mistaken premise, it is invited to say so and explain why, rather than to decline.*
 
@@ -76,7 +80,7 @@
 
 **Request 3.** State the Provider’s position on whether the Research Model falls within the exception in **Article 3, point (63)** for “AI models that are used for research, development or prototyping activities before they are placed on the market”, together with the reasons for that position and the date from which it is said to apply.
 
-**Request 4.** State the Provider’s position on whether the Evaluation constituted research, testing or development activity within **Article 2(8)**, and whether any part of it constituted **testing in real-world conditions** within Article 3, point (57). If the Provider contends that it did, identify which of the conditions in Article 57 or Article 60 it says were fulfilled, and in respect of which system.
+**Request 4.** State whether any part of the Evaluation involved use of the model in real-world conditions outside a laboratory or simulated environment, and if so describe the environment, the systems and third parties reachable from it, and the dates. Provide the records evidencing the environment and its egress configuration. *(An earlier draft of this request asked which conditions in Article 57 or Article 60 the Provider said were fulfilled. Those are the regulatory-sandbox and real-world-testing regimes for high-risk AI systems, and this analysis argues at length that neither reaches a general-purpose AI model. Citing them at the Provider was a category error and is recorded as such.)*
 
 **Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use. If so, state when. If the Provider contends the model nonetheless falls outside the obligations for models, state which of the three conditions set out in Recital 97 it relies on, having regard to the position that those conditions are cumulative and that the third is unavailable to a general-purpose AI model with systemic risk.
 
@@ -116,21 +120,21 @@
 
 ---
 
-## Part F: Period for response
+## Part E: Period for response
 
-9. The Provider is requested to respond by **[date]**, being **[20] working days** from the date of this request.
+9. The Provider shall supply the information requested by **[date]**, being the period set by the Commission for the purposes of Article 91(4). **[Drafting note: this figure is to be chosen before signature and not left bracketed. A single period across Section I and the document productions at Requests 6, 8, 9 and 12 is unlikely to be proportionate; tranching is the better course.]**
 
-10. Where the Provider cannot respond fully within that period, it should provide a partial response within the period, identifying what is outstanding and the date by which it will be supplied.
+10. Where the Provider considers that it cannot comply in full within that period, it may apply in writing, before the expiry of the period and with reasons, for an extension in respect of identified items. An extension takes effect only if granted by the Commission in writing. Absent such a grant, the period set at paragraph 9 applies to the whole of this request.
 
 11. Information supplied in response to this request, **including trade secrets**, is subject to the confidentiality obligations in Article 78, as Article 55(3) provides. The Provider is not invited to withhold information on confidentiality grounds, but should identify material it considers confidential so that it may be handled accordingly.
 
-## Part G: Indication of fines (Article 91(4))
+## Part F: Indication of fines (Article 91(4))
 
 12. In accordance with Article 91(4), attention is drawn to **Article 101(1), point (b)**, under which the Commission may impose on providers of general-purpose AI models fines not exceeding **3% of annual total worldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher**, where it finds that the provider intentionally or negligently “failed to comply with a request for a document or for information pursuant to Article 91, or supplied incorrect, incomplete or misleading information”.
 
-13. Pursuant to Article 91(5), where information is supplied by representatives or by lawyers duly authorised to act, the Provider remains fully responsible if the information supplied is incomplete, incorrect or misleading.
+13. In accordance with **Article 91(5)**, the information requested shall be supplied by the Provider or its representative; in the case of legal persons, companies or firms, by the persons authorised to represent them by law or by their statutes. Lawyers duly authorised to act may supply information on behalf of their clients; the Provider nevertheless remains fully responsible if the information supplied is incomplete, incorrect or misleading. The response shall be accompanied by a statement, signed by a person authorised to represent the Provider, that the information supplied is to the best of that person’s knowledge correct, complete and not misleading, and identifying any request to which a complete answer has not been given and why.
 
-14. **Temporal scope.** Article 101 has applied since 2 August 2026, Article 113, point (b) having excepted it from the earlier application date of Chapter XII. Nothing in this request should be read as asserting exposure under Article 101(1), point (a) in respect of conduct predating that date. Paragraph 12 concerns compliance with this request.
+14. **Temporal scope.** Article 101 has applied since 2 August 2026, Article 113, point (b) having excepted it from the earlier application date of Chapter XII. Paragraph 12 concerns compliance with this request.
 
 **[Signature block—to be completed by the issuing authority]**
 
