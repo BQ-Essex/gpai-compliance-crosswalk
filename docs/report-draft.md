@@ -209,7 +209,7 @@ The record is live; every negative-search note is dated accordingly.
 
 Two slips in the published Regulation are reproduced rather than corrected. Article 101(1) reads “whichever is higher., when the Commission finds”; its closing subparagraph reads “The Commission shall also into account commitments made”, missing a verb. Both appear in the authentic OJ text and the consolidated text alike. Neither is ambiguous, and neither changes anything here—they are recorded because this report claims to have read the enacting text rather than a summary of it.
 
-A month of follow-up would add: whether the affected platform provides an essential service within a CER Annex sector; whether the Commission has published an assessment under Article 56(6) of whether the codes cover the Article 53 and 55 obligations; the Article 3(1)/3(63) bridging question; and confirmation of the second-hand register entries against the consolidated text.
+A month of follow-up would add: whether the affected platform provides an essential service within a CER Annex sector; reading the Commission Opinion and the AI Board Adequacy Assessment on the GPAI Code, to see whether either names Article 55; the Article 3(1)/3(63) bridging question; and confirmation of the second-hand register entries against the consolidated text.
 
 ## 7. Conclusion
 

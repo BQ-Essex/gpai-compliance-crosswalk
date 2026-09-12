@@ -291,6 +291,70 @@ sources:
       Article 56(6) as amended obliges the Commission to assess whether the codes cover the
       Article 53 and 55 obligations and to publish that assessment.
 
+  - id: ec-cop-adequacy-opinion
+    tier: T4
+    date: "2025-08-01"
+    retrieved: "2026-09-12"
+    title: "Commission Opinion on the assessment of the General-Purpose AI Code of Practice"
+    url: "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-general-purpose-ai-code-practice"
+    document_urls:
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/118688   # Commission Opinion"
+      - "https://ec.europa.eu/newsroom/dae/redirection/document/118687   # AI Board Adequacy Assessment"
+    establishes:
+      - >-
+        The landing page states, verbatim: "The Commission and the AI Board have confirmed
+        that the GPAI Code of Practice, developed by independent experts, is an adequate
+        voluntary tool for providers of GPAI models to demonstrate compliance with the AI
+        Act." Published 1 August 2025; page last updated 1 August 2025.
+      - >-
+        Two documents are offered for download - the Commission Opinion and the AI Board's
+        Adequacy Assessment - and NEITHER HAS BEEN READ. This entry records the landing
+        page only.
+    caveats:
+      - >-
+        IT PREDATES THE DUTY IT WOULD OTHERWISE SATISFY. Article 56(6) was replaced by
+        Regulation (EU) 2026/1744, in force 27 July 2026, to require that the Commission
+        "shall assess whether the codes of practice cover the obligations provided for in
+        Articles 53 and 55" and "shall publish its assessment". This opinion is dated
+        1 August 2025 and is expressed in general terms - an adequate tool for
+        demonstrating compliance with the Act - rather than by reference to particular
+        provisions.
+    documented_negatives:
+      - >-
+        As of 12 September 2026, searching digital-strategy.ec.europa.eu including its
+        library and search endpoints, and general web search: no assessment of the GPAI
+        Code published AFTER 27 July 2026, and none expressed in the Article 56(6) formula
+        of covering the obligations in Articles 53 and 55, was located. The only published
+        Commission assessment of this Code found is the one above, of 1 August 2025.
+        Whether the Commission Opinion document itself names provisions is not known -
+        see the caveat above; the document has not been read.
+
+  - id: ec-transparency-code-adequacy
+    tier: T4
+    date: "2026-07-09"
+    retrieved: "2026-09-12"
+    title: "Commission opinion on the assessment of the Code of Practice on Transparency of AI-generated Content"
+    url: "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content"
+    establishes:
+      - >-
+        Cited only as a comparator, and a close one. The page states that "On July 8, the
+        Commission concluded that the Code of Practice on Transparency of AI-generated
+        Content ADEQUATELY COVERS THE OBLIGATIONS PROVIDED FOR IN ARTICLES 50(2), (4) and
+        (5) AI Act and facilitates their effective implementation. The following day, the
+        AI Board adopted its Adequacy Assessment code."
+      - >-
+        That is the Article 56(6) formula - assessment by reference to named provisions,
+        published, with a Board adequacy assessment alongside - applied to a different code
+        eight months after the GPAI opinion and days before the Omnibus entered into force.
+        It shows what a provision-specific published assessment looks like in practice.
+      - >-
+        It also records that "Adherence to the code does not constitute conclusive evidence
+        of compliance with these obligations."
+    tier_note: >-
+      Not about general-purpose AI models. Included because it establishes the Commission's
+      own practice, which is what makes the absence of a post-Omnibus equivalent for the
+      GPAI Code a fact worth stating rather than an absence of evidence.
+
   - id: ec-gpai-guidelines
     tier: T4
     date: "2025-11-19"

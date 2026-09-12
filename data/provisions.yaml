@@ -287,6 +287,20 @@ provisions:
         defined by reference to an AI system (Art. 3, point (1)), while Art. 55(1)(c)
         binds providers of models.
 
+  - id: art50
+    cite: "Article 50"
+    title: "Transparency obligations for providers and deployers of certain AI systems"
+    amended_by_omnibus: "True"
+    provenance: "not reproduced"
+    verified: "2026-09-12 — amendment status from CELEX 32026R1744, instruction (20), replacing paragraph 7"
+    text: >-
+      [Text not reproduced. This analysis does not rely on Article 50's wording. It is
+      held so that the Commission's published conclusion that the Code of Practice on
+      Transparency of AI-generated Content "adequately covers the obligations provided for
+      in Articles 50(2), (4) and (5)" resolves to a provision in the register rather than
+      dangling. That conclusion is cited as a comparator for the Article 56(6) assessment
+      shape, not for anything Article 50 requires.]
+
   - id: art51
     cite: "Article 51"
     title: "Classification as GPAI model with systemic risk"
