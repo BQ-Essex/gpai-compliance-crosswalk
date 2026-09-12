@@ -63,3 +63,9 @@ exceptions:
     why: >-
       Californian statutory language quoted in the comparative section. The register holds
       Regulation (EU) 2024/1689 and the instruments it imports, not foreign statutes.
+
+  - quote: "Article 52(2) then places the burden on the provider"
+    kind: own-words
+    why: >-
+      The draft's own retracted wording, preserved verbatim in the corrections log so the
+      tenth entry records what was actually written rather than a tidied version of it.

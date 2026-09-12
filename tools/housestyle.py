@@ -151,6 +151,40 @@ def find_echoes(text):
     return echoes
 
 
+NUMBERS = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,
+           "nine":9,"ten":10,"eleven":11,"twelve":12,"thirteen":13,"fourteen":14}
+
+
+def count_drift(text):
+    """Does a stated count of corrections match the rows in the table below it?
+
+    A number written in prose and a table it describes drift apart silently, and this
+    one did: the log said seven while the table held nine, through two edits that each
+    failed to update it. A count nobody checks is a claim nobody checks.
+
+    Only the table immediately following the sentence is counted. The first version of
+    this check counted every pipe-delimited row in the file and reported fifteen, which
+    is the same class of mistake in a different costume.
+    """
+    lines = text.splitlines()
+    start = next((i for i, l in enumerate(lines)
+                  if re.match(r"^\w+ errors have been found", l)), None)
+    if start is None:
+        return None
+    stated = NUMBERS.get(lines[start].split()[0].lower())
+    if stated is None:
+        return None
+    rows, seen_table = 0, False
+    for line in lines[start + 1:]:
+        if line.startswith("|"):
+            seen_table = True
+            if not re.match(r"^\|\s*-{2,}", line) and not line.startswith("| Error"):
+                rows += 1
+        elif seen_table and not line.strip():
+            break
+    return None if rows == 0 or stated == rows else (stated, rows)
+
+
 def process(path, fix=False):
     """Apply the mechanical fixes to one file and report what changed or remains.
 
@@ -168,6 +202,7 @@ def process(path, fix=False):
     straight = shelved.count('"') + len(re.findall(r"(?<=\w)'(?=\w)", shelved))
     signposts = find_signposts(original)
     echoes = find_echoes(original)
+    drift = count_drift(original)
 
     if fix and revised != original:
         with open(path, "w", encoding="utf-8") as handle:
@@ -183,11 +218,16 @@ def process(path, fix=False):
         print(f"  line {number}: signposting — “{phrase}”. "
               f"Usually the frame goes and the sentence stays.")
 
+    if drift:
+        print(f"  corrections log says {drift[0]} errors; the table has {drift[1]} rows. "
+              f"A count written in prose drifts from the table it describes, silently, "
+              f"and this one already has.")
+
     for number, first, opening in echoes:
         print(f"  line {number}: repeats the paragraph at line {first} — “{opening}…”. "
               f"One of the two is a revision that was never deleted.")
 
-    return (revised == original or fix) and not signposts and not echoes
+    return (revised == original or fix) and not signposts and not echoes and not drift
 
 
 def main():
