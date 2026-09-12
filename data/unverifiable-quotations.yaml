@@ -106,3 +106,74 @@ exceptions:
       the same reading as the OECD line above, and not held as a file. The documents it
       describes are now held and hashed; the page that describes them is not.
 
+  - quote: "in the alternative, where the Commission prefers to proceed on the initiative"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "identifying what is outstanding and the date by which it will be supplied"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "to the extent the Provider considers that provision to apply"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "Article 53(1)(a) does not apply; accordingly nothing is produced"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "The Commission is considering two publicly reported episodes"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "having regard to the position that those conditions are cumulative"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "whether loss of containment"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "the basis on which safeguards were not applied"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.
+
+  - quote: "the server-side request forgery"
+    kind: own-words
+    why: >-
+      The adversarial review of the instrument quoting the draft it was reviewing. Several
+      of these passages have since been changed or deleted in response to that review, so
+      the words are in the repository's git history rather than in any current file, which
+      is what a review record is for.

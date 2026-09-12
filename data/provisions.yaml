@@ -865,6 +865,44 @@ provisions:
 # three of the six recorded errors. Cite them in prose with the instrument qualifier —
 # "CER Article 2, point (4)" — which is both how citecheck tells them apart and how a
 # reader should have been able to tell all along.
+  - id: art54
+    cite: "Article 54"
+    title: "Authorised representatives of providers of general-purpose AI models"
+    amended_by_omnibus: false
+    text: >-
+      1. Prior to placing a general-purpose AI model on the Union market, providers
+      established in third countries shall, by written mandate, appoint an authorised
+      representative which is established in the Union. [...]
+    notes: >-
+      Registered 12 September 2026 because the instrument review said the request must be
+      served on the Article 54 authorised representative in parallel where the provider is
+      established in a third country. Extract only; nothing here turns on paragraphs 2 to 5.
+
+  - id: art92
+    cite: "Article 92"
+    title: "Power to conduct evaluations"
+    amended_by_omnibus: false
+    text: >-
+      1. The AI Office, after consulting the Board, may conduct evaluations of the
+      general-purpose AI model concerned: (a) to assess compliance of the provider with
+      obligations under this Regulation, where the information gathered pursuant to
+      Article 91 [...]
+    notes: >-
+      Registered 12 September 2026. Relevant only as the power that follows Article 91 when
+      the information gathered is insufficient - which is why the confidentiality clause of
+      the instrument should not promise more than Article 78 gives.
+
+  - id: art93
+    cite: "Article 93"
+    title: "Power to request measures"
+    amended_by_omnibus: false
+    text: >-
+      1. Where necessary and appropriate, the Commission may request providers to:
+      (a) take appropriate measures to comply with the obligations set out in Articles 53
+      and 54; (b) implement mitigation measures, where the evaluation carried out in [...]
+    notes: >-
+      Registered 12 September 2026, same reason as art92. Extract only.
+
 imported_provisions:
   - id: cer-2-1
     instrument: "CER"
