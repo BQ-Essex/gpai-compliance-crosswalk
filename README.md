@@ -29,11 +29,18 @@ Everything here is built to hold that line. Verdicts may only take one of three 
 The constraint is also **machine-checked**, because a discipline that depends on a tired human at hour forty is a discipline that fails at hour forty:
 
 ```bash
-pip install pyyaml          # the checkers' only dependency
-python3 tools/validate.py   # the cross-walk rows hold to the verdict discipline
-python3 tools/citecheck.py  # every citation in the prose resolves to verified text
-python3 tools/quotecheck.py # every quotation matches the document it is attributed to
+pip install pyyaml       # the checkers' only dependency
+python3 tools/check.py   # runs all four; exit code is the worst of them
 ```
+
+```
+validate.py    ok    cross-walk rows hold to the verdict discipline
+citecheck.py   ok    citations resolve to verified text
+quotecheck.py  ok    quotations match the documents they are attributed to
+housestyle.py  ok    prose conventions, and no paragraph repeated
+```
+
+**What a green board does not mean** is the part worth reading, and `check.py` says it on every clean run. Every one of the nine errors in the corrections log passed every check that existed when it was made. These establish that citations resolve, that quotations are accurate, that verdicts stay in register and that absences are bounded. They cannot establish that a provision is the right one for the proposition, that an inference from two recitals is sound, or that a reading of a Commission opinion is the better of two available readings—which is where this analysis has actually gone wrong. Green is a floor, not a verdict.
 
 `tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library.
 
