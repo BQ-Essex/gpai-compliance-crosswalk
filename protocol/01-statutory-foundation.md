@@ -53,6 +53,16 @@ So Article 2(8)’s single carve-back has no purchase on a model at all. On the 
 
 **It is answered, and the answer says something about how the Regulation is built.** Recital 97 does not carve an exception out of Article 2(8). It relocates the moment of placement: a model integrated into its provider’s own system put into service *is* placed on the market, so the development was not activity “prior to [its] being placed on the market”, and Article 2(8) never engages. The recital is not overriding the enacting text; it is fixing the point in time from which the enacting text runs. That is a structural job, and the observation worth making is that the Act leaves it to a recital to do.
 
+### 1.3a Recital 25: the research exclusion has two halves, and only one is an exclusion
+
+> **Recital 25 (extracts)**: … It is therefore necessary to exclude from its scope AI systems and models specifically developed and put into service **for the sole purpose of scientific research and development**. … As regards **product-oriented** research, testing and development activity regarding AI systems **or models**, the provisions of this Regulation should also not apply **prior to those systems and models being put into service or placed on the market**. That exclusion is **without prejudice to the obligation to comply with this Regulation where an AI system falling into the scope of this Regulation is placed on the market or put into service as a result of such research and development activity** …
+
+Scientific research and development is excluded outright, on a **sole purpose** test, by Article 2(6) and this recital together. Product-oriented research is not excluded at all: the Regulation simply does not reach it *before* placement or putting into service. A frontier developer’s pre-release evaluation of a model it intends to ship is product-oriented on any reading, so this half of the recital postpones rather than exempts.
+
+**Then note the drafting.** The recital speaks of “those systems **and models** being **put into service** or placed on the market”. Article 2(1)(a) gives models no put-into-service limb, and Article 3, point (11) defines the term by reference to an **AI system** alone. Recital 97 does the same when it deems an integrated own model placed on the market. Two recitals presuppose a category the enacting definitions withhold. That is the strongest evidence available that the asymmetry at §1.5 is an artefact rather than a choice—and it still does not cure it, because the principle that a recital cannot derogate from enacting terms is not weakened by there being two of them.
+
+Note also the closing “without prejudice” clause, which names only “an **AI system** falling into the scope of this Regulation”. Even here, where the recital is at its most expansive, the asymmetry survives.
+
 ### 1.4 Article 3, point (3): ‘provider’ is tied to market placement
 
 > ‘provider’ means a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model or that has [one] developed **and places it on the market** or puts the AI system into service under its own name or trademark, whether for payment or free of charge;

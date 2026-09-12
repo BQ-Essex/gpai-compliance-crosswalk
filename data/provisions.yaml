@@ -855,6 +855,47 @@ imported_provisions:
         earlier draft of this analysis read it as though it were.
 
 recitals:
+  - id: recital-25
+    cite: "Recital 25"
+    source_celex: "32024R1689"
+    provenance: "authentic OJ"
+    verified: "2026-09-12 against CELEX 32024R1689"
+    text: >-
+      This Regulation should support innovation, should respect freedom of science, and
+      should not undermine research and development activity. It is therefore necessary to
+      exclude from its scope AI systems and models specifically developed and put into
+      service for the sole purpose of scientific research and development. Moreover, it is
+      necessary to ensure that this Regulation does not otherwise affect scientific
+      research and development activity on AI systems or models prior to being placed on
+      the market or put into service. As regards product-oriented research, testing and
+      development activity regarding AI systems or models, the provisions of this
+      Regulation should also not apply prior to those systems and models being put into
+      service or placed on the market. That exclusion is without prejudice to the
+      obligation to comply with this Regulation where an AI system falling into the scope
+      of this Regulation is placed on the market or put into service as a result of such
+      research and development activity and to the application of provisions on AI
+      regulatory sandboxes and testing in real world conditions. [...]
+    notes:
+      - >-
+        SPLITS R&D IN TWO, and the split is the useful part. Scientific R&D is excluded
+        outright by Art. 2(6), on the 'sole purpose' test. Product-oriented R&D is not
+        excluded: the Regulation merely does not apply to it BEFORE the system or model is
+        put into service or placed on the market. A frontier developer's internal
+        evaluation of a model destined for release is product-oriented on any reading.
+      - >-
+        A SECOND RECITAL RUNNING AHEAD OF THE ENACTING TEXT, which matters more here than
+        the point it is usually cited for. It speaks of 'those systems AND MODELS being
+        PUT INTO SERVICE or placed on the market'. Art. 2(1)(a) has no put-into-service
+        limb for models at all, and Art. 3, point (11) confines that term to AI systems.
+        Recital 97 does the same thing. Two recitals presuppose a category the definitions
+        do not provide, which is the strongest available evidence that the asymmetry in
+        Art. 2(1)(a) is an artefact rather than a considered choice - and it cuts in
+        favour of the Commission's reading without curing the fragility, because a recital
+        still cannot derogate from enacting terms.
+      - >-
+        The closing 'without prejudice' clause names only 'an AI system falling into the
+        scope of this Regulation', not a model. The asymmetry survives even here.
+
   - id: recital-97
     cite: "Recital 97"
     source_celex: "32024R1689"

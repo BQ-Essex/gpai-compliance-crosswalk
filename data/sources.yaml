@@ -302,14 +302,46 @@ sources:
 
   - id: pistillo-internal-deployment
     tier: T4
-    date: "2025-12-08"
-    author: "Matteo Pistillo, Apollo Research"
+    date: "2026-05"
+    date_note: >-
+      The document itself reads "Commentary by Matteo Pistillo | Submitted: May 2026", and
+      its own footnotes give access dates through 1 June 2026. An earlier version of this
+      entry dated it December 2025 and gave an arXiv identifier of 2512.05742, which is a
+      December 2025 number and cannot be the same document. THE IDENTIFIER IS NOT
+      CONFIRMED: arXiv was unreachable from the machine this was prepared on, so it has
+      not been checked whether 2512.05742 is an earlier preprint of this chapter, a
+      different paper, or simply wrong here. Cited below as the chapter actually held.
+    author: "Pistillo, M."
     title: "Internal deployment in the AI Act"
+    venue: "Commentary chapter, submitted May 2026"
+    document: "Internal-deployment-in-the-AI-Act.pdf"
+    sha256: "00436de5aaf2b77d312af1b7e517a031f1a436efae42033030578fd0ce3e7472"
     url: "https://arxiv.org/abs/2512.05742"
-    note: "Pre-print for the Cambridge Commentary on EU General-Purpose AI Law"
+    url_note: >-
+      Recorded as previously held and flagged as unconfirmed. See date_note.
     establishes:
-      - "Analyses Arts. 2(1)(a)-(c), 2(6), 2(8), 3(9), 3(11), 3(63); draws the same systems/models asymmetry"
-      - "Concludes internal deployment generally DOES trigger the Act, models becoming covered once integrated into systems put into service (Recital 97)"
+      - "Stress-tests arguments for and against including internal deployment in the Act's scope, working Arts. 2(1)(a)-(c), 2(6) and 2(8)"
+      - "Canvasses the same deemed-placement pathway this analysis runs: integration of an internal GPAI model into an internal AI system put into service, via Art. 2(1)(a) and Recital 97"
+      - "Offers a second pathway: reading 'placing on the market' to include making a model available for use in the provider's own business"
+      - "Draws the scientific / product-oriented R&D distinction from Recital 25, concluding that models deployed internally for the SOLE purpose of scientific R&D are exempt under Art. 2(6) while product-oriented R&D is not"
+    documented_negatives:
+      - >-
+        As of 12 September 2026, in the chapter as held: the Commission's GPAI scope
+        Guidelines are cited once and are not worked at paragraph level; the Commission's
+        Q&A does not appear; the three cumulative conditions of the internal-use exception
+        do not appear, nor does the Guidelines' 'internal processes that are essential'
+        example; and neither Article 52(1), nor Article 55, nor 'serious incident' occurs
+        anywhere in it.
+      - >-
+        The phrases 'Article 60' and 'real world conditions' do not occur. The observation
+        that Art. 2(8)'s single carve-back cannot reach a general-purpose AI model - Art.
+        3, point (57) being defined by reference to an AI SYSTEM and Art. 60 confined on
+        its face to HIGH-RISK AI SYSTEMS - is not made here.
     tier_note: >-
-      Cited because it precedes this analysis and reaches the same destination by a
-      different route. The scope argument is not original to this work.
+      Cited because it precedes this analysis and reaches the same destination, in part by
+      the same route. The scope argument is not original to this work, and this entry
+      records what is his so that what is left can be stated without overclaiming: the
+      Guidelines at paragraph level, the Q&A's three-condition test, the Art. 3(57)/Art. 60
+      point, and the Chapter V obligation-by-obligation analysis, which the chapter does
+      not attempt.
+
