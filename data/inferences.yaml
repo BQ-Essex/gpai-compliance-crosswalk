@@ -175,7 +175,7 @@ inferences:
       and is deliberately kept out of the verdict cells for that reason.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.7; docs/worked-example.md §6"
+    stated_at: "docs/report-draft.md §4.7; docs/worked-example.md §5"
 
   - id: inf-irreversibility
     claim: >-
@@ -189,7 +189,7 @@ inferences:
       the disruption at the time rather than to its eventual remedy.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.6; docs/worked-example.md §4"
+    stated_at: "docs/report-draft.md §4.4; docs/worked-example.md §4"
 
   - id: inf-bridging-gap
     claim: >-
@@ -204,7 +204,7 @@ inferences:
       the Code sidesteps the question by stating its own triggers rather than resolving it.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.6; protocol/01-statutory-foundation.md §5"
+    stated_at: "docs/report-draft.md §4.4; protocol/01-statutory-foundation.md §1.9"
 
   - id: inf-no-101a-exposure
     claim: >-

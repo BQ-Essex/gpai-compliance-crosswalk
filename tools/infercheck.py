@@ -15,7 +15,7 @@ weakest ones the easiest to find. What can then be checked mechanically is real:
   · every premise resolves to a provision, recital or source that exists
   · every inference names something that would defeat it
   · the dependency graph is acyclic, and nothing depends on what is not there
-  · every load-bearing inference says where in the prose it is actually stated
+  · every stated_at reference points at a heading that exists in the file it names
   · an inference marked contestable is not silently load-bearing without saying so
 
 None of that makes an argument sound. It makes an unsound one findable, which is the
@@ -36,6 +36,7 @@ Exit codes:
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -90,6 +91,20 @@ def check(entries, known):
             complaints.append(
                 f"[{eid}] is load-bearing and does not say where it is stated. A step the "
                 f"conclusion depends on should be findable in the prose.")
+
+        for ref in re.finditer(r"([\w./-]+\.md)\s*§\s*([0-9]+(?:\.[0-9a-z]+)?)",
+                               entry.get("stated_at") or ""):
+            path, section = ROOT / ref.group(1), ref.group(2)
+            if not path.exists():
+                complaints.append(f"[{eid}] stated_at names {ref.group(1)}, which is not here.")
+                continue
+            body = path.read_text(encoding="utf-8")
+            if not re.search(r"^#{2,4}\s+%s[.\s]" % re.escape(section), body, re.M):
+                complaints.append(
+                    f"[{eid}] says it is stated at {ref.group(1)} section {section}, and "
+                    f"that section does not exist. Three of the first twelve entries here "
+                    f"were wrong this way: the field that exists to make a claim findable "
+                    f"was itself unchecked.")
 
         defeater = (entry.get("defeater") or "").strip()
         if defeater and len(defeater) < 40:
