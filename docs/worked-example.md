@@ -104,6 +104,8 @@ Volume, same source, with the two bases kept apart because the source keeps them
 
 ### 3.4 Article 55(2)—which compliance branch, and therefore which documents exist
 
+> **Article 56(6), as amended by the Omnibus**, requires the Commission to assess whether the codes of practice “cover the obligations provided for in Articles 53 and 55” and to **publish** that assessment. On the Code branch the provider relies on an instrument the Commission must itself appraise and publish on—which makes the adequacy of the Code a matter of public record rather than of the provider’s say-so. Article 56 is the only Chapter V provision the Omnibus touched; Articles 51 to 55 stand as enacted.
+
 | | |
 |---|---|
 | **Disclosed facts** | The provider is recorded as a **full signatory** of the GPAI Code of Practice, with no chapter limitation **[T4, signatory registry]**. |

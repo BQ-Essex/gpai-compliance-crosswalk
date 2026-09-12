@@ -31,6 +31,7 @@ meta:
   extracted: "2026-09-11"
   extended: "2026-09-12"
   verified_against_consolidated: "2026-09-12"
+  amendment_status_cross_checked: "2026-09-12 against the amending act itself, CELEX 32026R1744, not only the consolidated change markers"
   caveat: >-
     The EUR-Lex consolidated text carries the standing notice that it "is meant
     purely as a documentation tool and has no legal effect". Cite the
@@ -411,6 +412,39 @@ provisions:
     notes:
       - "Forecloses the trade-secret objection: confidentiality is handled on receipt."
 
+  - id: art56
+    cite: "Article 56"
+    title: "Codes of practice"
+    amended_by_omnibus: "True"
+    provenance: "consolidated (extract)"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727 and the amending act CELEX 32026R1744, instruction (21)"
+    text: >-
+      [Paragraph 6, as replaced by Regulation (EU) 2026/1744:] The Commission and the Board
+      shall regularly monitor and evaluate the achievement of the objectives of the codes
+      of practice by the participants and their contribution to the proper application of
+      this Regulation. The Commission, taking utmost account of the opinion of the Board,
+      shall assess whether the codes of practice cover the obligations provided for in
+      Articles 53 and 55, and shall regularly monitor and evaluate the achievement of their
+      objectives. The Commission shall publish its assessment of the adequacy of the codes
+      of practice.
+    notes:
+      - >-
+        REINSTATED, having been removed on 12 September as an entry nothing cited. That was
+        a mistake made on tooling grounds rather than legal ones: reading the amending act
+        shows this is the ONE provision inside Chapter V that the Omnibus touched, and what
+        it adds bears directly on Art. 55(2).
+      - >-
+        The amended paragraph obliges the Commission to assess whether the codes of practice
+        COVER THE OBLIGATIONS IN ARTICLES 53 AND 55, and to PUBLISH that assessment. A
+        provider relying on the Code under Art. 55(2) is therefore relying on an instrument
+        the Commission is now under a duty to assess and to publish its assessment of. Ask
+        for that assessment.
+      - >-
+        Chapter V runs from Article 51 to Article 56. The obligation provisions - 51, 52, 53,
+        54 and 55 - are untouched by the Omnibus. Article 56(6) is the exception, and the
+        claim that "Chapter V is untouched" was made in this project's own working notes
+        before the amending act was read.
+
   - id: art57
     cite: "Article 57"
     title: "AI regulatory sandboxes"
@@ -436,9 +470,9 @@ provisions:
   - id: art60
     cite: "Article 60"
     title: "Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes"
-    amended_by_omnibus: "False"
+    amended_by_omnibus: "True"
     provenance: "consolidated (extract)"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727, and against the amending act CELEX 32026R1744, instruction (24)"
     text: >-
       [Paragraph 1, first sentence:] Testing of high-risk AI systems in real world
       conditions outside AI regulatory sandboxes may be conducted by providers or
@@ -457,6 +491,19 @@ provisions:
         market and Art. 2(8) never engages. That is the coherent account of how the two
         provisions sit together, and it is worth stating because it shows the recital
         doing structural work the definition does not.
+      - >-
+        FLAG CORRECTED. This entry read amended_by_omnibus "False" for a few hours. The
+        Omnibus replaces paragraph 1's first subparagraph and the whole of paragraph 2
+        (Regulation (EU) 2026/1744, instruction (24)). The words quoted above survive the
+        replacement unchanged - the amendment adds "in accordance with this Article and
+        the real-world testing plan referred to in this Article, without prejudice to the
+        prohibitions under Article 5" - so the argument built on them is unaffected, but
+        the flag was wrong and the method that produced it was worse: amendment status had
+        been derived by finding the nearest preceding change marker in the consolidated
+        text, and the anchor phrase used to locate this provision is also its own ARTICLE
+        HEADING, so the search matched the heading and read the marker before it. Status is
+        now taken from the amending act's own list of instructions, which cannot be
+        confused by a heading.
 
   - id: art68-2
     cite: "Article 68(2)"
