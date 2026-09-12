@@ -142,6 +142,14 @@ Naming the non-answer in advance is what converts a request from a question into
 
 This project ran for two days before noticing. Six of its negative-search notes were written as unbounded claims, and the corpus actually searched was never logged, so it cannot now be reconstructed—those notes carry a field saying so rather than a corpus invented after the fact. `tools/validate.py` now refuses a negative-search note without one.
 
+## Step 6b: Enumerate the inferences, and rank them by weakness
+
+Citations resolving and quotations matching say nothing about whether a step follows, and a step that does not follow is the error that survives everything. It survives because prose hides it: an unsound inference reads exactly like a sound one when both are sentences in a paragraph whose conclusion the reader has already accepted.
+
+So enumerate them. Each argumentative step gets an entry: the claim stated so it could be denied, the premises it rests on as ids that must resolve, what it depends on, **what would defeat it**, and how contestable its author believes it is. What can then be checked mechanically is real—dangling premises, missing defeaters, circular dependency, a load-bearing step that appears nowhere in the prose—and what cannot be checked is at least visible.
+
+Two disciplines make this more than bookkeeping. **Name a defeater or drop the claim**: an author who cannot say what would show a step wrong has usually not tested it. And **rank your own steps by weakness, then publish the ranking weakest first**. That feels like handing over the soft point, and it is. The alternative is a reader who attacks the easiest claim rather than the most important one, which is worse for everybody, and an analysis that would rather be attacked well should say where to aim.
+
 ## Step 7: Let the instrument fall out of the unresolved rows
 
 Every unresolved row is already a question with a settlement condition attached. Drafting the request is then assembly rather than invention.

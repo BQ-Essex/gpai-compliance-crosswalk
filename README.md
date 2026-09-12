@@ -37,6 +37,7 @@ python3 tools/check.py   # runs all four; exit code is the worst of them
 validate.py    ok    cross-walk rows hold to the verdict discipline
 citecheck.py   ok    citations resolve to verified text
 quotecheck.py  ok    quotations match the documents they are attributed to
+infercheck.py  ok    inference register: premises resolve, defeaters named, no cycles
 housestyle.py  ok    prose conventions, and no paragraph repeated
 ```
 
@@ -128,6 +129,24 @@ Declared unverifiable, with reasons, in data/unverifiable-quotations.yaml: 10.
 The unattributable count is the honest part. Those are quotations of the incident record, of Californian and New York statutes, and of this project’s own earlier drafts—not defects, and not verified either. And where a quotation genuinely cannot be checked, it is named in `data/unverifiable-quotations.yaml` with a reason and one of three permitted kinds. An exception written down in a reviewed file is a different thing from an exception a tool makes for itself; loosening the checker until it stopped noticing would have been easier and would have destroyed the only number here worth having.
 
 `_sources/` is not committed—the documents are cited by URL and pinned by SHA-256, not redistributed—so this check runs for whoever holds them. That is the point rather than a limitation: the tool reports what *you* can verify, on the documents *you* have.
+
+## The inference register, and the one thing checkers cannot do
+
+Soundness is not a decidable property and no tool here will ever say an argument is good. But the reason this analysis’s nine errors survived was not that a script could not adjudicate them. It was that they sat in prose, where nobody was reading them as claims.
+
+`data/inferences.yaml` gives reasoning the treatment this repository already gives evidence and legal conclusions: its own cell, so the failure can be looked at. Twelve argumentative steps, each stated so it could be denied, each resting on premises that must resolve to the register, each naming **what would defeat it**, and each ranked `strong`, `moderate` or `contestable` by its own author.
+
+`infercheck.py` verifies the structure—premises resolve, defeaters are named and are conditions rather than gestures, the dependency graph is acyclic, and no load-bearing step fails to say where in the prose it is stated. It does not verify that anything follows, and says so on every clean run.
+
+The useful part is a command:
+
+```bash
+python3 tools/infercheck.py --attack
+```
+
+It prints the load-bearing steps weakest first, with the defeater for each. **That list, not the report, is what an adversarial reader should be handed**—a dozen numbered claims to test in ten minutes, rather than five thousand words in which the weak step is indistinguishable from the strong ones. The two currently marked contestable are the author’s own nomination for where this analysis is most likely wrong.
+
+Ranking one’s own arguments by weakness invites attack at the soft point. That is the intention. An unranked list invites a reader to attack the easiest claim instead of the most important one, and this analysis would rather be attacked well.
 
 ## What this repository does not contain, by choice
 

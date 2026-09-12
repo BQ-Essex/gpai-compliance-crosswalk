@@ -6,6 +6,7 @@ Four checkers, one command:
     validate.py    the cross-walk rows hold to the verdict discipline
     citecheck.py   every citation in the prose resolves to verified text
     quotecheck.py  every attributed quotation matches the document it is attributed to
+    infercheck.py  the inference register is structurally sound
     housestyle.py  the prose conventions, including repeated paragraphs
 
     python3 tools/check.py            # run all four, summarise
@@ -23,6 +24,15 @@ recitals is sound, or that a reading of a Commission opinion is the better of tw
 available readings. Those are the places this analysis has actually gone wrong, and no
 checker here would have caught any of them. Green means the mechanical failures are
 absent. It is a floor, not a verdict.
+
+What narrows that gap is not a checker but a register. data/inferences.yaml enumerates
+the argumentative steps, each stated so it could be denied, each naming what would defeat
+it, each ranked by how contestable its own author thinks it is. Run
+
+    python3 tools/infercheck.py --attack
+
+to print the load-bearing steps weakest first. That list, not the report, is what an
+adversarial reader should be handed.
 """
 
 from __future__ import annotations
@@ -40,6 +50,7 @@ CHECKS = (
     ("validate.py", [], "cross-walk rows hold to the verdict discipline"),
     ("citecheck.py", [], "citations resolve to verified text"),
     ("quotecheck.py", [], "quotations match the documents they are attributed to"),
+    ("infercheck.py", [], "inference register: premises resolve, defeaters named, no cycles"),
     ("housestyle.py", None, "prose conventions, and no paragraph repeated"),
 )
 
@@ -92,9 +103,10 @@ def main(argv):
             print()
         print(f"{len(failures)} of {len(CHECKS)} checks failing.")
     else:
-        print("All four clean. Which means the mechanical failures are absent, and "
-              "nothing more:\nevery error in the corrections log passed every check "
-              "that existed when it was made.")
+        print("All clean. Which means the mechanical failures are absent, and nothing "
+              "more:\nevery error in the corrections log passed every check that existed "
+              "when it was made.\nFor the part no checker reaches, run "
+              "`python3 tools/infercheck.py --attack`.")
     return worst
 
 

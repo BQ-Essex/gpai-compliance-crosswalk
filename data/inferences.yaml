@@ -1,0 +1,223 @@
+# The argumentative steps, enumerated.
+#
+# Citations resolve and quotations match. Neither says whether a step FOLLOWS, and every
+# error in this project's corrections log was a step that did not follow while every
+# mechanical check passed. The response is not to pretend soundness is decidable. It is
+# to stop letting inferences hide in prose.
+#
+# This file does for reasoning what the facts/characterisation split did for evidence and
+# the verdict/conclusion_of_law split did for legal conclusions: gives the failure its own
+# cell, so it can be looked at. A reader who wants to attack this analysis should be able
+# to read a dozen numbered claims rather than five thousand words, and find the weak one
+# in ten minutes rather than not at all.
+#
+# Each entry carries:
+#   claim         the step, in one sentence, stated so it could be denied
+#   type          what kind of move it is — the honest label, not the flattering one
+#   premises      provision, recital or source ids it rests on; all must resolve
+#   depends_on    other inferences it needs; the graph must be acyclic
+#   defeater      what would show it wrong. An inference whose author cannot name one
+#                 has usually not been thought through
+#   strength      strong | moderate | contestable — and contestable is not a confession,
+#                 it is a direction to the reader
+#   load_bearing  true if the report's conclusion changes when this step fails
+#
+# strength is the author's own estimate and is the softest thing here. It is recorded
+# anyway, because an unranked list of claims invites a reader to attack the easiest
+# rather than the most important, and this analysis would rather be attacked well.
+
+inferences:
+  - id: inf-asymmetry
+    claim: >-
+      Article 2(1), point (a) catches AI systems on placing on the market OR putting into
+      service, but general-purpose AI models on placing on the market alone, and that
+      difference is on the face of the enacting text rather than an artefact of reading.
+    type: textual
+    premises: [art2-1a, art3-9, art3-10, art3-11]
+    depends_on: []
+    defeater: >-
+      Any enacting provision applying a putting-into-service trigger to models. Article
+      2(1), points (b) to (g) were read for this and none does.
+    strength: strong
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1 step one"
+
+  - id: inf-carveback-unreachable
+    claim: >-
+      Article 2(8)'s single carve-back cannot reach a general-purpose AI model, because
+      'testing in real world conditions' is defined at Article 3, point (57) by reference
+      to an AI SYSTEM and the conditions it defers to are Article 57's national sandboxes
+      and Article 60, which is confined on its face to HIGH-RISK AI SYSTEMS.
+    type: textual
+    premises: [art2-8, art3-57, art57, art60]
+    depends_on: []
+    defeater: >-
+      Any route by which a model could satisfy the Article 57 or 60 conditions. If one
+      exists the textual reading weakens and Article 2(8) acquires an exception that
+      could, on some facts, be elected.
+    strength: strong
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.1 step three; protocol/01-statutory-foundation.md §1.3"
+
+  - id: inf-relocation
+    claim: >-
+      Recital 97 does not except Article 2(8); it relocates the moment of placement, so
+      that the development was never activity 'prior to' placing on the market and Article
+      2(8) never engages.
+    type: harmonising construction
+    premises: [recital-97, art2-8, recital-25]
+    depends_on: [inf-carveback-unreachable]
+    defeater: >-
+      A reading on which Article 2(8) still bites after deemed placement, which would put
+      the recital in conflict with the enacting text rather than in sequence with it. The
+      Commission's Q&A treats development-phase duties as applying, which is evidence
+      against that reading but is not enacting text.
+    strength: moderate
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1; protocol/01-statutory-foundation.md §1.3a"
+
+  - id: inf-drafting-artefact
+    claim: >-
+      Recitals 25 and 97 both speak of MODELS being 'put into service', a limb Article
+      2(1), point (a) does not give them and Article 3, point (11) confines to systems.
+      Two recitals presupposing a category the definitions withhold is evidence that the
+      asymmetry is an artefact of drafting rather than a considered choice.
+    type: inference to the best explanation
+    premises: [recital-25, recital-97, art2-1a, art3-11]
+    depends_on: [inf-asymmetry]
+    defeater: >-
+      That recitals are drafted loosely as a matter of course, so their vocabulary carries
+      no signal about legislative intent. This is a real objection and this analysis has
+      not met it. The claim is evidential, not probative, and nothing downstream turns on
+      it: inf-relocation and the conclusion stand without it.
+    strength: contestable
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.1; protocol/01-statutory-foundation.md §1.3a"
+
+  - id: inf-sole-purpose-omission
+    claim: >-
+      Article 2(6) uses 'for the sole purpose of' in the enacting text and Article 3,
+      point (63) does not, so the omission from the definition reads as chosen rather than
+      careless, and a reader supplying it from Recital 97 supplies a term the enacting
+      text declined.
+    type: expressio unius
+    premises: [art2-6, art3-63, recital-97]
+    depends_on: []
+    defeater: >-
+      Evidence from the travaux that the qualifier was intended in both places and dropped
+      in error. Not consulted; the travaux have not been read for this project.
+    strength: moderate
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.1 step two"
+
+  - id: inf-product-oriented
+    claim: >-
+      A frontier developer's pre-release evaluation of a model it intends to ship is
+      'product-oriented' research within Recital 25 rather than scientific research within
+      Article 2(6), so the research provisions postpone rather than exempt.
+    type: characterisation of facts
+    premises: [recital-25, art2-6]
+    depends_on: []
+    defeater: >-
+      Evidence that the evaluation was conducted for the sole purpose of scientific
+      research and development. The provider has not stated its position; Request 4 of the
+      instrument asks for it.
+    strength: moderate
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1"
+
+  - id: inf-attach
+    claim: >-
+      On the Commission's reading the Chapter V obligations attach to the internal research
+      model, by deemed placement under Recital 97 with the internal-use exception
+      unavailable to a model carrying systemic risk.
+    type: conclusion of law
+    premises: [recital-97, art2-1a, art3-63, ec-gpai-guidelines, ec-gpai-qa]
+    depends_on: [inf-relocation, inf-product-oriented]
+    defeater: >-
+      A holding that a recital cannot supply a deeming rule the enacting definition
+      withholds. The non-derogation principle cuts this way and the report says so; the
+      Commission's reading governs enforcement but is open to challenge before the CJEU.
+    strength: moderate
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1 and §7"
+
+  - id: inf-opinion-construes
+    claim: >-
+      Commission Opinion C(2025) 5361 final at paragraph 33, in saying the Code sets out
+      'what without undue delay typically requires of reporting timelines', is stating what
+      the statutory phrase in Article 55(1), point (c) requires, not merely describing what
+      Commitment 9 contains.
+    type: reading of a document
+    premises: [ec-cop-adequacy-opinion, art55-1c, cop-text]
+    depends_on: []
+    defeater: >-
+      The competing reading, that the paragraph summarises a chapter of the Code rather
+      than construing the Act. The sentence sits in a passage framed as compliance
+      'pursuant to Article 55(1), point (c)', which favours this reading but does not
+      settle it. FLAGGED BY THE AUTHOR AS THE MOST ARGUABLE STEP HERE.
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.7; protocol/01-statutory-foundation.md §5a"
+
+  - id: inf-cyber-limb
+    claim: >-
+      A model that escapes containment and reaches a third party's production
+      infrastructure falls within Measure 9.3's 'serious cybersecurity breach, including
+      the (self-)exfiltration of model weights and cyberattacks' more naturally than within
+      the serious-harm-to-property category, so the applicable period is five days.
+    type: characterisation of facts
+    premises: [cop-text, art3-49]
+    depends_on: [inf-opinion-construes]
+    defeater: >-
+      The provider's own classification, if it assigned a different category. Request 11a
+      of the instrument asks which category was assigned. This is a judgement about facts
+      and is deliberately kept out of the verdict cells for that reason.
+    strength: moderate
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.7; docs/worked-example.md §6"
+
+  - id: inf-irreversibility
+    claim: >-
+      Limb (b) of Article 3, point (49) fails on these facts because the affected service
+      was rebuilt, so the disruption was not irreversible.
+    type: application to facts
+    premises: [art3-49, cer-2-4, hf-technical-timeline]
+    depends_on: []
+    defeater: >-
+      Evidence of a component not restored, or an argument that irreversibility attaches to
+      the disruption at the time rather than to its eventual remedy.
+    strength: strong
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.6; docs/worked-example.md §4"
+
+  - id: inf-bridging-gap
+    claim: >-
+      'Serious incident' at Article 3, point (49) is defined by reference to an AI system
+      while Article 55(1), point (c) binds providers of models, and the Act does not
+      expressly bridge the two.
+    type: textual
+    premises: [art3-49, art3-1, art3-66, art55-1c]
+    depends_on: []
+    defeater: >-
+      Any provision applying the Article 3, point (49) definition to models. None found;
+      the Code sidesteps the question by stating its own triggers rather than resolving it.
+    strength: strong
+    load_bearing: false
+    stated_at: "docs/report-draft.md §4.6; protocol/01-statutory-foundation.md §5"
+
+  - id: inf-no-101a-exposure
+    claim: >-
+      Article 101 applies from 2 August 2026 by operation of Article 113, so conduct in
+      July 2026 carries no exposure under Article 101(1), point (a), while point (b) is
+      unaffected because a request would be issued now.
+    type: temporal
+    premises: [art113, art101-1a, art101-1b, art91]
+    depends_on: []
+    defeater: >-
+      A transitional provision bringing Article 101 into application earlier. Article 113
+      was read in the consolidated text and its third paragraph in the amending act; none
+      found.
+    strength: strong
+    load_bearing: false
+    stated_at: "docs/report-draft.md §5; instrument Part G paragraph 14"
