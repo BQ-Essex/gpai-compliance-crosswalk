@@ -65,6 +65,13 @@ rows:
     negative_search:
       statement: "No published source states the provider's position on whether the research model falls within the Article 3, point (63) exception, nor whether any Article 52(1) notification was made for it."
       as_of: "2026-09-11"
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     rfi_requests: [1, 2, 3, 4, 5]
     lead_row: true
     note: >-
@@ -122,6 +129,13 @@ rows:
     negative_search:
       statement: "No published source sets out the containment requirements of the evaluation protocol or states whether the protocol was documented in the Article 53(1)(a) technical documentation."
       as_of: "2026-09-11"
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     rfi_requests: [5, 6]
 
   - id: g3-art55-1b-systemic
@@ -145,6 +159,13 @@ rows:
     negative_search:
       statement: "No published source states whether any provider's systemic-risk assessment identified evaluation-environment containment failure as a source of systemic risk."
       as_of: "2026-09-11"
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     rfi_requests: [7]
     evenhandedness_note: >-
       The second provider's disclosure is registered at T1 — the same tier as the
@@ -184,6 +205,13 @@ rows:
     negative_search:
       statement: "No published source describes the egress-control architecture of the evaluation environment before 9 July 2026."
       as_of: "2026-09-11"
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     rfi_requests: [8]
 
   - id: g3-art55-2-route
@@ -243,6 +271,13 @@ rows:
       statement: "The Commission has declined to confirm whether the DseWiki episode qualifies as a serious incident, and has not stated that it meets the definition."
       as_of: "2026-09-11"
       sources: [ec-regnier-statement]
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     headline: true
 
   - id: g2-art55-1c-timing
@@ -297,6 +332,13 @@ rows:
     negative_search:
       statement: "No published source states the date of the filing with the Commission or the provision under which it was made."
       as_of: "2026-09-11"
+      corpus: >-
+        NOT RECORDED AT THE TIME. This note was written before the method required a
+        search corpus, and the sources actually consulted were not logged. Read it as
+        bounded by the register in data/sources.yaml and by ordinary web search on the
+        obvious terms, and not as a claim about everything published. Re-running it and
+        recording the corpus properly is outstanding work, listed in the report's
+        limitations.
     discipline_note: >-
       Employee IP addresses visiting a public wiki evidence some internal attention;
       they do not evidence the organisation forming a view that a reportable incident

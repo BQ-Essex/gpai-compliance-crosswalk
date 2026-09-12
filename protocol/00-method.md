@@ -126,10 +126,15 @@ Any unresolved row carries:
 - **what would settle it**—the specific artifact or answer
 - **what would not settle it**—the plausible non-answer, named in advance
 - **a dated negative-search note**—*“as of [date], no source in [X] states [Y]”*
+- **a description of [X]**—which sites, registers and search terms were actually used
 
 The third matters most. Without it, “the record is silent” means only “we did not find it,” and a request that asks for something already public is the fastest way to lose a reader who knows the material. Write these **as you go**; by hour twenty nobody remembers which searches were actually run.
 
 Naming the non-answer in advance is what converts a request from a question into an instrument: it closes the obvious evasion on the face of the document.
+
+**Name the corpus, or the absence means nothing.** “No published source states X” is a claim about everything ever published and nobody is in a position to make it. What can honestly be said is that a stated set of sources, searched on stated terms on a stated date, did not contain X. The difference is not pedantry: an unbounded absence cannot be checked, cannot be repeated, and cannot be falsified, which puts it outside the register of claims this method permits everywhere else.
+
+This project ran for two days before noticing. Six of its negative-search notes were written as unbounded claims, and the corpus actually searched was never logged, so it cannot now be reconstructed—those notes carry a field saying so rather than a corpus invented after the fact. `tools/validate.py` now refuses a negative-search note without one.
 
 ## Step 7: Let the instrument fall out of the unresolved rows
 

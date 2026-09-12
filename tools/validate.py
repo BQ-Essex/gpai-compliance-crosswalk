@@ -183,6 +183,14 @@ def check_the_verdicts(crosswalk, provision_ids, source_ids):
                     f"reasoning rather than evidence."
                 )
 
+        col = (row.get("conclusion_of_law") or "").strip()
+        if col and not verdict:
+            complaints.append(
+                f"[{rid}] states a conclusion of law with no verdict beside it. The two are "
+                f"separate claims and the row needs both: what the record establishes, and "
+                f"what the law makes of it. A conclusion standing alone reads as a finding."
+            )
+
         provision = row.get("provision")
         if provision and provision not in provision_ids:
             complaints.append(f"[{rid}] points at provision {provision!r}, which isn't in provisions.yaml.")
@@ -219,6 +227,14 @@ def check_the_verdicts(crosswalk, provision_ids, source_ids):
                 complaints.append(
                     f"[{rid}] has a negative-search note with no as-of date. The record moves; "
                     f"an undated absence goes stale without anyone noticing."
+                )
+            if not negative.get("corpus"):
+                complaints.append(
+                    f"[{rid}] has a negative-search note with no corpus. \"No published "
+                    f"source states X\" is a claim about everything ever published, which "
+                    f"nobody can make. Record what was actually searched - which sites, "
+                    f"which registers, which terms - so the absence is bounded and "
+                    f"someone else can repeat it."
                 )
     return complaints
 
