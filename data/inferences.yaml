@@ -276,7 +276,7 @@ inferences:
       Annex XIII.
     type: textual
     function: step
-    premises: [art51, art52-1, art90]
+    premises: [art51, art52-1, art52-2, art52-3, art90]
     depends_on: []
     defeater: >-
       A reading on which the designation power requires the compute figure first. The

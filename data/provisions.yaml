@@ -340,6 +340,45 @@ provisions:
       - "Expressly forward-looking: 'or it becomes known that it will be met'."
       - "Final sentence supplies the remedy: ex officio designation where unnotified."
 
+  - id: art52-2
+    cite: "Article 52(2)"
+    title: "Rebutting the systemic-risk presumption"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727"
+    text: >-
+      The provider of a general-purpose AI model that meets the condition referred to in
+      Article 51(1), point (a), may present, with its notification, sufficiently
+      substantiated arguments to demonstrate that, exceptionally, although it meets that
+      requirement, the general-purpose AI model does not present, due to its specific
+      characteristics, systemic risks and therefore should not be classified as a
+      general-purpose AI model with systemic risk.
+    notes:
+      - >-
+        READ THE TRIGGER CAREFULLY. This route is available to a provider whose model
+        meets Art. 51(1), point (a) - the capability/compute limb - and it is presented
+        "with its notification". It is a rebuttal of the presumption, not a general right
+        of reply. Article 52 says nothing about rebutting a Commission DESIGNATION under
+        Art. 51(1), point (b), and an earlier draft of the report assumed it did.
+
+  - id: art52-3
+    cite: "Article 52(3)"
+    title: "Rejection of the provider's arguments"
+    amended_by_omnibus: "False"
+    provenance: "consolidated"
+    verified: "2026-09-12 against CELEX 02024R1689-20260727"
+    text: >-
+      Where the Commission concludes that the arguments submitted pursuant to paragraph 2
+      are not sufficiently substantiated and the relevant provider was not able to
+      demonstrate that the general-purpose AI model does not present, due to its specific
+      characteristics, systemic risks, it shall reject those arguments, and the
+      general-purpose AI model shall be considered to be a general-purpose AI model with
+      systemic risk.
+    notes:
+      - >-
+        "was not able to demonstrate" puts the burden on the provider once the presumption
+        is engaged.
+
   - id: art53-1a
     cite: "Article 53(1), point (a)"
     title: "Technical documentation"
