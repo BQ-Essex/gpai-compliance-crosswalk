@@ -64,14 +64,16 @@ rows:
     would_not_settle: "A description of the model as internal or unreleased, without the reasoning and dates that make it a position. Equally, an assertion that Recital 115 brings development-stage conduct into scope — a recital cannot derogate from enacting terms."
     negative_search:
       statement: "No published source states the provider's position on whether the research model falls within the Article 3, point (63) exception, nor whether any Article 52(1) notification was made for it."
-      as_of: "2026-09-11"
+      as_of: "2026-09-12"
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026. Searched: English-language web search on
+        "OpenAI notification European Commission AI Office Article 52 serious incident
+        report Hugging Face intrusion 2026"; the three provider accounts in this register,
+        read from their archived captures; digital-strategy.ec.europa.eu including its
+        library and search endpoints. The provider's three published accounts describe the
+        model's status and say nothing about Article 3, point (63) or Article 52(1). No
+        register of notified general-purpose AI models is published by the Commission that
+        this search could find.
     rfi_requests: [1, 2, 3, 4, 5]
     lead_row: true
     note: >-
@@ -128,14 +130,14 @@ rows:
     would_not_settle: "Public descriptions of the evaluation's difficulty."
     negative_search:
       statement: "No published source sets out the containment requirements of the evaluation protocol or states whether the protocol was documented in the Article 53(1)(a) technical documentation."
-      as_of: "2026-09-11"
+      as_of: "2026-09-12"
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026. Searched: English-language web search on "OpenAI internal
+        model evaluation sandbox containment egress controls IM1 technical documentation
+        2026"; the provider accounts and the affected party's technical timeline from their
+        archived captures. Secondary analyses of the escape are numerous - vendor blogs and
+        Cloud Security Alliance research notes - and none reproduces the evaluation protocol
+        or states whether it was documented under Article 53(1), point (a).
     rfi_requests: [5, 6]
 
   - id: g3-art55-1b-systemic
@@ -158,14 +160,14 @@ rows:
     would_not_settle: "Post-incident remediation commitments."
     negative_search:
       statement: "No published source states whether any provider's systemic-risk assessment identified evaluation-environment containment failure as a source of systemic risk."
-      as_of: "2026-09-11"
+      as_of: "2026-09-12"
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026. Searched: English-language web search on "OpenAI systemic
+        risk assessment preparedness framework containment failure evaluation environment
+        source of risk disclosed"; the provider's published Preparedness Framework pages and
+        the SaferAI frontier risk tracker surfaced by that search. The framework is public;
+        nothing found states whether loss of containment during internal evaluation was
+        identified as a source of systemic risk before July 2026.
     rfi_requests: [7]
     evenhandedness_note: >-
       The second provider's disclosure is registered at T1 — the same tier as the
@@ -204,14 +206,13 @@ rows:
     would_not_settle: "A description of the exploit chain, which is already public."
     negative_search:
       statement: "No published source describes the egress-control architecture of the evaluation environment before 9 July 2026."
-      as_of: "2026-09-11"
+      as_of: "2026-09-12"
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026. Searched: the affected party's technical timeline (T2) and
+        the provider's accounts (T1) from their archived captures, plus the web search on
+        sandbox containment and egress controls noted on the evaluation row. The timeline
+        describes the egress route exploited; none of these sources describes the
+        egress-control architecture that stood before 9 July 2026.
     rfi_requests: [8]
 
   - id: g3-art55-2-route
@@ -268,16 +269,19 @@ rows:
     would_settle: "A determination by the Commission, or facts establishing serious harm to property within limb (d)."
     would_not_settle: "The provider's internal classification of the episode, which uses a taxonomy the Regulation does not employ."
     negative_search:
-      statement: "The Commission has declined to confirm whether the DseWiki episode qualifies as a serious incident, and has not stated that it meets the definition."
-      as_of: "2026-09-11"
+      statement: >-
+        The Commission has been asked directly and declined to confirm that the episode
+        qualifies as a serious incident, and has not stated that it meets the definition.
+        A declination on the record, not an absence of coverage.
+      as_of: "2026-09-12"
       sources: [ec-regnier-statement]
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026. This is no longer a bare absence and should not be read as
+        one: the Commission's spokesperson was asked directly and declined to confirm that
+        the episode qualifies (see ec-regnier-statement, 7 September 2026, corroborated by
+        two further outlets on 7-8 September). Searched in addition: English-language web
+        search on the Commission and the DseWiki filing; digital-strategy.ec.europa.eu.
+        Nothing found in which the Commission states the episode meets Article 3, point (49).
     headline: true
 
   - id: g2-art55-1c-timing
@@ -330,15 +334,22 @@ rows:
       available period.
     would_not_settle: "The public disclosure date, which is not the same as the date the view was formed. Nor confirmation that 'a report was filed' without its particulars."
     negative_search:
-      statement: "No published source states the date of the filing with the Commission or the provision under which it was made."
-      as_of: "2026-09-11"
+      statement: >-
+        The Commission confirmed receipt of a filing and its spokesperson declined, on the
+        record, to say when it was submitted, which provision was relied on, or whether
+        enforcement would follow. That is a refusal rather than a silence, and it is the
+        stronger form of the point: the body that knows was asked and would not say. No
+        published source states the date or the provision.
+      as_of: "2026-09-12"
       corpus: >-
-        NOT RECORDED AT THE TIME. This note was written before the method required a
-        search corpus, and the sources actually consulted were not logged. Read it as
-        bounded by the register in data/sources.yaml and by ordinary web search on the
-        obvious terms, and not as a claim about everything published. Re-running it and
-        recording the corpus properly is outstanding work, listed in the report's
-        limitations.
+        Re-run 12 September 2026, and likewise stronger than an absence. The Commission
+        confirmed it had received a filing and its spokesperson declined to say WHEN it was
+        submitted, WHICH PROVISION was relied on, or whether enforcement would follow
+        (ec-regnier-statement and its corroboration). Searched in addition: English-language
+        web search on "OpenAI notification European Commission AI Office Article 52 serious
+        incident report"; the provider's own accounts from their archived captures. One
+        secondary outlet computes "approximately 75 days" from detection on 21 June 2026;
+        that is its arithmetic, not a stated date, and it is treated as characterisation.
     discipline_note: >-
       Employee IP addresses visiting a public wiki evidence some internal attention;
       they do not evidence the organisation forming a view that a reportable incident

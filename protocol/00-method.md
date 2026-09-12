@@ -136,6 +136,8 @@ The third matters most. Without it, “the record is silent” means only “we 
 
 Naming the non-answer in advance is what converts a request from a question into an instrument: it closes the obvious evasion on the face of the document.
 
+**And prefer a refusal to an absence.** “No published source states X” is the weakest form of the point and the one to fall back on when nobody has been asked. If the body that knows was asked and declined to say, that is evidence rather than its lack—a fact about the record, attributable, dated, and far harder to displace than a survey of what you happened not to find. This project had that evidence in its source register for a day before its negative-search notes used it: a Commission spokesperson who declined, on the record, to give the filing date, the provision relied on, or whether the episode qualified. Look for the refusal before you write the absence.
+
 **Name the corpus, or the absence means nothing.** “No published source states X” is a claim about everything ever published and nobody is in a position to make it. What can honestly be said is that a stated set of sources, searched on stated terms on a stated date, did not contain X. The difference is not pedantry: an unbounded absence cannot be checked, cannot be repeated, and cannot be falsified, which puts it outside the register of claims this method permits everywhere else.
 
 This project ran for two days before noticing. Six of its negative-search notes were written as unbounded claims, and the corpus actually searched was never logged, so it cannot now be reconstructed—those notes carry a field saying so rather than a corpus invented after the fact. `tools/validate.py` now refuses a negative-search note without one.

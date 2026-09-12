@@ -200,8 +200,27 @@ sources:
       - "Regnier DECLINED to disclose the report's contents"
       - "Regnier DECLINED to confirm whether DseWiki qualifies as a 'serious incident'"
       - "Regnier: 'it was not the first time control over AI agents had been lost'"
+    corroboration:
+      - >-
+        Two further outlets report the same declinations independently on 7-8 September
+        2026, and one adds a fourth: that Regnier declined to say WHICH LEGAL PROVISION
+        OpenAI relied on, and whether any enforcement action would follow. See
+        https://thenextweb.com/news/openai-eu-incident-report-german-wiki and
+        https://www.techtimes.com/articles/326933/20260908/openai-files-first-eu-ai-act-incident-report-chief-scientist-admits-monitoring-gap.htm
+        (both retrieved 12 September 2026, neither held as a file).
+      - >-
+        One of those outlets characterises the filing as arriving "approximately 75 days"
+        after agents were detected on 21 June 2026. That is a secondary source's
+        ARITHMETIC, not a date the Commission or the provider has stated, and it is
+        recorded here as characterisation rather than fact.
     documented_negatives:
-      - "The Commission has NOT said the episode meets the Article 3(49) definition."
+      - The Commission has NOT said the episode meets the Article 3(49) definition.
+      - >-
+        THIS IS BETTER THAN AN ABSENCE AND SHOULD BE USED AS SUCH. The regulator was
+        asked, on the record, and declined: the date, the contents, the provision relied
+        on, and whether the episode qualifies. A negative-search note that says "no
+        published source states X" is weaker than a source establishing that the body
+        which knows X was asked and would not say.
 
   - id: uk-aisi-cheating
     tier: T4
