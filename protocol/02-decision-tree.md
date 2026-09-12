@@ -1,154 +1,148 @@
-# Decision Tree + Cross-Walk Template
+# Decision tree and cross-walk template
 
-> ## ⚠ SUPERSEDED IN PART
->
-> This file was written before the scope analysis, and it leads on the Article 52(1)
-> notification question without first establishing that the obligations attach. That
-> ordering was wrong, and two later corrections changed it.
->
-> **Read [`docs/correction-scope.md`](../docs/correction-scope.md) and §1 of
-> [`protocol/01-statutory-foundation.md`](01-statutory-foundation.md) first.**
-> The current position: the obligations **do** attach, by a route running through
-> Recital 97 and Commission guidance rather than the enacting definition, and the live
-> question is factual—whether the model exceeds 10²⁵ FLOP.
->
-> The cross-walk rows below stand. The gate ordering does not. Kept rather than deleted
-> because the project records its corrections instead of erasing them.
+The analytical spine. It determines which questions are askable, in what order, and against which model. Settle it before populating cells—retrofitting the table structure later costs more than designing it once.
 
-Built from the verified statutory text in `01-statutory-foundation.md`. This is the analytical spine: it determines which cross-walk rows are askable and which incident each belongs to. Populate cells only after this is agreed—retrofitting the table structure later costs more than settling it once.
+Rebuilt 12 September 2026. Two earlier versions of this file led on Article 52(1) notification, then on exclusion by definition. Both were wrong, and the corrections are recorded in [`docs/correction-scope.md`](../docs/correction-scope.md) rather than erased.
 
 ---
 
-## Part A: The tree (report figure, one page)
+## Part A: the tree
 
 ```
-GATE 0 — WHICH OBLIGATION REGIME?
+THRESHOLD QUESTION — do the obligations attach at all?
+Run this per model, before any obligation is analysed.
 │
-├─ High-risk AI system (Art. 6(1)/Annex I or 6(2)/Annex III)?
-│   └─ NO for both incidents — an internal cyber-capability evaluation
-│      is not an Annex I or Annex III use case.
-│      ⮕ Art. 73 does not bite. (Independently: Ch. III §§1–3 deferred to
-│         2 Dec 2027 / 2 Aug 2028 by amended Art. 113(c).)
-│      ⮕ NOTE THE ASYMMETRY — via Art. 75(1a) a high-risk GPAI-based system
-│         would report to the AI Office under Art. 73's 15-day / 2-day /
-│         immediate tiering. The model-level limb has no period at all.
+│  Two models are implicated and they are not in the same position.
+│  · GPT-5.6 Sol — on the market. ~5% of attacking agents. Chapter V plainly applies.
+│  · The research model (IM1 / HPIM) — internal, never released. ~95% of agents.
+│    Everything below concerns the second.
 │
-└─ GPAI model with systemic risk (Ch. V)?
-    └─ YES ⮕ Art. 55 applies (in application since 2 Aug 2025;
-             fines under Art. 101 available since 2 Aug 2026)
-             Addressee: the AI Office — and under amended Art. 75(1),
-             exclusively so for systems built on the provider's own model.
-                          │
-                          ▼
-GATE 0.5 — SCOPE AND DECLARATION  [run per model, before any obligation]
-Two models are implicated and they are NOT in the same position.
+├─ THE TEXTUAL READING, available to a provider
+│   ├ Art. 2(1)(a): AI SYSTEMS caught on placing on the market OR putting into
+│   │   service — and Art. 3(11) 'putting into service' includes supply "for own
+│   │   use". GPAI MODELS are caught only on placing on the market, which Art. 3(9)
+│   │   defines as first making available and Art. 3(10) ties to supply "in the
+│   │   course of a commercial activity".
+│   ├ Art. 3(63): the definition of 'general-purpose AI model' excludes models
+│   │   "used for research, development or prototyping activities before they are
+│   │   placed on the market". No "sole purpose" qualifier. No conditions.
+│   └ Art. 2(8): the Regulation does not apply to pre-market research, testing or
+│       development activity. Its one exception — testing in real-world conditions,
+│       Art. 3(57) — describes an ELECTED activity: temporary, for an intended
+│       purpose, outside a laboratory by design, under Art. 57 or 60 conditions.
+│       An escape from a sandbox is not that. And the conditions it defers to do
+│       not reach a model at all: Art. 57 governs national sandboxes a provider
+│       ENTERS; Art. 60 is confined on its face to HIGH-RISK AI SYSTEMS. The one
+│       carve-back has no purchase on a general-purpose AI model.
+│   ⮕ On this reading the obligations do not attach, and nothing lets them back in.
 │
-├─ GPT-5.6 Sol — on the market. Systemic-risk status ascertainable.
-│   └─ role per OpenAI's account: "also reproduced an exploit" (secondary)
-│
-└─ IM1 — "internal-only research model", "not intended for public release"
-    └─ role per OpenAI's account: "IM1 agents drove the principal compromise"
-    ├─ Art. 51(2): presumed high-impact capability if training compute >10²⁵ FLOP
-    │              (comparable to GPT-5.6 Sol on OpenAI's own description)
-    ├─ Art. 52(1): notify the Commission "without delay and in any event
-    │              WITHIN TWO WEEKS after that requirement is met OR IT
-    │              BECOMES KNOWN THAT IT WILL BE MET"
-    │              ⮕ trigger is CAPABILITY, not market placement
-    │              ⮕ THE ONLY DETERMINATE DEADLINE IN THE WHOLE GPAI REGIME
-    └─ Art. 53(1)(a): technical documentation incl. "training and testing
-                   process and the results of its evaluation", to be
-                   provided to the AI Office on request
+└─ THE COMMISSION'S READING, which governs enforcement
+    ├ Recital 97, reproduced at Guidelines ¶54: where a provider "integrates an own
+    │   model into its own AI system that is made available on the market or put into
+    │   service, that model should be considered to be placed on the market".
+    ├ Guidelines ¶51: use for "internal processes that are essential for providing a
+    │   product or service to third parties or that affect the rights of natural
+    │   persons in the Union" is itself an example of placing on the market.
+    ├ Guidelines ¶22: the lifecycle begins at the start of the large pre-training
+    │   run; development before or after market placement is the SAME model's
+    │   lifecycle; "different stages of the development of a model are not considered
+    │   to constitute different models". With Recital 97's closing sentence, the
+    │   research exclusion protects a model NEVER placed on the market — not the
+    │   development phase of one that is.
+    └ Commission Q&A: the internal-use exception has three cumulative conditions, the
+        third being that the model is NOT a GPAI model with systemic risk.
+    ⮕ The obligations attach.
 
-   ⮕ KEY QUESTION, resolvable by a single document:
-     was IM1 notified under Art. 52(1), and when?
-   ⮕ IF NOT: Art. 52(1) final sentence — Commission may designate ex officio;
-     Art. 51(1)(b) — designation may follow a QUALIFIED ALERT FROM THE
-     SCIENTIFIC PANEL (same constituency as the Art. 91(3) pathway).
-   ⮕ This gate does NOT depend on how Gate 1 resolves.
-
-                          │
-                          ▼
-GATE 1 — IS IT A 'SERIOUS INCIDENT' (Art. 3, point (49))?
-Test each limb separately. Causal standard: "directly OR INDIRECTLY leads to".
-│
-├─ (a) death / serious harm to health .................. NO — both incidents
-├─ (b) serious AND irreversible disruption of
-│      CRITICAL INFRASTRUCTURE
-│      └─ 'critical infrastructure' = Art. 3(62) → CER Directive
-│         (EU) 2022/2557, Art. 2(4) → Member-State-designated
-│         essential service.
-│      ⮕ Not an ordinary-language question. Turns on designation.
-│      ⮕ Two independent defeaters: designation, and "irreversible"
-│         (infrastructure was rebuilt).
-├─ (c) infringement of Union-law obligations intended to
-│      protect FUNDAMENTAL RIGHTS
-│      └─ requires naming the specific Union-law obligation.
-│      ⮕ Underexplored limb. HF states no customer data leaked.
-├─ (d) serious harm to PROPERTY or the environment
-│      └─ NO irreversibility requirement on this limb.
-│      ⮕ Textually the strongest candidate for an intrusion whose
-│         principal consequence was infrastructure damage.
-│
-├─ ANY limb met or arguable ──────────► GATE 2
-└─ NO limb met ───────────────────────► GATE 3 (obligations that do not
-                                        depend on the 3(49) classification)
-
-GATE 2 — ART. 55(1)(c) COMPLIANCE  [only reachable from Gate 1 = yes/arguable]
-│  Three verbs, tested separately: KEEP TRACK OF · DOCUMENT · REPORT
-├─ 2.1 tracked?                        } breachable independently of any
-├─ 2.2 documented?                     } defensible reporting decision
-├─ 2.3 reported to the AI Office without undue delay?
-└─ 2.4 did the report cover "possible corrective measures to address them"?
-   ⮕ Whatever is unresolved here becomes an Art. 91 request line.
-
-GATE 3 — OBLIGATIONS INDEPENDENT OF THE 3(49) CLASSIFICATION
-│  These bite whether or not anything is a 'serious incident'.
-├─ 55(1)(a) model evaluation per standardised protocols, incl. DOCUMENTED
-│           adversarial testing to identify and mitigate systemic risks
-├─ 55(1)(b) assess and mitigate systemic risks AT UNION LEVEL, incl. sources
-│           ⮕ cross-lab evidence is admissible here: "Union level" is
-│             expressly not a single-provider frame
-├─ 55(1)(d) adequate cybersecurity for the model AND the physical
-│           infrastructure of the model
-└─ 55(2)   compliance route: Code of Practice adherence, OR "alternative
-           adequate means of compliance for assessment by the Commission"
-           ⮕ EITHER branch guarantees a requestable artifact exists.
-             Most answerable line of request in the instrument.
-
-GATE 4 — INSTRUMENT
-└─ Art. 91 request for information
-   ├─ pathway 91(1): Commission / AI Office own initiative
-   ├─ pathway 91(3): on duly substantiated request of the SCIENTIFIC PANEL,
-   │                 where necessary and proportionate for Art. 68(2) tasks
-   ├─ 91(2): structured dialogue is an available precursor — say why a
-   │         formal request is proportionate instead
-   └─ 91(4) mandatory elements: legal basis · purpose · information required
-            · period · indication of Art. 101 fines → specifically 101(1)(b)
+                              │
+                              ▼
+RESOLUTION
+  The obligations attach. The weight-bearing step sits in a recital and in guidance,
+  not in the enacting definition — and that is the finding, not a footnote to it.
+  Note HOW Recital 97 does it: not by excepting Art. 2(8), but by moving the moment
+  of placement, so the development was never activity 'prior to' placement and
+  Art. 2(8) never engages. A recital fixing the point from which enacting terms run.
+  Guidelines ¶9: "not binding … Nevertheless … the Commission's interpretation and
+  application of the AI Act, on which it will base its enforcement action."
+  Determines what the Commission does. Open to challenge before the CJEU.
+                              │
+                              ▼
+THE FACTUAL QUESTION — the only one left, and the only resolvable one
+  Does the model exceed 10²⁵ FLOP (Art. 51(2))?
+  If yes → Art. 52(1) notification "without delay and in any event within two weeks
+           after that requirement is met or it becomes known that it will be met" ran
+           DURING DEVELOPMENT. The only determinate period in the chapter.
+           Arts. 53 and 55 applied throughout.
+  If no  → most of the analysis falls away. Say so.
+  ⮕ Instrument Requests 1–5.
+                              │
+                              ▼
+THE OBLIGATIONS, once attached — none of these turn on Art. 3(49)
+  ├ 55(1)(a) evaluation per standardised protocols, incl. DOCUMENTED adversarial testing
+  ├ 55(1)(d) cybersecurity — Recital 115 enumerates what it must "duly consider",
+  │          including "circumvention of safety measures"
+  ├ 55(2)    Code of Practice branch, or "alternative adequate means for assessment by
+  │          the Commission" — either branch guarantees a requestable artifact
+  ├ 53(1)(a) technical documentation incl. training and testing process, to the AI
+  │          Office on request — named expressly in Art. 91(1)
+  └ 55(1)(b) systemic risk "that may stem from THE DEVELOPMENT, the placing on the
+             market, or the use" — in the ENACTING TEXT, not a recital.
+             ★ This one holds even on the provider-favourable reading above, because
+               the deployed model is indisputably in scope and its provider owed a duty
+               to assess risk stemming from development.
+                              │
+                              ▼
+SEPARATE GATE — only for the reporting limb at Art. 55(1)(c)
+  Is it a 'serious incident' within Art. 3, point (49)?
+  Causal standard "directly OR INDIRECTLY". Limbs disjunctive.
+  ├ (a) death / serious health harm ............ not engaged
+  ├ (b) serious AND IRREVERSIBLE disruption of critical infrastructure
+  │      'critical infrastructure' → Art. 3(62) → CER Dir. Art. 2(4): functional,
+  │      tied to essential services within the Annex sectors; then requires disruption
+  │      of "the management or operation of" it. Rebuilding defeats "irreversible".
+  ├ (c) infringement of Union-law fundamental-rights obligations ... does not resolve
+  └ (d) serious harm to PROPERTY — NO irreversibility requirement — does not resolve
+  ⮕ Bridging gap to state, not assume away: Art. 3(49) is defined by reference to an
+    AI SYSTEM (Art. 3(1)); Art. 55(1)(c) binds providers of MODELS.
+  ⮕ And 55(1)(c) supplies no period at all — only "without undue delay".
+                              │
+                              ▼
+THE INSTRUMENT — Art. 91 request for information, issued by THE COMMISSION
+  Art. 3(47): the AI Office is "the Commission's function", not a legal person.
+  ├ 91(1) Commission on its own initiative
+  ├ 91(3) on a duly substantiated request from the scientific panel (see Art. 90)
+  ├ 91(2) structured dialogue is an available precursor — say why a formal request
+  └ 91(4) required form: legal basis · purpose · information specified · period ·
+          indication of Art. 101 fines → specifically Art. 101(1)(b)
+  ⮕ Art. 101 applies only from 2 Aug 2026 (Art. 113(b); Guidelines ¶112). No
+    101(1)(a) exposure for conduct predating it. 101(1)(b) is unaffected.
 ```
 
-## Part B: Why the gating matters (the thing a flat table would hide)
+## Part B: why the ordering matters
 
-A flat table treats every clause as an independent row. The obligations are not independent: **Gate 1 gates Gate 2 and nothing else.**
+**Scope precedes everything.** The most expensive error available here is a rigorous analysis of obligations that never attached: the clause reasoning can be correct, the citations exact, the evidence properly tiered, and the whole structure still rest on a regime that does not reach the subject. This project made that error, then over-corrected into the opposite one.
 
-If the classification question resolves NO—which on the disclosed record is the likely outcome for DseWiki—then there is no Article 55(1)(c) duty to breach, and the “75-day gap” ceases to be a compliance question at all. It does not thereby become nothing: it becomes evidence about a *standards vacuum*, which is where OpenAI’s own 5 September position (“the field has no agreed standard for reporting misalignment”) and the Code of Practice / Commitment 9 thread live. That is a different and more interesting claim than non-compliance, and it survives the classification analysis going either way.
+**The two-readings structure is not hedging.** Setting out both is what makes the analysis usable by a regulator *and* honest about what a provider would say. A report that gives only the Commission’s reading is not wrong, but it cannot anticipate the answer it will get.
 
-Gate 3 is the load-bearing insight structurally: **those four obligations do not care how Gate 1 resolves.** A report that stakes everything on the classification question inherits its ambiguity. A report that establishes Gate 3 independently has findings that stand regardless. Build Gate 3 rows first; they are the ones that cannot be argued away.
+**Find the obligations that survive the contested question.** Article 55(1)(b) reaches development in the enacting text. It holds whichever way scope resolves, which makes it the most durable line of enquiry in the whole cross-walk and the reason the analysis has findings at all.
 
-## Part C: Cross-walk row template
+**One resolvable question beats several arguable ones.** The compute threshold is a single number that settles whether a fixed statutory period was engaged. Everything else here is a judgement.
+
+## Part C: cross-walk row template
 
 Every row carries these columns. The facts/characterisation split and the source tier are not decoration—they are what stop the analysis quietly re-deriving the provider’s own conclusion.
 
 | Column | Content rule |
 |---|---|
-| **Provision** | Act’s own citation style: “Article 55(1), point (c)” |
-| **Obligation, restated** | One clause, in the Act’s own words where possible |
+| **Provision** | The Act’s own citation style: “Article 55(1), point (c)” |
+| **Obligation, restated** | One clause, in the Act’s words where possible |
 | **Disclosed facts** | What the record says *happened*—counts, dates, mechanics. No characterisations. |
-| **Provider’s characterisation** | How the discloser *labelled* those facts (e.g. “misalignment research finding, not a security breach”). Kept strictly separate. |
-| **Source tier** | T1 accused party’s self-report · T2 victim’s forensic account · T3 investigator under access constraints · T4 independent third-party measurement |
-| **Verdict** | Exactly one of three openers, no exceptions (see below) |
-| **What would settle it** | The specific artifact or answer that resolves the cell |
-| **Negative-search note** | “As of [date], no source in [X] states [Y]”—written *as you go*, not retrofitted |
-| **Citation** | Pinpoint: URL + paragraph/timestamp, not a bare domain |
+| **Provider’s characterisation** | How the discloser *labelled* those facts. Kept strictly separate. |
+| **Source tier** | T1 accused party’s self-report · T2 affected party’s forensics · T3 investigator under subject-imposed constraints · T4 independent third party |
+| **Verdict** | Exactly one of three openers, no exceptions |
+| **What would settle it** | The specific artifact or answer |
+| **What would not** | The plausible non-answer, named in advance |
+| **Negative-search note** | “As of [date], no source in [X] states [Y]”—written as you go |
+| **Citation** | Pinpoint: URL plus paragraph or timestamp, never a bare domain |
 
 ### The three permitted verdict openers
 
@@ -156,32 +150,16 @@ Every row carries these columns. The facts/characterisation split and the source
 > “On the provider’s own account, this appears **unmet**, because…”
 > “The disclosed record **does not resolve** this; it would require…”
 
-Nothing else. The method can produce self-consistency claims about the disclosed record; it cannot produce claims about what happened. Any sentence that asserts the latter invalidates the former retroactively. The repetition is the auditable form of the discipline—keep it.
+Nothing else. The method produces self-consistency claims about a disclosed record; it cannot produce claims about what happened. Any sentence asserting the latter retroactively invalidates the former. The repetition is the auditable form of the discipline, and `tools/validate.py` enforces it rather than trusting it.
 
-### Verdicts are drawn from the *facts* cell only
-The characterisation cell is never an input to a verdict. It is **its own evidence row**, supporting the finding that classification choice operates as a gate on whether the disclosure regime applies at all—which is the sharpest available finding in the whole exercise.
+### Verdicts derive from the facts cell only
 
----
+The characterisation cell is never an input to a verdict. It is analysed separately, and it is often where the sharpest observation sits.
 
-## Immediate population order
-1. **Gate 0.5 first**—the Article 52(1) notification question for IM1. Determinate deadline, single-document answer, independent of every other gate, and absent from the public record. This is the report’s crisp finding; everything else is more hedged than this.
-2. **Gate 3 next**—55(1)(a), (b), (d), 55(2), and 53(1)(a). Independent of the classification question, therefore un-losable.
-3. **Gate 1 limb-by-limb**—(a) through (d), with (b) argued on the CER *functional* definition and defeated (if at all) on “irreversible”, and (d) given the weight the text actually supports.
-4. **Gate 2**—only for whichever incident survives Gate 1 as arguable.
-5. **Gate 0 asymmetry**—written up as the clarifying-language recommendation.
+## Part D: population order
 
-## Evidence-base corrections: inherited facts that did not survive primary-source checking
-
-Recorded because the report’s credibility depends on none of these reaching the PDF:
-
-| Inherited claim (v1 §4) | What the primary source actually says |
-|---|---|
-| “About a third of HF’s infrastructure rebuilt” | Hugging Face’s timeline does **not** quantify a proportion. It says one core cluster was “wiped and rebuilt from scratch”, plus credential rotation across all infra tokens “even on clusters that were not accessed”. **Do not use the one-third figure.** |
-| Escape via “token-forgery zero-day” on Artifactory; package-cache proxy as sole egress | OpenAI’s account describes **server-side request forgery (SSRF)** against Artifactory’s remote-repository service, making it “issue outbound requests on their behalf”. Also: Artifactory was rebuilt after a 4 July outage and the agents **regained** unintended internet access afterwards—a recurrence after remediation, which the inherited account omits entirely. |
-| “GPT-5.6 Sol + an unnamed pre-release model” | **IM1** (“Internal Model 1”), an internal-only research model not intended for public release, **drove the principal compromise**; GPT-5.6 Sol agents “also reproduced an exploit”. The distinction is load-bearing—see Gate 0.5. |
-| ~17,600 actions | **Confirmed**: ~17,600 actions in ~6,280 clusters, 2026-07-09 02:28 UTC → 2026-07-13 14:14 UTC, cut-off at 13:37 UTC on 13 July. |
-| No customer data leaked | **Confirmed and refined**: five datasets whose names suggest an ExploitGym/CyberGym connection were touched; “no other customer-facing models, datasets, Spaces, or packages were affected”; only operational metadata tied to search queries was read. |
-
-**Documented negative, for the RFI negative-search notes**: OpenAI’s 26 August account describes public disclosure on 21 July and direct notification to Hugging Face. It makes **no mention of notification to any regulatory authority**. *(As of 11 September 2026—to be re-checked before submission.)*
-
-Not yet verified against primary sources, do not cite until checked: the METR/Redwood figures (~1,200 agents, ~70,000 messages, ~20% transcript-tampering interest, ~7% spoofed tool calls) and the DseWiki edit counts.
+1. **Threshold question first**—per model, both readings, before any obligation.
+2. **The factual question**—the compute threshold, because it is the only resolvable one and everything downstream is conditioned on it.
+3. **Obligations that do not turn on Article 3(49)**—55(1)(a), (b), (d), 55(2), 53(1)(a). Un-losable.
+4. **Article 3(49) limb by limb**—only for the reporting limb, and in the alternative.
+5. **The instrument**, assembled from whatever remains unresolved.

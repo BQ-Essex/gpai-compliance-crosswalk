@@ -1,3 +1,8 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Source documents are cited by URL and pinned by SHA-256 in data/sources.yaml,
+# not vendored. See the pinpoint_note on ec-gpai-guidelines.
+*.PDF
+*.pdf

@@ -15,7 +15,7 @@ Three errors were found by adversarial review of the finished draft and are reco
 | Error | Correction |
 |---|---|
 | Article 73(4) recorded as “immediately” for incidents involving death | **“not later than 10 days”**. Tiering is 15 days / two days / 10 days, with “immediately” as the floor in each, not the limit |
-| “Critical infrastructure” said to turn on Member State designation | Designation attaches to **‘critical entity’** (CER Art. 2(1)). The Act imports Art. 2(**4**), which is **functional** |
+| “Critical infrastructure” said to turn on Member State designation | Designation attaches to **‘critical entity’** (CER Art. 2(1)). The Act imports CER Art. 2(**4**), which is **functional** |
 | **Scope treated as settled; Articles 2(8), 3(3) and 3(63) never consulted** | See §1. The research/development exclusion sits inside the definition of ‘general-purpose AI model’ itself |
 | **Scope then treated as resolved in the provider’s favour; Recital 97, Article 2(1)(a), Article 3 points (9)–(11) and the Commission’s Q&A never consulted** | See §1.5–1.7. Recital 97 deems a model integrated into the provider’s own system put into service to be placed on the market, and its internal-use exception is expressly unavailable to models with systemic risk. **The obligations attach.** The live question is factual: does the model exceed 10²⁵ FLOP? |
 
@@ -28,6 +28,8 @@ Three errors were found by adversarial review of the finished draft and are reco
 > ‘general-purpose AI model’ means an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, **except AI models that are used for research, development or prototyping activities before they are placed on the market**;
 
 On the face of it, a model used for research, development or prototyping before market placement is **not a ‘general-purpose AI model’ within the meaning of the Regulation**—not exempted from particular obligations, but outside the term on which Chapter V operates. Note what the enacting text does **not** say: there is no “sole purpose” qualifier, and no condition about internal processes or systemic risk. Recital 97 and the Commission’s guidance supply all three. See §1.6.
+
+And the omission reads as deliberate rather than careless, because the formula was to hand. **Article 2(6)** excludes AI systems and models “specifically developed and put into service **for the sole purpose of** scientific research and development”. The drafters used the qualifier where they wanted it, two paragraphs from the scope provision that governs this analysis, and did not use it in Article 3, point (63). A reader who supplies it from Recital 97 is supplying a term the enacting text declined.
 
 ### 1.2 Article 2(8): the operative scope exclusion, and its one way back in
 
@@ -42,6 +44,12 @@ The final sentence is the only route back into the Regulation for anything occur
 Every element describes a **deliberate, conditioned, elected** activity: temporary, for the system’s intended purpose, conducted outside a laboratory by design, subject to the conditions in Articles 57 or 60.
 
 **A model that reaches the real world by escaping a simulated environment satisfies none of it.** The escape was not temporary testing, not for an intended purpose, and not a modality anyone elected. The exception is drafted for exposure that is *chosen*; it does not reach exposure that *occurs*.
+
+**And there is a further step, which the definition makes and the commentary generally does not.** The defined term is the temporary testing of an **AI system**, and the conditions it defers to are those of Article 57 or Article 60. Article 57 establishes national regulatory sandboxes that Member States operate and providers enter. Article 60 is titled “Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes”, and its first paragraph confines it to “providers or prospective providers of **high-risk AI systems** listed in Annex III or covered by Union harmonisation legislation listed in Section A of Annex I”. Neither reaches a general-purpose AI model.
+
+So Article 2(8)’s single carve-back has no purchase on a model at all. On the enacting text, pre-market development of a general-purpose AI model sits outside the Regulation with no relevant exception—a stronger version of the textual reading than the one this analysis first ran, and one that has to be answered rather than dismissed.
+
+**It is answered, and the answer says something about how the Regulation is built.** Recital 97 does not carve an exception out of Article 2(8). It relocates the moment of placement: a model integrated into its provider’s own system put into service *is* placed on the market, so the development was not activity “prior to [its] being placed on the market”, and Article 2(8) never engages. The recital is not overriding the enacting text; it is fixing the point in time from which the enacting text runs. That is a structural job, and the observation worth making is that the Act leaves it to a recital to do.
 
 ### 1.4 Article 3, point (3): ‘provider’ is tied to market placement
 
@@ -69,7 +77,37 @@ The three conditions are cumulative, and condition (c) is decisive: **the intern
 
 The same Q&A states that obligations “explicitly or implicitly pertain to the **development phase**”, naming the duty to “notify the Commission that their general-purpose AI model **meets or will meet** the training compute threshold” (Articles 51–52), to “document information about training and testing” (Article 53), and to “assess and mitigate systemic risk” (Article 55).
 
-### 1.7 Where that leaves scope, stated precisely
+### 1.7 The Commission’s Guidelines, at paragraph level
+
+*Commission Guidelines on the scope of the obligations for providers of general-purpose AI models established by Regulation (EU) 2024/1689*, C(2025) 7719 final, Brussels, 19 November 2025. Obtained as the published English text; paragraph numbers are the Guidelines’ own.
+
+**Status, paragraph 9**—the sentence that governs how everything else here should be read:
+
+> “These guidelines are not binding for providers of general-purpose AI models; an authoritative interpretation of the AI Act may only be given by the Court of Justice of the European Union (‘CJEU’). Nevertheless, these guidelines set out the Commission’s interpretation and application of the AI Act, **on which it will base its enforcement action**.”
+
+Not binding, and enforcement-determining. Both halves are operative.
+
+**Internal use as placing on the market, paragraph 51.** Among the Guidelines’ worked examples of a model being placed on the market:
+
+> “a general-purpose AI model is used for **internal processes that are essential for providing a product or service to third parties or that affect the rights of natural persons in the Union**.”
+
+Note the polarity. Recital 97 states the carve-back negatively (obligations do not apply to purely internal processes *not* essential to third-party provision where rights are *not* affected); the Guidelines state the same boundary positively, as an example of placement. Paragraph 52 adds that the examples “require case-by-case assessment” and are to be read with the Blue Guide and Articles 3(9) and (10) and Recital 97.
+
+**Deemed placement, Section 3.1.3, paragraph 54**, quoting Recital 97 as its authority:
+
+> “First, as specified in recital 97 AI Act, ‘[w]hen the provider of a general-purpose AI model integrates an own model into its own AI system that is made available on the market or put into service, that model should be considered to be placed on the market and, therefore, the obligations in this Regulation for models should continue to apply in addition to those for AI systems.‘”
+
+**Lifecycle, paragraph 22—the most consequential paragraph for this analysis, and the least obvious:**
+
+> “the Commission considers the lifecycle of a general-purpose AI model to **begin at the start of the large pre-training run**. Any subsequent development of the model downstream of this large pre-training run performed by the provider or on behalf of the provider, **whether before or after the model has been placed on the market, forms part of the same model’s lifecycle** rather than giving rise to new models … A model is thus considered to be **the same model along its entire lifecycle**, i.e. throughout its development, market availability, and use. In particular, **different stages of the development of a model are not considered to constitute different models**.”
+
+Read with the closing sentence of Recital 97—the research exclusion “is without prejudice to the obligation to comply with this Regulation when, following such activities, a model is placed on the market”—this narrows the Article 3(63) exemption considerably. A model in development is not a different model from the one later released. **The exemption protects a model that is never placed on the market; it does not protect the development phase of a model that is.**
+
+**Enforcement timing, paragraph 112**, corroborating the Article 113 derivation at §8 from the Commission’s own account: “In the first year from 2 August 2025 onwards, the Commission cannot take any enforcement actions because its enforcement powers only enter int[o application on 2 August 2026]”.
+
+**What the Guidelines do not do.** They quote the Article 3(63) research exclusion when reproducing the definition (paragraph 13) and nowhere condition it, gloss it, or add the “sole purpose” qualifier. That qualifier appears only in Recital 97. The phrase “sole purpose of research” does not occur in the Guidelines at all.
+
+### 1.8 Where that leaves scope, stated precisely
 
 **The obligations attach**, on the Commission’s reading, provided the model is one with systemic risk. The route runs: model integrated into the provider’s own AI system put into service → deemed placed on the market (Recital 97) → internal-use exception unavailable because the model carries systemic risk → Chapter V applies, including the development-phase duties the Q&A names.
 
@@ -81,13 +119,13 @@ The same Q&A states that obligations “explicitly or implicitly pertain to the 
 2. **The Q&A disclaims its own authority**: “This Q&A does not constitute an official position of the Commission … Only the Court of Justice of the European Union is competent to authoritatively interpret the AI Act.”
 3. **A provider could run the textual argument.** It is the strongest position available to it, and the analysis should say so rather than pretend the question is closed.
 
-### 1.8 The independent hook, which needs none of the above
+### 1.8a The independent hook, which needs none of the above
 
 **Article 55(1), point (b)** obliges providers of general-purpose AI models with systemic risk to assess and mitigate systemic risks at Union level, including their sources, “that may stem from **the development**, the placing on the market, or the use” of such models. **“Development” is in the enacting text, not a recital.**
 
 This matters because it holds whichever way the scope argument goes. Even on the provider-favourable reading—research model outside the definition—the *deployed* model is indisputably within it, and its provider owed a duty to assess systemic risk stemming from development. A containment failure during internal evaluation is squarely a **risk source** that duty reaches.
 
-### 1.7 A bridging problem to state rather than paper over
+### 1.9 A bridging problem to state rather than paper over
 
 ‘Serious incident’ at Article 3, point (49) is defined by reference to an **AI system** (Article 3(1)). Article 55(1)(c) binds providers of **models**. Article 3, point (66) defines ‘general-purpose AI system’ separately as a system based on such a model. The Act does not expressly bridge the two for the purposes of Article 55(1)(c), and the analysis should record this as unresolved rather than assume it away.
 
@@ -112,7 +150,7 @@ This matters because it holds whichever way the scope argument goes. Even on the
 >
 > **CER Art. 2(4)**: an asset, a facility, equipment, a network or a system, or a part [thereof], **which is necessary for the provision of an essential service**;
 > **CER Art. 2(5)**: ‘essential service’ means a service which is crucial for the maintenance of vital societal functions, **economic activities**, public health and safety, or the environment;
-> **CER Art. 2(1)** *(different term, for contrast)*: ‘critical entity’ means an entity **identified by a Member State in accordance with Article 6** …
+> **CER Art. 2(1)** *(different term, for contrast)*: ‘critical entity’ means an entity **identified by a Member State in accordance with [CER] Article 6** …
 
 The imported term is **functional**; designation attaches to ‘critical entity’. But the functional test is not at large either: CER Article 5 requires Member States to identify essential services within the Annex sectors, where “digital infrastructure” covers IXPs, DNS and TLD registries, cloud providers, data centres, CDNs and trust services. **And Article 3(49)(b) requires disruption of “the management or operation of” that infrastructure**, which is a further step. Limb (b) is arguable, not comfortable, and fails independently on “irreversible” where the affected systems were rebuilt.
 
@@ -167,7 +205,7 @@ The qualified-alert pathway referenced at Article 51(1)(b) is governed by **Arti
 
 ---
 
-## 6. Article 101, point (b): fines (unamended)
+## 6. Article 101(1), point (b): fines (unamended)
 
 > The Commission may impose … fines not exceeding **3 % of … annual total worldwide turnover … or EUR 15 000 000, whichever is higher**, when the Commission finds that the provider intentionally or negligently: … (b) **failed to comply with a request for a document or for information pursuant to Article 91**, or supplied incorrect, incomplete or misleading information;
 

@@ -31,6 +31,31 @@ And then: where a scope exclusion has an exception, **read the exception’s own
 
 Where scope resolves against coverage, the analysis is not over. Look for obligations on a *covered* party that reach the excluded activity by their own wording—a duty to assess risk arising from a phase is not the same as a duty attaching to conduct in that phase, and the first can survive where the second does not.
 
+## Step 0b: Read the regulator’s own guidance before reasoning from the text
+
+This is the lesson that cost most to learn, and it is the one most likely to transfer.
+
+The scope question in the worked example was answered wrongly twice from the enacting text alone. The first attempt never reached the scope provisions. The second reached them, read them carefully, reasoned correctly from what they said, and still landed in the wrong place—because the regulator had already published an operative test that the text does not contain, and the analysis had not looked.
+
+Careful reading does not substitute for checking what the supervising body has said. In an EU context that means, in order:
+
+1. **The enacting text**, from the consolidated version, with amendment markers read.
+2. **The recitals**, from the authentic publication, remembering that they interpret and cannot derogate.
+3. **The regulator’s guidelines and Q&A.** These often consolidate scattered recitals into a test with conditions and thresholds that appear nowhere in the articles.
+4. **Specialist commentary**, which is also how you discover whether your finding is novel—see Step 0c.
+
+**Then hold two things apart.** Non-binding guidance still determines enforcement. The Commission’s guidelines say they are not legally binding and that only the Court may authoritatively interpret the Act, and in the same breath that they represent the interpretation “on which it will base its enforcement action”. Both halves are true and a competent analysis reports both: what the regulator will do, and what a regulated party could still argue.
+
+Where guidance and enacting text diverge, **that divergence is usually the finding**. It tells you where the instrument is doing work its drafters did not write down, which is exactly where a clarifying-language recommendation has purchase.
+
+## Step 0c: Check whether the finding is already in the literature
+
+Before writing that something is unnoticed, search for it. A methodology that claims epistemic discipline cannot afford an unchecked novelty claim, and novelty is the cheapest thing in any paper for a reader to falsify.
+
+In the worked example the scope argument had been published nine months earlier by a specialist writing for a scholarly commentary, reaching the same destination by a different route. Finding that did not weaken the work. It moved the contribution from “here is an unnoticed gap” to “here is where that argument’s weight actually sits, applied to a case that makes it bite”—which is a smaller claim, and a true one.
+
+State plainly what is yours and what is not.
+
 ## Step 1: Establish the statutory foundation from primary sources
 
 Explainer sites are a research aid, not a citation. Two failures follow from citing them:
@@ -41,6 +66,12 @@ Explainer sites are a research aid, not a citation. Two failures follow from cit
 Consolidated texts typically **omit recitals** and carry a notice that they have no legal effect. Take recitals from the authentic publication and say so once in the citation note.
 
 Follow every cross-reference out of the instrument and into whatever it points at. In the worked example a definition resolved into a different directive, where the defined term turned out to be **functional** rather than designation-based—the opposite of what the summary implied, in the direction that mattered.
+
+**Then close the loop mechanically, because the register will drift from the prose.** A statutory register is built early and consulted selectively; the argument goes on acquiring citations for days afterwards, and nothing announces when a sentence starts leaning on a provision nobody verified. Extract every citation from the finished prose and check it against the register. Running this for the first time on a draft that had been through two adversarial reviews produced twenty-three unbacked citations, among them the single provision the scope analysis turns on. `tools/citecheck.py` is the implementation.
+
+Two things it will not do. It cannot tell whether a citation is *apposite*—verified text can still be the wrong provision for the proposition—and it should skip citations belonging to other instruments and spans of bare article numbers, which name a body of provisions rather than a piece of text. Say which exclusions you made and why, because an exclusion is where a checker quietly stops checking.
+
+**Mark how each entry was obtained.** Not every provision will come from the same place; access fails, sources go dark mid-project, and the honest response is a provenance field rather than a uniform-looking register. Where a weaker source is all there is, record what would confirm it, and check whether an authority quotes the same wording—a Commission document reproducing a definition is corroboration a reader can follow.
 
 ## Step 2: Build the gating logic before populating anything
 
@@ -106,6 +137,14 @@ Two drafting rules earn their place:
 2. **Follow the instrument’s own required form.** Most information-gathering powers specify what a valid request must contain. Meeting that specification exactly is most of what “usable with light edits” means in practice.
 
 And state plainly, in the instrument, that no finding has been made. A request premised on an unproven conclusion is one a lawyer rejects on sight; a request that asks is one they can act on.
+
+## Step 7b: Keep a corrections log, and publish it
+
+Every correction the method catches goes into a dated log that ships with the work, recording what was wrong, what the text actually says, and what changed as a result.
+
+Two reasons, and the second is the one that matters. It is the honest thing to do. And a method whose entire claim is that it catches its own drift has no way to evidence that claim except by showing the catches—a clean record proves nothing, because it is indistinguishable from a record that was never kept.
+
+The instinct to tidy the log before publication should be resisted. It is the most persuasive artifact the method produces.
 
 ## Step 8: Mark provenance so the draft cannot be mistaken for the real thing
 

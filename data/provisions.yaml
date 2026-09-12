@@ -8,6 +8,20 @@
 #
 # amended_by_omnibus is recorded from the EUR-Lex change markers themselves
 # (▼M1 = amended, ▼B = base text), not inferred from commentary.
+#
+# TWO PROVENANCE CLASSES, and the difference matters. Entries marked
+#   provenance: consolidated
+# were read from the EUR-Lex consolidated text named above, change markers and
+# all. Entries marked
+#   provenance: reproduction
+# were read from a published reproduction of the authentic text after the
+# consolidated version proved unreachable from the machine this was prepared on;
+# for those, amended_by_omnibus is recorded as "unverified" rather than guessed,
+# and a reader should treat the wording as accurate to the 2024 text and
+# unconfirmed against the 2026 amendments. Where a reproduction is quoted by a
+# Commission document, corroborated_by names the paragraph, which is as close to
+# an authentic check as this analysis could get without the consolidated file.
+# Closing that gap is the first item in the repository's own limitations.
 
 meta:
   regulation: "Regulation (EU) 2024/1689"
@@ -16,6 +30,7 @@ meta:
   authentic_celex: "32024R1689"
   amending_act: "Regulation (EU) 2026/1744"
   extracted: "2026-09-11"
+  extended: "2026-09-12"
   caveat: >-
     The EUR-Lex consolidated text carries the standing notice that it "is meant
     purely as a documentation tool and has no legal effect". Cite the
@@ -23,6 +38,44 @@ meta:
     as the authentic version.
 
 provisions:
+  - id: art2-1a
+    cite: "Article 2(1), point (a)"
+    title: "Scope — who the Regulation binds"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      This Regulation applies to: (a) providers placing on the market or putting into
+      service AI systems or placing on the market general-purpose AI models in the
+      Union, irrespective of whether those providers are established or located within
+      the Union or in a third country;
+    notes:
+      - >-
+        THE ASYMMETRY ON WHICH THE SCOPE ARGUMENT TURNS. AI systems are caught on
+        placing on the market OR putting into service. General-purpose AI models are
+        caught on placing on the market alone. 'Putting into service' at Art. 3(11)
+        expressly includes supply 'for own use'; that limb is not extended to models.
+      - >-
+        Read with Arts. 3(9) and 3(10), a model never supplied to anyone is, on the
+        enacting text alone, never placed on the market. Recital 97 answers this by
+        relocating the moment of placement, not by creating an exception.
+
+  - id: art2-6
+    cite: "Article 2(6)"
+    title: "Scope — scientific research and development exclusion"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      This Regulation does not apply to AI systems or AI models, including their output,
+      specifically developed and put into service for the sole purpose of scientific
+      research and development.
+    notes:
+      - >-
+        Distinct from Art. 2(8) and narrower. It requires the SOLE purpose of scientific
+        research and development, and it speaks of models 'put into service' — a term
+        Art. 2(1)(a) does not apply to models. Not relied on here; recorded because the
+        'sole purpose' formula appears in the enacting text at this provision and
+        nowhere in Art. 3, point (63).
+
   - id: art2-8
     cite: "Article 2(8)"
     title: "Scope — research, testing and development exclusion"
@@ -64,37 +117,73 @@ provisions:
     notes:
       - "Art. 52(1) binds 'the relevant provider'. The temporal trigger is capability; STANDING is tied to placing on the market."
 
-  - id: art3-57
-    cite: "Article 3, point (57)"
-    title: "Definition — 'testing in real-world conditions'"
-    amended_by_omnibus: false
+  - id: art3-9
+    cite: "Article 3, point (9)"
+    title: "Definition — 'placing on the market'"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction; corroborated"
+    corroborated_by: >-
+      Commission Guidelines C(2025) 7719 final, para. 47, which quotes this definition
+      as applied to a general-purpose AI model.
     text: >-
-      'testing in real-world conditions' means the temporary testing of an AI system for its
-      intended purpose in real-world conditions outside a laboratory or otherwise simulated
-      environment, with a view to gathering reliable and robust data and to assessing and
-      verifying the conformity of the AI system with the requirements of this Regulation, and
-      it does not qualify as placing the AI system on the market or putting it into service
-      within the meaning of this Regulation, provided that all the conditions laid down in
-      Article 57 or 60 are fulfilled;
+      'placing on the market' means the first making available of an AI system or a
+      general-purpose AI model on the Union market;
     notes:
-      - "Every element describes an ELECTED activity: temporary, intended purpose, outside a laboratory by design, Art. 57/60 conditions."
-      - "Drafted for exposure that is chosen. Does not reach exposure that occurs."
+      - >-
+        The only trigger the Regulation applies to general-purpose AI models at
+        Art. 2(1)(a). It defers entirely to Art. 3(10).
 
-  - id: art3-63
-    cite: "Article 3, point (63)"
-    title: "Definition — 'general-purpose AI model'"
-    amended_by_omnibus: false
+  - id: art3-10
+    cite: "Article 3, point (10)"
+    title: "Definition — 'making available on the market'"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction; corroborated"
+    corroborated_by: >-
+      Commission Guidelines C(2025) 7719 final, para. 47.
     text: >-
-      'general-purpose AI model' means an AI model, including where such an AI model is
-      trained with a large amount of data using self-supervision at scale, that displays
-      significant generality and is capable of competently performing a wide range of
-      distinct tasks regardless of the way the model is placed on the market and that can be
-      integrated into a variety of downstream systems or applications, except AI models that
-      are used for research, development or prototyping activities before they are placed on
-      the market;
+      'making available on the market' means the supply of an AI system or a
+      general-purpose AI model for distribution or use on the Union market in the course
+      of a commercial activity, whether in return for payment or free of charge;
     notes:
-      - "THE EXCLUSION IS INSIDE THE DEFINED TERM. Not an exemption from obligations — outside the term Chapter V operates on."
-      - "Consequence: Arts. 51, 52, 53, 55 cannot attach, and Art. 91 cannot reach the documentation."
+      - >-
+        'Supply' and 'in the course of a commercial activity' are the two words a
+        provider would rely on. A model that never leaves the developer is not supplied
+        to anyone, and the Guidelines at para. 51 answer this not by reading 'supply'
+        loosely but by treating essential internal use as itself an example of placement.
+
+  - id: art3-11
+    cite: "Article 3, point (11)"
+    title: "Definition — 'putting into service'"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      'putting into service' means the supply of an AI system for first use directly to
+      the deployer or for own use in the Union for its intended purpose;
+    notes:
+      - >-
+        'or for own use' is express, and it is confined to AI SYSTEMS. Art. 2(1)(a) does
+        not apply this trigger to models. The asymmetry is therefore deliberate on the
+        face of the text, which is what makes the textual reading available to a provider.
+
+  - id: art3-47
+    cite: "Article 3, point (47)"
+    title: "Definition — 'AI Office'"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      'AI Office' means the Commission's function of contributing to the implementation,
+      monitoring and supervision of AI systems and general-purpose AI models, and AI
+      governance, provided for in Commission Decision of 24 January 2024; references in
+      this Regulation to the AI Office shall be construed as references to the Commission;
+    notes:
+      - >-
+        DECISIVE FOR THE INSTRUMENT. The AI Office is a function of the Commission, not a
+        legal person, so an Art. 91 request is issued in the Commission's name. An earlier
+        draft of the instrument was issued in the AI Office's name and was ultra vires on
+        its face.
+      - >-
+        Guidelines para. 6 states that the Commission has exclusive competence to enforce
+        Chapter V, its implementation entrusted to the AI Office.
 
   - id: art3-49
     cite: "Article 3, point (49)"
@@ -112,6 +201,22 @@ provisions:
       - "Limbs are disjunctive — one suffices."
       - "ONLY limb (b) carries an irreversibility requirement. Limb (d) does not."
       - "Limb (b) is not self-contained: depends on art3-62."
+
+  - id: art3-57
+    cite: "Article 3, point (57)"
+    title: "Definition — 'testing in real-world conditions'"
+    amended_by_omnibus: false
+    text: >-
+      'testing in real-world conditions' means the temporary testing of an AI system for its
+      intended purpose in real-world conditions outside a laboratory or otherwise simulated
+      environment, with a view to gathering reliable and robust data and to assessing and
+      verifying the conformity of the AI system with the requirements of this Regulation, and
+      it does not qualify as placing the AI system on the market or putting it into service
+      within the meaning of this Regulation, provided that all the conditions laid down in
+      Article 57 or 60 are fulfilled;
+    notes:
+      - "Every element describes an ELECTED activity: temporary, intended purpose, outside a laboratory by design, Art. 57/60 conditions."
+      - "Drafted for exposure that is chosen. Does not reach exposure that occurs."
 
   - id: art3-62
     cite: "Article 3, point (62)"
@@ -141,6 +246,38 @@ provisions:
         (Art. 2(1)). The AI Act imports Art. 2(4), 'critical INFRASTRUCTURE',
         which is defined FUNCTIONALLY. No Member State designation is required.
       - "Consequence: limb (b) is arguable on the functional test, and fails (if at all) on 'irreversible'."
+
+  - id: art3-63
+    cite: "Article 3, point (63)"
+    title: "Definition — 'general-purpose AI model'"
+    amended_by_omnibus: false
+    text: >-
+      'general-purpose AI model' means an AI model, including where such an AI model is
+      trained with a large amount of data using self-supervision at scale, that displays
+      significant generality and is capable of competently performing a wide range of
+      distinct tasks regardless of the way the model is placed on the market and that can be
+      integrated into a variety of downstream systems or applications, except AI models that
+      are used for research, development or prototyping activities before they are placed on
+      the market;
+    notes:
+      - "THE EXCLUSION IS INSIDE THE DEFINED TERM. Not an exemption from obligations — outside the term Chapter V operates on."
+      - "Consequence: Arts. 51, 52, 53, 55 cannot attach, and Art. 91 cannot reach the documentation."
+
+  - id: art3-66
+    cite: "Article 3, point (66)"
+    title: "Definition — 'general-purpose AI system'"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      'general-purpose AI system' means an AI system which is based on a general-purpose
+      AI model and which has the capability to serve a variety of purposes, both for
+      direct use as well as for integration in other AI systems;
+    notes:
+      - >-
+        The Act keeps system and model apart as defined terms throughout. This is why the
+        bridging gap at Art. 55(1)(c) is real: 'serious incident' at Art. 3, point (49) is
+        defined by reference to an AI system (Art. 3, point (1)), while Art. 55(1)(c)
+        binds providers of models.
 
   - id: art51
     cite: "Article 51"
@@ -267,6 +404,94 @@ provisions:
     notes:
       - "Forecloses the trade-secret objection: confidentiality is handled on receipt."
 
+  - id: art57
+    cite: "Article 57"
+    title: "AI regulatory sandboxes"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction (partial)"
+    text: >-
+      [Paragraph 1, first sentence:] Member States shall ensure that their competent
+      authorities establish at least one AI regulatory sandbox at national level, which
+      shall be operational by 2 August 2027. [...]
+    notes:
+      - >-
+        A sandbox under this article is a supervised national scheme that a provider
+        enters. It is not a description of a developer's own evaluation environment, and
+        an escape from the latter is not an event within the former.
+
+  - id: art60
+    cite: "Article 60"
+    title: "Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction (partial)"
+    text: >-
+      [Paragraph 1, first sentence:] Testing of high-risk AI systems in real world
+      conditions outside AI regulatory sandboxes may be conducted by providers or
+      prospective providers of high-risk AI systems listed in Annex III or covered by
+      Union harmonisation legislation listed in Section A of Annex I [...]
+    notes:
+      - >-
+        SHARPENS THE TEXTUAL READING. Article 2(8)'s single carve-back is 'testing in
+        real world conditions', defined at Art. 3, point (57) by reference to an AI
+        SYSTEM and operationalised here for HIGH-RISK AI SYSTEMS alone. The carve-back
+        has no purchase on a general-purpose AI model, so on the enacting text Art. 2(8)
+        excludes pre-market model development without relevant exception.
+      - >-
+        This does not defeat the Commission's reading. Recital 97 works by relocating the
+        moment of placement, so that the development is not 'prior to' placing on the
+        market and Art. 2(8) never engages. That is the coherent account of how the two
+        provisions sit together, and it is worth stating because it shows the recital
+        doing structural work the definition does not.
+
+  - id: art68-2
+    cite: "Article 68(2)"
+    title: "Scientific panel — composition and independence"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      The scientific panel shall consist of experts selected by the Commission on the
+      basis of up-to-date scientific or technical expertise in the field of AI necessary
+      for the tasks set out in paragraph 3, and shall be able to demonstrate meeting all
+      of the following conditions: (a) having particular expertise and competence and
+      scientific or technical expertise in the field of AI; (b) independence from any
+      provider of AI systems or general-purpose AI models; (c) an ability to carry out
+      activities diligently, accurately and objectively. The Commission, in consultation
+      with the Board, shall determine the number of experts on the panel in accordance
+      with the required needs and shall ensure fair gender and geographical representation.
+    notes:
+      - >-
+        Article 91(3) conditions a panel-initiated request for information on the
+        fulfilment of 'the tasks of the scientific panel under Article 68(2)'. Paragraph
+        (2) sets out composition and independence; the TASKS are at paragraph (3). The
+        cross-reference as enacted points at the wrong paragraph.
+
+  - id: art68-3
+    cite: "Article 68(3)"
+    title: "Scientific panel — tasks"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      The scientific panel shall advise and support the AI Office, in particular with
+      regard to the following tasks: (a) supporting the implementation and enforcement of
+      this Regulation as regards general-purpose AI models and systems, in particular by:
+      (i) alerting the AI Office of possible systemic risks at Union level of
+      general-purpose AI models, in accordance with Article 90; (ii) contributing to the
+      development of tools and methodologies for evaluating capabilities of
+      general-purpose AI models and systems, including through benchmarks; (iii)
+      providing advice on the classification of general-purpose AI models with systemic
+      risk; (iv) providing advice on the classification of various general-purpose AI
+      models and systems; (v) contributing to the development of tools and templates; (b)
+      supporting the work of market surveillance authorities, at their request; (c)
+      supporting cross-border market surveillance activities as referred to in Article
+      74(11), without prejudice to the powers of market surveillance authorities; (d)
+      supporting the AI Office in carrying out its duties in the context of the Union
+      safeguard procedure pursuant to Article 81.
+    notes:
+      - >-
+        The tasks Article 91(3) must mean to refer to. Point (a)(i) is the alerting task
+        that Article 90 governs, which is the pathway the instrument names in the
+        alternative.
+
   - id: art73
     cite: "Article 73"
     title: "Reporting of serious incidents (high-risk AI systems)"
@@ -290,6 +515,21 @@ provisions:
       - "Do not propose importing the scheme wholesale: the 2-day tier attaches only to Art. 3(49)(b), so facts in limb (d) get the SLOWEST tier."
       - "Chapter III §§1-3 deferred to 2027-12-02 and 2028-08-02 by amended Art. 113(c)."
 
+  - id: art75-1
+    cite: "Article 75(1)"
+    title: "Exclusive competence of the AI Office"
+    amended_by_omnibus: "True"
+    provenance: "consolidated"
+    text: >-
+      [Extract, as amended:] The AI Office shall be exclusively competent for supervision
+      and enforcement in relation to [...] (a) AI systems based on general-purpose AI
+      models where the model and the system are developed by the same provider [...]
+    notes:
+      - >-
+        Where the model and the system come from the same provider, supervision of both
+        sits with the AI Office. That is the same fact pattern Recital 97 deems to be
+        placing on the market, approached from the enforcement side.
+
   - id: art75-1a
     cite: "Article 75(1a)"
     title: "Derogation — AI Office as addressee for GPAI-based high-risk systems"
@@ -308,6 +548,59 @@ provisions:
         WITH Article 73's day-counts; the model-level duty at art55-1c has the same
         addressee and NO period at all.
       - "Art. 75(1) also gives the AI Office EXCLUSIVE competence over systems built on the provider's own model."
+
+  - id: art78
+    cite: "Article 78"
+    title: "Confidentiality"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      1. The Commission, market surveillance authorities and notified bodies and any
+      other natural or legal person involved in the application of this Regulation shall,
+      in accordance with Union or national law, respect the confidentiality of information
+      and data obtained in carrying out their tasks and activities in such a manner as to
+      protect, in particular: (a) the intellectual property rights and confidential
+      business information or trade secrets of a natural or legal person, including source
+      code, except in the cases referred to in Article 5 of Directive (EU) 2016/943 [...];
+      (b) the effective implementation of this Regulation, in particular for the purposes
+      of inspections, investigations or audits; (c) public and national security
+      interests; (d) the conduct of criminal or administrative proceedings; (e)
+      information classified pursuant to Union or national law. 2. The authorities
+      involved in the application of this Regulation pursuant to paragraph 1 shall request
+      only data that is strictly necessary [...] and shall delete the data collected as
+      soon as it is no longer needed for the purpose for which it was obtained [...]
+    notes:
+      - >-
+        What the instrument can offer its addressee. Article 55(3) routes information
+        obtained under Chapter V through this article, trade secrets expressly included,
+        which is why the instrument asks the Provider to identify sensitive material
+        rather than withhold it.
+      - >-
+        Paragraph 2's necessity limit cuts both ways: it also disciplines the drafting of
+        a request. A request for everything is not a request for what is strictly
+        necessary.
+
+  - id: art90
+    cite: "Article 90"
+    title: "Scientific panel alerts of systemic risks"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      1. The scientific panel may provide a qualified alert to the AI Office where it has
+      reason to suspect that: (a) a general-purpose AI model poses concrete identifiable
+      risk at Union level; or (b) a general-purpose AI model meets the conditions referred
+      to in Article 51. 2. Upon such qualified alert, the Commission, through the AI
+      Office and after having informed the Board, may exercise the powers laid down in
+      this Section for the purpose of assessing the matter. The AI Office shall inform the
+      Board of any measure according to Articles 91 to 94. [Paragraph 3, setting out what
+      a qualified alert must contain, is not reproduced here.]
+    notes:
+      - >-
+        Limb (b) is the route that matters on these facts: a qualified alert may be given
+        where the panel suspects a model MEETS the Art. 51 conditions. It does not require
+        the model to have been notified, or placed on the market, first.
+      - >-
+        This is the pathway the instrument names in the alternative under Art. 91(3).
 
   - id: art91
     cite: "Article 91"
@@ -340,6 +633,27 @@ provisions:
       - "indication of Article 101 fines"
     notes:
       - "TWO activation pathways: 91(1) own-initiative; 91(3) scientific panel."
+
+  - id: art101-1a
+    cite: "Article 101(1), point (a)"
+    title: "Fines for providers of general-purpose AI models — substantive infringement"
+    amended_by_omnibus: "unverified"
+    provenance: "reproduction"
+    text: >-
+      The Commission may impose on providers of general-purpose AI models fines not
+      exceeding 3 % of their annual total worldwide turnover in the preceding financial
+      year or EUR 15 000 000, whichever is higher, when the Commission finds that the
+      provider intentionally or negligently: (a) infringed the relevant provisions of this
+      Regulation;
+    notes:
+      - >-
+        Article 113 brings Article 101 into application on 2 August 2026. Conduct in July
+        2026 therefore carries no exposure under point (a), which is a real limit on what
+        an enforcement response to these episodes could achieve and is stated in the
+        report rather than left for a reader to find.
+      - >-
+        Point (b) — failure to comply with an Art. 91 request — is unaffected by that
+        timing, because the request would be issued now. See art101-1b.
 
   - id: art101-1b
     cite: "Article 101(1), point (b)"
@@ -374,6 +688,49 @@ provisions:
         APPLIES FROM 2026-08-02. Derivable from the Act alone.
 
 recitals:
+  - id: recital-97
+    cite: "Recital 97"
+    source_celex: "32024R1689"
+    text: >-
+      [...] It should be understood that the obligations for the providers of
+      general-purpose AI models should apply once the general-purpose AI models are
+      placed on the market. When the provider of a general-purpose AI model integrates
+      an own model into its own AI system that is made available on the market or put
+      into service, that model should be considered to be placed on the market and,
+      therefore, the obligations in this Regulation for models should continue to apply
+      in addition to those for AI systems. The obligations laid down for models should
+      in any case not apply when an own model is used for purely internal processes
+      that are not essential for providing a product or a service to third parties and
+      the rights of natural persons are not affected. Considering their potential
+      significantly negative effects, the general-purpose AI models with systemic risk
+      should always be subject to the relevant obligations under this Regulation. The
+      definition should not cover AI models used before their placing on the market for
+      the sole purpose of research, development and prototyping activities [...] without
+      prejudice to the obligation to comply with this Regulation when, following such
+      activities, a model is placed on the market.
+    notes:
+      - >-
+        THE WEIGHT-BEARING SOURCE OF THIS ANALYSIS, and the reason the route is the
+        finding. The deemed-placement rule, the three-condition internal-use carve-out
+        and the 'sole purpose' qualifier all sit here. None of the three appears in
+        Article 3, point (63).
+      - >-
+        Reproduced verbatim by the Commission at Guidelines C(2025) 7719 final, para. 54
+        (Section 3.1.3), which attributes the deemed-placement rule to this recital and
+        nothing else.
+      - >-
+        Guidelines para. 53 quotes two further sentences of this recital: 'AI models are
+        typically integrated into and form part of AI systems', and '[the] rules for
+        general-purpose AI models and for general-purpose AI models that pose systemic
+        risks, ... should apply also when these models are integrated or form part of an
+        AI system'. Both corroborate that integration does not take a model out of the
+        model regime.
+      - >-
+        A recital cannot derogate from enacting terms (Nilsson C-162/97; Manfredi
+        C-308/97; Tyson Parketthandel C-134/08). That principle was applied against an
+        earlier draft that relied on Recital 115; it applies here too, against the
+        conclusion this analysis now supports. Stated, not resolved.
+
   - id: recital-114
     cite: "Recital 114"
     source_celex: "32024R1689"

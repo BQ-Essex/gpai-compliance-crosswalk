@@ -29,11 +29,14 @@ Everything here is built to hold that line. Verdicts may only take one of three 
 The constraint is also **machine-checked**, because a discipline that depends on a tired human at hour forty is a discipline that fails at hour forty:
 
 ```bash
-pip install pyyaml          # the validator's only dependency
-python3 tools/validate.py
+pip install pyyaml          # the checkers' only dependency
+python3 tools/validate.py   # the cross-walk rows hold to the verdict discipline
+python3 tools/citecheck.py  # every citation in the prose resolves to verified text
 ```
 
 `tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library.
+
+The second of those was added after the first had been green for a day. `validate.py` polices the rows; nothing policed the prose, and the prose is where the argument is made. On its first run `citecheck.py` found twenty-three citations with no verified text behind them, including **Article 2(1), point (a)**—the provision the entire scope analysis turns on. They are all backed now, which is the only reason it is worth saying.
 
 ## The method caught itself being wrong, which is the point
 
@@ -41,7 +44,7 @@ Two independent adversarial passes were run over the finished draft with no sigh
 
 The first version asked whether a model responsible for ~95% of the attacking agents had been notified to the Commission under Article 52(1), against that provision’s two-week deadline. It had not consulted **Article 3, point (63)**, whose definition of ‘general-purpose AI model’ ends “except AI models that are used for research, development or prototyping activities before they are placed on the market”, nor **Article 2(8)**, which excludes pre-market research, testing and development activity from the Regulation entirely. The scope argument rested on a recital, which cannot derogate from enacting terms.
 
-The corrected analysis asks the prior question first: whether the obligations attach to that model at all. A later audit found that correction had itself overshot, concluding they did not attach without consulting Recital 97 or the Commission’s own guidance. They do attach — by a route running through a recital rather than the enacting definition, which is now the finding. Findings, corrections and what was done about them are in [`docs/adversarial-review.md`](docs/adversarial-review.md) and [`docs/correction-scope.md`](docs/correction-scope.md).
+The corrected analysis asks the prior question first: whether the obligations attach to that model at all. A later audit found that correction had itself overshot, concluding they did not attach without consulting Recital 97 or the Commission’s own guidance. They do attach—by a route running through a recital rather than the enacting definition, which is now the finding. Findings, corrections and what was done about them are in [`docs/adversarial-review.md`](docs/adversarial-review.md) and [`docs/correction-scope.md`](docs/correction-scope.md).
 
 ## Why this framing rather than a legal opinion
 
@@ -53,12 +56,15 @@ Track 3 asks whether a regulator could use the output with light edits. A non-la
 protocol/     the method, abstracted from this incident — reusable on the next one
 data/         provisions, sources and cross-walk rows as structured YAML
 instrument/   the model Article 91 request for information
-tools/        validate.py — enforces the verdict discipline; housestyle.py — prose conventions
+tools/        validate.py — the verdict discipline; citecheck.py — citations against the
+              register; housestyle.py — prose conventions
 docs/         worked example, comparative regimes, the correction record and review findings
 ```
 
 ### `data/provisions.yaml`
 Verified statutory text with provenance. Every provision records whether it was amended by **Regulation (EU) 2026/1744** (the Digital Omnibus on AI), taken from the EUR-Lex change markers themselves rather than inferred from commentary. Extracted from the consolidated text at CELEX `02024R1689-20260727`; recitals from the authentic OJ text at `32024R1689`, the consolidated version omitting them.
+
+Entries carry a `provenance` field, because not all of them were obtained the same way. Those marked `consolidated` were read from the EUR-Lex consolidated text, change markers and all. Those marked `reproduction` were read from a published reproduction of the authentic text, after the consolidated version proved unreachable from the machine this was prepared on; for those, `amended_by_omnibus` reads `unverified` rather than a guess, and where a Commission document quotes the same wording, `corroborated_by` names the paragraph. The distinction is recorded rather than smoothed over because the second class is weaker, and a reader is entitled to know which is which.
 
 ### `data/sources.yaml`
 Every source, tiered by its **relationship to the claim** rather than by prestige:
@@ -83,6 +89,15 @@ The rows. Each separates **disclosed facts** from the **provider’s characteris
 - Every row states facts to derive its verdict from
 - Every unresolved row carries a route to settlement **and** a dated negative-search note—so that “the record is silent” is something demonstrated rather than assumed
 
+## What the citation checker checks
+
+- Every Article and Recital cited anywhere in the prose resolves to text in `data/provisions.yaml`
+- Register entries nothing cites are reported, so the register does not accumulate dead weight
+
+It deliberately skips two things, and both exclusions are substantive. Citations qualified by another instrument—the CER Directive, the Charter, the Californian and New York statutes—are not this register’s to hold. And a span of bare article numbers (“Articles 51 to 56”) names a body of provisions rather than a piece of text: the claim that Chapter V runs from 51 to 56 rests on Article 113, which is verified, not on the last article in the span, which nothing quotes.
+
+What it cannot do is check that a citation is *apposite*. A pinpoint that resolves to verified text can still be the wrong provision for the proposition. One failure mode is closed; the other is still a reader’s job.
+
 ## What this repository does not contain, by choice
 
 The exploit chain in the July 2026 intrusion is already public, published by the affected party in its own technical timeline. This repository **cites it by reference and does not reproduce payloads, injection strings, or a consolidated reconstruction of the escalation path.**
@@ -95,6 +110,7 @@ Prepared over a sprint weekend by one person. Specific limits:
 
 - **The author is not a lawyer.** The statutory text is verified against primary sources; the reasoning from it is an outsider’s, offered as a method to be checked rather than advice to be relied on.
 - **The record is live and moving.** Every negative-search note carries an as-of date for this reason. Several underlying facts were days old when this was written.
+- **Part of the register is second-hand.** Sixteen provisions were added after the consolidated EUR-Lex text became unreachable from the machine this was prepared on, and were taken from a published reproduction of the authentic text instead. Their wording is accurate to the 2024 Regulation and unconfirmed against the 2026 amendments; each is marked `provenance: reproduction`, and confirming them against the consolidated file is the first thing a reader with access should do.
 - **Two designations remain unreconciled.** The model responsible for the majority of the attacking agents is named differently in the provider’s account and in the independent investigation, and this repository does not assert that they are the same model—establishing that is Request 1 of the instrument.
 
 ## Licence

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check and fix Markdown prose against Brad's house style.
 
-Three of the conventions are mechanical and can be fixed outright: closed em
+A fifth check is not about style at all: a paragraph that repeats an earlier one,\nwhich is what a revision pasted below its original looks like a day later.\n\nThree of the conventions are mechanical and can be fixed outright: closed em
 dashes, smart quotes, and range en dashes left alone. The fourth — signposting
 that announces a point rather than making it — can only be flagged, because
 deciding whether a phrase is doing work is a judgement no script should make.
@@ -123,6 +123,34 @@ def find_signposts(text):
     return found
 
 
+ECHO_MIN = 200      # characters; shorter blocks repeat legitimately
+ECHO_PREFIX = 100   # characters of normalised opening that must coincide
+
+
+def find_echoes(text):
+    """Return (line number, opening) for paragraphs that repeat an earlier paragraph.
+
+    Not a style rule but a drafting one, and it earned its place: a paragraph in the
+    report was revised, the revision pasted below the original, and both survived the
+    weekend. Exact repetition is the easy case; the one that actually happened shared
+    an opening and diverged near the end, so the test is the opening.
+    """
+    seen = {}
+    echoes = []
+    line = 1
+    for block in text.split("\n\n"):
+        stripped = re.sub(r"[*`_>#|]", "", block)
+        flat = re.sub(r"\s+", " ", stripped).strip().lower()
+        if len(flat) >= ECHO_MIN:
+            key = flat[:ECHO_PREFIX]
+            if key in seen:
+                echoes.append((line, seen[key], flat[:70]))
+            else:
+                seen[key] = line
+        line += block.count("\n") + 2
+    return echoes
+
+
 def process(path, fix=False):
     """Apply the mechanical fixes to one file and report what changed or remains.
 
@@ -139,6 +167,7 @@ def process(path, fix=False):
     spaced = len(re.findall(r"\s—\s", shelved))
     straight = shelved.count('"') + len(re.findall(r"(?<=\w)'(?=\w)", shelved))
     signposts = find_signposts(original)
+    echoes = find_echoes(original)
 
     if fix and revised != original:
         with open(path, "w", encoding="utf-8") as handle:
@@ -154,7 +183,11 @@ def process(path, fix=False):
         print(f"  line {number}: signposting — “{phrase}”. "
               f"Usually the frame goes and the sentence stays.")
 
-    return (revised == original or fix) and not signposts
+    for number, first, opening in echoes:
+        print(f"  line {number}: repeats the paragraph at line {first} — “{opening}…”. "
+              f"One of the two is a revision that was never deleted.")
+
+    return (revised == original or fix) and not signposts and not echoes
 
 
 def main():
@@ -165,7 +198,9 @@ def main():
     if not args:
         sys.exit(__doc__)
 
-    clean = all(process(path, fix=fix) for path in args)
+    # Not a generator: every file should be reported on, not just those up to the
+    # first failure.
+    clean = all([process(path, fix=fix) for path in args])
     sys.exit(0 if clean else 1)
 
 
