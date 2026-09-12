@@ -6,3 +6,8 @@ __pycache__/
 # not vendored. See the pinpoint_note on ec-gpai-guidelines.
 *.PDF
 *.pdf
+
+# Drop-zone for primary-source files being verified against. Cited by URL and
+# pinned by hash in data/sources.yaml; never redistributed from here.
+_sources/
+*.html
