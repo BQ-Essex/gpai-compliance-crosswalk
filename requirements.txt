@@ -1,0 +1,4 @@
+pyyaml>=6
+# optional, per tool:
+# pypdf        tools/reverify.py, if pdftotext is not on the path
+# python-docx  tools/formfill.py
