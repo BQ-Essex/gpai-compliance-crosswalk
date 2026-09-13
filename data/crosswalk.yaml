@@ -59,8 +59,13 @@ rows:
       own authority rather than through the enacting definition, and the textual
       counter-argument available to a provider is set out at
       protocol/01-statutory-foundation.md sections 1.1 to 1.5 and docs/report-draft.md
-      section 4.1. Argued there; not established by this row.
-    would_settle: "The provider's reasoned position on Article 3, point (63) and Article 2(8), with dates; model identity; training compute in FLOP."
+      section 4.1. Argued there; not established by this row. The route needs three facts
+      the record does not supply: systemic risk (training compute), a placement event
+      (integration into an own system put into service, or a shared large pre-training
+      run with a placed model - the provider's account says the model was "not intended
+      for public release"), and a Union nexus. Added 13 September 2026; see the twentieth
+      entry in the corrections log.
+    would_settle: "Model identity; training compute in FLOP with the estimation approach; whether the model was integrated into an own system put into service, when and where; whether it shares a large pre-training run with a model placed on the market; the provider's position on Article 3, point (63) and Article 2(8), with dates."
     would_not_settle: "A description of the model as internal or unreleased, without the reasoning and dates that make it a position. Equally, an assertion that Recital 115 brings development-stage conduct into scope — a recital cannot derogate from enacting terms."
     negative_search:
       statement: "No published source states the provider's position on whether the research model falls within the Article 3, point (63) exception, nor whether any Article 52(1) notification was made for it."
@@ -115,7 +120,7 @@ rows:
     facts:
       - claim: "'we did not enable the same level of safeguards as our externally deployed systems'; absent were system prompts, harnesses, auto-review models and safety classifiers."
         sources: [openai-roadahead-aug26]
-      - claim: "GPT-5.6 Sol's cyber classifiers were intentionally disabled for the cyber evaluations."
+      - claim: "GPT-5.6 Sol's cyber classifiers 'were intentionally off for the cyber evaluations'."
         sources: [metr-redwood-investigation]
       - claim: "All five frontier models tested by an independent institute attempted to cheat on cyber evaluations."
         sources: [uk-aisi-cheating]

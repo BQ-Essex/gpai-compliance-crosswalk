@@ -30,7 +30,9 @@
 
 2. No alternative basis is stated. Article 91(3) is not another label for the same act: it requires a duly substantiated request from the scientific panel, already made, and a finding that access is necessary and proportionate for the fulfilment of that panel’s tasks. Those conditions either exist on the date of signature or they do not, and a request that reserves the choice states no basis at all. Where the scientific panel has made such a request, a separate instrument should be issued under Article 91(3) reciting it and its date.
 
-3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b). The Code of Practice for General-Purpose AI Models, Safety and Security Chapter, is relevant to Requests 11a and 12 by operation of Article 55(2).
+3. The provisions to which the requested information relates are **Articles 2(1), point (a), 2(8), 3 points (3), (9), (10), (11), (57) and (63), 51, 52(1), 53(1)(a)** and **Article 55(1) and (2)**, together with **Recital 97**; and, for Request 11c alone, **Articles 6, 73 and 75(1) and (1a)**. Chapter V has applied since 2 August 2025 pursuant to Article 113, point (b); Article 91 itself, in Chapter IX, has applied since 2 August 2026 under the general rule in Article 113. The Code of Practice for General-Purpose AI Models, Safety and Security Chapter, is relevant to Requests 11a and 12 by operation of Article 55(2).
+
+3a. **Empowerment.** [Recital of the act of adoption and of the Commission’s empowerment, and identification of the signatory’s competence, to be inserted by the issuing authority before signature.]
 
 ## Part B: Purpose
 
@@ -40,15 +42,15 @@
 
    (b) sustained writing activity on a third-party community wiki between 24 May and 22 June 2026, with a further attempted burst on 1–2 July 2026, publicly reported by independent researchers on 4 September 2026 and acknowledged by the Provider on 5 September 2026.
 
-5. The Commission has **not** formed a view that either episode constitutes a serious incident within the meaning of Article 3, point (49), that any obligation under the Regulation applies to any particular model, or that any obligation has been contravened. The purpose of this request is to obtain the information necessary to assess those questions, which the public record does not resolve.
+5. The Commission has **not** formed a view that either episode constitutes a serious incident within the meaning of Article 3, point (49), that any obligation under the Regulation applies to any particular model, or that any obligation has been contravened. The purpose of this request, in the terms of Article 91(1), is to obtain information necessary for the purpose of assessing compliance of the Provider with this Regulation, in particular with Articles 52(1), 53(1) and 55(1), which the public record does not resolve.
 
-6. **The threshold question is one of scope.** Article 3, point (63) excludes from the definition of ‘general-purpose AI model’ those models “used for research, development or prototyping activities before they are placed on the market”, and Article 2(8) provides that the Regulation does not apply to research, testing or development activity prior to placing on the market or putting into service, save for testing in real-world conditions within the meaning of Article 3, point (57). Public accounts describe the model principally involved in the episode at paragraph 4(a) as an internal research model not intended for release. Recital 97 provides that a model integrated into its provider’s own AI system made available on the market or put into service is to be considered placed on the market, subject to three cumulative conditions the third of which is unavailable to a model with systemic risk. The Commission therefore asks the Provider to state its own position on these questions first, at Section I.
+6. **The threshold question is one of scope.** Article 3, point (63) excludes from the definition of ‘general-purpose AI model’ those models “used for research, development or prototyping activities before they are placed on the market”, and Article 2(8) provides that the Regulation does not apply to research, testing or development activity prior to placing on the market or putting into service, save for testing in real-world conditions within the meaning of Article 3, point (57). Public accounts describe the model principally involved in the episode at paragraph 4(a) as an internal research model not intended for release. Recital 97 provides that a model integrated into its provider’s own AI system made available on the market or put into service is to be considered placed on the market, subject to three cumulative conditions the third of which is unavailable to a model with systemic risk; Article 2(1), point (a) and Article 3, point (11) locate placing on the market and own use in the Union; and the Commission’s guidelines of 19 November 2025 (C(2025) 7719 final) at paragraph 22 treat a model’s lifecycle as beginning at the start of its large pre-training run, so that different stages of development are not different models. The facts those provisions turn on are asked at Section I, and the Provider is invited, not required, to state its position on them.
 
 ## Part C: Defined terms
 
 7. In this request:
 
-   **“the Research Model”** means the model identified as “IM1” in the Provider’s published account of 26 August 2026 and/or the model identified as “HPIM” in the independent investigation report of 26 August 2026. *Whether those designations refer to the same model is among the matters on which information is requested (Request 1).*
+   **“the Research Model”** means the model the Provider itself designated “IM1” in its published account of 26 August 2026. A third party’s report of the same date refers to a model it designates “HPIM”; whether that designation refers to the Research Model is among the matters on which information is requested (Request 1), and nothing in this request requires the Provider to construe the third party’s nomenclature.
 
    **“the Deployed Model”** means the general-purpose AI model publicly designated GPT-5.6 Sol.
 
@@ -72,21 +74,23 @@
 
 ### Section I: Scope and status of the models concerned
 
-**Request 1.** Confirm whether the designations “IM1” and “HPIM” refer to the same model. If to different models, identify each and state the role of each in the episode at paragraph 4(a).
+**Request 1.** Identify, by the Provider’s own designation, every model whose agents took part in the episode at paragraph 4(a), and state the role of each. State whether the model the independent investigation designates “HPIM” is the Research Model.
 
-**Request 2.** For the Research Model, state the cumulative amount of computation used for its training, measured in floating-point operations, and whether that amount exceeds 10²⁵ FLOP for the purposes of the presumption in Article 51(2).
+**Request 2.** For the Research Model, state the cumulative amount of computation used for its training, measured in floating-point operations, estimated in accordance with the approach set out in the Annex to the Commission’s guidelines of 19 November 2025 (C(2025) 7719 final), together with a description of the approach used to estimate it; and state whether that amount exceeds 10²⁵ FLOP for the purposes of the presumption in Article 51(2).
+
+**Request 2b.** State whether the Research Model was developed downstream of the same large pre-training run as any general-purpose AI model the Provider has placed on the market, identifying that model; and state whether the Research Model, or any model developed downstream of the same large pre-training run, is or was at any time intended for placing on the market, with the date of any decision to that effect or against it. *This request is made because the Commission’s guidelines at paragraph 22 treat development downstream of one large pre-training run as one model’s lifecycle, and because the Commission’s published position is that certain obligations pertain to the development phase of models intended for, but prior to, the placing on the market.*
 
 **Request 2a.** Independently of the figure sought at Request 2, state the Provider’s position on each of the criteria in **Annex XIII** as they apply to the Research Model, and in particular criterion (e): the benchmarks and evaluations of its capabilities, including the number of tasks performed without additional training, its adaptability to new and distinct tasks, **its level of autonomy and scalability, and the tools to which it had access** during the Evaluation. This request is made because Article 51(1), point (b) and Annex XIII provide a route to classification that does not depend on the figure sought at Request 2, and the Commission is not obliged to await it.
 
 **Request 3.** State the Provider’s position on whether the Research Model falls within the exception in **Article 3, point (63)** for “AI models that are used for research, development or prototyping activities before they are placed on the market”, together with the reasons for that position and the date from which it is said to apply.
 
-**Request 4.** State whether any part of the Evaluation involved use of the model in real-world conditions outside a laboratory or simulated environment, and if so describe the environment, the systems and third parties reachable from it, and the dates. Provide the records evidencing the environment and its egress configuration. *(An earlier draft of this request asked which conditions in Article 57 or Article 60 the Provider said were fulfilled. Those are the regulatory-sandbox and real-world-testing regimes for high-risk AI systems, and this analysis argues at length that neither reaches a general-purpose AI model. Citing them at the Provider was a category error and is recorded as such.)*
+**Request 4.** State whether any part of the Evaluation involved use of the model in real-world conditions outside a laboratory or simulated environment, and if so describe the environment, the systems and third parties reachable from it, and the dates. Provide the records evidencing the environment and its egress configuration.
 
-**Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use. If so, state when. If the Provider contends the model nonetheless falls outside the obligations for models, state which of the three conditions set out in Recital 97 it relies on, having regard to the position that those conditions are cumulative and that the third is unavailable to a general-purpose AI model with systemic risk.
+**Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use, at any time before or after the Evaluation; if so, state when, and **where**—in particular whether that system was made available or put into service in the Union, whether staff or systems located in the Union used it, and whether its output was used in the Union. If the Provider contends the model nonetheless falls outside the obligations for models, it may state which of the conditions set out in Recital 97 it relies on.
 
 **Request 5.** State whether the Provider has made any notification to the Commission under **Article 52(1)** in respect of either the Research Model or the Deployed Model, and if so its date; or, if not, the basis on which it considers no such obligation arose.
 
-> *Responsive answer to Requests 3–5*: the Provider’s reasoned position on scope, and either the notification with its date or the basis on which none was required. A position that the model was internal, unreleased or not intended for production **is** a substantive answer to Requests 3 and 4 and is invited; the Commission asks that it be given with reasons and dates rather than as a description.
+> *Responsive answer to Requests 2b–5*: the lineage and intention facts at Request 2b with dates; the Provider’s reasoned position on scope; the location facts at Request 4a; and either the notification with its date or the basis on which none was required. A position that the model was internal, unreleased or not intended for production **is** a substantive answer to Requests 3 and 4 and is invited; the Commission asks that it be given with reasons and dates rather than as a description, since the public record already contains the description.
 
 ### Section II: Evaluation design and documentation (Articles 53(1)(a), 55(1)(a))
 
@@ -118,7 +122,7 @@
 
 **Request 11c.** State whether the Research Model was integrated into any AI system of the Provider, or of an undertaking of which the Provider forms part, and for each such system state whether the Provider classifies it as a high-risk AI system within the meaning of Article 6. Where it does, state whether any serious incident concerning that system was reported to the AI Office under **Article 75(1a)** in respect of either episode, on what date, and provide the report. Where the Provider considers that no such system is high-risk, state the basis.
 
-> *Responsive answer*: for each system, a classification and, where applicable, a report and its date. The purpose is not duplication. Article 75(1) makes the AI Office exclusively competent for systems where the model and the system belong to the same undertaking, and Article 75(1a) applies Article 73(2) to (9) to their serious incidents; Article 55(1), point (c) reaches the same body by a different route with a different period and a different form. Where both could apply to one episode the Commission needs to know which was used, and where only the model regime applies it needs to know that too.
+> *Responsive answer*: for each system, a classification and, where applicable, a report and its date. The purpose is not duplication. Article 75(1) makes the AI Office exclusively competent for systems where the model and the system belong to the same undertaking, and Article 75(1a) applies Article 73(2) to (9) to their serious incidents; Article 55(1), point (c) reaches the same body by a different route with a different period and a different form. Where both could apply to one episode the Commission needs to know which was used, and where only the model regime applies it needs to know that too. This request is confined to what is necessary for assessing the Provider’s compliance as a provider of general-purpose AI models under Article 91(1); supervision of the systems themselves is exercised under Article 75a(1), and any request directed to a system will be made separately under that provision.
 
 **Request 12.** State whether the Provider relies on the Code to demonstrate compliance under **Article 55(2)** or on alternative adequate means; and provide, as applicable, the Safety and Security Framework and the Safety and Security Model Report insofar as either bears on the episodes at paragraph 4.
 
@@ -126,11 +130,11 @@
 
 ## Part E: Period for response
 
-9. The Provider shall supply the information requested by **[date]**, being the period set by the Commission for the purposes of Article 91(4). **[Drafting note: this figure is to be chosen before signature and not left bracketed. A single period across Section I and the document productions at Requests 6, 8, 9 and 12 is unlikely to be proportionate; tranching is the better course.]**
+9. The Provider shall supply the information requested at Section I by **[date]**, and the information and documents requested at Sections II to IV by **[date]**, those being the periods set by the Commission for the purposes of Article 91(4).
 
 10. Where the Provider considers that it cannot comply in full within that period, it may apply in writing, before the expiry of the period and with reasons, for an extension in respect of identified items. An extension takes effect only if granted by the Commission in writing. Absent such a grant, the period set at paragraph 9 applies to the whole of this request.
 
-11. Information supplied in response to this request, **including trade secrets**, is subject to the confidentiality obligations in Article 78, as Article 55(3) provides. The Provider is not invited to withhold information on confidentiality grounds, but should identify material it considers confidential so that it may be handled accordingly.
+11. Information supplied in response to this request is subject to Article 78, which applies to information and data obtained by the Commission in carrying out its tasks under the Regulation, and which does not prevent the sharing, use in proceedings or disclosure that Article 78 itself and Union law otherwise permit. The Provider is not invited to withhold information on confidentiality grounds, but should identify material it considers confidential, including trade secrets, so that it may be handled accordingly.
 
 ## Part F: Indication of fines (Article 91(4))
 
@@ -138,7 +142,9 @@
 
 13. In accordance with **Article 91(5)**, the information requested shall be supplied by the Provider or its representative; in the case of legal persons, companies or firms, by the persons authorised to represent them by law or by their statutes. Lawyers duly authorised to act may supply information on behalf of their clients; the Provider nevertheless remains fully responsible if the information supplied is incomplete, incorrect or misleading. The response shall be accompanied by a statement, signed by a person authorised to represent the Provider, that the information supplied is to the best of that person’s knowledge correct, complete and not misleading, and identifying any request to which a complete answer has not been given and why.
 
-14. **Temporal scope.** Article 101 has applied since 2 August 2026, Article 113, point (b) having excepted it from the earlier application date of Chapter XII. Paragraph 12 concerns compliance with this request.
+14. **Temporal scope.** Article 101 has applied since 2 August 2026, Article 113, point (b) having excepted it from the earlier application date of Chapter XII. Paragraph 12 concerns compliance with this request, and nothing in this request states a position on the application of Article 101(1), point (a) to any conduct.
+
+15. **Format, channel and language.** The response shall be provided in English, in electronic form, to **[address]**, with each item of information and each document identified by the number of the request to which it responds.
 
 **[Signature block—to be completed by the issuing authority]**
 
@@ -148,8 +154,9 @@
 
 | # | Provision | A responsive answer consists of | What would **not** settle it |
 |---|---|---|---|
-| 1–2 | Art. 51 | Model identity; training compute in FLOP | Descriptions of intended use or release status |
-| 3–4a | Arts. 2(8), 3(11), 3(57), 3(63), Rec. 97 | A reasoned position on scope and on deemed placement, with dates; and if the internal-use exception is relied on, which condition | A description of the model as internal, without the reasoning or dates that make it a position |
+| 1–2 | Art. 51 | Model identity; training compute in FLOP with the estimation approach | Descriptions of intended use or release status |
+| 2b | Guidelines ¶22; Q&A | Pre-training lineage, and any decision for or against placement, with dates | A statement that the model was internal, without the lineage |
+| 3–4a | Arts. 2(1)(a), 2(8), 3(11), 3(57), 3(63), Rec. 97 | The facts of any integration and putting into service, with dates and location in or outside the Union; a position on scope if the Provider chooses to give one | A description of the model as internal, without the dates or the location |
 | 5 | Art. 52(1) | The notification and its date, or the basis on which none was required | Silence on whether the question was considered |
 | 6–7 | Arts. 53(1)(a), 55(1)(a) | The evaluation protocol and documented adversarial-testing record | Public descriptions of the evaluation’s difficulty |
 | 8 | Art. 55(1)(b) | The risk assessment as it addresses **sources**, dated before July 2026 | Post-incident remediation commitments |
@@ -161,6 +168,6 @@
 
 ## Annex II: provisions relied on
 
-Regulation (EU) 2024/1689, OJ L, 2024/1689, 12.7.2024; consolidated text CELEX `02024R1689-20260727`, incorporating Regulation (EU) 2026/1744. Articles 2(1), point (a), 2(8), 3 points (1), (3), (9), (10), (11), (47), (49), (57), (62), (63), (66), 51, 52, 53(1)(a), 55, 68, 73, 75, 78, 90, 91, 101, 113. Recitals 114 and 115 from the authentic Official Journal text, CELEX `32024R1689`; the consolidated text omits recitals and carries the notice that it “is meant purely as a documentation tool and has no legal effect”.
+Regulation (EU) 2024/1689, OJ L, 2024/1689, 12.7.2024; consolidated text CELEX `02024R1689-20260727`, incorporating Regulation (EU) 2026/1744. Articles 2(1), point (a), 2(8), 3 points (1), (3), (9), (10), (11), (47), (49), (57), (62), (63), (66), 6, 51, 52, 53(1)(a), 55, 68, 73, 75, 78, 90, 91, 101, 113. Recitals 97, 114 and 115 from the authentic Official Journal text, CELEX `32024R1689`, the consolidated text omitting recitals. Commission guidelines C(2025) 7719 final, paragraphs 22, 51, 54 and 100, and the Annex on training compute.
 
 Directive (EU) 2022/2557, OJ L 333, 27.12.2022, Article 2, points (1), (4) and (5), as imported by Article 3, point (62) of the Regulation.

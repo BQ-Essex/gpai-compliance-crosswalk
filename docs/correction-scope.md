@@ -62,7 +62,7 @@ That is a more serious regulatory gap than the one originally identified, and it
 
 Two things hold.
 
-**GPT-5.6 Sol is on the market.** The investigators put its agents at ~5% of the attacking population and record that they “also reproduced an exploit”. It is a general-purpose AI model; if designated with systemic risk, Article 55 attaches to it in full. The cross-walk of Article 55(1) points (a), (b) and (d) and Article 55(2) stands for the deployed model.
+**GPT-5.6 Sol is on the market.** The investigators put its agents at ~5% of the attacking population; the provider records that they “also reproduced an exploit” (OpenAI, 2026b). It is a general-purpose AI model; if designated with systemic risk, Article 55 attaches to it in full. The cross-walk of Article 55(1) points (a), (b) and (d) and Article 55(2) stands for the deployed model.
 
 **Article 55(1)(b) expressly reaches development.** The obligation is to assess and mitigate systemic risks at Union level, including their sources, “that may stem from **the development**, the placing on the market, or the use of general-purpose AI models with systemic risk”. The word is in the enacting text, not a recital.
 

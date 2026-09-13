@@ -25,7 +25,7 @@ an Act citation later in the same line.
 
 One instrument is an exception, and it earned it. The CER Directive is imported by the
 Act's own definition of 'critical infrastructure', and relying on an imported definition
-is still relying on text: two of the nineteen errors this analysis has recorded came from
+is still relying on text: two of the twenty-four errors this analysis has recorded came from
 reading a summary of that Directive rather than the Directive. So `imported_provisions`
 in the register holds the CER text, citations qualified 'CER' resolve against it, and
 prose that cites the Directive without saying so is reported rather than waved through.

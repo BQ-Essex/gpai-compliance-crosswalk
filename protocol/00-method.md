@@ -156,7 +156,7 @@ Where the regime publishes a reporting template, fill it from the public record 
 
 The first is a presentation. A cross-walk row is an analysis a reader may disagree with; the same row in the regulator’s own form, with the field left blank, argues for itself. A form completed from public sources shows at a glance which of the regime’s own questions the record can answer and which it cannot, and who the answers come from—which in this project turned out to be everyone except the party the form addresses.
 
-The second is a test of the form. A template encodes what the regulator believes it needs to know. Set it against the obligation it says it evidences, field by field, and ask what the obligation requires that no field captures. Here the answer was the date of awareness: every reporting period in the Code runs from it, the form has no field for it, and so a perfectly completed report cannot show whether it was late. That finding did not come from the analysis. It came from trying to fill the form and running out of boxes.
+The second is a test of the form. A template encodes what the regulator believes it needs to know. Set it against the obligation it says it evidences, field by field, and ask what the obligation requires that no field captures. Here the answer was the date of awareness: every initial-report period in the Code runs from it, the form has no field for it—because the Code’s own list of contents, which the form transcribes, has none—and so a perfectly completed report cannot show whether the initial report was late. That finding did not come from the analysis. It came from trying to fill the form and running out of boxes.
 
 Two rules make it reliable.
 

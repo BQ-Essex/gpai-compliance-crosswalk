@@ -238,12 +238,34 @@ exceptions:
   - quote: "intentionally disabled for the cyber evaluations"
     kind: own-words
     why: >-
-      This analysis quoting its own superseded draft. The phrase was carried as a quotation
-      marked [T3] until 13 September 2026, when the incident record was first held as files
-      and quotecheck.py could not find it in any of them. No held source says "disabled";
-      they say the evaluation was run "without production classifiers" and that the models
-      "did not have the classifiers and monitoring we usually implement". Recorded as the
-      eighteenth error; the sentence now quotes the sources instead.
+      This analysis quoting its own superseded draft, in the corrections log and the worked
+      example. The phrase was carried as a quotation marked [T3] until 13 September 2026,
+      when the incident record was first held as files and quotecheck.py could not find it
+      in any of them. No held source says "disabled"; the investigators say the deployed
+      model's cyber classifiers "were intentionally off for the cyber evaluations", the
+      provider that it ran the evaluation "without production classifiers". Recorded as
+      the eighteenth error. An earlier version of this entry said "the sentence now quotes
+      the sources instead" while the report's §4.2 still carried the phrase in quotation
+      marks attributed to the investigators - an exception recorded as a fix, which is the
+      twenty-third error. The report now quotes the investigators' own words.
+
+  - quote: "provided the model is one with systemic risk"
+    kind: own-words
+    why: >-
+      The corrections log quoting this project's own superseded §1.8, in the twentieth
+      entry. The words are in the git history, not in any source.
+
+  - quote: "Every reporting period in the Code runs from awareness"
+    kind: own-words
+    why: >-
+      The corrections log quoting this project's own superseded report, in the twenty-first
+      entry. Measure 9.3 says no such thing, which is the point of the entry.
+
+  - quote: "declined to give the filing date, the provision relied on, or whether the episode qualifies as a serious incident"
+    kind: own-words
+    why: >-
+      The corrections log quoting this project's own superseded Appendix G, in the
+      twenty-second entry. The held press report says less, which is the point of the entry.
 
   - quote: "Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen"
     kind: own-words

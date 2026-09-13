@@ -124,20 +124,70 @@ inferences:
 
   - id: inf-product-oriented
     claim: >-
-      A frontier developer's pre-release evaluation of a model it intends to ship is
-      'product-oriented' research within Recital 25 rather than scientific research within
-      Article 2(6), so the research provisions postpone rather than exempt.
+      A frontier developer's cyber-capability evaluation, run on its own account "to
+      determine the appropriate safeguards for deployment", is 'product-oriented' research
+      within Recital 25 rather than scientific research within Article 2(6), so the
+      research provisions postpone rather than exempt - and a postponement only matters
+      for a model that is later placed.
     type: characterisation of facts
     function: graded
-    premises: [recital-25, art2-6]
+    premises: [recital-25, art2-6, openai-roadahead-aug26]
     depends_on: []
     defeater: >-
       Evidence that the evaluation was conducted for the sole purpose of scientific
-      research and development. The provider has not stated its position; Request 4 of the
-      instrument asks for it.
+      research and development. An earlier version of this inference rested on "a model
+      it intends to ship", with no source premise; the provider's own account, quoted at
+      §1 of the report, says the model was "not intended for public release", which is
+      why the placement question is now its own inference (inf-placement-event) rather
+      than an assumption inside this one.
     strength: moderate
     load_bearing: true
     stated_at: "docs/report-draft.md §4.1"
+
+  - id: inf-placement-event
+    claim: >-
+      The research model was, or is to be treated as, placed on the market - by
+      integration into an own AI system put into service (Recital 97), by being intended
+      for placement (the Q&A), or by sharing a large pre-training run with a model that
+      was placed (Guidelines para. 22) - so that its development was not activity 'prior
+      to' placement.
+    type: characterisation of facts
+    function: step
+    premises: [recital-97, art2-8, art3-63, ec-gpai-guidelines, ec-gpai-qa, openai-roadahead-aug26, metr-redwood-investigation]
+    depends_on: []
+    defeater: >-
+      THE RECORD ALREADY SUPPLIES ONE. The provider says the model was one of several
+      "research models that were not intended for public release" and that its weights
+      were quarantined after the incident; the investigators call it "a research model
+      which was not intended for production". The only system it is recorded as running
+      in is the evaluation harness, and testing before putting into service is what
+      Article 2(8) excludes. So on the disclosed record this step is not established, and
+      one of its three routes is denied. What would establish it: use of the model in any
+      own system put into service (Request 4a), or a shared large pre-training run with a
+      placed model (Request 2b). Added 13 September 2026 after an external audit found
+      the scope verdict stating one open condition where the route needs three.
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1 and §7"
+
+  - id: inf-union-nexus
+    claim: >-
+      Any placement event under inf-placement-event occurred 'in the Union' within
+      Article 2(1), point (a) and Article 3, point (11).
+    type: characterisation of facts
+    function: step
+    premises: [art2-1a, art3-11, ec-gpai-guidelines, pistillo-internal-deployment]
+    depends_on: [inf-placement-event]
+    defeater: >-
+      Nothing in the record addresses it, and the provider is established in a third
+      country. The Guidelines' internal-use example at para. 51 requires processes
+      essential to third-party provision "or that affect the rights of natural persons in
+      the Union"; Pistillo records that how 'in the Union' will be read remains unclear.
+      Request 4a asks where any own system incorporating the model was put into service.
+      This inference is recorded as unestablished rather than as probable.
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.1 and §7"
 
   - id: inf-attach
     claim: >-
@@ -146,17 +196,26 @@ inferences:
       unavailable to a model carrying systemic risk.
     type: conclusion of law
     function: step
-    premises: [recital-97, art2-1a, art3-63, ec-gpai-guidelines, ec-gpai-qa, case-nilsson, case-milch-kontor]
-    depends_on: [inf-relocation, inf-product-oriented]
+    premises: [recital-97, art2-1a, art3-10, art3-63, ec-gpai-guidelines, ec-gpai-qa, case-nilsson, case-milch-kontor]
+    depends_on: [inf-relocation, inf-product-oriented, inf-placement-event, inf-union-nexus]
     defeater: >-
       A holding that a recital cannot supply a deeming rule the enacting definition
-      withholds. The authority is now read rather than gestured at: Nilsson, C-162/97, para.
-      54, and in the sharper form Deutsches Milch-Kontor, C-136/04, para. 32 - a preamble
-      cannot be relied on "either as a ground for derogating from the actual provisions of
-      the act in question or for interpreting those provisions in a manner clearly contrary
-      to their wording". The second limb is what a challenge would be argued from, and this
-      inference is where it would land. The report says so; the
-      Commission's reading governs enforcement but is open to challenge before the CJEU.
+      withholds: Nilsson, C-162/97, para. 54, and in the sharper form Deutsches
+      Milch-Kontor, C-136/04, para. 32 - a preamble cannot be relied on "either as a
+      ground for derogating from the actual provisions of the act in question or for
+      interpreting those provisions in a manner clearly contrary to their wording". The
+      second limb is what a challenge would be argued from, AND IT BITES UNEVENLY. Recital
+      97 has two limbs: an own system MADE AVAILABLE ON THE MARKET, where the embedded
+      model is supplied for use on the Union market in the course of a commercial
+      activity and Article 3, points (9) and (10) are arguably just being applied; and an own
+      system merely PUT INTO SERVICE, where nothing is supplied to anyone and putting into
+      service is the trigger Article 2(1), point (a) withholds from models. A never-released
+      model can only use the second limb. The Commission does not rest the second limb on
+      the recital alone - Guidelines para. 51 lists essential internal use among its
+      examples of placing on the market, read with the Blue Guide - so a challenge is
+      really against that reading of 'making available', which is Pistillo's second
+      pathway. Whether own use can be a supply is the question, and the enacting text
+      does not settle it.
     strength: moderate
     load_bearing: true
     stated_at: "docs/report-draft.md §4.1 and §7"
@@ -178,7 +237,7 @@ inferences:
       settle it. FLAGGED BY THE AUTHOR AS THE MOST ARGUABLE STEP HERE.
     strength: contestable
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.7; protocol/01-statutory-foundation.md §5a"
+    stated_at: "docs/report-draft.md §4.6; protocol/01-statutory-foundation.md §5a"
 
   - id: inf-cyber-limb
     claim: >-
@@ -198,7 +257,7 @@ inferences:
       and is deliberately kept out of the verdict cells for that reason.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.7; docs/worked-example.md §5"
+    stated_at: "docs/report-draft.md §4.6; docs/worked-example.md §5"
 
   - id: inf-irreversibility
     claim: >-
@@ -240,20 +299,26 @@ inferences:
 
   - id: inf-no-101a-exposure
     claim: >-
-      Article 101 applies from 2 August 2026 by operation of Article 113, so conduct in
-      July 2026 carries no exposure under Article 101(1), point (a), while point (b) is
-      unaffected because a request would be issued now.
+      Article 101 applies from 2 August 2026 by operation of Article 113, as does Article
+      91 itself; point (b) is therefore available for a request issued now, and the report
+      takes no position on whether an omission that began before 2 August 2026 and
+      continued past it carries exposure under point (a).
     type: temporal
     function: step
     premises: [art113, art101-1a, art101-1b, art91]
     depends_on: []
     defeater: >-
-      A transitional provision bringing Article 101 into application earlier. Article 113
-      was read in the consolidated text and its third paragraph in the amending act; none
-      found.
+      For the point (b) half: a transitional provision bringing Article 101 into
+      application on a different date; Article 113 was read in the consolidated text and
+      its third paragraph in the amending act, and none was found. An earlier version of
+      this inference also claimed that July 2026 conduct carries NO point (a) exposure.
+      That was asserted beyond the source: a failure to notify under Article 52(1) or to
+      report under Article 55(1), point (c) is a continuing omission, and Article 113
+      fixes when Article 101 applies, not the temporal reach of fines over omissions that
+      persist. Withdrawn 13 September 2026.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §5; instrument Part G paragraph 14"
+    stated_at: "docs/report-draft.md §5; instrument Part F paragraph 14"
 
   - id: inf-scaffolding-attribution
     claim: >-
@@ -266,8 +331,14 @@ inferences:
     premises: [art3-1, art3-63, art3-66, art55-1b, art75-1, art75-1a, openai-roadahead-aug26]
     depends_on: [inf-attach]
     defeater: >-
-      THE STRONGEST OBJECTION AVAILABLE TO THE PROVIDER, and it attacks attribution
-      rather than definition, so it survives even if scope resolves against them.
+      THE OBJECTION THAT OUTLIVES A SCOPE FINDING, though not the provider's strongest -
+      scope and territory defeat everything, where this defeats attribution under Article
+      55(1), points (c) and (d) alone and leaves Article 52(1) and Article 55(1), point (b)
+      untouched. It attacks attribution rather than definition, so it survives even if
+      scope resolves against them. One reply the earlier version of this entry missed:
+      Article 3, point (49), Measure 9.3 of the Code and Guidelines para. (100) all reach
+      involvement that is the model's "directly or indirectly", which is the language a
+      harness objection has to get past.
       Persistent goal-seeking, memory and tool invocation are properties of scaffolding
       rather than of raw weights; if the scaffolding was built by a different actor, the
       conduct may not be the model provider's at all. What blunts it here, and only
@@ -343,9 +414,12 @@ inferences:
     claim: >-
       The Commission's serious-incident template cannot evidence compliance with the Code's
       own reporting periods, because the template states on its face that it demonstrates
-      compliance with Article 55(1), point (c) "as part of Commitment 9", every period in
-      Measure 9.3 runs from the date a Signatory becomes aware of its model's involvement,
-      and the template asks for no date but the incident's own start and end.
+      compliance with Article 55(1), point (c) "as part of Commitment 9", every
+      INITIAL-REPORT period in Measure 9.3 runs from the date a Signatory becomes aware of
+      its model's involvement (the intermediate and final periods run from the initial
+      report and from resolution), and the template asks for no date but the incident's
+      own start and end. The omission is inherited: fields 1 to 9 transcribe Measure 9.2
+      item for item, and Measure 9.2 has no awareness item either.
     type: textual
     function: step
     premises: [ec-incident-template, cop-text, art55-1c]
@@ -359,7 +433,7 @@ inferences:
       submission but still not the date of awareness.
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.7; docs/appendix-forms.md §3"
+    stated_at: "docs/report-draft.md §4.6; docs/appendix-forms.md §3"
 
   - id: inf-form-statutory
     claim: >-
@@ -378,7 +452,7 @@ inferences:
       losing the recommendation.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.7"
+    stated_at: "docs/report-draft.md §4.6"
 
   - id: inf-cyber-covered
     claim: >-
@@ -398,7 +472,7 @@ inferences:
       defeat it outright, and nothing in the enacting text compels the wider reading.
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.7"
+    stated_at: "docs/report-draft.md §4.6"
 
   - id: inf-instrument-selection
     claim: >-
@@ -422,6 +496,18 @@ inferences:
       a final Article 73 guidance extending to Article 55(1), point (c), or a general-purpose
       template revised to carry the structural fields; the draft guidance at para. (4)
       excludes general-purpose models by name, and the template was published in that state.
+      TWO LIMITS THE FIRST VERSION OF THIS ENTRY DID NOT STATE. This is a claim about
+      structure, and as structure it needs nothing from the scope inferences; applied to
+      THIS incident it needs inf-attach (the model must be one with systemic risk for the
+      Article 55(1), point (c) regime to be the applicable one) and
+      inf-scaffolding-attribution (the system must be the same undertaking's). And it is
+      prospective: Article 73 has applied only since 2 August 2026, Article 75(1a) since
+      27 July 2026, the high-risk classification both depend on is deferred to 2 December
+      2027 and 2 August 2028, and the seven-page form is a consultation draft. The
+      comparison is between two drafting choices, not two live regimes. Also: the
+      general-purpose template's omission is not the Commission's drafting choice but the
+      Code's - fields 1 to 9 transcribe Measure 9.2 item for item - so the report no longer
+      calls the bifurcation the omission's "cause".
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.7"
+    stated_at: "docs/report-draft.md §4.6"

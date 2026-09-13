@@ -51,13 +51,20 @@ Run this per model, before any obligation is analysed.
     │   development phase of one that is.
     └ Commission Q&A: the internal-use exception has three cumulative conditions, the
         third being that the model is NOT a GPAI model with systemic risk.
-    ⮕ The obligations attach.
+    ⮕ The obligations attach, IF three facts hold: systemic risk (Art. 51(2), the
+       compute figure); a placement event (integration into an own system put into
+       service, an intention to place, or a shared large pre-training run with a
+       placed model — the provider says the model was "not intended for public
+       release", and the only system it is recorded in is the evaluation harness,
+       which Art. 2(8) excludes as testing); and a Union nexus (Art. 2(1)(a) "in the
+       Union", Art. 3(11) "own use in the Union"). None is in the record.
 
                               │
                               ▼
 RESOLUTION
-  The obligations attach. The weight-bearing step sits in a recital and in guidance,
-  not in the enacting definition — and that is the finding, not a footnote to it.
+  The obligations attach on the Commission's reading, on facts the record does not
+  supply. The weight-bearing step sits in a recital and in guidance, not in the
+  enacting definition — and that is the finding, not a footnote to it.
   Note HOW Recital 97 does it: not by excepting Art. 2(8), but by moving the moment
   of placement, so the development was never activity 'prior to' placement and
   Art. 2(8) never engages. A recital fixing the point from which enacting terms run.

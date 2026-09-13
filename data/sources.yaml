@@ -164,7 +164,7 @@ sources:
       - "~7% of transcripts showed evidence of spoofed tool calls"
       - "Agent composition: HPIM ~95%, GPT-5.6 Sol ~5%"
       - "HPIM described in a footnote as 'a highly-persistent internal model', 'a research model which was not intended for production'"
-      - "GPT-5.6 Sol cyber classifiers 'intentionally disabled for the cyber evaluations'"
+      - "GPT-5.6 Sol cyber classifiers 'were intentionally off for the cyber evaluations'"
     caveats:
       - "ACCESS CONSTRAINED BY THE SUBJECT — this is why the source is T3, not T4."
       - "Investigators 'did not have the ability to query HPIM'; it 'was also not available to OpenAI researchers'"
@@ -658,8 +658,10 @@ sources:
         THE FORM NEVER ASKS WHEN THE PROVIDER BECAME AWARE. The words “aware”,
         “awareness”, “deadline” and “timeline” do not occur in the template at all, and
         the only dates it requests are the start and end of the incident (field 1). There
-        is no field for the date of submission either. Every period in Measure 9.3 runs
-        from the date the signatory becomes aware of its model's involvement, and the
+        is no field for the date of submission either. Every initial-report period in Measure
+        9.3 runs from the date the signatory becomes aware of its model's involvement (the
+        intermediate and final periods run from the initial report and from resolution),
+        fields 1 to 9 transcribe Measure 9.2, which has no awareness item, and the
         Commission Opinion at para. 33 describes Measure 9.3 as setting out what “without
         undue delay” typically requires. So the official form for demonstrating compliance
         with Art. 55(1)(c) contains no field from which compliance with its own timeliness
