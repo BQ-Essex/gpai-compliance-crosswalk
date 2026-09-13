@@ -2,7 +2,7 @@
 
 **To:** the European AI Office, for the attention of whoever holds the file on the July 2026 evaluation-sandbox incident and the DseWiki episode
 **From:** Bradley Quinlan, University of Essex—an external researcher, not a lawyer, writing in a personal capacity
-**Re:** what the public record establishes about those episodes under Regulation (EU) 2024/1689, what it does not, and the four documents attached
+**Re:** what the public record establishes about those episodes under Regulation (EU) 2024/1689, what it does not, and the six documents attached
 **Date:** 13 September 2026
 
 ---
@@ -29,5 +29,6 @@ If any of the three fails, the research model is outside Chapter V on the Commis
 1. `model-article-91-request.md`—the request, in Article 91(4)’s form
 2. `issuing-note.md`—the reasoning behind each request, for the AI Office
 3. `answer-matrix.md`—what each answer does, and what follows
-4. `model-amended-serious-incident-template.docx`—the template with two fields added
-5. `amendment-table.md`—three amendments to the Regulation, drafted
+4. `what-the-provider-will-say.md`—the analysis’s own weakest steps, with the objection to each, weakest first
+5. `model-amended-serious-incident-template.docx`—the template with two fields added, and `filled-template.docx`, the same filled from the public record
+6. `amendment-table.md`—three amendments to the Regulation, drafted

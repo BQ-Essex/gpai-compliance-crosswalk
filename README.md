@@ -4,6 +4,10 @@ A method for testing a frontier model provider’s obligations under the EU AI A
 
 ---
 
+> **Start here, if you have twenty minutes.** Read `instrument/cover-note.md` (one page), then `instrument/model-article-91-request.md` (the deliverable), then `instrument/answer-matrix.md` (what each answer does). Then the report’s §1 to §4 at `docs/report-draft.md`. Everything else is the working behind those four things, and `python3 tools/check.py` is how you check the working without reading it.
+
+---
+
 ## The enforcement pack
 
 Everything in `instrument/` is in the form its addressee would issue or adopt, and every word of it traces to text held and verified here. Read in this order:
@@ -14,8 +18,9 @@ Everything in `instrument/` is in the form its addressee would issue or adopt, a
 4. **`answer-matrix.md`**—for each answer the provider could give, where it puts the model and what the Commission does next. Every cell is a held provision.
 5. **`model-amended-serious-incident-template.docx`**—the Commission’s own template of 4 November 2025, every field unchanged, with fields 1a (date of awareness) and 1b (date of submission) added in the wording of its high-risk draft. The template transcribes Measure 9.2 of the Code, which lists what a report contains and not when the clock started, so without these two fields a completed report cannot show whether it was timely. This is the Commission’s form to change and needs no legislator.
 6. **`amendment-table.md`**—three amendments in current-text/amended-text form: the deemed-placement rule into Article 3, point (9); the “sole purpose” qualifier into Article 3, point (63); a determinate period into Article 55(1), point (c). Each added word is traced to the recital, Commission act or provision it is lifted from.
-7. **`filled-template.docx`**—the amended template filled from the public record, each field carrying its status, rendered by `tools/formfill.py` from `data/form-fill.yaml`.
-8. **`docx/`**—every document above as DOCX, rendered by `tools/render-pack.py`, because light edits happen in Word. The Markdown is the source of truth and is what the checkers read.
+7. **`what-the-provider-will-say.md`**—the load-bearing steps weakest first with the objection recorded against each, rendered from the inference register by `tools/objections.py`, for a desk officer to have read before the reply arrives.
+8. **`filled-template.docx`**—the amended template filled from the public record, each field carrying its status, rendered by `tools/formfill.py` from `data/form-fill.yaml`.
+9. **`docx/`**—every document above as DOCX, rendered by `tools/render-pack.py`, because light edits happen in Word. The Markdown is the source of truth and is what the checkers read.
 
 None of it has been issued, adopted or sent. The provenance header on the request says so, and the placeholders are explicit rather than plausible.
 

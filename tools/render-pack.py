@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "instrument"
 OUT = SRC / "docx"
 ORDER = ("cover-note", "model-article-91-request", "issuing-note", "answer-matrix",
-         "amendment-table", "draft-request")
+         "what-the-provider-will-say", "amendment-table", "draft-request")
 
 
 def main() -> int:

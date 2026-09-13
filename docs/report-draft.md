@@ -22,7 +22,7 @@ Commentary since has asked whether these episodes were reported as the AI Act re
 
 ## 2. What was built
 
-An enforcement pack, in `instrument/`, each document in the form its addressee would issue or adopt:
+An enforcement pack, in `instrument/`, each document in the form its addressee would issue or adopt. A reader with twenty minutes takes the first four in order; the rest is the working behind them.
 
 1. **A cover note** to the AI Office: what the record establishes, what it does not, what one request settles, what one form change fixes.
 2. **A model Article 91 request**, in Article 91(4)’s required form, issued in the Commission’s name, asking the three facts first and the documentation and reporting questions after.

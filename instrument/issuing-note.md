@@ -54,6 +54,10 @@
 | 11a | Code, Measure 9.3 | The date of awareness, the category assigned, and the reports submitted | That the episodes were considered internally, without the dates the periods run from |
 | 12 | Art. 55(2), Code | The Framework and Model Report as they bear on these episodes | The fact of signature to the Code |
 
-## 4. After the answers
+## 4. Service
+
+Article 54(1) requires a provider established in a third country to appoint, by written mandate, an authorised representative established in the Union before placing a general-purpose AI model on the Union market. The request is addressed to the Provider and served on that representative as well, and Request 4a asks whether and when one was appointed in respect of the Research Model or its lineage. The date answers a question of its own: an appointment made before the Evaluation is the Provider’s own contemporaneous view that a model of that lineage was headed for the Union market.
+
+## 5. After the answers
 
 `answer-matrix.md` sets out, for each answer the Provider can give to Requests 2, 2b and 4a, where it puts the model and what the Commission does next. The request and this note are drafted so that the matrix can be read straight off the response.

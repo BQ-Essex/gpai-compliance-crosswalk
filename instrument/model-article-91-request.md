@@ -19,7 +19,7 @@
 
 **Reference:** [to be assigned by the issuing authority]
 **Date:** [to be inserted]
-**Addressee:** [Provider concerned—“the Provider”]
+**Addressee:** [Provider concerned—“the Provider”], and, the Provider being established in a third country, its authorised representative established in the Union appointed under Article 54, on whom this request is also served
 **Issued by:** [European Commission—“the Commission”]
 
 ---
@@ -84,7 +84,7 @@
 
 **Request 4.** State whether any part of the Evaluation involved use of the model in real-world conditions outside a laboratory or simulated environment, and if so describe the environment, the systems and third parties reachable from it, and the dates. Provide the records evidencing the environment and its egress configuration.
 
-**Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use, at any time before or after the Evaluation; if so, state when, and **where**—in particular whether that system was made available or put into service in the Union, whether staff or systems located in the Union used it, and whether its output was used in the Union. If the Provider contends the model nonetheless falls outside the obligations for models, it may state which of the conditions set out in Recital 97 it relies on.
+**Request 4a.** State whether the Research Model was **integrated into an AI system of the Provider’s own** which was made available on the market or **put into service** within the meaning of Article 3, point (11), including for the Provider’s own use, at any time before or after the Evaluation; if so, state when, and **where**—in particular whether that system was made available or put into service in the Union, whether staff or systems located in the Union used it, and whether its output was used in the Union. State whether, and on what date, the Provider appointed an authorised representative under Article 54 in respect of the Research Model or of any model developed downstream of the same large pre-training run. If the Provider contends the model nonetheless falls outside the obligations for models, it may state which of the conditions set out in Recital 97 it relies on.
 
 **Request 5.** State whether the Provider has made any notification to the Commission under **Article 52(1)** in respect of either the Research Model or the Deployed Model, and if so its date; or, if not, the basis on which it considers no such obligation arose.
 
