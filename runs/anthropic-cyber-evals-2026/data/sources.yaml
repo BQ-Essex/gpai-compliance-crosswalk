@@ -1,0 +1,103 @@
+# Source register for the second run: Anthropic's cybersecurity-evaluation incidents,
+# April to July 2026, disclosed 30 July 2026, with a fourth disclosed 10 September 2026.
+#
+# Tier by the source's relationship to the claim, not by prestige.
+#   T1  the party whose conduct is in question, on its own conduct
+#   T2  the affected party's forensic account
+#   T3  an investigator operating under access constraints imposed by the subject
+#   T4  an independent third party with no stake in the characterisation
+#
+# HELD means a copy sits in _sources/ with the SHA-256 below and quotecheck.py verifies
+# quotations against it. One document is held at the time of this run; the others are
+# registered by URL and retrieval date, and every quotation of them is unverified and is
+# reported as such by the checker. That is the honest state of a run begun in one
+# evening, and the first thing a second day would fix.
+
+tiers:
+  T1: "Party whose conduct is in question, reporting on its own conduct"
+  T2: "Affected party's forensic account"
+  T3: "Investigator under subject-imposed access constraints"
+  T4: "Independent third party"
+
+sources:
+  - id: anthropic-evals-jul30
+    tier: T1
+    date: "2026-07-30"
+    title: "Investigating real-world incidents in our cybersecurity evaluations"
+    url: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+    archived_url: "https://web.archive.org/web/20260912133952/https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Investigating three incidents in our cybersecurity evaluations \\ Anthropic.pdf"
+        sha256: "92ca61d499fbfe034bd4f890693152542c57e8d20e2b8534cb86ad0049747e7c"
+    establishes:
+      - "Three incidents in 141,006 reviewed evaluation runs; six runs in total, four of them against one organisation"
+      - "Three models: Claude Opus 4.7, Claude Mythos 5, and 'an internal research test model' which footnote 1 says 'is not planned for general release'"
+      - "The environment was a third-party evaluation partner's (Irregular); a misconfiguration left it with live internet access"
+      - "Timeline: review began 23 July; all three incidents identified 24 July; partner and affected organisations notified 27 July; published 30 July"
+      - "Harm: application and infrastructure credentials and a database of 'several hundred rows of production data' (Incident 1); a malicious PyPI package live 'for roughly one hour' and run on 15 real systems, one a security company's scanner, whose credentials were exfiltrated (Incident 2); one company's internet-facing application compromised after scanning roughly 9,000 targets (Incident 3)"
+      - "Safeguards: the models 'did not have the classifiers and monitoring we usually implement to prevent misuse'"
+      - "No statement about any report to the AI Office or a national competent authority"
+    caveats:
+      - "A provider's account of its own conduct, tiered exactly as the OpenAI accounts were in the first run"
+      - "The affected organisations are not named; the PyPI team was notified"
+
+  - id: csa-note-jul31
+    tier: T4
+    date: "2026-07-31"
+    title: "Claude's Cybersecurity Evaluations Breached Three Organizations (research note)"
+    url: "https://labs.cloudsecurityalliance.org/research/csa-research-note-anthropic-claude-eval-breach-pypi-20260731/"
+    retrieved: "2026-09-13"
+    held: false
+    establishes:
+      - "Independent restatement of the timeline (23, 24, 27, 30 July) and of the three incidents; notes that Irregular had not then published its own account"
+    caveats:
+      - "NOT HELD. Read through a fetch summary on 13 September 2026; nothing quoted from it is verified"
+
+  - id: willison-jul30
+    tier: T4
+    date: "2026-07-30"
+    title: "Investigating three real-world incidents in our cybersecurity evaluations (commentary)"
+    url: "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/"
+    retrieved: "2026-09-13"
+    held: false
+    establishes:
+      - "Contemporaneous independent commentary; frames the episode as a pattern with the OpenAI/Hugging Face incident of the previous week"
+    caveats:
+      - "NOT HELD; commentary, not evidence"
+
+  - id: securityweek-irregular-aug17
+    tier: T4
+    date: "2026-08-17"
+    title: "Irregular Details How a Naming Error Let AI Models Attack a Real Company (SecurityWeek, reporting Irregular's own account 'Addressing Recent Incidents, Ongoing Findings and Path Forward')"
+    url: "https://www.securityweek.com/irregular-details-how-a-naming-error-let-ai-models-attack-a-real-company/"
+    retrieved: "2026-09-13"
+    held: false
+    establishes:
+      - "Irregular's account, reported: a fictional target company's name matched a real domain; Irregular ran the testing environment; corrective measures announced"
+      - "The evaluation partner's own account exists and should be held directly, not through press"
+    caveats:
+      - "NOT HELD, and second-hand: the primary is Irregular's blog post, whose URL the article does not give"
+
+  - id: hackernews-fourth-sep10
+    tier: T4
+    date: "2026-09-10"
+    title: "Anthropic Discloses Fourth AI Hacking Incident Involving Claude Opus 4.6 (The Hacker News)"
+    url: "https://thehackernews.com/2026/09/anthropic-ai-models-breached-real.html"
+    retrieved: "2026-09-13"
+    held: false
+    establishes:
+      - "A fourth incident, an early version of Claude Opus 4.6, occurring in January 2026, discovered in July 2026, disclosed 10 September 2026; affected parties notified but not named"
+      - "Anthropic has agreed an independent investigation with METR"
+    caveats:
+      - "NOT HELD; the primary is Anthropic's own update, which should be held"
+
+  - id: cop-signatories
+    tier: T4
+    date: "2026-09-11"
+    title: "GPAI Code of Practice signatory registry"
+    url: "https://aiprovidertrust.com/questions/gpai-code-of-practice/"
+    retrieved: "2026-09-11"
+    held: false
+    establishes:
+      - "Anthropic recorded as a full signatory, no chapter limitation (as registered in the first run)"

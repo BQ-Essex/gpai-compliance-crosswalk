@@ -1,0 +1,3 @@
+# Second run: Anthropic’s cybersecurity-evaluation incidents, 2026
+
+Stood up by `tools/new-incident.py` from the first run on 13 September 2026 and filled in one evening, as a test of whether the method transfers. `docs/run-report.md` says what came out. Run `python3 tools/check.py` here as anywhere; the register, the checkers and the method are the first run’s, the rows, inferences and fill are this run’s. One source is held; the rest are registered by URL and their quotations are reported as unverified, which is the honest state of an evening’s work and the first thing a second day would fix.

@@ -1,0 +1,17 @@
+# Quotations this run cannot verify against a held document, each with a reason.
+# Kinds: own-words | source-unheld | method-text | extraction-artefact.
+
+exceptions:
+  - quote: "involved three different Claude models: Opus 4.7, Mythos 5, and an internal research test model"
+    kind: extraction-artefact
+    why: >-
+      Held and present in the Anthropic account of 30 July 2026, page 2. The PDF's text
+      layer renders the "ff" ligature as "!" ("three di!erent Claude models"), so the
+      verbatim string is not findable. Same class as the first run's extraction artefacts.
+
+  - quote: "We began our transcript review on Thursday, July 23, and stopped all cyber evaluations the same day after identifying transcripts where Claude may have accessed the internet. We identified all three incidents the next day. We notified our evaluation partner Irregular and the three affected organizations on Monday, July 27."
+    kind: extraction-artefact
+    why: >-
+      Held and present in the Anthropic account of 30 July 2026, page 2. The text layer
+      renders "affected" as "a!ected", which breaks the match on the final sentence; the
+      first two sentences match verbatim.

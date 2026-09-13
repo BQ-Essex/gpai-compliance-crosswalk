@@ -4,7 +4,7 @@ A method for testing a frontier model provider’s obligations under the EU AI A
 
 ---
 
-> **Start here, if you have twenty minutes.** Read `instrument/cover-note.md` (one page), then `instrument/model-article-91-request.md` (the deliverable), then `instrument/answer-matrix.md` (what each answer does). Then the report’s §1 to §4 at `docs/report-draft.md`. Everything else is the working behind those four things, and `python3 tools/check.py` is how you check the working without reading it.
+> **Start here, if you have twenty minutes.** Read `instrument/cover-note.md` (one page), then `instrument/model-article-91-request.md` (the deliverable), then `instrument/answer-matrix.md` (what each answer does). Then the report’s §1 to §4 at `docs/report-draft.md`. Everything else is the working behind those four things, and `python3 tools/check.py` is how you check the working without reading it. `runs/anthropic-cyber-evals-2026/docs/run-report.md` is the same method run on a second incident in one evening, which is the test of whether any of this transfers.
 
 ---
 
@@ -41,7 +41,7 @@ The verification layer transfers; the judgement does not. The runbook:
 9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently. `tools/housestyle.py` checks the stated count against the table and sweeps every sentence that quotes it.
 10. **Run `python3 tools/check.py` after every change**, and read the last three lines of its output every time.
 
-What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
+A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred. What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
 
 ---
 

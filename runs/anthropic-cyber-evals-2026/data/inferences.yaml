@@ -1,0 +1,106 @@
+# The argumentative steps for the second run, enumerated so they can be denied.
+# Each entry: claim, type, function (step | graded), premises (ids in provisions.yaml or
+# sources.yaml), depends_on (inference ids; acyclic), defeater, strength, load_bearing,
+# stated_at. Written in one evening; the strengths are one person's estimate.
+
+inferences:
+  - id: inf-opus-placed
+    claim: >-
+      Claude Opus 4.7 is a general-purpose AI model placed on the Union market, so the
+      research exclusion at Article 3, point (63) does not arise for it and Chapter V
+      applies subject to classification under Article 51.
+    type: characterisation of facts
+    function: step
+    premises: [art3-63, art2-1a, art3-9, anthropic-evals-jul30]
+    depends_on: []
+    defeater: >-
+      Evidence that the model was not available on the Union market at the dates of the
+      incidents. The provider's account presupposes general availability ("when we make
+      the model generally available") and a Union availability is not stated in it; the
+      request should ask the date of Union placement rather than assume it.
+    strength: strong
+    load_bearing: true
+    stated_at: "docs/run-report.md §2"
+
+  - id: inf-internal-model-three-facts
+    claim: >-
+      For the internal research test model the first run's three facts govern unchanged:
+      a placement event, a Union nexus and systemic risk, none of which the record
+      supplies, and one of which ("not planned for general release") it denies.
+    type: conclusion of law
+    function: step
+    premises: [art3-63, art2-8, recital-97, anthropic-evals-jul30]
+    depends_on: []
+    defeater: >-
+      A shared large pre-training run with a placed model (Guidelines para. 22), which
+      would make it that model; or use in an own system put into service in the Union.
+      Neither is in the record. This is the same inference as the first run's
+      inf-placement-event with a different provider's model in it, which is the point.
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/run-report.md §2"
+
+  - id: inf-third-party-scaffolding
+    claim: >-
+      The conduct is attributable to the provider's models and so to the provider for
+      Article 55(1), points (c) and (d), even though the evaluation environment, its
+      network configuration and the target scenario were a third-party evaluation
+      partner's.
+    type: conclusion of law
+    function: graded
+    premises: [art55-1c, art55-1d, art3-49, anthropic-evals-jul30, securityweek-irregular-aug17]
+    depends_on: []
+    defeater: >-
+      THE FIRST RUN PREDICTED THIS. Its register said that where the scaffolding is a
+      third party's, the attribution objection "keeps its full force", and here it is: the
+      harness was Irregular's, the internet access was Irregular's misconfiguration, the
+      target name was Irregular's error. What blunts it: Article 55(1), point (c) reaches
+      involvement of the model "directly or indirectly" on the AI Office's reading at
+      Guidelines para. (100), Measure 9.3 uses the same words, the provider's own account
+      names measures "on both our side and our partner's" that could have prevented it,
+      and Article 55(1), point (d) speaks of the provider ensuring protection for the model
+      and its physical infrastructure, which does not stop being the provider's obligation
+      because the infrastructure was rented. Where it does not reach: nothing in the
+      enacting text says whose infrastructure counts, and a provider would say a partner's
+      network is not "the physical infrastructure of the model".
+    strength: contestable
+    load_bearing: true
+    stated_at: "docs/run-report.md §3"
+
+  - id: inf-awareness-date
+    claim: >-
+      The date the provider became aware of its models' involvement, for Measure 9.3, is
+      24 July 2026 at the latest, so a five-day initial-report period for a serious
+      cybersecurity breach ran to 29 July 2026.
+    type: characterisation of facts
+    function: step
+    premises: [art55-1c, cop-signatories, anthropic-evals-jul30]
+    depends_on: []
+    defeater: >-
+      A reading on which awareness of "the involvement of their model in the incident"
+      requires establishing which model, which the account dates no later than 24 July
+      either; or a categorisation other than "a serious cybersecurity breach", which
+      would lengthen the period to fifteen days (8 August). Either way the date the
+      Commission's form does not ask is, for once, public.
+    strength: strong
+    load_bearing: true
+    stated_at: "docs/run-report.md §3"
+
+  - id: inf-cyber-breach-category
+    claim: >-
+      Credential exfiltration, access to a production database and execution of a
+      malicious package on fifteen third-party systems is "a serious cybersecurity breach"
+      within Measure 9.3(2), whether or not any Article 3, point (49) limb is engaged.
+    type: characterisation of facts
+    function: graded
+    premises: [art3-49, anthropic-evals-jul30]
+    depends_on: []
+    defeater: >-
+      That the breaches were of third parties' systems rather than "related to the model
+      or its physical infrastructure" in the words of Guidelines para. (100); Measure
+      9.3(2) itself is not so limited, naming "cyberattacks" generally. A reading confining
+      both to attacks ON the model would put these incidents into the fifteen-day tier or
+      outside the Code's categories altogether.
+    strength: moderate
+    load_bearing: false
+    stated_at: "docs/run-report.md §3"
