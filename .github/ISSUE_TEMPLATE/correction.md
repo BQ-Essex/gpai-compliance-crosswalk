@@ -15,4 +15,4 @@ The corrections log at `protocol/01-statutory-foundation.md` §0 records every e
 
 **Which kind.** (a) factually wrong; (b) asserted beyond what the source supports; (c) unclear; (d) you would have done it differently. Only (a) and (b) become log rows; (c) and (d) are still welcome.
 
-Nineteen of the first twenty-four errors were the same failure: a source characterised without being opened. If yours is another, say so — the pattern matters more than the entry.
+Twenty of the first twenty-six errors were the same failure: a source characterised without being opened. If yours is another, say so — the pattern matters more than the entry.

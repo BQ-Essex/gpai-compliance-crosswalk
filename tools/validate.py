@@ -104,6 +104,13 @@ def known_identifiers(provisions, sources):
 FIXING_REQUIRED = {"T1", "T2", "T3"}
 
 
+def is_fixed(entry) -> bool:
+    """A source is fixed when a copy of it exists that the register can name: a SHA-256
+    of a held file (top-level or under `documents:`) or a Wayback capture."""
+    return bool(entry.get("sha256") or entry.get("archived_url")
+                or any(d.get("sha256") for d in (entry.get("documents") or []) if isinstance(d, dict)))
+
+
 def check_the_sources(sources):
     """Confirm every source carries the metadata the tiering depends on.
 
@@ -123,7 +130,19 @@ def check_the_sources(sources):
                 f"[{sid}] tier is {tier!r} — it needs to be one of {sorted(VALID_TIERS)}, "
                 f"since the whole point of tiering is that a T1 claim reads differently from a T4 one."
             )
-        if tier in FIXING_REQUIRED and not (entry.get("archived_url") or entry.get("sha256")):
+        # The method's first rule, made executable on 13 September 2026 after the second
+        # run broke it twice in an hour: a source nobody holds may be registered - by
+        # URL, so the next reader can go and hold it - but it may not be said to
+        # establish anything. `establishes:` is the register characterising a document,
+        # and characterising a document you have not opened is fourteen of the first
+        # run's twenty-five errors and both of the second run's first two.
+        if not is_fixed(entry) and entry.get("establishes"):
+            complaints.append(
+                f"[{sid}] is not held or captured, yet the register says it establishes "
+                f"{len(entry['establishes'])} thing(s). Hold it (sha256) or capture it "
+                f"(archived_url), or move those lines to `would_establish:` until you have."
+            )
+        if tier in FIXING_REQUIRED and not is_fixed(entry):
             complaints.append(
                 f"[{sid}] is {tier} and carries no fixed capture. Add archived_url (a "
                 f"Wayback timestamp) or sha256 (a local copy). The tier says this is a "
@@ -145,7 +164,7 @@ def check_the_sources(sources):
     return complaints
 
 
-def check_the_verdicts(crosswalk, provision_ids, source_ids):
+def check_the_verdicts(crosswalk, provision_ids, source_ids, source_entries=None):
     """Check every cross-walk row against the register discipline.
 
     Enforces, per row: the verdict opens with a permitted opener; the provision it
@@ -210,6 +229,13 @@ def check_the_verdicts(crosswalk, provision_ids, source_ids):
             for sid in fact.get("sources", []) or []:
                 if sid not in source_ids:
                     complaints.append(f"[{rid}] cites source {sid!r}, which isn't in sources.yaml.")
+                elif source_entries and not is_fixed(source_entries[sid]):
+                    complaints.append(
+                        f"[{rid}] rests a fact on {sid!r}, which nobody holds or captured. A "
+                        f"verdict is derived from facts, and a fact from a document not opened "
+                        f"is the failure this method exists to stop. Hold it, capture it, or "
+                        f"move the claim to the negative-search note as an absence."
+                    )
 
         if verdict.startswith(UNRESOLVED_OPENER):
             if not (row.get("would_settle") or "").strip():
@@ -269,7 +295,8 @@ def main():
     provision_ids, _recital_ids, source_ids = known_identifiers(provisions, sources)
 
     complaints = check_the_sources(sources)
-    complaints += check_the_verdicts(crosswalk, provision_ids, source_ids)
+    entries = {s.get("id"): s for s in sources.get("sources", [])}
+    complaints += check_the_verdicts(crosswalk, provision_ids, source_ids, entries)
 
     row_count = len(crosswalk.get("rows", []))
     sys.exit(report_back(complaints, row_count, quiet=quiet))
