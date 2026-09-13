@@ -87,6 +87,8 @@ ATTRIBUTION = (
     (r"therecord\.media|Recorded Future|The Record from|The Record names|reports? from The Record", "The Record"),
     (r"TechCrunch|wiki incident", "TechCrunch"),
     (r"spokesperson|R[e\u00e9]gnier|IBTimes|confirmed receipt", "IBTimes"),
+    (r"Agence Europe|first requests for information|Europe Daily Bulletin|more than 30 (?:AI )?providers", "AGENCE EUROPE"),
+    (r"EU AI Act Newsletter|Virkkunen|Euractiv|Uuk", "Newsletter #110"),
     (r"Von Arx|collusion\.wiki|the wiki’s public logs|message board", "message board"),
     (r"Nilsson|Milch-Kontor|Orkem|AM ?& ?S|Akzo|C-\d{2,3}/\d{2}|\b\d{3}/\d{2}\b",
      "provisions.yaml"),

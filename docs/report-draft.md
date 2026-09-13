@@ -36,6 +36,10 @@ Behind the pack is a method and a repository (§6, Appendix H): a statutory regi
 
 ## 3. What a regulator can do now
 
+**The power is already in use, and on this ground.** On 1 September 2026 the Commission stated that the AI Office had sent its first requests for information to more than 30 providers; they come, the reporting agency records, “after several incidents involving AI models that occurred this summer”, and its spokesperson described two strands, the first of which “concerns safety and security, notably the use of and the most advanced AI models” (Agence Europe, 2026). Article 91 is therefore not a route proposed here in the abstract: it is the instrument the AI Office reached for first, on this subject, weeks after the episodes analysed in this report.
+
+What the attached request adds is specificity. On the only public account of what those requests ask—how providers prevent their models being stolen, how much access external evaluators get, how usage is monitored once a model is public—none of the three reaches the question this analysis turns on, which is whether the model was ever integrated into an own AI system put into service. A request written across thirty providers cannot ask that. An incident-specific one can, and it is the first thing this one asks.
+
 **Ask the three facts, in order.** The request asks them at Section I. Request 4a: was the model integrated into an own AI system made available on the market or put into service, when, and where. Request 2b: does it share a large pre-training run with a model already placed, or was it at any time intended for placement. Request 2: its cumulative training compute, estimated by the approach in the Guidelines’ own annex. The order is the Act’s: without a placement event the definition is not met and nothing else in Chapter V is reached; without a Union nexus Article 2(1), point (a) is not engaged; only then does systemic risk matter. Article 91 has applied since 2 August 2026 (Guidelines ¶103), and Article 101(1), point (b) stands behind it.
 
 **Read the answers off the matrix.** If the model was integrated into an own system put into service in the Union, or shares a pre-training run with a placed model, it is within the definition on the Commission’s reading and Chapter V applies from the placement date, with the development-phase duties the Commission names applying before it. If it was never integrated, shares no lineage and was never intended for placement, it is outside Chapter V on the Commission’s own reading; nothing attaches to it, and the regulatory response is the amendment table. If the answer is silence or evasion, Article 101(1), point (b) and Article 92 are the next steps. Every cell of the matrix is a provision held and verified in the register—Articles 2(1), point (a), 2(8), 3 points (11) and (63), 51, 52, 53, 55, 90, 91, 92 and 101, Annex XIII, Recital 97—or a numbered paragraph of the Guidelines or the Q&A, and nothing else.
@@ -94,6 +98,8 @@ A second run exists: `runs/anthropic-cyber-evals-2026/` applies the same apparat
 
 ## Reference list
 
+Agence Europe (2026) ‘European Commission sends first requests for information to more than 30 AI providers’, *Europe Daily Bulletin*, No. 13929, 3 September. Available at: https://agenceurope.eu/en/bulletin/article/13929/31/european-commission-sends-first-requests-for-information-to-more-than-30-ai-providers (Accessed: 13 September 2026).
+
 Anthropic (2026) *Investigating real-world incidents in our cybersecurity evaluations*. 30 July. Available at: https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals (Accessed: 11 September 2026).
 
 California (2025) *Senate Bill 53: Transparency in Frontier Artificial Intelligence Act*. Sacramento: California State Legislature. Available at: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53 (Accessed: 11 September 2026).
@@ -123,6 +129,8 @@ Pistillo, M. (2026) *Internal deployment in the AI Act*. Chapter for the *Cambri
 Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence, OJ L, 2024/1689, 12.7.2024. Consolidated text CELEX 02024R1689-20260727, as amended by Regulation (EU) 2026/1744. ELI: http://data.europa.eu/eli/reg/2024/1689/oj
 
 UK AI Security Institute (2026) Findings on frontier model behaviour in cyber evaluations, July. Reported by Cloud Security Alliance. Available at: https://cloudsecurityalliance.org/artifacts/every-frontier-model-cheated-what-aisi-s-findings-mean-for-trust (Accessed: 11 September 2026).
+
+Uuk, R. (2026) ‘The EU AI Act Newsletter #110: Powers in Practice’, 8 September. Future of Life Institute. Available at: https://artificialintelligenceact.substack.com/p/the-eu-ai-act-newsletter-110-powers (Accessed: 13 September 2026).
 
 Von Arx, S. et al. (2026) *DseWiki incident analysis*. 4 September. Available at: https://collusion.wiki/ (Accessed: 11 September 2026). Archived at: https://web.archive.org/web/20260912133451/https://collusion.wiki/ (Archived: 12 September 2026). The page was bylined 3 September when first captured on 4 September 2026; the figures cited here are identical in both captures.
 

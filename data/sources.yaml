@@ -242,6 +242,89 @@ sources:
       This is why the knowledge-date evidence is stronger here than anything
       resting on the provider's own account.
 
+  - id: ae-first-rfis
+    tier: T4
+    document: "European Commission sends first requests for information to more than 30 AI providers | AGENCE EUROPE.pdf"
+    sha256: "73e6485b942d247c6fb8ac0615cd1765d7904c57900b86fd09aff8beede58216"
+    held_from: "2026-09-13"
+    date: "2026-09-02"
+    title: "European Commission sends first requests for information to more than 30 AI providers"
+    publication: "Agence Europe, Europe Daily Bulletin No. 13929, 3 September 2026; article datelined 02/09/2026"
+    url: "https://agenceurope.eu/en/bulletin/article/13929/31/european-commission-sends-first-requests-for-information-to-more-than-30-ai-providers"
+    establishes:
+      - >-
+        THE ARTICLE 91 POWER IS IN USE. "The European Commission sent its first requests for
+        information to more than 30 artificial intelligence (AI) providers, it specified on
+        Tuesday 1 September."
+      - >-
+        AND THE OCCASION IS THIS SUMMER'S INCIDENTS: "They come after several incidents
+        involving AI models that occurred this summer."
+      - >-
+        "Sent by the AI Office under the AI Act, the bulk of whose provisions have applied
+        since 2 August, these requests cover two separate strands."
+      - >-
+        Thomas Regnier, spokesperson: "The first concerns safety and security, notably the
+        use of and the most advanced AI models. The second focuses more on copyright and
+        transparency issues".
+      - >-
+        Commission Vice-President Henna Virkkunen wrote that the second strand targets
+        companies that have not "taken part in informal compliance dialogues with the AI
+        Office".
+    caveats:
+      - >-
+        PRECISION ON THE DATE, because the difference matters to a project that dates
+        everything. The article says the Commission SPECIFIED ON 1 SEPTEMBER that it HAD
+        SENT the requests. It does not give the date they were sent. Anything written from
+        this source should say the Commission stated on 1 September 2026 that it had sent
+        them, not that it sent them on that date.
+      - >-
+        The Regnier quotation reads "the use of and the most advanced AI models", which is
+        ungrammatical and is reproduced as printed. Whether the gap is the spokesperson's or
+        the agency's transcription cannot be told from this source. It is reproduced rather
+        than repaired, as the two slips in the published Regulation are at Appendix G.
+      - >-
+        A subscription page. The capture held here is the article as served on 13 September
+        2026; the body text is present in full above the paywall prompt.
+
+  - id: fli-newsletter-110
+    tier: T4
+    document: "The EU AI Act Newsletter #110: Powers in Practice.pdf"
+    sha256: "e769a73f14c42537e3ab1937d3cfcf20620207eaa4f6f96ba7d64aa23551119c"
+    held_from: "2026-09-13"
+    date: "2026-09-08"
+    title: "The EU AI Act Newsletter #110: Powers in Practice"
+    publication: "Future of Life Institute, Risto Uuk"
+    url: "https://artificialintelligenceact.substack.com/p/the-eu-ai-act-newsletter-110-powers"
+    provenance: reproduction
+    provenance_note: >-
+      SECOND-HAND AND RECORDED AS SUCH. This newsletter relays reporting by Maximilian
+      Henning at Euractiv and quotes Commissioner Virkkunen as she spoke to Euractiv. It is
+      not Euractiv and must not be cited as though it were: two entries in the corrections
+      log came from trusting a summary in place of the thing summarised. It corroborates
+      ae-first-rfis, which is first-hand on the same events, and is held for that purpose.
+      WHAT WOULD SETTLE IT: the Euractiv article itself.
+    establishes:
+      - >-
+        Corroboration that the Commission "has made first use of its new AI Act enforcement
+        powers, requesting information from leading developers on cybersecurity, safety and
+        copyright compliance", and that this "follows a string of high-profile cybersecurity
+        incidents at several leading AI labs just weeks ago".
+      - >-
+        WHAT THE REQUESTS ASK, ON THE ONLY PUBLIC ACCOUNT OF IT, attributed to Virkkunen
+        speaking to Euractiv: the Commission wants to know how labs prevent humans or AI
+        "from stealing their models", how much access they give external evaluators, and how
+        usage is monitored once a model is public. NONE OF THE THREE reaches the placement
+        question this analysis turns on, which is the gap the attached request fills.
+      - >-
+        Some providers of the "most advanced" models received requests and were not named;
+        others were left out because the Commission has "already had very close dialogue"
+        with them.
+    caveats:
+      - >-
+        The PDF's text layer renders the "fi" ligature as "@" throughout - "arti@cial",
+        "@rst", "high-pro@le" - so quotations from it are checked against the mangled
+        string. See the extraction-artefact entries in data/unverifiable-quotations.yaml.
+
   - id: ec-regnier-statement
     tier: T4
     document: "OpenAI Files EU Incident Report After DseWiki Episode; Commission Says Agent Control Has Been Lost Before | IBTimes UK.pdf"

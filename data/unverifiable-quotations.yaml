@@ -288,3 +288,21 @@ exceptions:
       citation rather than a quotation. Left as an exception rather than restyled, because
       restyling prose to satisfy a checker is how a checker stops meaning anything.
 
+  - quote: "after several incidents involving AI models that occurred this summer"
+    kind: extraction-artefact
+    why: >-
+      Held at _sources/European Commission sends first requests ... AGENCE EUROPE. The
+      bulletin is a two-column print and the extraction threads the sidebar through the
+      sentence: "They come after several incidents involving AI models FOREIGN AFFAIRS:
+      ministers back European institutional that occurred this summer." The words are all
+      present and in order, with a navigation headline running between them.
+
+  - quote: "concerns safety and security, notably the use of and the most advanced AI models"
+    kind: extraction-artefact
+    why: >-
+      Same document, same cause: "The first concerns safety and security, notably the use of
+      and the Kaja Kallas (/en/bulletin/article/13929/3/ministers-back- most advanced AI
+      models." Note that "the use of and the" is the bulletin's own wording and is reproduced
+      rather than repaired; whether the gap is the spokesperson's or the agency's cannot be
+      told from this source, and the caveat on ae-first-rfis says so.
+
