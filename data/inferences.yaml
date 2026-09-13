@@ -48,7 +48,7 @@ inferences:
       2(1), points (b) to (g) were read for this and none does.
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1 step one"
+    stated_at: "docs/report-draft.md §5.1 step one"
 
   - id: inf-carveback-unreachable
     claim: >-
@@ -66,7 +66,7 @@ inferences:
       could, on some facts, be elected.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.1 step three; protocol/01-statutory-foundation.md §1.3"
+    stated_at: "docs/report-draft.md §5.1 step three; protocol/01-statutory-foundation.md §1.3"
 
   - id: inf-relocation
     claim: >-
@@ -84,7 +84,7 @@ inferences:
       against that reading but is not enacting text.
     strength: moderate
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1; protocol/01-statutory-foundation.md §1.3a"
+    stated_at: "docs/report-draft.md §5.1; protocol/01-statutory-foundation.md §1.3a"
 
   - id: inf-drafting-artefact
     claim: >-
@@ -103,7 +103,7 @@ inferences:
       it: inf-relocation and the conclusion stand without it.
     strength: contestable
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.1; protocol/01-statutory-foundation.md §1.3a"
+    stated_at: "docs/report-draft.md §5.1; protocol/01-statutory-foundation.md §1.3a"
 
   - id: inf-sole-purpose-omission
     claim: >-
@@ -120,7 +120,7 @@ inferences:
       in error. Not consulted; the travaux have not been read for this project.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.1 step two"
+    stated_at: "docs/report-draft.md §5.1 step two"
 
   - id: inf-product-oriented
     claim: >-
@@ -142,7 +142,7 @@ inferences:
       than an assumption inside this one.
     strength: moderate
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1"
+    stated_at: "docs/report-draft.md §5.1"
 
   - id: inf-placement-event
     claim: >-
@@ -168,7 +168,7 @@ inferences:
       the scope verdict stating one open condition where the route needs three.
     strength: contestable
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1 and §7"
+    stated_at: "docs/report-draft.md §5.1 and §7"
 
   - id: inf-union-nexus
     claim: >-
@@ -187,7 +187,7 @@ inferences:
       This inference is recorded as unestablished rather than as probable.
     strength: contestable
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1 and §7"
+    stated_at: "docs/report-draft.md §5.1 and §7"
 
   - id: inf-attach
     claim: >-
@@ -218,7 +218,7 @@ inferences:
       does not settle it.
     strength: moderate
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.1 and §7"
+    stated_at: "docs/report-draft.md §5.1 and §7"
 
   - id: inf-opinion-construes
     claim: >-
@@ -237,7 +237,7 @@ inferences:
       settle it. FLAGGED BY THE AUTHOR AS THE MOST ARGUABLE STEP HERE.
     strength: contestable
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.6; protocol/01-statutory-foundation.md §5a"
+    stated_at: "docs/report-draft.md §5.2; protocol/01-statutory-foundation.md §5a"
 
   - id: inf-cyber-limb
     claim: >-
@@ -257,7 +257,7 @@ inferences:
       and is deliberately kept out of the verdict cells for that reason.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.6; docs/worked-example.md §5"
+    stated_at: "docs/report-draft.md §5.2; docs/worked-example.md §5"
 
   - id: inf-irreversibility
     claim: >-
@@ -272,7 +272,7 @@ inferences:
       the disruption at the time rather than to its eventual remedy.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.4; docs/worked-example.md §4"
+    stated_at: "docs/report-draft.md §5.3; docs/worked-example.md §4"
 
   - id: inf-bridging-gap
     claim: >-
@@ -295,7 +295,7 @@ inferences:
       true of the Code and was not the whole of the record.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.4; protocol/01-statutory-foundation.md §1.9"
+    stated_at: "docs/report-draft.md §5.3; protocol/01-statutory-foundation.md §1.9"
 
   - id: inf-no-101a-exposure
     claim: >-
@@ -365,7 +365,7 @@ inferences:
       provider says.
     strength: contestable
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.2"
+    stated_at: "docs/report-draft.md §5.1"
 
   - id: inf-designation-route
     claim: >-
@@ -386,7 +386,7 @@ inferences:
       to rebut, which is the opposite of the burden this analysis had assumed throughout.
     strength: strong
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.3"
+    stated_at: "docs/report-draft.md §3"
 
   - id: inf-annex-xiii-evidence
     claim: >-
@@ -408,7 +408,7 @@ inferences:
       evaluation would find, and the episode did occur during an evaluation.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.3"
+    stated_at: "docs/report-draft.md §3"
 
   - id: inf-form-cannot-evidence
     claim: >-
@@ -433,7 +433,7 @@ inferences:
       submission but still not the date of awareness.
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.6; docs/appendix-forms.md §3"
+    stated_at: "docs/report-draft.md §5.2; docs/appendix-forms.md §3"
 
   - id: inf-form-statutory
     claim: >-
@@ -452,7 +452,7 @@ inferences:
       losing the recommendation.
     strength: moderate
     load_bearing: false
-    stated_at: "docs/report-draft.md §4.6"
+    stated_at: "docs/report-draft.md §5.2"
 
   - id: inf-cyber-covered
     claim: >-
@@ -472,7 +472,7 @@ inferences:
       defeat it outright, and nothing in the enacting text compels the wider reading.
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.6"
+    stated_at: "docs/report-draft.md §5.2"
 
   - id: inf-instrument-selection
     claim: >-
@@ -510,4 +510,4 @@ inferences:
       calls the bifurcation the omission's "cause".
     strength: strong
     load_bearing: true
-    stated_at: "docs/report-draft.md §4.6"
+    stated_at: "docs/report-draft.md §5.2"

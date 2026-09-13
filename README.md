@@ -1,6 +1,40 @@
 # GPAI Compliance Cross-Walk
 
-A method for testing a frontier model provider’s obligations under the EU AI Act against a **public disclosure record**, together with a worked example and a model Article 91 request for information.
+A method for testing a frontier model provider’s obligations under the EU AI Act against a **public disclosure record**, a worked example, and an **enforcement pack**: a model Article 91 request, an issuing note, an answer matrix, the Commission’s serious-incident template rebuilt with the two fields it lacks, and three amendments to the Regulation in drafted form.
+
+---
+
+## The enforcement pack
+
+Everything in `instrument/` is in the form its addressee would issue or adopt, and every word of it traces to text held and verified here. Read in this order:
+
+1. **`cover-note.md`**—one page to the AI Office: what the public record establishes, what it does not, the one request that settles it, the one form change that fixes the next incident.
+2. **`model-article-91-request.md`**—the request, in Article 91(4)’s required form, issued in the Commission’s name. It asks three facts first: whether the research model was ever integrated into an own AI system put into service, and where; whether it shares a large pre-training run with a model already placed on the market, or was intended for placement; and its training compute. Without those three, Chapter V does not reach the model on the Commission’s own reading.
+3. **`issuing-note.md`**—for the AI Office, not the addressee: why each request is asked and what would leave it open. Kept out of the request so the request does not pre-grade answers.
+4. **`answer-matrix.md`**—for each answer the provider could give, where it puts the model and what the Commission does next. Every cell is a held provision.
+5. **`model-amended-serious-incident-template.docx`**—the Commission’s own template of 4 November 2025, every field unchanged, with fields 1a (date of awareness) and 1b (date of submission) added in the wording of its high-risk draft. The template transcribes Measure 9.2 of the Code, which lists what a report contains and not when the clock started, so without these two fields a completed report cannot show whether it was timely. This is the Commission’s form to change and needs no legislator.
+6. **`amendment-table.md`**—three amendments in current-text/amended-text form: the deemed-placement rule into Article 3, point (9); the “sole purpose” qualifier into Article 3, point (63); a determinate period into Article 55(1), point (c). Each added word is traced to the recital, Commission act or provision it is lifted from.
+
+None of it has been issued, adopted or sent. The provenance header on the request says so, and the placeholders are explicit rather than plausible.
+
+---
+
+## Running it on the next incident
+
+The verification layer transfers; the judgement does not. The runbook:
+
+1. `python3 tools/new-incident.py ../next-incident`—stands up a repository with the five checkers, the verified statutory register, the method and empty registers, and runs the checkers over it. Re-verify `data/provisions.yaml` against EUR-Lex before relying on amendment status; the `meta` block says when it was last checked.
+2. **Hold the record before characterising it.** Every document the analysis will cite goes in `_sources/`, with its SHA-256 in `data/sources.yaml`. Nineteen of this project’s twenty-four errors were a source characterised without being opened.
+3. **Tier by relationship, not prestige.** T1 for the party whose conduct is in question, T2 for the affected party’s forensics, T3 for an investigator under the subject’s constraints, T4 for the independent. Two providers’ self-reports sit at the same tier.
+4. **Work scope first.** For an internal or research model, the three facts in the request are the questions: placement event, Union nexus, systemic risk. `protocol/02-decision-tree.md` and `instrument/answer-matrix.md` are written for that fact pattern generally and only their cells are this incident’s.
+5. **One row per obligation**, facts apart from characterisation, the verdict in one of the three permitted forms, a `would_settle` and a `would_not_settle`, and a dated, corpus-bounded negative-search note for every absence claimed. `tools/validate.py` will refuse anything else.
+6. **Enumerate the inferences** as you go, each with a defeater. `python3 tools/infercheck.py --attack` is what you hand an adversarial reader.
+7. **Fill the regulator’s form from the record** before writing anything about the form. That is where the awareness-date finding came from, and it is a cheap test wherever a regime publishes a template.
+8. **Adapt the request.** Parts A, C, D’s governing clauses, E and F survive untouched; the requests are the incident’s. Keep the reasoning in the issuing note.
+9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently. `tools/housestyle.py` checks the stated count against the table and sweeps every sentence that quotes it.
+10. **Run `python3 tools/check.py` after every change**, and read the last three lines of its output every time.
+
+What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
 
 ---
 
@@ -64,7 +98,7 @@ Track 3 asks whether a regulator could use the output with light edits. A non-la
 ```
 protocol/     the method, abstracted from this incident — reusable on the next one
 data/         provisions, sources and cross-walk rows as structured YAML
-instrument/   the model Article 91 request for information
+instrument/   the enforcement pack: cover note, model Article 91 request, issuing note, answer matrix, amended template (DOCX), amendment table
 tools/        validate.py — the verdict discipline; citecheck.py — citations against the
               register; housestyle.py — prose conventions
 docs/         worked example, comparative regimes, the correction record and review findings
