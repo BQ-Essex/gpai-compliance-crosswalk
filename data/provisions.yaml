@@ -915,6 +915,30 @@ provisions:
     notes: >-
       Registered 12 September 2026, same reason as art92. Extract only.
 
+  - id: art6
+    cite: "Article 6"
+    title: "Classification rules for high-risk AI systems"
+    amended_by_omnibus: true
+    text: >-
+      1. Irrespective of whether an AI system is placed on the market or put into service
+      independently of the products referred to in points (a) and (b), that AI system shall
+      be considered to be high-risk where both of the following conditions are fulfilled:
+      (a) the AI system is intended to be used as a safety component of a product, or the AI
+      system is itself a product, covered by the Union harmonisation legislation listed in
+      Annex I; (b) the product whose safety component pursuant to point (a) is the AI system,
+      or the AI system itself as a product, is required to undergo a third-party conformity
+      assessment, with a view to the placing on the market or the putting into service of
+      that product pursuant to the Union harmonisation legislation listed in Annex I.
+      [Paragraph 1a inserted by Regulation (EU) 2026/1744; paragraph 2 and Annex III are the
+      other classification route. Extract only - this register holds Article 6 for the single
+      purpose of Request 11c, which asks the Provider to classify its own systems.]
+    notes: >-
+      Registered 13 September 2026. Held as an extract and marked as one: nothing in this
+      analysis turns on the content of Article 6, which is why it was not registered earlier.
+      The instrument cites it only to ask the Provider whether it classifies a system of its
+      own as high-risk, which is what decides whether Article 75(1a) reaches that system at
+      all - and therefore whether the two serious-incident regimes meet on these facts.
+
 # Judgments of the Court of Justice. Added 13 September 2026, after an adversarial review
 # of the instrument cited five of them and this register marked the citations UNVERIFIED
 # on the reasoning that confabulated case law is a known failure of the tool that produced

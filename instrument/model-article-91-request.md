@@ -116,6 +116,10 @@
 
 > *Responsive answer*: the route relied on and the reasoning, whichever route that is. A statement that the episode was handled under an internal security process is not responsive: the question is what view the Provider took of Article 55(1), point (c), not what process it used. This request is put separately from Request 11 because the guidelines’ first route does not pass through Article 3, point (49) at all, and a Provider answering only the Article 3, point (49) question could answer it accurately and leave the operative question untouched.
 
+**Request 11c.** State whether the Research Model was integrated into any AI system of the Provider, or of an undertaking of which the Provider forms part, and for each such system state whether the Provider classifies it as a high-risk AI system within the meaning of Article 6. Where it does, state whether any serious incident concerning that system was reported to the AI Office under **Article 75(1a)** in respect of either episode, on what date, and provide the report. Where the Provider considers that no such system is high-risk, state the basis.
+
+> *Responsive answer*: for each system, a classification and, where applicable, a report and its date. The purpose is not duplication. Article 75(1) makes the AI Office exclusively competent for systems where the model and the system belong to the same undertaking, and Article 75(1a) applies Article 73(2) to (9) to their serious incidents; Article 55(1), point (c) reaches the same body by a different route with a different period and a different form. Where both could apply to one episode the Commission needs to know which was used, and where only the model regime applies it needs to know that too.
+
 **Request 12.** State whether the Provider relies on the Code to demonstrate compliance under **Article 55(2)** or on alternative adequate means; and provide, as applicable, the Safety and Security Framework and the Safety and Security Model Report insofar as either bears on the episodes at paragraph 4.
 
 ---

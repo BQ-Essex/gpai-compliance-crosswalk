@@ -399,3 +399,29 @@ inferences:
     strength: strong
     load_bearing: true
     stated_at: "docs/report-draft.md §4.7"
+
+  - id: inf-instrument-selection
+    claim: >-
+      Which serious-incident regime applies to one undertaking's own model running inside its
+      own system is selected by whether the thing pointed at is the model or the system, and
+      not by the severity of what happened - so the regime governing models with systemic
+      risk carries the thinner instrument, no statutory period, no classification and no
+      awareness field, while the system regime carries Article 73's periods and a seven-page
+      form.
+    type: textual
+    function: step
+    premises: [art75-1, art75-1a, art55-1c, art73, art3-49, ec-incident-template, ec-art73-draft-guidance]
+    depends_on: []
+    defeater: >-
+      Any provision or guidance making the choice of regime turn on severity, or applying
+      Article 73's periods to a model directly. None found. The nearest thing running the
+      other way is that Article 75(1a) only reaches providers of HIGH-RISK AI systems, so on
+      facts where the own-system is not high-risk the regimes do not both apply at all - which
+      does not defeat the claim, it is the claim: a non-high-risk system carrying a
+      systemic-risk model is reported under the lighter regime alone. What WOULD defeat it is
+      a final Article 73 guidance extending to Article 55(1), point (c), or a general-purpose
+      template revised to carry the structural fields; the draft guidance at para. (4)
+      excludes general-purpose models by name, and the template was published in that state.
+    strength: strong
+    load_bearing: true
+    stated_at: "docs/report-draft.md §4.7"
