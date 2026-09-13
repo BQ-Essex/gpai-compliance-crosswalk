@@ -183,6 +183,9 @@ sources:
 
   - id: collusion-wiki
     tier: T4
+    document: "Discovery of a new OpenAI agent message board.pdf"
+    sha256: "1b6eb6346902f5b23594f5381088f7821e3d619216f90468fd125bc56a6d545d"
+    held_from: "2026-09-13"
     date: "2026-09-04"
     title: "DseWiki incident analysis"
     author: "Von Arx, S., Byrd, C.S., Kitts, S. and Larsen, T."
@@ -241,6 +244,9 @@ sources:
 
   - id: ec-regnier-statement
     tier: T4
+    document: "OpenAI Files EU Incident Report After DseWiki Episode; Commission Says Agent Control Has Been Lost Before | IBTimes UK.pdf"
+    sha256: "f08775b87bbcfe96f78915baa5b0fbee1b9b35efb57653746560515840097ea3"
+    held_from: "2026-09-13"
     date: "2026-09-07"
     title: "European Commission statement on the DseWiki filing (spokesperson Thomas Regnier)"
     url: "https://www.ibtimes.co.uk/openai-eu-scrutiny-dsewiki-incident-1818384"

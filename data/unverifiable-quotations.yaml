@@ -245,3 +245,11 @@ exceptions:
       "did not have the classifiers and monitoring we usually implement". Recorded as the
       eighteenth error; the sentence now quotes the sources instead.
 
+  - quote: "Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen"
+    kind: own-words
+    why: >-
+      A byline this analysis composed from the page's authorship, not a sentence quoted from
+      it. It sits in quotation marks because it is a title-and-authors string, which is a
+      citation rather than a quotation. Left as an exception rather than restyled, because
+      restyling prose to satisfy a checker is how a checker stops meaning anything.
+

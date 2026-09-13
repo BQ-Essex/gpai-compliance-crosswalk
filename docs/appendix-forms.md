@@ -31,9 +31,9 @@ The Commission publishes it in two renditions, DOCX and PDF, and both were read 
 | 7 | **Recommendation** to the AI Office | Nothing. |—| **cannot fill** |
 | 8 | **Root cause analysis** | The nearest thing is that the provider did not enable the safeguards it uses for externally deployed systems, and names them; and that a model was evaluated “without production classifiers used to prevent models from pursuing high-risk cyber activity”. That describes mitigations *absent by choice*, which is not a root cause analysis and is arguably a graver disclosure. Inputs, outputs and the analysis itself are not public. | T1; T3 | **partial** |
 | 9 | **Patterns in post-market monitoring** | Only the victim’s monitoring is described, and described failing: detection fired but did not raise the alert’s criticality correctly. The provider’s own monitoring is not in the record. | **T2, not the provider** | **cannot fill** |
-| 10 | **Submitter information**—provider, authorised representative or other; organisation, contact name, email, phone | No filing is public, so no submitter is. |—| **cannot fill** |
+| 10 | **Submitter information**—provider, authorised representative or other; organisation, contact name, email, phone | The provider filed and the Commission confirmed receipt, so the submitter is known in substance. Its organisation, named contact and the submission date are not public. | **T4, the Commission’s spokesperson** | **partial** |
 
-**Two filled, four partial, four cannot fill.**
+**Two filled, five partial, three cannot fill.**
 
 ---
 
@@ -65,7 +65,9 @@ That is not a drafting nicety. Timeliness is the only part of Article 55(1), poi
 
 **The field the Act most needs is the one that cannot be filled.** Field 4 is model identity, and every obligation in Chapter V is indexed to a model: whether Article 51’s threshold is met, whether Article 52(1)’s two-week notification ran, what Article 53(1), point (a) documentation covers. Two authoritative accounts name the principal model differently and neither asserts they are the same. That is Request 1 of the instrument, and it is first for this reason.
 
-**A completed form would still not disclose that it was ever filed.** The provider’s account mentions no notification to any authority; no public source gives a filing date or the provision relied on; the Commission’s spokesperson, asked directly, declined to say. Field 10 is blank here for that reason, and the blank is the point.
+**A report HAS been filed, and that sharpens the point rather than blunting it.** On 7 September 2026 the Commission’s spokesperson confirmed receipt of the provider’s report on the wiki episode, said Brussels remained in close contact, and declined to say when it was submitted or what it contained. He added that “Incident reports are not just a tick-box” and that “you have to be quite precise and accurate about the measures you are aiming to take”. So the position is this. A report exists. The regulator has it. The regulator will not give the date. And the form it was filed on has no field for the date of awareness or the date of submission, so the AI Office cannot establish timeliness from the document either. The finding at §3 is not a hypothetical about a form nobody has used; it describes the only filing anyone knows about.
+
+An earlier version of this appendix said no filing was public and marked field 10 *cannot fill*. The source register had carried the confirmation of receipt since 12 September. This file was written from memory of the situation rather than from the register, which is the nineteenth entry in the corrections log.
 
 **The gaps are not evenly distributed.** Everything about what happened *at the victim* is public. Everything about what happened *inside the provider*—the evaluation protocol, the egress architecture before the failure, the risk assessment, the monitoring, the root cause—is not. The form asks for the second category almost exclusively. A report filed “to the best of their knowledge” reads identically whether knowledge is absent or withheld, and the form provides no way to tell the two apart.
 
