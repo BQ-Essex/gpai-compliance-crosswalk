@@ -142,6 +142,18 @@ def check_the_sources(sources):
                 f"{len(entry['establishes'])} thing(s). Hold it (sha256) or capture it "
                 f"(archived_url), or move those lines to `would_establish:` until you have."
             )
+        # A hash with nothing naming the file it hashes cannot be checked by anyone: a
+        # reader has to guess which document in _sources/ it belongs to, and guessing is
+        # the thing this register exists to remove. Two entries carried a bare sha256 for
+        # a day, both of them Commission acts and one the source of the single most
+        # load-bearing quotation in the timing analysis. Both hashes proved correct, which
+        # is why this is a documentation check and not an integrity one.
+        if entry.get("sha256") and not entry.get("document"):
+            complaints.append(
+                f"[{sid}] records a sha256 and does not name the file it hashes. Add "
+                f"`document:`. A hash a reader cannot attach to a document is not a "
+                f"citation, it is a number."
+            )
         if tier in FIXING_REQUIRED and not is_fixed(entry):
             complaints.append(
                 f"[{sid}] is {tier} and carries no fixed capture. Add archived_url (a "

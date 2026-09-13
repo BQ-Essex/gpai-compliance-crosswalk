@@ -25,7 +25,7 @@ If any of the three fails, the research model is outside Chapter V on the Commis
 
 **What a legislator could do.** Three amendments, drafted in current-text/amended-text form with every added word traced to a recital, a Commission act or an enacting provision: the deemed-placement rule into Article 3, point (9); the “sole purpose” qualifier into Article 3, point (63); a determinate period into Article 55(1), point (c).
 
-**What this is not.** It is not a finding that any obligation was contravened, and it does not say what happened: every claim is about a disclosed record assembled by interested parties, and the method that produced it says so in its first line. Its statutory text is verified against the consolidated Regulation; its quotations of the record are verified against held copies; its reasoning is enumerated so it can be attacked step by step; and it has been wrong twenty-seven times in three days, each time recorded. The repository at `github.com/BQ-Essex/gpai-compliance-crosswalk` carries all of it.
+**What this is not.** It is not a finding that any obligation was contravened, and it does not say what happened: every claim is about a disclosed record assembled by interested parties, and the method that produced it says so in its first line. Its statutory text is verified against the consolidated Regulation; its quotations of the record are verified against held copies; its reasoning is enumerated so it can be attacked step by step; and it has been wrong twenty-eight times in three days, each time recorded. The repository at `github.com/BQ-Essex/gpai-compliance-crosswalk` carries all of it.
 
 **Attached.**
 1. `model-article-91-request.md`—the request, in Article 91(4)’s form
