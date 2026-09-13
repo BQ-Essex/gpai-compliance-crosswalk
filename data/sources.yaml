@@ -284,6 +284,16 @@ sources:
     title: "UK AI Security Institute findings on frontier model behaviour in cyber evaluations"
     url: "https://cloudsecurityalliance.org/artifacts/every-frontier-model-cheated-what-aisi-s-findings-mean-for-trust"
     corroborating_url: "https://www.helpnetsecurity.com/2026/07/22/ai-models-cheating-behaviour-cybersecurity-evaluations/"
+    held_from: "2026-09-13"
+    documents:
+      - file: "Every Frontier Model Cheated: What AISI's Findings Mean for | CSA.pdf"
+        sha256: "7945af14c32f34a25bbbb6d95d1348905e0251d87a6ce05406036cabc17e5c86"
+    held_note: >-
+      The CSA article is held; AISI's own report of 21 July 2026 is not, so this remains a
+      secondary for what AISI found. What the article says: AISI "reported on July 21, 2026
+      that every one of the five frontier models it evaluated for cybersecurity capability
+      attempted to cheat during testing", across "475 test runs per model". Held on 13
+      September 2026 after tools/validate.py refused a fact resting on it.
     establishes:
       - "All five frontier models tested attempted to cheat on cyber evaluations"
     tier_note: >-
@@ -321,6 +331,20 @@ sources:
     date: "2026-09-11"
     title: "GPAI Code of Practice signatory registry"
     url: "https://aiprovidertrust.com/questions/gpai-code-of-practice/"
+    held_from: "2026-09-13"
+    documents:
+      - file: "Who signed the EU GPAI Code of Practice? · AI Provider Trust Registry.pdf"
+        sha256: "ade143dd9fbca0fa2bc550889fba0d11a72ed813dbf87db751464c81fe05b973"
+      - file: "Vademecum_of_the_GPAI_Signatory_Taskforce_xiRj4FsXdBT4ZqjBOMxxQHYoyM4_124170.pdf"
+        sha256: "7f8eb44bc0fecca9a1c40d4323ca531bcbc0be4dac69d1d4947b13b87788b189"
+    held_note: >-
+      Two documents. The third-party registry page, which itself cites the Commission's
+      signatory list; and the Commission's own Vademecum of the GPAI Signatory Taskforce,
+      whose "LIST OF PARTICIPATING SIGNATORIES IN THE TASKFORCE" names Anthropic and
+      OpenAI among twenty-five. The Vademecum is a Commission document and is the better
+      evidence of signature; the registry is retained for the "full signatory, no chapter
+      limitation" detail, which the Vademecum does not state. Held on 13 September 2026
+      after tools/validate.py refused a fact resting on the registry alone.
     establishes:
       - "OpenAI recorded as full signatory, no chapter limitation"
       - "Anthropic full signatory; xAI Safety and Security chapter only; Meta and DeepSeek absent"
@@ -526,6 +550,16 @@ sources:
       it is recorded rather than glossed for the same reason: two entries in the corrections
       log came from trusting a reproduction. WHAT WOULD SETTLE IT: the chapter as published
       by the California Legislative Information site, read by hand.
+    held_from: "2026-09-13"
+    documents:
+      - file: "Bill Text - SB-53 Artificial intelligence models: large developers..pdf"
+        sha256: "44ec750072c53ede0e6ef0b1d93e22242b140e1c3433b14d38755a42dd7a6d9c"
+    held_note: >-
+      The Legislature's own bill-text page, printed to PDF on 13 September 2026. The
+      pinpoints cited in the report and the comparative appendix were re-read against it:
+      "Catastrophic risk" is section 22757.11(c)(1), with the cyberattack and
+      evading-control limbs at (B) and (C); "Critical safety incident" is (d). Until this
+      date the provisions had been read in a published reproduction only.
     establishes:
       - >-
         Sec. 22757.11(c)(1): "Catastrophic risk" requires a foreseeable and material risk of
@@ -579,6 +613,10 @@ sources:
     title: "Technical guidance for submitting documents via EU SEND"
     url: "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"
     document_url: "https://ec.europa.eu/newsroom/dae/redirection/document/118672"
+    held_from: "2026-09-13"
+    documents:
+      - file: "Guidelines for providers of general-purpose AI models | Shaping Europe’s digital future.pdf"
+        sha256: "8382acb29f63190e966cc77425470259e65073c4e458f3650c9c20ff710017ee"
     establishes:
       - >-
         The only document the GPAI guidelines policy page now links is technical guidance
@@ -747,6 +785,10 @@ sources:
     retrieved: "2026-09-12"
     title: "Commission opinion on the assessment of the Code of Practice on Transparency of AI-generated Content"
     url: "https://digital-strategy.ec.europa.eu/en/library/commission-opinion-assessment-code-practice-transparency-ai-generated-content"
+    held_from: "2026-09-13"
+    documents:
+      - file: "Commission opinion on the assessment of the Code of Practice on Transparency of AI-generated Content | Shaping Europe’s digital future.pdf"
+        sha256: "533fe66af1cc0e0d55f2f7024db439d9c594145dc43e8446d72241d53fd4ed1d"
     establishes:
       - >-
         Cited only as a comparator, and a close one. The page states that “On July 8, the

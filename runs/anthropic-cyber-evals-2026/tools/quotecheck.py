@@ -80,7 +80,11 @@ ATTRIBUTION = (
     # The second run's record, held from 13 September 2026: the evaluation partner's own
     # account, and the press that pressed it.
     (r"\bIrregular\b", "Irregular"),
-    (r"The Record\b|Recorded Future", "The Record"),
+    # Held from 13 September 2026, when validate.py refused facts resting on them.
+    (r"SB[ -]?53|California", "SB-53"),
+    (r"\bAISI\b|AI Security Institute", "AISI"),
+    (r"signator|Vademecum|Taskforce", "Vademecum"),
+    (r"therecord\.media|Recorded Future|The Record from|The Record names|reports? from The Record", "The Record"),
     (r"TechCrunch|wiki incident", "TechCrunch"),
     (r"spokesperson|R[e\u00e9]gnier|IBTimes|confirmed receipt", "IBTimes"),
     (r"Von Arx|collusion\.wiki|the wiki’s public logs|message board", "message board"),

@@ -267,6 +267,19 @@ exceptions:
       The corrections log quoting this project's own superseded Appendix G, in the
       twenty-second entry. The held press report says less, which is the point of the entry.
 
+  - quote: "publicly disclosed by the affected party on 16 July 2026"
+    kind: own-words
+    why: >-
+      The adversarial review and the scope correction quoting this project's own earlier
+      draft, on lines that also mention California and so now attribute to the held SB 53
+      text. The words are in the git history, not in any source.
+
+  - quote: "expressly includes unauthorised access to or exfiltration of model weights"
+    kind: own-words
+    why: >-
+      The corrections log quoting the comparative appendix's own superseded paraphrase of
+      SB 53, which the seventeenth entry corrects. Own words, not the statute's.
+
   - quote: "Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen"
     kind: own-words
     why: >-

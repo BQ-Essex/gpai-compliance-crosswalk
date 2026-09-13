@@ -168,10 +168,12 @@ sources:
 
   - id: cop-signatories
     tier: T4
-    date: "2026-09-11"
-    title: "GPAI Code of Practice signatory registry"
-    url: "https://aiprovidertrust.com/questions/gpai-code-of-practice/"
-    retrieved: "2026-09-11"
-    held: false
+    date: "2026-09"
+    title: "Vademecum of the GPAI Signatory Taskforce (European Commission), with its list of participating Signatories"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Vademecum_of_the_GPAI_Signatory_Taskforce_xiRj4FsXdBT4ZqjBOMxxQHYoyM4_124170.pdf"
+        sha256: "7f8eb44bc0fecca9a1c40d4323ca531bcbc0be4dac69d1d4947b13b87788b189"
     establishes:
-      - "Anthropic recorded as a full signatory, no chapter limitation (as registered in the first run)"
+      - "The Commission's own list of participating Signatories in the Taskforce names Anthropic among twenty-five; the first run's third-party registry adds 'full signatory, no chapter limitation'"
