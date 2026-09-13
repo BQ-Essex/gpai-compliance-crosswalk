@@ -55,7 +55,7 @@ def load():
     provisions = yaml.safe_load((DATA / "provisions.yaml").read_text(encoding="utf-8"))
     sources = yaml.safe_load((DATA / "sources.yaml").read_text(encoding="utf-8"))
     known = set()
-    for key in ("provisions", "imported_provisions", "recitals"):
+    for key in ("provisions", "imported_provisions", "recitals", "case_law"):
         known |= {e["id"] for e in provisions.get(key, []) or []}
     known |= {s["id"] for s in sources.get("sources", []) or []}
     return inferences.get("inferences", []) or [], known

@@ -915,6 +915,116 @@ provisions:
     notes: >-
       Registered 12 September 2026, same reason as art92. Extract only.
 
+# Judgments of the Court of Justice. Added 13 September 2026, after an adversarial review
+# of the instrument cited five of them and this register marked the citations UNVERIFIED
+# on the reasoning that confabulated case law is a known failure of the tool that produced
+# them. That was a precaution standing in for a check that was available: EUR-Lex serves
+# every one of these, and all five proved accurate as to name, number, date, court AND
+# proposition. Recorded as the sixteenth error. Each entry below was read in the English
+# text on EUR-Lex at the CELEX number given, and quotes the paragraph it is cited for.
+case_law:
+  - id: case-orkem
+    cite: "Orkem v Commission, Case 374/87"
+    celex: "61987CJ0374"
+    court: "Court of Justice of the European Communities"
+    date: "1989-10-18"
+    verified: "2026-09-13, EUR-Lex English text"
+    holding_relied_on: >-
+      Para. 34: the Commission "is entitled, in order to preserve the useful effect of
+      Article 11(2) and (5) of Regulation No 17, to compel an undertaking to provide all
+      necessary information concerning such facts as may be known to it and to disclose to
+      it, if necessary, such documents relating thereto as are in its possession, even if
+      the latter may be used to establish, against it or another undertaking, the existence
+      of anti-competitive conduct". Para. 35: the Commission "may not compel an undertaking
+      to provide it with answers which might involve an admission on its part of the
+      existence of an infringement which it is incumbent upon the Commission to prove".
+      Para. 41 concludes that requiring acknowledgment of an infringement "undermined the
+      applicant's rights of defence".
+    bearing: >-
+      Cited in the instrument review for the proposition that requests compelling the
+      Provider's legal self-characterisation exceed what may be compelled. The line the
+      judgment draws is between FACTS AND DOCUMENTS, which may be compelled even where they
+      incriminate, and ADMISSIONS OF THE INFRINGEMENT, which may not. That is the line the
+      instrument now draws at the head of Part D. NOTE THE LIMIT OF THE ANALOGY: Orkem
+      concerns Regulation No 17 in competition procedure, not Article 91 of the AI Act, and
+      nothing here establishes that the Court would apply it identically to a request under
+      a different instrument. It is the governing principle on compelled admissions in
+      Union procedure; it is not a holding about this Regulation.
+
+  - id: case-ams
+    cite: "AM & S Europe Ltd v Commission, Case 155/79"
+    celex: "61979CJ0155"
+    court: "Court of Justice of the European Communities"
+    date: "1982-05-18"
+    verified: "2026-09-13, EUR-Lex English text"
+    holding_relied_on: >-
+      Para. 21: the laws of the Member States "protect, in similar circumstances, the
+      confidentiality of written communications between lawyer and client provided that, on
+      the one hand, such communications are made for the purposes and in the interests of
+      the client's rights of defence and, on the other hand, they emanate from independent
+      lawyers, that is to say, lawyers who are not bound to the client by a relationship of
+      employment."
+    bearing: >-
+      The source of the two-limb test for legal professional privilege in Union procedure:
+      rights of defence, and an INDEPENDENT lawyer.
+
+  - id: case-akzo
+    cite: "Akzo Nobel Chemicals Ltd and Akcros Chemicals Ltd v Commission, Case C-550/07 P"
+    celex: "62007CJ0550"
+    court: "Court of Justice of the European Union, Grand Chamber"
+    date: "2010-09-14"
+    verified: "2026-09-13, EUR-Lex English text"
+    holding_relied_on: >-
+      Para. 44: "the requirement of independence means the absence of any employment
+      relationship between the lawyer and his client, so that legal professional privilege
+      does not cover exchanges within a company or group with in-house lawyers." Para. 45:
+      an in-house lawyer "does not enjoy the same degree of independence from his employer
+      as a lawyer working in an external law firm does in relation to his client." The
+      appeal was dismissed in its entirety.
+    bearing: >-
+      THE REVIEW WAS LOOSE HERE AND THE JUDGMENT CORRECTS IT. The review cited AM&S and Akzo
+      together for the proposition that a request compelling records of legal consideration
+      reaches "exactly where external and in-house counsel's advice sits". Akzo holds the
+      opposite of the in-house half: privilege does NOT cover exchanges with in-house
+      lawyers. The consequence for the instrument runs the other way from the review's:
+      where the Provider's consideration of whether an episode was a serious incident was
+      done in-house, a privilege claim over that record fails on this authority.
+
+  - id: case-nilsson
+    cite: "Criminal proceedings against Gunnar Nilsson and others, Case C-162/97"
+    celex: "61997CJ0162"
+    court: "Court of Justice of the European Communities, Fifth Chamber"
+    date: "1998-11-19"
+    verified: "2026-09-13, EUR-Lex English text"
+    holding_relied_on: >-
+      Para. 54: "the preamble to a Community act has no binding legal force and cannot be
+      relied on as a ground for derogating from the actual provisions of the act in
+      question."
+    bearing: >-
+      The non-derogation principle this report invokes against ITS OWN scope conclusion.
+
+  - id: case-milch-kontor
+    cite: "Deutsches Milch-Kontor GmbH v Hauptzollamt Hamburg-Jonas, Case C-136/04"
+    celex: "62004CJ0136"
+    court: "Court of Justice of the European Union, Fifth Chamber"
+    date: "2005-11-24"
+    verified: "2026-09-13, EUR-Lex English text"
+    holding_relied_on: >-
+      Para. 32: "the preamble to a Community act has no binding legal force and cannot be
+      relied on either as a ground for derogating from the actual provisions of the act in
+      question OR FOR INTERPRETING THOSE PROVISIONS IN A MANNER CLEARLY CONTRARY TO THEIR
+      WORDING."
+    bearing: >-
+      The sharper of the two formulations, and the strongest verified authority against this
+      report's own scope finding. The second limb is the one that bites: Article 2(1), point
+      (a) gives models a placing-on-the-market trigger alone, and Recital 97 supplies a
+      deemed placement the enacting text does not. Whether that INTERPRETS the provision or
+      is CLEARLY CONTRARY to its wording is the question on which inf-attach turns, and this
+      judgment is what a challenge would be argued from. The report says the Commission's
+      reading governs enforcement and is open to challenge before the CJEU; this is the
+      authority that challenge would cite, and it is now cited by name rather than gestured
+      at as "the non-derogation principle".
+
 imported_provisions:
   - id: cer-2-1
     instrument: "CER"

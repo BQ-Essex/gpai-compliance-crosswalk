@@ -6,7 +6,25 @@ That is a weakness in this review and it is not a reason to discard it. What the
 
 **Two consequences follow, and both matter more than the ranking below.**
 
-*The case-law references in this review are unverified.* It cites *Orkem* (374/87), *AM&S* (155/79), *Akzo Nobel* (C-550/07), *Nilsson* (C-162/97) and *Deutsches Milch-Kontor* (C-136/04). **None has been read. None has been checked against a report.** Confabulated citations are a known failure of the tool that produced them, and this project’s own standard is that a source characterised without being opened is not a source. They are reproduced here because they are what the reviewer said, and they are marked unverified because that is what they are. What would settle them: reading each judgment. Until then, the propositions they are cited for should be treated as directions for a qualified reader to check, not as authority.
+*The case-law references in this review have now been read, and they hold.* An earlier version of this file marked them unverified and noted that confabulated citations are a known failure of the tool that produced them. That was a precaution standing in for a check that was available, and it is the sixteenth entry in the corrections log. All five were read in the English text on EUR-Lex on 13 September 2026 and every one is accurate as to name, number, date, court **and proposition**:
+
+| Cited as | Verified | Paragraph relied on |
+|---|---|---|
+| *Orkem v Commission*, 374/87 | CJ, 18 October 1989, CELEX 61987CJ0374 | ¶34 facts and documents may be compelled; **¶35** the Commission “may not compel an undertaking to provide it with answers which might involve an admission on its part of the existence of an infringement which it is incumbent upon the Commission to prove” |
+| *AM & S Europe v Commission*, 155/79 | CJ, 18 May 1982, CELEX 61979CJ0155 | ¶21 privilege requires communications for the rights of defence and emanating from “independent lawyers, that is to say, lawyers who are not bound to the client by a relationship of employment” |
+| *Akzo Nobel and Akcros v Commission*, C-550/07 P | CJ Grand Chamber, 14 September 2010, CELEX 62007CJ0550 | ¶44 privilege “does not cover exchanges within a company or group with in-house lawyers”; appeal dismissed in its entirety |
+| *Nilsson and others*, C-162/97 | CJ Fifth Chamber, 19 November 1998, CELEX 61997CJ0162 | ¶54 a preamble “has no binding legal force and cannot be relied on as a ground for derogating from the actual provisions of the act in question” |
+| *Deutsches Milch-Kontor*, C-136/04 | CJ Fifth Chamber, 24 November 2005, CELEX 62004CJ0136 | ¶32 the same, and adds “or for interpreting those provisions in a manner clearly contrary to their wording” |
+
+Each is now in `data/provisions.yaml` under `case_law`, with the paragraph quoted, and `quotecheck.py` checks quotations of them against those holdings.
+
+**Two things the reading changed, which marking them unverified would never have produced.**
+
+*The review was loose about Akzo, and the judgment cuts the other way.* It cited *AM & S* and *Akzo* together for the proposition that a request compelling records of legal consideration reaches “exactly where external and in-house counsel’s advice sits”. *Akzo* holds the opposite of the in-house half. The consequence for the instrument is the reverse of the one the review drew: where the Provider’s own consideration of whether an episode was a serious incident was done in-house, a privilege claim over that record fails on this authority. The instrument’s privilege clause now says so.
+
+*Deutsches Milch-Kontor is the strongest verified authority against this report’s own scope finding,* and it was sitting in a citation this file had dismissed. Its second limb—a preamble cannot be relied on “for interpreting those provisions in a manner clearly contrary to their wording”—is precisely the question Recital 97 raises, since Article 2(1), point (a) gives models a placing-on-the-market trigger alone. The report now cites it by name where it previously gestured at “the non-derogation principle”, and `inf-attach` rests its defeater on it.
+
+*One limit worth stating.* *Orkem* concerns Regulation No 17 in competition procedure, not Article 91 of this Regulation. It is the governing principle on compelled admissions in Union procedure; it is not a holding about the AI Act, and nothing here establishes that the Court would apply it identically to a request under a different instrument.
 
 *One of its assertions about the enacting text was simply wrong*, and was acted on before being checked—see defect 19 and the fourteenth entry in the corrections log. A review is evidence, not authority.
 

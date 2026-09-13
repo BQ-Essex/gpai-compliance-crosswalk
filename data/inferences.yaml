@@ -146,11 +146,16 @@ inferences:
       unavailable to a model carrying systemic risk.
     type: conclusion of law
     function: step
-    premises: [recital-97, art2-1a, art3-63, ec-gpai-guidelines, ec-gpai-qa]
+    premises: [recital-97, art2-1a, art3-63, ec-gpai-guidelines, ec-gpai-qa, case-nilsson, case-milch-kontor]
     depends_on: [inf-relocation, inf-product-oriented]
     defeater: >-
       A holding that a recital cannot supply a deeming rule the enacting definition
-      withholds. The non-derogation principle cuts this way and the report says so; the
+      withholds. The authority is now read rather than gestured at: Nilsson, C-162/97, para.
+      54, and in the sharper form Deutsches Milch-Kontor, C-136/04, para. 32 - a preamble
+      cannot be relied on "either as a ground for derogating from the actual provisions of
+      the act in question or for interpreting those provisions in a manner clearly contrary
+      to their wording". The second limb is what a challenge would be argued from, and this
+      inference is where it would land. The report says so; the
       Commission's reading governs enforcement but is open to challenge before the CJEU.
     strength: moderate
     load_bearing: true

@@ -177,3 +177,12 @@ exceptions:
       of these passages have since been changed or deleted in response to that review, so
       the words are in the repository's git history rather than in any current file, which
       is what a review record is for.
+
+  - quote: "exactly where external and in-house counsel"
+    kind: own-words
+    why: >-
+      docs/instrument-review.md quoting the review it reproduces, in the passage correcting
+      that review's loose statement about in-house privilege. The words are the reviewer's
+      and the reviewer is a language model, so there is no document to check them against;
+      what is checkable, and checked, is the Akzo Nobel holding that corrects them.
+

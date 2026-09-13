@@ -2,7 +2,7 @@
 """Check that every quotation in the prose appears in a document we actually hold.
 
 `citecheck.py` proves a citation resolves to verified text. It says nothing about the
-sentence around it. Eleven of the fifteen errors in this project's corrections log are the
+sentence around it. Eleven of the sixteen errors in this project's corrections log are the
 same failure and it is not a citation failure: a source was characterised, or quoted,
 without being opened. A recital was summarised from a mirror. A directive was read
 through a summary. A Commission opinion was described from its landing page. In each
@@ -66,6 +66,8 @@ ATTRIBUTION = (
     (r"\bCER\b|2022/2557", "32022L2557"),
     (r"Pistillo", "Internal-deployment"),
     (r"Omnibus|2026/1744", "32026R1744"),
+    (r"Nilsson|Milch-Kontor|Orkem|AM ?& ?S|Akzo|C-\d{2,3}/\d{2}|\b\d{3}/\d{2}\b",
+     "provisions.yaml"),
     (r"Draft Guidance|GUIDANCE PARA|Article 73 AI Act|119624", "Draft_Guidance_article_73"),
     (r"high-risk (?:form|template)|High-risk AI systems\)|119623|Section 1\.[23]",
      "Incident_report_for_serious_incidents"),
@@ -149,6 +151,12 @@ def register_text() -> dict:
         return {}
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     blocks = []
+    # Judgments are held the same way: quoted from the paragraph read on EUR-Lex, with a
+    # `verified` field saying when. A quotation from a judgment is checkable against that
+    # and nowhere else, since the judgments are not held as files.
+    case = [e.get("holding_relied_on", "") for e in (data.get("case_law") or [])]
+    if case:
+        blocks.extend(case)
     for key in ("provisions", "imported_provisions", "recitals"):
         for entry in data.get(key, []) or []:
             if entry.get("text"):

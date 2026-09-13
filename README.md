@@ -41,7 +41,7 @@ infercheck.py  ok    inference register: premises resolve, defeaters named, no c
 housestyle.py  ok    prose conventions, no repeated paragraph, no drifted count
 ```
 
-**What a green board does not mean** is the part worth reading, and `check.py` says it on every clean run. Every one of the fifteen errors in the corrections log passed every check that existed when it was made. These establish that citations resolve, that quotations are accurate, that verdicts stay in register and that absences are bounded. They cannot establish that a provision is the right one for the proposition, that an inference from two recitals is sound, or that a reading of a Commission opinion is the better of two available readings—which is where this analysis has actually gone wrong. Green is a floor, not a verdict.
+**What a green board does not mean** is the part worth reading, and `check.py` says it on every clean run. Every one of the sixteen errors in the corrections log passed every check that existed when it was made. These establish that citations resolve, that quotations are accurate, that verdicts stay in register and that absences are bounded. They cannot establish that a provision is the right one for the proposition, that an inference from two recitals is sound, or that a reading of a Commission opinion is the better of two available readings—which is where this analysis has actually gone wrong. Green is a floor, not a verdict.
 
 `tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library, plus two checks that are not about style at all. A **repeated paragraph** is what a revision pasted below its original looks like a day later. A **drifted count** is a number written in prose that the register underneath it has since outgrown: `nine errors` outliving a table of eleven, `twelve argumentative steps` outliving a register of seventeen. The canonical figure is always the register’s own length or the table’s own row count, never a sentence about it, and the sweep covers the tools’ docstrings as well as the prose, because four of the six stale counts were in docstrings and a checker that exempts itself is not a checker. The corrections log is exempt, and that exemption is the log’s whole purpose: every number in it is historical by construction.
 
@@ -108,13 +108,13 @@ The rows. Each separates **disclosed facts** from the **provider’s characteris
 
 It deliberately skips two things, and both exclusions are substantive. Citations qualified by an instrument the register does not hold—the Charter, the Californian and New York statutes—are not its to check. And a span of bare article numbers (“Articles 51 to 56”) names a body of provisions rather than a piece of text: the claim that Chapter V runs from 51 to 56 rests on Article 113, which is verified, not on the last article in the span, which nothing quotes.
 
-The **CER Directive is the exception, and it earned it**. The Act’s definition of ‘critical infrastructure’ resolves into it, and relying on an imported definition is still relying on text—two of the fifteen recorded errors came from reading a summary of that Directive rather than the Directive. So `imported_provisions` holds the verified CER text, citations qualified `CER` resolve against it, and prose that cites the Directive without saying which instrument it means is reported rather than waved through.
+The **CER Directive is the exception, and it earned it**. The Act’s definition of ‘critical infrastructure’ resolves into it, and relying on an imported definition is still relying on text—two of the sixteen recorded errors came from reading a summary of that Directive rather than the Directive. So `imported_provisions` holds the verified CER text, citations qualified `CER` resolve against it, and prose that cites the Directive without saying which instrument it means is reported rather than waved through.
 
 What it cannot do is check that a citation is *apposite*. A pinpoint that resolves to verified text can still be the wrong provision for the proposition. One failure mode is closed; the other is still a reader’s job.
 
 ## What the quotation checker checks
 
-`citecheck.py` proves a citation resolves. It says nothing about the sentence around it—and **eleven of the fifteen errors in this project’s corrections log are that failure**, not a citation failure. A recital summarised from a mirror. A directive read through a summary. A Commission opinion described from its landing page. Each time the citation was well-formed and the claim beside it was wrong.
+`citecheck.py` proves a citation resolves. It says nothing about the sentence around it—and **eleven of the sixteen errors in this project’s corrections log are that failure**, not a citation failure. A recital summarised from a mirror. A directive read through a summary. A Commission opinion described from its landing page. Each time the citation was well-formed and the claim beside it was wrong.
 
 `quotecheck.py` checks the claim. Every quoted span attributed to a document held in `_sources/` is looked for, verbatim, in that document. It tolerates what a PDF does to a sentence and nothing else: line-break hyphenation, quotation marks of any species, an editorial `[w]hen`, a footnote number extracted into the middle of a clause, a semicolon where our sentence ends in a full stop. It does not tolerate a different word.
 
@@ -132,7 +132,7 @@ The unattributable count is the honest part. Those are quotations of the inciden
 
 ## The inference register, and the one thing checkers cannot do
 
-Soundness is not a decidable property and no tool here will ever say an argument is good. But the reason this analysis’s fifteen errors survived was not that a script could not adjudicate them. It was that they sat in prose, where nobody was reading them as claims.
+Soundness is not a decidable property and no tool here will ever say an argument is good. But the reason this analysis’s sixteen errors survived was not that a script could not adjudicate them. It was that they sat in prose, where nobody was reading them as claims.
 
 `data/inferences.yaml` gives reasoning the treatment this repository already gives evidence and legal conclusions: its own cell, so the failure can be looked at. Eighteen argumentative steps, each stated so it could be denied, each resting on premises that must resolve to the register, each naming **what would defeat it**, and each ranked `strong`, `moderate` or `contestable` by its own author.
 
