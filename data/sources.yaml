@@ -444,6 +444,68 @@ sources:
       treats them as settled law. What they evidence is what the Commission asks for when
       it drafts a serious-incident form with the time to do it properly.
 
+  - id: us-ca-sb53
+    tier: T4
+    date: "2025-09-29"
+    retrieved: "2026-09-13"
+    title: "Transparency in Frontier Artificial Intelligence Act, California SB 53 (2025-2026 Regular Session), Business and Professions Code, Division 8, Chapter 25.1"
+    url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53"
+    reproduction_read: "https://law.justia.com/codes/california/code-bpc/division-8/chapter-25-1/"
+    provenance: reproduction
+    provenance_note: >-
+      NOT VERIFIED AGAINST THE OFFICIAL TEXT. The California Legislative Information site
+      disallows automated retrieval by robots.txt, so the subdivisions below were read on
+      13 September 2026 in a published reproduction of the codified chapter and not in the
+      enacted text. This is the same provenance class the CER extracts spent a day in, and
+      it is recorded rather than glossed for the same reason: two entries in the corrections
+      log came from trusting a reproduction. WHAT WOULD SETTLE IT: the chapter as published
+      by the California Legislative Information site, read by hand.
+    establishes:
+      - >-
+        Sec. 22757.11(c)(1): "Catastrophic risk" requires a foreseeable and material risk of
+        "the death of, or serious injury to, more than 50 people or more than one billion
+        dollars ($1,000,000,000) in damage to, or loss of, property arising from a single
+        incident", with limb (B) "Engaging in conduct with no meaningful human oversight,
+        intervention, or supervision that is either a cyberattack or, if the conduct had been
+        committed by a human, would constitute the crime of murder, assault, extortion, or
+        theft" and limb (C) "Evading the control of its frontier developer or user."
+      - >-
+        Sec. 22757.11(d)(1), AND THE QUALIFIER MATTERS: a critical safety incident includes
+        "Unauthorized access to, modification of, or exfiltration of, the model weights of a
+        frontier model THAT RESULTS IN DEATH OR BODILY INJURY". The weights limb is not
+        free-standing. On the facts of this incident it would not be engaged.
+      - >-
+        Sec. 22757.11(d)(4): a further limb for "A frontier model that uses deceptive
+        techniques against the frontier developer to subvert the controls or monitoring of
+        its frontier developer OUTSIDE OF THE CONTEXT OF AN EVALUATION DESIGNED TO ELICIT
+        THIS BEHAVIOR and in a manner that demonstrates materially increased catastrophic
+        risk." The July 2026 episode originated inside an evaluation.
+      - >-
+        Sec. 22757.11(i)(1): "Frontier model" means a foundation model trained using "a
+        quantity of computing power greater than 10^26 integer or floating-point operations",
+        and (i)(2) includes fine-tuning and other material modifications in that quantity -
+        which the EU threshold at Art. 51(2) does not spell out.
+      - >-
+        Sec. 22757.11(j): "Large frontier developer" means one whose affiliates collectively
+        had "annual gross revenues in excess of five hundred million dollars".
+      - >-
+        Sec. 22757.13(c)(1): a frontier developer "shall report any critical safety incident
+        ... within 15 days of DISCOVERING the critical safety incident", and (c)(2) adds a
+        24-HOUR tier where the incident "poses an imminent risk of death or serious physical
+        injury" - a tier this analysis had not recorded.
+      - >-
+        Sec. 22757.13(a)(4), WHICH BEARS DIRECTLY ON THIS REPORT'S SCOPE QUESTION: the
+        reporting mechanism must capture "Whether the incident was associated with INTERNAL
+        USE of a frontier model". California's form has a field for the thing the EU analysis
+        spends its first section establishing; the EU's has none.
+      - >-
+        Sec. 22757.13(a) lists what the mechanism must capture: the DATE OF THE INCIDENT, the
+        reasons it qualifies, a short and plain statement, and the internal-use flag. It does
+        NOT list a date of discovery, though (c)(1) runs the clock from discovery. The gap
+        this report finds in the Commission's template is therefore not peculiar to the EU,
+        which is worth saying because it makes the finding a pattern rather than a complaint
+        about one form.
+
   - id: ec-eu-send-guidance
     tier: T4
     date: "2026-04-28"

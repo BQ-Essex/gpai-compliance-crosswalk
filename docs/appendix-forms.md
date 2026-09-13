@@ -75,7 +75,7 @@ That is not a drafting nicety. Timeliness is the only part of Article 55(1), poi
 
 ## 5. The comparison that sharpens it
 
-California’s regime, analysed in [`comparative-regimes.md`](comparative-regimes.md), runs its 15-day clock from **discovering** a critical safety incident, and its definition expressly includes unauthorised access to or exfiltration of model weights. New York’s runs 72 hours from **a determination**. Article 55(1), point (c) sets no period at all, and the Code supplies one running from **awareness of the model’s involvement**.
+California’s regime, analysed in [`comparative-regimes.md`](comparative-regimes.md), runs its 15-day clock from **discovering** a critical safety incident, and its definition of a critical safety incident reaches unauthorised access to, modification of, or exfiltration of model weights—but only where that **results in death or bodily injury** (§22757.11(d)(1)). On this record it would not be engaged, and an earlier version of this appendix stated the limb without its qualifier. `comparative-regimes.md` had it right; this file had taken the point from memory of that file rather than from the text. New York’s runs 72 hours from **a determination**. Article 55(1), point (c) sets no period at all, and the Code supplies one running from **awareness of the model’s involvement**.
 
 Read against this form, the trigger matters more than the period—and the EU form is the one that omits the trigger from its own fields. A clock that starts on the provider’s awareness, evidenced in a form with no field for awareness, is a clock nobody outside can verify has started.
 
@@ -136,4 +136,16 @@ The high-risk form says “Manufacturer” once, where it says “provider” te
 The two only meet where the system is **high-risk**, which Article 75(1a) requires and which this record does not establish. That is the gap rather than a way out of it. A system that is not high-risk, carrying a model that is systemic-risk, is reported under the model regime alone: no statutory period, no classification, no awareness field, two pages.
 
 **So the recommendation has three depths.** Add the two dates, which costs the Commission nothing and is already drafted. Give the general-purpose form the structural fields the high-risk one has. Or extend the Article 73 guidance to Article 55(1), point (c)—which its own paragraph (4) says it is “not dealing with”, and which is where the divergence begins.
+
+---
+
+## 8. One more form, and it asks the question this report spends its first section on
+
+California’s reporting mechanism under §22757.13(a) must capture four things: the date of the incident, the reasons it qualifies, a short and plain statement of it, and—**§22757.13(a)(4)**—“whether the incident was associated with **internal use** of a frontier model”.
+
+The EU’s general-purpose template has no such field. Whether a model was in internal use is the question this report works through Recital 97, Article 2(8), Article 3, point (63) and two Commission documents to answer, and the Californian form simply asks it.
+
+**And the same gap appears there.** §22757.13(c)(1) runs its 15-day clock from **discovering** the incident; §22757.13(a) requires the mechanism to capture the date of the incident and does not list a date of discovery. So the defect at §3 above is not peculiar to the Commission. Two regimes, drafted independently, each set a clock running from the moment the developer knew and each built a form that does not record it. That makes the finding a pattern rather than a complaint about one document, and it makes the two-field recommendation portable.
+
+One tier this analysis had not recorded until now: §22757.13(c)(2) requires disclosure within **24 hours** where a critical safety incident “poses an imminent risk of death or serious physical injury”, to an appropriate authority rather than to the Office of Emergency Services. Neither episode here engages it.
 

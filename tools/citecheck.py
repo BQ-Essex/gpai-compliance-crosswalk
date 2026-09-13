@@ -25,7 +25,7 @@ an Act citation later in the same line.
 
 One instrument is an exception, and it earned it. The CER Directive is imported by the
 Act's own definition of 'critical infrastructure', and relying on an imported definition
-is still relying on text: two of the sixteen errors this analysis has recorded came from
+is still relying on text: two of the seventeen errors this analysis has recorded came from
 reading a summary of that Directive rather than the Directive. So `imported_provisions`
 in the register holds the CER text, citations qualified 'CER' resolve against it, and
 prose that cites the Directive without saying so is reported rather than waved through.
@@ -225,6 +225,25 @@ def gather(paths):
     return found
 
 
+# US state statute citations. This checker does not resolve them and never has: the
+# register holds Union text and the imported CER text, and nothing else. That exemption
+# used to be SILENT, which meant a clean run read the same whether a citation had been
+# checked or deliberately skipped. It is now counted and reported on every run, because
+# an invisible exemption is indistinguishable from coverage.
+FOREIGN_STATUTE = re.compile(r"\u00a7\s?\d{3,5}\.\d+[a-z0-9()]*", re.IGNORECASE)
+
+
+def foreign_census(paths):
+    """Where the US state citations are, and how many. Not a check - a declaration."""
+    sites = {}
+    for path in paths:
+        for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            for match in FOREIGN_STATUTE.finditer(line):
+                sites.setdefault(match.group(0).rstrip("()"), []).append(
+                    f"{path.relative_to(ROOT)}:{number}")
+    return sites
+
+
 def main(argv):
     quiet = "--quiet" in argv
     show_unused = "--unused" in argv
@@ -265,6 +284,21 @@ def main(argv):
                 f"Every statutory citation in {len(paths)} file(s) resolves to verified "
                 f"text. {len(found)} distinct citation(s) checked."
             )
+
+        foreign = foreign_census(paths)
+        if foreign:
+            total = sum(len(v) for v in foreign.values())
+            print(
+                f"\n{len(foreign)} US state statute citation(s), {total} occurrence(s), "
+                f"are OUTSIDE this checker's coverage and always have been.\nThe register "
+                f"holds Union text and the imported CER text; California and New York are "
+                f"read\nfrom secondary reproductions and are not verified here. See "
+                f"docs/comparative-regimes.md \u00a70.\nListed with --foreign."
+            )
+            if "--foreign" in sys.argv:
+                for ident in sorted(foreign):
+                    print(f"  {ident}  ({len(foreign[ident])}\u00d7)  "
+                          f"{', '.join(sorted(set(foreign[ident])))}")
 
         if show_unused and unused:
             print(f"\n{len(unused)} register entry/entries nothing cites:")

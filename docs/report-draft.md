@@ -56,7 +56,7 @@ Every verdict takes one of three forms: *on the provider’s own account, this a
 
 Statutory text was extracted from the EUR-Lex consolidated version (CELEX 02024R1689-20260727). Amendment status is taken from the amending act’s own numbered instructions; an earlier draft read it from the consolidated text’s change markers instead, which is how Article 60 came to be recorded as unamended when instruction (24) of Regulation (EU) 2026/1744 replaces part of it. Recitals were taken from the authentic Official Journal text, the consolidated version omitting them.
 
-Five of the sixteen errors in the corrections log were caught this way, by opening the primary document rather than a description of it: the CER Directive twice, the amending act, the Commission Opinion, and Article 52.
+Five of the seventeen errors in the corrections log were caught this way, by opening the primary document rather than a description of it: the CER Directive twice, the amending act, the Commission Opinion, and Article 52.
 
 An explainer source had flattened the irreversibility qualifier distinguishing Article 3(49) limb (b) from limb (d). A draft recorded Article 73(4) as “immediately” where the text reads “not later than 10 days”. A draft then rested its scope argument on Recital 115 while never consulting Articles 2(8) or 3(63), and a recital cannot derogate from enacting terms (*Nilsson* C‑162/97; *Manfredi* C‑308/97; *Tyson Parketthandel* C‑134/08). The correction to that produced a fourth error in the opposite direction—concluding the obligations did not attach, without consulting Recital 97, Article 2(1)(a), Article 3 points (9) to (11), or the Commission’s own guidance. §4.1 is the result of fixing it, and the same non-derogation principle is applied there against the conclusion it now supports.
 
@@ -236,7 +236,7 @@ The absence was checked against both published renditions. The Commission issues
 
 ### 4.8 Cross-jurisdictional check
 
-California’s SB 53 §22757.11(c)(1)(B)–(C) describes this conduct closely—“conduct with no meaningful human oversight… that is either a cyberattack” and “evading the control of its frontier developer”—and its magnitude floor of 50 deaths or $1bn excludes it (California, 2025). Its deception limb applies “outside evaluation contexts”. All three regimes condition the reporting clock on the regulated party’s own characterisation; New York pairs the shortest deadline, 72 hours, with the most gateable trigger (New York, 2025). Full table at Appendix B.
+California’s SB 53 §22757.11(c)(1)(B)–(C) describes this conduct closely—“conduct with no meaningful human oversight… that is either a cyberattack” and “Evading the control of its frontier developer or user”—and its magnitude floor of 50 deaths or $1bn excludes it (California, 2025). Its deception limb applies “outside evaluation contexts”. All three regimes condition the reporting clock on the regulated party’s own characterisation; New York pairs the shortest deadline, 72 hours, with the most gateable trigger (New York, 2025). Full table at Appendix B.
 
 ## 5. The instrument
 

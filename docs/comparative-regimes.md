@@ -1,6 +1,21 @@
 # Comparative Appendix: Three Regimes, Three Clocks
 *Same method, lower resolution, applied to California SB 53 and the New York RAISE Act. The purpose is to show the protocol transfers, and to surface where the regimes disagree—which is where regulatory attention is usually worth spending.*
 
+
+---
+
+## 0. Where this text comes from, before anything is compared
+
+Until 13 September 2026 this appendix cited nine provisions of California and New York law and **no source entry existed for either statute**. Not an unverified entry: none. A method whose third step is to tier every source by its relationship to the claim had a comparative appendix resting on citations with no address. It is the seventeenth entry in the corrections log.
+
+The California provisions are now registered at `us-ca-sb53` and were read on 13 September 2026 in a published reproduction of the codified chapter, because the California Legislative Information site disallows automated retrieval. **They are not verified against the enacted text**, and the register says so in the same words it used for the CER extracts that spent a day in that condition. What would settle it is the chapter as published by the Legislature, read by hand.
+
+Reading them corrected three things in this analysis and added two. The exfiltration-of-weights limb at §22757.11(d)(1) is qualified by “that results in death or bodily injury”, which an appendix elsewhere in this repository had dropped; “Evading the control of its frontier developer **or user**” had lost its last two words inside quotation marks; and the deception limb was quoted as applying “outside evaluation contexts”, which is a paraphrase, not the text. Added: a **24-hour** tier at §22757.13(c)(2) where an incident poses an imminent risk of death or serious physical injury, and §22757.13(a)(4), which requires the reporting mechanism to capture “whether the incident was associated with internal use of a frontier model”.
+
+**The New York RAISE Act is still unregistered.** Its provisions are described here without pinpoints and without a source, and nothing in this repository verifies them. That is stated rather than fixed, because stating it is honest and fixing it properly takes longer than the time remaining.
+
+`tools/citecheck.py` now counts US state citations on every run and says they are outside its coverage, so a clean board can no longer be mistaken for one that checked them.
+
 ---
 
 ## 1. Coverage thresholds: the EU catches models the US state regimes do not
@@ -42,7 +57,7 @@ The EU limb (d) has no numeric floor and asks only whether harm to property was 
 
 ### And a carve-out that runs directly against the EU’s interpretive position
 
-California’s deception limb applies to a model subverting developer controls **“outside evaluation contexts”**. The July 2026 intrusion originated *inside* an evaluation context.
+California’s deception limb applies to a model subverting developer controls **“outside of the context of an evaluation designed to elicit this behavior”**. The July 2026 intrusion originated *inside* an evaluation context.
 
 Set that beside **Recital 115** of the EU AI Act, which contemplates the reporting duty arising where **“the development or use of the model causes a serious incident”**, and Recital 114, which extends the evaluation obligations to testing prior to first placing on the market and across the entire model lifecycle.
 
