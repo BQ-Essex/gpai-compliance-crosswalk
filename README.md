@@ -41,7 +41,7 @@ The verification layer transfers; the judgement does not. The runbook:
 9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently. `tools/housestyle.py` checks the stated count against the table and sweeps every sentence that quotes it.
 10. **Run `python3 tools/check.py` after every change**, and read the last three lines of its output every time.
 
-A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred. What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
+A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred, what the change of incident produced, and the two errors the run made in its first hour. What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
 
 ---
 

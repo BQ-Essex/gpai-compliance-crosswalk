@@ -48,7 +48,7 @@ inferences:
       partner's.
     type: conclusion of law
     function: graded
-    premises: [art55-1c, art55-1d, art3-49, anthropic-evals-jul30, securityweek-irregular-aug17]
+    premises: [art55-1c, art55-1d, art3-49, anthropic-evals-jul30, irregular-aug14, openai-thirdparty-aug4]
     depends_on: []
     defeater: >-
       THE FIRST RUN PREDICTED THIS. Its register said that where the scaffolding is a
@@ -62,7 +62,14 @@ inferences:
       and its physical infrastructure, which does not stop being the provider's obligation
       because the infrastructure was rented. Where it does not reach: nothing in the
       enacting text says whose infrastructure counts, and a provider would say a partner's
-      network is not "the physical infrastructure of the model".
+      network is not "the physical infrastructure of the model". TWO FACTS FROM THE HELD
+      RECORD SHARPEN IT. In the fourth incident the component that failed - the abort
+      command - was "a misconfiguration in our evaluation harness", the provider's own,
+      inside the partner's environment; the objection cannot be run for that incident in
+      its pure form. And the same partner environment reached OpenAI's and Meta's models
+      as well as Anthropic's: one evaluator, three providers, three sets of Article 55(1)
+      obligations, and no obligation on the evaluator, which is a gap in the Act the first
+      run did not see because its scaffolding was the provider's own.
     strength: contestable
     load_bearing: true
     stated_at: "docs/run-report.md §3"
@@ -81,7 +88,10 @@ inferences:
       requires establishing which model, which the account dates no later than 24 July
       either; or a categorisation other than "a serious cybersecurity breach", which
       would lengthen the period to fifteen days (8 August). Either way the date the
-      Commission's form does not ask is, for once, public.
+      Commission's form does not ask is, for once, public. For the fourth incident the
+      date of awareness is "August", identified while assembling transcripts for METR, and
+      the disclosure is 9 September; a five-day period from any date in August had run
+      before disclosure, and whether a report to the AI Office preceded it is unknown.
     strength: strong
     load_bearing: true
     stated_at: "docs/run-report.md §3"

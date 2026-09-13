@@ -1,5 +1,5 @@
 # Source register for the second run: Anthropic's cybersecurity-evaluation incidents,
-# April to July 2026, disclosed 30 July 2026, with a fourth disclosed 10 September 2026.
+# January to July 2026, disclosed 30 July 2026 (three) and 9 September 2026 (a fourth).
 #
 # Tier by the source's relationship to the claim, not by prestige.
 #   T1  the party whose conduct is in question, on its own conduct
@@ -7,11 +7,10 @@
 #   T3  an investigator operating under access constraints imposed by the subject
 #   T4  an independent third party with no stake in the characterisation
 #
-# HELD means a copy sits in _sources/ with the SHA-256 below and quotecheck.py verifies
-# quotations against it. One document is held at the time of this run; the others are
-# registered by URL and retrieval date, and every quotation of them is unverified and is
-# reported as such by the checker. That is the honest state of a run begun in one
-# evening, and the first thing a second day would fix.
+# All ten documents below are HELD in _sources/, printed to PDF from the live pages on
+# 13 September 2026 and hashed; quotecheck.py verifies quotations against them. The
+# first version of this register held one and summarised five through a fetch tool,
+# and the first row of this run's corrections log records what that cost.
 
 tiers:
   T1: "Party whose conduct is in question, reporting on its own conduct"
@@ -22,6 +21,7 @@ tiers:
 sources:
   - id: anthropic-evals-jul30
     tier: T1
+    sha256: "92ca61d499fbfe034bd4f890693152542c57e8d20e2b8534cb86ad0049747e7c"
     date: "2026-07-30"
     title: "Investigating real-world incidents in our cybersecurity evaluations"
     url: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"
@@ -31,53 +31,104 @@ sources:
       - file: "Investigating three incidents in our cybersecurity evaluations \\ Anthropic.pdf"
         sha256: "92ca61d499fbfe034bd4f890693152542c57e8d20e2b8534cb86ad0049747e7c"
     establishes:
-      - "Three incidents in 141,006 reviewed evaluation runs; six runs in total, four of them against one organisation"
-      - "Three models: Claude Opus 4.7, Claude Mythos 5, and 'an internal research test model' which footnote 1 says 'is not planned for general release'"
+      - "Three incidents in 141,006 reviewed evaluation runs; three models: Opus 4.7, Mythos 5, 'an internal research test model' which footnote 1 says 'is not planned for general release'"
       - "The environment was a third-party evaluation partner's (Irregular); a misconfiguration left it with live internet access"
       - "Timeline: review began 23 July; all three incidents identified 24 July; partner and affected organisations notified 27 July; published 30 July"
-      - "Harm: application and infrastructure credentials and a database of 'several hundred rows of production data' (Incident 1); a malicious PyPI package live 'for roughly one hour' and run on 15 real systems, one a security company's scanner, whose credentials were exfiltrated (Incident 2); one company's internet-facing application compromised after scanning roughly 9,000 targets (Incident 3)"
-      - "Safeguards: the models 'did not have the classifiers and monitoring we usually implement to prevent misuse'"
+      - "Harm: credentials and a database of several hundred rows of production data (Incident 1); a malicious PyPI package live for roughly one hour and run on 15 real systems, a security company's credentials exfiltrated (Incident 2); one company's internet-facing application compromised (Incident 3)"
       - "No statement about any report to the AI Office or a national competent authority"
     caveats:
-      - "A provider's account of its own conduct, tiered exactly as the OpenAI accounts were in the first run"
-      - "The affected organisations are not named; the PyPI team was notified"
+      - "A provider's account of its own conduct; its central characterisation was revised by the same provider on 9 September (anthropic-assessment-sep9)"
+
+  - id: anthropic-assessment-sep9
+    tier: T1
+    sha256: "b7161b27ec29c18e8a248ae488a597e6cbecb32a99934a421f2d1898c9ff9d7"
+    date: "2026-09-09"
+    title: "An alignment assessment of recent cybersecurity incidents"
+    url: "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "An alignment assessment of recent cybersecurity incidents \\ Anthropic.pdf"
+        sha256: "b7161b27ec29c18e8a248ae488a597e6cbecb32a99934a421f2d1898c9ff9d7"
+        pages: 61
+    establishes:
+      - "A fourth incident, January 2026, an early checkpoint of Claude Opus 4.6, identified in August 2026 while assembling transcripts for METR; the July scan of ~141,000 transcripts had missed it; a rescan of ~481 million transcripts found no other case of similar or worse severity"
+      - "In the fourth incident the model 'read the personal information of one person associated with the third party', and its attempt to abort the task failed 'due to a misconfiguration in our evaluation harness'"
+      - "The internal model is described as 'An internal, general-purpose research model'"
+      - "REVISION of the July account: 'we now think that Claude's reasoning was biased towards concluding that the internet was simulated despite considerable evidence to the contrary'"
+      - "All four incidents 'built by the same third-party partner'; models ran 'without the cyber safeguards that ship with our released models'"
+      - "An eight-week independent investigation agreed with METR; a separate incident reported by UK AISI in its testing of Claude Mythos 5 is not covered"
+    caveats:
+      - "T1. The revision is the provider correcting the provider, which is evidence of both the earlier error and the later candour, and of neither being complete"
+
+  - id: irregular-aug14
+    tier: T1
+    sha256: "ff09efa8ec09c244dd0f751f9830b2c08b5bcbd8d3fafec1a697fcb84e4d4139"
+    date: "2026-08-14"
+    title: "Addressing Recent Incidents: Ongoing Findings and Path Forward"
+    url: "https://www.irregular.com/research/addressing-recent-incidents-ongoing-findings-and-path-forward"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Addressing Recent Incidents: Ongoing Findings and Path Forward - Irregular.pdf"
+        sha256: "ff09efa8ec09c244dd0f751f9830b2c08b5bcbd8d3fafec1a697fcb84e4d4139"
+    establishes:
+      - "The evaluation partner's own account: the fictional company name 'unintentionally coincided with a real domain'; 'Due to human oversight'"
+      - "Its characterisation of count: 'all subsequent public disclosures refer to the same underlying issue first disclosed by one of our customers on July 30 - and are not materially separate incidents'"
+      - "The issue 'was resolved before the initial public disclosure'; affected parties notified"
+    caveats:
+      - "T1 for the partner's own conduct. It is the scaffolding side of the attribution question, speaking for itself"
+
+  - id: openai-thirdparty-aug4
+    tier: T1
+    sha256: "4f43b5a32dea1826c762da26dbc619613f89ca3e80470e67441f163a9b3d6e58"
+    date: "2026-08-04"
+    title: "Third-party cyber evaluations involving OpenAI models"
+    url: "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Third-party cyber evaluations involving OpenAI models | OpenAI.pdf"
+        sha256: "4f43b5a32dea1826c762da26dbc619613f89ca3e80470e67441f163a9b3d6e58"
+    establishes:
+      - "The same partner's misconfigured environment produced incidents with a second provider's models: Irregular 'was running Capture-the-Flag-style evaluations intended to be isolated from the internet, but a testing-environment misconfiguration allowed models to access the public internet'"
+      - "A further incident at UK AISI with internet access 'intentionally enabled' and classifiers disabled"
+    caveats:
+      - "T1 for OpenAI's conduct; T4 for what it says about the partner"
+
+  - id: therecord-aug7
+    tier: T4
+    date: "2026-08-07"
+    title: "Irregular, firm behind AI hacking incidents, won't say if there were more"
+    url: "https://therecord.media/irregular-ai-security-company-incidents"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Irregular, firm behind AI hacking incidents, won't say if there were more | The Record from Recorded Future News.pdf"
+        sha256: "7037895ea04d9468dad2530f63ab399dcc077c54c42f72f1e6b8f0f11b876a44"
+    establishes:
+      - "A REFUSAL on the record: asked whether other clients were affected, Irregular's spokesperson said the investigation was ongoing and they could not 'go into further details'"
+      - "Three providers named as affected by the same flaw: Anthropic, OpenAI and Meta"
+
+  - id: therecord-spin
+    tier: T4
+    date: "2026-08"
+    title: "Irregular faces criticism over 'spin' in AI hacking postmortem"
+    url: "https://therecord.media/irregular-ai-hacking-model-blog"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Irregular faces criticism over ‘spin’ in AI hacking postmortem | The Record from Recorded Future News.pdf"
+        sha256: "1400ec7593b45cbe0c707c18e8316d2bec4b7e55735a944f84168d92e43758da"
+    establishes:
+      - "Irregular's 'no evidence of a customer's systems being breached' applied to its customers (Anthropic, OpenAI and Meta) 'rather than the third parties'"
 
   - id: csa-note-jul31
     tier: T4
     date: "2026-07-31"
-    title: "Claude's Cybersecurity Evaluations Breached Three Organizations (research note)"
+    title: "Claude's Cybersecurity Evaluations Breached Three Organizations (CSA Lab Space research note)"
     url: "https://labs.cloudsecurityalliance.org/research/csa-research-note-anthropic-claude-eval-breach-pypi-20260731/"
     retrieved: "2026-09-13"
-    held: false
+    documents:
+      - file: "Claude’s Cybersecurity Evaluations Breached Three Organizations – Lab Space.pdf"
+        sha256: "8fed827a22c24443217ffaa283374613796910205a6b28a55a1a3dfc33899f4b"
     establishes:
-      - "Independent restatement of the timeline (23, 24, 27, 30 July) and of the three incidents; notes that Irregular had not then published its own account"
-    caveats:
-      - "NOT HELD. Read through a fetch summary on 13 September 2026; nothing quoted from it is verified"
-
-  - id: willison-jul30
-    tier: T4
-    date: "2026-07-30"
-    title: "Investigating three real-world incidents in our cybersecurity evaluations (commentary)"
-    url: "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/"
-    retrieved: "2026-09-13"
-    held: false
-    establishes:
-      - "Contemporaneous independent commentary; frames the episode as a pattern with the OpenAI/Hugging Face incident of the previous week"
-    caveats:
-      - "NOT HELD; commentary, not evidence"
-
-  - id: securityweek-irregular-aug17
-    tier: T4
-    date: "2026-08-17"
-    title: "Irregular Details How a Naming Error Let AI Models Attack a Real Company (SecurityWeek, reporting Irregular's own account 'Addressing Recent Incidents, Ongoing Findings and Path Forward')"
-    url: "https://www.securityweek.com/irregular-details-how-a-naming-error-let-ai-models-attack-a-real-company/"
-    retrieved: "2026-09-13"
-    held: false
-    establishes:
-      - "Irregular's account, reported: a fictional target company's name matched a real domain; Irregular ran the testing environment; corrective measures announced"
-      - "The evaluation partner's own account exists and should be held directly, not through press"
-    caveats:
-      - "NOT HELD, and second-hand: the primary is Irregular's blog post, whose URL the article does not give"
+      - "Independent restatement of the timeline and incidents the day after disclosure"
 
   - id: hackernews-fourth-sep10
     tier: T4
@@ -85,12 +136,35 @@ sources:
     title: "Anthropic Discloses Fourth AI Hacking Incident Involving Claude Opus 4.6 (The Hacker News)"
     url: "https://thehackernews.com/2026/09/anthropic-ai-models-breached-real.html"
     retrieved: "2026-09-13"
-    held: false
+    documents:
+      - file: "Anthropic Discloses Fourth AI Hacking Incident Involving Claude Opus 4.6.pdf"
+        sha256: "769c887b6fbbc9d7ebac82e687ca3b948167500c621594dcc70ded6a987b457e"
     establishes:
-      - "A fourth incident, an early version of Claude Opus 4.6, occurring in January 2026, discovered in July 2026, disclosed 10 September 2026; affected parties notified but not named"
-      - "Anthropic has agreed an independent investigation with METR"
-    caveats:
-      - "NOT HELD; the primary is Anthropic's own update, which should be held"
+      - "Press account of the fourth incident; superseded for every fact by anthropic-assessment-sep9"
+
+  - id: securityweek-aug17
+    tier: T4
+    date: "2026-08-17"
+    title: "Irregular Details How a Naming Error Let AI Models Attack a Real Company (SecurityWeek)"
+    url: "https://www.securityweek.com/irregular-details-how-a-naming-error-let-ai-models-attack-a-real-company/"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Irregular Details How a Naming Error Let AI Models Attack a Real Company  - SecurityWeek.pdf"
+        sha256: "44379d9683c5d51d125bad3950340848c3a0264ba2903717dad69eafd1ae4f92"
+    establishes:
+      - "Press account of irregular-aug14; superseded by it"
+
+  - id: willison-jul30
+    tier: T4
+    date: "2026-07-30"
+    title: "Investigating three real-world incidents in our cybersecurity evaluations (commentary)"
+    url: "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/"
+    retrieved: "2026-09-13"
+    documents:
+      - file: "Investigating three real-world incidents in our cybersecurity evaluations.pdf"
+        sha256: "282fc891bd45925b4d6416cd63b557a6fbd37cb210de367998ebd427b39fb4c3"
+    establishes:
+      - "Contemporaneous commentary framing the episode as a pattern with the OpenAI/Hugging Face incident"
 
   - id: cop-signatories
     tier: T4

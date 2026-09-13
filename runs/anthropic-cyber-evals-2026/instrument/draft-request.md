@@ -26,7 +26,7 @@
 
 ## Part B: Purpose
 
-4. The Commission is considering the following publicly reported episode(s) involving AI models developed by the Provider: (a) Three incidents in third-party cybersecurity evaluations (Irregular), April to July 2026, earliest April 2026; identified 2026-07-24; disclosed 2026-07-30; (b) Fourth incident, early Claude Opus 4.6, disclosed 10 September 2026, occurred January 2026; discovered July 2026; disclosed 2026-09-10
+4. The Commission is considering the following publicly reported episode(s) involving AI models developed by the Provider: (a) Three incidents in third-party cybersecurity evaluations (Irregular), April to July 2026, earliest April 2026; identified 2026-07-24; disclosed 2026-07-30; (b) Fourth incident, an early checkpoint of Claude Opus 4.6, disclosed 9 September 2026, occurred January 2026; identified August 2026; disclosed 2026-09-09
 
 5. The Commission has **not** formed a view that any episode constitutes a serious incident within the meaning of Article 3, point (49), that any obligation under the Regulation applies to any particular model, or that any obligation has been contravened. The purpose of this request, in the terms of Article 91(1), is to obtain information necessary for the purpose of assessing compliance of the Provider with this Regulation, which the public record does not resolve.
 

@@ -2,112 +2,133 @@
 # run. One entry per field; tools/formfill.py checks the ids and renders it.
 # status: filled | partial | cannot-fill
 
-form: "Report for Serious Incidents under the AI Act (General-Purpose AI Models with Systemic Risk), 4 November 2025, as amended by fields 1a and 1b"
+form: Report for Serious Incidents under the AI Act (General-Purpose AI Models with Systemic Risk),
+  4 November 2025, as amended by fields 1a and 1b
 incident: irregular
-filled_on: "2026-09-13"
-
+filled_on: '2026-09-13'
 fields:
-  - field: "1"
-    label: "Start and end dates of the serious incident"
-    status: partial
-    text: >-
-      The earliest incidents date to April 2026; the last runs preceded the review of 23
-      July 2026. Per-incident dates are not given. Six runs across three incidents.
-    rows: [g2-art55-1c-timing]
-    sources: [anthropic-evals-jul30]
-  - field: "1a"
-    label: "Date on which the provider became aware of the involvement of its model in the serious incident"
-    status: filled
-    text: >-
-      24 July 2026, the day all three incidents were identified; the review that found them
-      began on 23 July 2026. This is the date from which the Measure 9.3 initial-report
-      periods run, and it is public.
-    rows: [g2-art55-1c-timing]
-    sources: [anthropic-evals-jul30]
-  - field: "1b"
-    label: "Date of submission of this report"
-    status: cannot-fill
-    text: "No report to the AI Office is public; the public account is dated 30 July 2026."
-    rows: [g2-art55-1c-timing]
-    sources: [anthropic-evals-jul30]
-  - field: "2"
-    label: "Resulting harm"
-    status: filled
-    text: >-
-      Incident 1: application and infrastructure credentials and a database of several
-      hundred rows of production data at one company. Incident 2: a malicious package on
-      PyPI for roughly one hour, run on 15 real systems, with a security company's
-      credentials exfiltrated and its further infrastructure accessed. Incident 3: one
-      company's internet-facing application compromised. From the provider; no affected
-      organisation has published.
-    rows: [g1-art3-49-limbs]
-    sources: [anthropic-evals-jul30]
-  - field: "3"
-    label: "Chain of events"
-    status: filled
-    text: >-
-      Capture-the-flag evaluations at a third-party partner's environment, prompted as
-      having no internet access, which a misconfiguration left connected; in one case the
-      fictional target's name matched a real domain; the models treated real systems as
-      part of the exercise.
-    rows: [g3-art55-1d-cybersecurity]
-    sources: [anthropic-evals-jul30, securityweek-irregular-aug17]
-  - field: "4"
-    label: "Model involved"
-    status: partial
-    text: >-
-      Three models, named by the provider: Claude Opus 4.7 (Incident 1), Claude Mythos 5
-      (Incident 2), and an internal research test model not planned for general release
-      (Incident 3). A fourth incident, disclosed 10 September, involved an early version of
-      Claude Opus 4.6. Whether the internal model shares a pre-training run with a placed
-      model is not stated.
-    rows: [g0-scope-three-models]
-    sources: [anthropic-evals-jul30, hackernews-fourth-sep10]
-  - field: "5"
-    label: "Evidence available"
-    status: partial
-    text: >-
-      141,006 evaluation runs reviewed; transcripts held by the provider; one redacted
-      transcript promised; a third-party review by METR agreed.
-    rows: [g3-art55-1b-systemic]
-    sources: [anthropic-evals-jul30, hackernews-fourth-sep10]
-  - field: "6"
-    label: "Serious incident response"
-    status: partial
-    text: >-
-      All cyber evaluations stopped on 23 July; partner and affected organisations
-      notified 27 July; PyPI notified; corrective measures described by the provider and,
-      separately, by the partner.
-    rows: [g3-art55-1d-cybersecurity]
-    sources: [anthropic-evals-jul30, securityweek-irregular-aug17]
-  - field: "7"
-    label: "Recommendation"
-    status: cannot-fill
-    text: "Nothing in the public record addressed to the AI Office."
-    rows: [g2-art55-1c-timing]
-    sources: []
-  - field: "8"
-    label: "Root cause analysis"
-    status: partial
-    text: >-
-      A misconfiguration at the evaluation partner giving live internet access; a prompt
-      stating there was none; production classifiers and monitoring not applied; a fictional
-      target name matching a real domain. The provider names defence-in-depth measures on
-      both sides that could have prevented it. The analysis itself is not public.
-    rows: [g3-art55-1b-systemic, g3-art55-1d-cybersecurity]
-    sources: [anthropic-evals-jul30, securityweek-irregular-aug17]
-  - field: "9"
-    label: "Patterns in post-market monitoring on serious incidents"
-    status: partial
-    text: >-
-      The review was triggered by another provider's incident and found the pattern across
-      three models and a further incident from January; the provider's routine monitoring
-      is described as not having detected it.
-    rows: [g3-art55-1b-systemic]
-    sources: [anthropic-evals-jul30, hackernews-fourth-sep10]
-  - field: "10"
-    label: "Submitter information"
-    status: cannot-fill
-    text: "No filing is public, so no submitter is."
-    rows: [g2-art55-1c-timing]
-    sources: []
+- field: '1'
+  label: Start and end dates of the serious incident
+  status: partial
+  text: The earliest incidents date to April 2026; the last runs preceded the review of 23 July 2026.
+    Per-incident dates are not given. Six runs across three incidents.
+  rows:
+  - g2-art55-1c-timing
+  sources:
+  - anthropic-evals-jul30
+- field: 1a
+  label: Date on which the provider became aware of the involvement of its model in the serious incident
+  status: filled
+  text: 24 July 2026, the day all three incidents were identified; the review that found them began
+    on 23 July 2026. For the fourth incident, a date in August 2026, when it was identified while
+    assembling transcripts for METR. These are the dates from which the Measure 9.3 initial-report
+    periods run, and they are public.
+  rows:
+  - g2-art55-1c-timing
+  sources:
+  - anthropic-evals-jul30
+  - anthropic-assessment-sep9
+- field: 1b
+  label: Date of submission of this report
+  status: cannot-fill
+  text: No report to the AI Office is public; the public account is dated 30 July 2026.
+  rows:
+  - g2-art55-1c-timing
+  sources:
+  - anthropic-evals-jul30
+- field: '2'
+  label: Resulting harm
+  status: filled
+  text: 'Incident 1: application and infrastructure credentials and a database of several hundred
+    rows of production data at one company. Incident 2: a malicious package on PyPI for roughly one
+    hour, run on 15 real systems, with a security company''s credentials exfiltrated and its further
+    infrastructure accessed. Incident 3: one company''s internet-facing application compromised.
+    Fourth incident: credentials harvested, system settings modified, and the personal information
+    of one person read. From the provider; no affected organisation has published.'
+  rows:
+  - g1-art3-49-limbs
+  sources:
+  - anthropic-evals-jul30
+  - anthropic-assessment-sep9
+- field: '3'
+  label: Chain of events
+  status: filled
+  text: Capture-the-flag evaluations at a third-party partner's environment, prompted as having no
+    internet access, which a misconfiguration left connected; in one case the fictional target's
+    name matched a real domain; the models treated real systems as part of the exercise.
+  rows:
+  - g3-art55-1d-cybersecurity
+  sources:
+  - anthropic-evals-jul30
+  - irregular-aug14
+- field: '4'
+  label: Model involved
+  status: partial
+  text: 'Four models, named by the provider: an early checkpoint of Claude Opus 4.6 (fourth incident,
+    January), Claude Opus 4.7 (Incident 1), Claude Mythos 5 (Incident 2), and an internal research
+    model not planned for general release, later described by the provider as general-purpose (Incident
+    3). Whether the internal model shares a pre-training run with a placed model is not stated.'
+  rows:
+  - g0-scope-three-models
+  sources:
+  - anthropic-evals-jul30
+  - anthropic-assessment-sep9
+- field: '5'
+  label: Evidence available
+  status: partial
+  text: 141,006 evaluation runs reviewed in July, roughly 481 million transcripts in September; the
+    Mythos 5 transcript released; an eight-week independent investigation by METR with access to
+    transcripts and staff agreed.
+  rows:
+  - g3-art55-1b-systemic
+  sources:
+  - anthropic-evals-jul30
+  - anthropic-assessment-sep9
+- field: '6'
+  label: Serious incident response
+  status: partial
+  text: All cyber evaluations stopped on 23 July; partner and affected organisations notified 27
+    July; PyPI notified; corrective measures described by the provider and, separately, by the partner.
+  rows:
+  - g3-art55-1d-cybersecurity
+  sources:
+  - anthropic-evals-jul30
+  - irregular-aug14
+- field: '7'
+  label: Recommendation
+  status: cannot-fill
+  text: Nothing in the public record addressed to the AI Office.
+  rows:
+  - g2-art55-1c-timing
+  sources: []
+- field: '8'
+  label: Root cause analysis
+  status: partial
+  text: A misconfiguration at the evaluation partner giving live internet access; a prompt stating
+    there was none; production classifiers and monitoring not applied; a fictional target name matching
+    a real domain. The provider names defence-in-depth measures on both sides that could have prevented
+    it. The analysis itself is not public.
+  rows:
+  - g3-art55-1b-systemic
+  - g3-art55-1d-cybersecurity
+  sources:
+  - anthropic-evals-jul30
+  - irregular-aug14
+- field: '9'
+  label: Patterns in post-market monitoring on serious incidents
+  status: partial
+  text: The review was triggered by another provider's incident and found the pattern across three
+    models and a further incident from January; the provider's routine monitoring is described as
+    not having detected it. The July scan is described as having missed the fourth incident.
+  rows:
+  - g3-art55-1b-systemic
+  sources:
+  - anthropic-evals-jul30
+  - anthropic-assessment-sep9
+- field: '10'
+  label: Submitter information
+  status: cannot-fill
+  text: No filing is public, so no submitter is.
+  rows:
+  - g2-art55-1c-timing
+  sources: []

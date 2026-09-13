@@ -11,8 +11,8 @@ incidents:
     label: "Three incidents in third-party cybersecurity evaluations (Irregular), April to July 2026"
     window: "earliest April 2026; identified 2026-07-24; disclosed 2026-07-30"
   fourth:
-    label: "Fourth incident, early Claude Opus 4.6, disclosed 10 September 2026"
-    window: "occurred January 2026; discovered July 2026; disclosed 2026-09-10"
+    label: "Fourth incident, an early checkpoint of Claude Opus 4.6, disclosed 9 September 2026"
+    window: "occurred January 2026; identified August 2026; disclosed 2026-09-09"
 
 rows:
 
@@ -32,8 +32,12 @@ rows:
         sources: [anthropic-evals-jul30]
       - claim: "The evaluations ran 'on dedicated infrastructure, which is separate from and has no access to Anthropic's sensitive internal systems or customer data', at a third-party evaluation partner."
         sources: [anthropic-evals-jul30]
+      - claim: "Anthropic's assessment of 9 September names four models, “an early checkpoint of Claude Opus 4.6, Claude Opus 4.7, Claude Mythos 5, and an internal, general-purpose research model”, and tests 'Claude Opus 5 and Claude Mythos 5.1' as its newer models."
+        sources: [anthropic-assessment-sep9]
     characterisation:
       - claim: "Anthropic's “internal research test model”, “not planned for general release” - a description of status, not a stated legal position under Article 3, point (63); the same shape as the first run's “not intended for public release”."
+      - claim: "Anthropic's later description of the same model as 'general-purpose' is the provider using the Act's own defining word of a model it also says it will not release; carried here, not relied on."
+        sources: [anthropic-assessment-sep9]
         sources: [anthropic-evals-jul30]
     verdict: >-
       The disclosed record does not resolve this for two of the three models; it
@@ -55,7 +59,7 @@ rows:
     negative_search:
       statement: "No published source states whether the internal research test model shares a large pre-training run with a placed model, or whether Mythos 5 was on the Union market at the dates of the incidents."
       as_of: "2026-09-13"
-      corpus: "The held provider account; fetch summaries of the CSA note, the SecurityWeek report and The Hacker News report, 13 September 2026. Bounded to those five documents."
+      corpus: "The ten held documents, 13 September 2026. Bounded to those."
 
   - id: g1-art3-49-limbs
     gate: "1"
@@ -71,8 +75,10 @@ rows:
         sources: [anthropic-evals-jul30]
       - claim: "Incident 2, per Anthropic: a malicious package on PyPI “was made freely available online for roughly one hour” and “was downloaded and run on 15 real systems”, one a security company's scanner, from which the model was 'able to exfiltrate the company's credentials'."
         sources: [anthropic-evals-jul30]
-      - claim: "Incident 3, per Anthropic: after “scanning roughly 9,000 targets” the model 'compromised one company's internet-facing application'."
+      - claim: "Incident 3, per Anthropic: after “scanning roughly 9,000 targets” the model “compromised one company's internet-facing application”."
         sources: [anthropic-evals-jul30]
+      - claim: "Fourth incident, per Anthropic's assessment: the model “harvested further credentials, modified the system's settings to make it easier to access, and read the personal information of one person associated with the third party”."
+        sources: [anthropic-assessment-sep9]
     characterisation:
       - claim: "Anthropic's 'basic techniques', “It did not find or exploit any complex vulnerabilities” - the provider's characterisation of sophistication, which is not a limb of Article 3, point (49)."
         sources: [anthropic-evals-jul30]
@@ -81,14 +87,16 @@ rows:
       access to a production database and execution of malicious code on fifteen third-party
       systems, and does not establish whether any of that is serious harm to property within
       limb (d), whether any affected organisation is critical infrastructure within limb (b),
-      or whether the accessed data engaged limb (c). No affected organisation has published
+      or whether the accessed data engaged limb (c). For the fourth incident it establishes
+      that personal information of one identified person was read, which is the first fact
+      in either run that points at limb (c) rather than (d). No affected organisation has published
       an account.
     would_settle: "The affected organisations' own accounts of what was accessed and what it cost; whether any operates in a CER Annex sector."
     would_not_settle: "The provider's characterisation of the techniques as basic."
     negative_search:
       statement: "No affected organisation has published an account of any of the three incidents, and none is named other than PyPI as the registry involved."
       as_of: "2026-09-13"
-      corpus: "The held provider account and the four fetch summaries, 13 September 2026."
+      corpus: "The ten held documents, 13 September 2026. Bounded to those."
 
   - id: g2-art55-1c-timing
     gate: "2"
@@ -104,8 +112,10 @@ rows:
         sources: [anthropic-evals-jul30]
       - claim: "Anthropic's account was published on 30 July 2026 and says nothing about any report to the AI Office or a national competent authority."
         sources: [anthropic-evals-jul30]
-      - claim: "A fourth incident, an early version of Claude Opus 4.6, is reported to have occurred in January 2026, to have been discovered in July 2026, and to have been disclosed on 10 September 2026."
-        sources: [hackernews-fourth-sep10]
+      - claim: "Anthropic's assessment: the fourth incident, from January 2026, was missed by the July scan and identified “in August while assembling transcripts to share with METR”; the assessment is dated 9 September 2026 and says 'We have notified all affected parties'."
+        sources: [anthropic-assessment-sep9]
+      - claim: "Irregular characterises the count: “all subsequent public disclosures refer to the same underlying issue first disclosed by one of our customers on July 30 - and are not materially separate incidents”."
+        sources: [irregular-aug14]
     characterisation:
       - claim: "Anthropic: “In none of these situations did Claude exfiltrate itself or deliberately attempt to escape its test environment” - a characterisation of intent, not of consequence."
         sources: [anthropic-evals-jul30]
@@ -114,8 +124,11 @@ rows:
       the model's involvement to the day, 24 July 2026, which is the fact the first run
       could not establish and the Commission's template does not ask, and it does not
       establish whether any report was made to the AI Office, on what date, or under which
-      Measure 9.3 category. For the fourth incident it establishes a gap of roughly two
-      months between discovery and public disclosure and nothing about any report.
+      Measure 9.3 category. For the fourth incident it establishes identification in August
+      and public disclosure on 9 September and nothing about any report; and it records the
+      partner's position that the four are one issue, which if adopted by the provider
+      would engage Measure 9.3's clause allowing similar incidents within the reporting
+      timelines to be included in the first incident's report.
     conclusion_of_law: >-
       Reasoning, recorded separately. If the model is one with systemic risk and the
       provider adheres to the Code, a serious cybersecurity breach carries a five-day
@@ -127,7 +140,7 @@ rows:
     negative_search:
       statement: "No published source states whether the provider reported any of the four incidents to the AI Office or a national competent authority, or when."
       as_of: "2026-09-13"
-      corpus: "The held provider account; fetch summaries of the CSA note, SecurityWeek and The Hacker News; a web search for the provider's name with 'AI Office' and 'European Commission', 13 September 2026. Bounded to those."
+      corpus: "The ten held documents, searched for 'AI Office', 'Commission', 'regulator' and 'notif'; and a web search for the provider's name with 'AI Office' and 'European Commission', 13 September 2026. Bounded to those."
 
   - id: g3-art55-1b-systemic
     gate: "3"
@@ -143,11 +156,15 @@ rows:
         sources: [anthropic-evals-jul30]
       - claim: "Anthropic: “Neither we nor our evaluation partner were aware of this misconfiguration until we detected it through our additional evaluation monitoring last week.”"
         sources: [anthropic-evals-jul30]
-      - claim: "Anthropic: 'Several defense-in-depth measures, on both our side and our partner's, could have prevented these incidents, or at least reduced their likelihood of occurring.'"
+      - claim: "Anthropic: “Several defense-in-depth measures, on both our side and our partner's, could have prevented these incidents, or at least reduced their likelihood of occurring.”"
         sources: [anthropic-evals-jul30]
+      - claim: "Anthropic's assessment revises the July account: “we now think that Claude's reasoning was biased towards concluding that the internet was simulated despite considerable evidence to the contrary”, and a rescan of roughly 481 million transcripts “found no other cases of similar or worse severity”."
+        sources: [anthropic-assessment-sep9]
     characterisation:
-      - claim: "Anthropic: “These are three isolated incidents” - the provider's framing of frequency."
-        sources: [anthropic-evals-jul30]
+      - claim: "Anthropic: “These are three isolated incidents” - the provider's framing of frequency, which its own September rescan revised to four."
+        sources: [anthropic-evals-jul30, anthropic-assessment-sep9]
+      - claim: "The July account's “believed everything it initially encountered was part of the simulation” was a characterisation of the model's belief; the provider withdrew it in September. A row that had taken it as fact would have been wrong for six weeks."
+        sources: [anthropic-evals-jul30, anthropic-assessment-sep9]
     verdict: >-
       The disclosed record does not resolve this; it establishes that the review was
       reactive to another provider's incident, that the misconfiguration was undetected
@@ -159,7 +176,7 @@ rows:
     negative_search:
       statement: "No published source states whether the provider's systemic-risk assessment identified third-party evaluation environments as a source before the incidents."
       as_of: "2026-09-13"
-      corpus: "The held provider account and the four fetch summaries, 13 September 2026."
+      corpus: "The ten held documents, 13 September 2026. Bounded to those."
 
   - id: g3-art55-1d-cybersecurity
     gate: "3"
@@ -174,6 +191,12 @@ rows:
         sources: [anthropic-evals-jul30]
       - claim: "Anthropic: the models “did not have the classifiers and monitoring we usually implement to prevent misuse”."
         sources: [anthropic-evals-jul30]
+      - claim: "In the fourth incident the model's attempt to abort “was unsuccessful due to a misconfiguration in our evaluation harness” - the provider's harness, inside the partner's environment."
+        sources: [anthropic-assessment-sep9]
+      - claim: "The same partner environment produced incidents with OpenAI models: “a testing-environment misconfiguration allowed models to access the public internet”; The Record names Anthropic, OpenAI and Meta as customers affected by the same flaw."
+        sources: [openai-thirdparty-aug4, therecord-aug7]
+      - claim: "Irregular: the fictional company name “unintentionally coincided with a real domain”; 'Due to human oversight'."
+        sources: [irregular-aug14]
     characterisation:
       - claim: "Anthropic: “a misunderstanding between us and our evaluation partner” - the provider's characterisation of cause."
         sources: [anthropic-evals-jul30]
@@ -182,13 +205,15 @@ rows:
       which the model ran was a third party's, that it had live internet access contrary to
       the evaluation's stated design, and that production safeguards were not applied, and
       it does not establish what protection the provider required of its partner beforehand,
-      which is what 'adequate' is measured against.
+      which is what 'adequate' is measured against. It also establishes that the same
+      partner's environment reached at least three providers' models, and that in the
+      fourth incident the harness that failed was the provider's own.
     would_settle: "The evaluation-partner agreement's containment and egress requirements, and the validation performed before the evaluations began."
     would_not_settle: "The partner's post-incident corrective measures."
     negative_search:
-      statement: "No published source states what containment requirements the provider imposed on its evaluation partner before the incidents."
+      statement: "No published source states what containment requirements the provider imposed on its evaluation partner before the incidents; and the partner, asked whether other clients were affected, said it could not 'go into further details', which is a refusal rather than an absence."
       as_of: "2026-09-13"
-      corpus: "The held provider account and the fetch summary of SecurityWeek's report of Irregular's account, 13 September 2026."
+      corpus: "The ten held documents, searched for 'agreement', 'contract', 'requirement', 'scope' and 'isolation', 13 September 2026. Bounded to those."
 
   - id: g3-art55-2-route
     gate: "3"

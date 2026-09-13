@@ -15,3 +15,20 @@ exceptions:
       Held and present in the Anthropic account of 30 July 2026, page 2. The text layer
       renders "affected" as "a!ected", which breaks the match on the final sentence; the
       first two sentences match verbatim.
+
+  - quote: "where the scaffolding IS a third party's, Article 75(1), point (a) says so by its own terms and the objection keeps its full force"
+    kind: own-words
+    why: >-
+      The run report quoting the first run's inference register (inf-scaffolding-attribution
+      in the parent repository's data/inferences.yaml), not a source.
+
+  - quote: "a cross-walk run on a different incident should expect this to be the first thing a provider says."
+    kind: own-words
+    why: >-
+      The same register entry, quoted for the prediction it made.
+
+  - quote: "this appears met: the obligations attach"
+    kind: method-text
+    why: >-
+      The method document, copied unchanged from the first run, quoting a superseded verdict
+      cell of its own as an example of the failure the verdict discipline exists to catch.

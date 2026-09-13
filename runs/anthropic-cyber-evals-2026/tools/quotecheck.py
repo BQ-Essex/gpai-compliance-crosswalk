@@ -2,7 +2,7 @@
 """Check that every quotation in the prose appears in a document we actually hold.
 
 `citecheck.py` proves a citation resolves to verified text. It says nothing about the
-sentence around it. Nineteen of the twenty-five errors in this project's corrections log are the
+sentence around it. Most of the errors in the first project's corrections log are the
 same failure and it is not a citation failure: a source was characterised, or quoted,
 without being opened. A recital was summarised from a mirror. A directive was read
 through a summary. A Commission opinion was described from its landing page. In each
@@ -77,6 +77,10 @@ ATTRIBUTION = (
     (r"Hugging Face|technical timeline|the victim|\bT2\b", "Technical Timel"),
     (r"\bMETR\b|Redwood|\bHPIM\b|independent investigation", "METR"),
     (r"\bAnthropic\b", "Anthropic"),
+    # The second run's record, held from 13 September 2026: the evaluation partner's own
+    # account, and the press that pressed it.
+    (r"\bIrregular\b", "Irregular"),
+    (r"The Record\b|Recorded Future", "The Record"),
     (r"TechCrunch|wiki incident", "TechCrunch"),
     (r"spokesperson|R[e\u00e9]gnier|IBTimes|confirmed receipt", "IBTimes"),
     (r"Von Arx|collusion\.wiki|the wiki’s public logs|message board", "message board"),
