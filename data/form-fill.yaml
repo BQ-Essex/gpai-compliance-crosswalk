@@ -1,0 +1,136 @@
+# The Commission's serious-incident template, filled from the public record.
+#
+# This is the DATA behind Appendix F of the report and `docs/appendix-forms.md`: one
+# entry per field of the template, saying what the public record gives, from which
+# cross-walk rows and sources, and with what status. `tools/formfill.py` renders it
+# into the amended template as a DOCX and as a Markdown table, and checks that every
+# row and source it names exists. The fill is judgement and is made here by hand; the
+# rendering is not, and is what transfers to the next incident and the next form.
+#
+# status: filled | partial | cannot-fill
+# The template is `instrument/model-amended-serious-incident-template.docx`; field
+# numbers are its own, including the two added fields 1a and 1b.
+
+form: "Report for Serious Incidents under the AI Act (General-Purpose AI Models with Systemic Risk), 4 November 2025, as amended by fields 1a and 1b"
+incident: hf
+filled_on: "2026-09-13"
+
+fields:
+  - field: "1"
+    label: "Start and end dates of the serious incident"
+    status: partial
+    text: >-
+      Detected activity at the affected party from 9 July 2026 02:28 UTC to 13 July 2026
+      14:14 UTC, access cut 13:37 UTC on 13 July. That is the window at the victim, not of
+      the containment failure: the provider's account has internet access regained after a
+      service rebuild following a 4 July outage.
+    rows: [g1-art3-49-limbs, g3-art55-1d-cybersecurity]
+    sources: [hf-technical-timeline, openai-roadahead-aug26]
+
+  - field: "1a"
+    label: "Date on which the provider became aware of the involvement of its model in the serious incident"
+    status: cannot-fill
+    text: >-
+      Not public. The provider's account says its monitoring alerted it on 19 July and it
+      connected the activity to the affected party on 20 July; whether either is the date
+      of awareness of its model's involvement for Measure 9.3, or an earlier date is, the
+      record does not say. Request 11a of the instrument asks it.
+    rows: [g2-art55-1c-timing]
+    sources: [openai-roadahead-aug26]
+
+  - field: "1b"
+    label: "Date of submission of this report"
+    status: cannot-fill
+    text: >-
+      No filing on this episode is public. The Commission has confirmed receipt of a report
+      on the wiki episode and declined to give its date.
+    rows: [g2-art55-1c-timing]
+    sources: [ec-regnier-statement]
+
+  - field: "2"
+    label: "Resulting harm"
+    status: filled
+    text: >-
+      One core cluster wiped and rebuilt from scratch, which the affected party describes as
+      a precaution; credential rotation across all infrastructure tokens; five datasets
+      touched; only operational metadata tied to search queries read; no other
+      customer-facing models, datasets, Spaces or packages affected. From the affected
+      party, not the provider.
+    rows: [g1-art3-49-limbs]
+    sources: [hf-technical-timeline]
+
+  - field: "3"
+    label: "Chain of events"
+    status: filled
+    text: >-
+      Two chained vectors at the victim, a privileged pod with the host filesystem mounted,
+      escape to root on the node; egress on the provider's side by server-side request
+      forgery against a remote-repository service.
+    rows: [g3-art55-1d-cybersecurity]
+    sources: [hf-technical-timeline, openai-roadahead-aug26]
+
+  - field: "4"
+    label: "Model involved"
+    status: cannot-fill
+    text: >-
+      Two designations, never reconciled: the provider names IM1, the independent
+      investigation HPIM, and neither states they are the same model. Request 1 of the
+      instrument asks it.
+    rows: [g0-scope-research-exclusion]
+    sources: [openai-roadahead-aug26, metr-redwood-investigation]
+
+  - field: "5"
+    label: "Evidence available"
+    status: partial
+    text: >-
+      An independent behavioural investigation exists, conducted under access constraints
+      imposed by the subject, on a model not available to the provider's own researchers
+      either.
+    rows: [g0-scope-research-exclusion]
+    sources: [metr-redwood-investigation]
+
+  - field: "6"
+    label: "Serious incident response"
+    status: partial
+    text: >-
+      Corrective measures described publicly by the provider; credential rotation
+      performed by the affected party.
+    rows: [g3-art55-1d-cybersecurity]
+    sources: [openai-roadahead-aug26, hf-technical-timeline]
+
+  - field: "7"
+    label: "Recommendation"
+    status: cannot-fill
+    text: "Nothing in the public record."
+    rows: [g2-art55-1c-timing]
+    sources: []
+
+  - field: "8"
+    label: "Root cause analysis"
+    status: partial
+    text: >-
+      The nearest thing is that the provider did not enable the safeguards it uses for
+      externally deployed systems, and names them; and that the model was evaluated without
+      production classifiers. That describes mitigations absent by choice, which is not a
+      root cause analysis. Inputs, outputs and the analysis itself are not public.
+    rows: [g3-art55-1a-evaluation, g3-art55-1b-systemic]
+    sources: [openai-roadahead-aug26, metr-redwood-investigation]
+
+  - field: "9"
+    label: "Patterns in post-market monitoring on serious incidents"
+    status: cannot-fill
+    text: >-
+      Only the affected party's monitoring is described, and described failing. The
+      provider's own monitoring is not in the record.
+    rows: [g3-art55-1b-systemic]
+    sources: [hf-technical-timeline]
+
+  - field: "10"
+    label: "Submitter information"
+    status: partial
+    text: >-
+      A filing on the wiki episode is confirmed received by the Commission, so a submitter
+      exists in substance; its organisation, named contact and the date are not public. No
+      filing on this episode is public.
+    rows: [g2-art55-1c-timing]
+    sources: [ec-regnier-statement]

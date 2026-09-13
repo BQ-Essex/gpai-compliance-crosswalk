@@ -16,7 +16,7 @@ Exit code is the worst of the five, so this is the single thing to run before a 
 and the single thing to put in CI.
 
 WHAT A GREEN BOARD DOES NOT MEAN, which is the part worth reading. Every one of the
-twenty-four errors in this project's corrections log passed every check that existed when it
+twenty-five errors in this project's corrections log passed every check that existed when it
 was made. The checks establish that citations resolve, that quotations are accurate,
 that verdicts stay in register and that absences are bounded. They cannot establish
 that a provision is the right one for the proposition, that an inference from two

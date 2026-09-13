@@ -53,7 +53,7 @@ inferences:
   - id: inf-carveback-unreachable
     claim: >-
       Article 2(8)'s single carve-back cannot reach a general-purpose AI model, because
-      'testing in real world conditions' is defined at Article 3, point (57) by reference
+      'testing in real-world conditions' is defined at Article 3, point (57) by reference
       to an AI SYSTEM and the conditions it defers to are Article 57's national sandboxes
       and Article 60, which is confined on its face to HIGH-RISK AI SYSTEMS.
     type: textual

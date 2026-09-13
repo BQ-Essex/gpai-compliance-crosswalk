@@ -22,7 +22,8 @@ What it writes fresh:
     data/crosswalk.yaml            the openers, an empty `rows:` list and one commented
                                    template row carrying every field the checkers expect
     data/inferences.yaml           the schema and an empty `inferences:` list
-    data/unverifiable-quotations.yaml   the three permitted kinds and an empty list
+    data/unverifiable-quotations.yaml   the permitted kinds and an empty list
+    data/form-fill.yaml            the form-fill schema and an empty field list
     protocol/01-statutory-foundation.md a corrections log with no rows yet
     README.md                      a stub pointing at the runbook
 
@@ -109,6 +110,17 @@ INFERENCES = '''# The argumentative steps, enumerated. Each entry carries:
 inferences: []
 '''
 
+FORMFILL = '''# A regulator's template, filled from the public record, as data. One entry per field:
+#   field, label, status (filled | partial | cannot-fill), text, rows (cross-walk ids),
+#   sources (source ids). tools/formfill.py checks the ids and renders the fill.
+
+form: "[name and date of the template]"
+incident: "[incident key from crosswalk.yaml]"
+filled_on: "YYYY-MM-DD"
+
+fields: []
+'''
+
 UNVERIFIABLE = '''# Quotations this project cannot verify against a held document, each with a reason.
 # Kinds: own-words | source-unheld | method-text | extraction-artefact.
 
@@ -162,6 +174,7 @@ def main(argv: list[str]) -> int:
     (target / "data/crosswalk.yaml").write_text(CROSSWALK, encoding="utf-8")
     (target / "data/inferences.yaml").write_text(INFERENCES, encoding="utf-8")
     (target / "data/unverifiable-quotations.yaml").write_text(UNVERIFIABLE, encoding="utf-8")
+    (target / "data/form-fill.yaml").write_text(FORMFILL, encoding="utf-8")
     (target / "protocol/01-statutory-foundation.md").write_text(FOUNDATION, encoding="utf-8")
     (target / "README.md").write_text(README, encoding="utf-8")
     print(f"stood up {target}")

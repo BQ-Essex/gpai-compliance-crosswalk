@@ -33,3 +33,11 @@ jobs:
       - run: pip install pyyaml
       - name: python3 tools/check.py
         run: python3 tools/check.py --verbose
+      - name: the scaffold stands up clean
+        run: python3 tools/new-incident.py "$RUNNER_TEMP/next-incident"
+      - name: the statutory register matches itself
+        run: python3 tools/reverify.py --self
+      - name: the form fill resolves to rows and sources
+        run: python3 tools/formfill.py --check
+      - name: a request drafts from the cross-walk
+        run: python3 tools/draft-request.py --out "$RUNNER_TEMP/draft-request.md"

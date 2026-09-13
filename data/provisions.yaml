@@ -44,7 +44,7 @@ provisions:
     title: "Scope — who the Regulation binds"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       This Regulation applies to: (a) providers placing on the market or putting into
       service AI systems or placing on the market general-purpose AI models in the
@@ -66,7 +66,7 @@ provisions:
     title: "Scope — scientific research and development exclusion"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       This Regulation does not apply to AI systems or AI models, including their output,
       specifically developed and put into service for the sole purpose of scientific
@@ -81,6 +81,7 @@ provisions:
 
   - id: art2-8
     cite: "Article 2(8)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Scope — research, testing and development exclusion"
     amended_by_omnibus: false
     text: >-
@@ -95,6 +96,7 @@ provisions:
 
   - id: art3-1
     cite: "Article 3, point (1)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'AI system'"
     amended_by_omnibus: false
     text: >-
@@ -110,6 +112,7 @@ provisions:
 
   - id: art3-3
     cite: "Article 3, point (3)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'provider'"
     amended_by_omnibus: false
     text: >-
@@ -128,7 +131,7 @@ provisions:
     corroborated_by: >-
       Commission Guidelines C(2025) 7719 final, para. 47, which quotes this definition
       as applied to a general-purpose AI model.
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'placing on the market' means the first making available of an AI system or a
       general-purpose AI model on the Union market;
@@ -144,7 +147,7 @@ provisions:
     provenance: "consolidated"
     corroborated_by: >-
       Commission Guidelines C(2025) 7719 final, para. 47.
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'making available on the market' means the supply of an AI system or a
       general-purpose AI model for distribution or use on the Union market in the course
@@ -161,7 +164,7 @@ provisions:
     title: "Definition — 'putting into service'"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'putting into service' means the supply of an AI system for first use directly to
       the deployer or for own use in the Union for its intended purpose;
@@ -176,7 +179,7 @@ provisions:
     title: "Definition — 'AI Office'"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'AI Office' means the Commission's function of contributing to the implementation,
       monitoring and supervision of AI systems and general-purpose AI models, and AI
@@ -194,6 +197,7 @@ provisions:
 
   - id: art3-49
     cite: "Article 3, point (49)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'serious incident'"
     amended_by_omnibus: false
     text: >-
@@ -211,13 +215,14 @@ provisions:
 
   - id: art3-57
     cite: "Article 3, point (57)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'testing in real-world conditions'"
     amended_by_omnibus: false
     text: >-
       'testing in real-world conditions' means the temporary testing of an AI system for its
       intended purpose in real-world conditions outside a laboratory or otherwise simulated
       environment, with a view to gathering reliable and robust data and to assessing and
-      verifying the conformity of the AI system with the requirements of this Regulation, and
+      verifying the conformity of the AI system with the requirements of this Regulation and
       it does not qualify as placing the AI system on the market or putting it into service
       within the meaning of this Regulation, provided that all the conditions laid down in
       Article 57 or 60 are fulfilled;
@@ -227,6 +232,7 @@ provisions:
 
   - id: art3-62
     cite: "Article 3, point (62)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'critical infrastructure'"
     amended_by_omnibus: false
     text: >-
@@ -256,6 +262,7 @@ provisions:
 
   - id: art3-63
     cite: "Article 3, point (63)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Definition — 'general-purpose AI model'"
     amended_by_omnibus: false
     text: >-
@@ -275,7 +282,7 @@ provisions:
     title: "Definition — 'general-purpose AI system'"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'general-purpose AI system' means an AI system which is based on a general-purpose
       AI model and which has the capability to serve a variety of purposes, both for
@@ -306,7 +313,7 @@ provisions:
     title: "Criteria for the designation of general-purpose AI models with systemic risk"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       For the purpose of determining that a general-purpose AI model has capabilities or an
       impact equivalent to those set out in Article 51(1), point (a), the Commission shall
@@ -340,6 +347,7 @@ provisions:
 
   - id: art51
     cite: "Article 51"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Classification as GPAI model with systemic risk"
     amended_by_omnibus: false
     text: >-
@@ -360,6 +368,7 @@ provisions:
 
   - id: art52-1
     cite: "Article 52(1)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Procedure — notification duty"
     amended_by_omnibus: false
     text: >-
@@ -382,7 +391,7 @@ provisions:
     title: "Rebutting the systemic-risk presumption"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       The provider of a general-purpose AI model that meets the condition referred to in
       Article 51(1), point (a), may present, with its notification, sufficiently
@@ -403,7 +412,7 @@ provisions:
     title: "Rejection of the provider's arguments"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       Where the Commission concludes that the arguments submitted pursuant to paragraph 2
       are not sufficiently substantiated and the relevant provider was not able to
@@ -418,10 +427,11 @@ provisions:
 
   - id: art53-1a
     cite: "Article 53(1), point (a)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Technical documentation"
     amended_by_omnibus: false
     text: >-
-      Providers of general-purpose AI models shall: draw up and keep up-to-date the
+      Providers of general-purpose AI models shall: (a) draw up and keep up-to-date the
       technical documentation of the model, including its training and testing
       process and the results of its evaluation, which shall contain, at a minimum,
       the information set out in Annex XI for the purpose of providing it, upon
@@ -431,6 +441,7 @@ provisions:
 
   - id: art55-1a
     cite: "Article 55(1), point (a)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Model evaluation and documented adversarial testing"
     amended_by_omnibus: false
     text: >-
@@ -442,6 +453,7 @@ provisions:
 
   - id: art55-1b
     cite: "Article 55(1), point (b)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Systemic risk assessment at Union level"
     amended_by_omnibus: false
     text: >-
@@ -454,6 +466,7 @@ provisions:
 
   - id: art55-1c
     cite: "Article 55(1), point (c)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Serious incident tracking, documentation and reporting"
     amended_by_omnibus: false
     text: >-
@@ -468,6 +481,7 @@ provisions:
 
   - id: art55-1d
     cite: "Article 55(1), point (d)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Cybersecurity protection"
     amended_by_omnibus: false
     text: >-
@@ -479,6 +493,7 @@ provisions:
 
   - id: art55-2
     cite: "Article 55(2)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Compliance route — code of practice or alternative means"
     amended_by_omnibus: false
     text: >-
@@ -493,6 +508,7 @@ provisions:
 
   - id: art55-3
     cite: "Article 55(3)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Confidentiality"
     amended_by_omnibus: false
     text: >-
@@ -507,7 +523,7 @@ provisions:
     title: "Codes of practice"
     amended_by_omnibus: "True"
     provenance: "consolidated (extract)"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727 and the amending act CELEX 32026R1744, instruction (21)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       [Paragraph 6, as replaced by Regulation (EU) 2026/1744:] The Commission and the Board
       shall regularly monitor and evaluate the achievement of the objectives of the codes
@@ -540,7 +556,7 @@ provisions:
     title: "AI regulatory sandboxes"
     amended_by_omnibus: "True"
     provenance: "consolidated (extract)"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       [Paragraph 1, first sentence:] Member States shall ensure that their competent
       authorities establish at least one AI regulatory sandbox at national level, which
@@ -562,7 +578,7 @@ provisions:
     title: "Testing of high-risk AI systems in real world conditions outside AI regulatory sandboxes"
     amended_by_omnibus: "True"
     provenance: "consolidated (extract)"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727, and against the amending act CELEX 32026R1744, instruction (24)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       [Paragraph 1, first sentence:] Testing of high-risk AI systems in real world
       conditions outside AI regulatory sandboxes may be conducted by providers or
@@ -571,7 +587,7 @@ provisions:
     notes:
       - >-
         SHARPENS THE TEXTUAL READING. Article 2(8)'s single carve-back is 'testing in
-        real world conditions', defined at Art. 3, point (57) by reference to an AI
+        real-world conditions', defined at Art. 3, point (57) by reference to an AI
         SYSTEM and operationalised here for HIGH-RISK AI SYSTEMS alone. The carve-back
         has no purchase on a general-purpose AI model, so on the enacting text Art. 2(8)
         excludes pre-market model development without relevant exception.
@@ -600,7 +616,7 @@ provisions:
     title: "Scientific panel — composition and independence"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       The scientific panel shall consist of experts selected by the Commission on the
       basis of up-to-date scientific or technical expertise in the field of AI necessary
@@ -623,7 +639,7 @@ provisions:
     title: "Scientific panel — tasks"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       The scientific panel shall advise and support the AI Office, in particular with
       regard to the following tasks: (a) supporting the implementation and enforcement of
@@ -648,6 +664,7 @@ provisions:
 
   - id: art73
     cite: "Article 73"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Reporting of serious incidents (high-risk AI systems)"
     amended_by_omnibus: false
     text: >-
@@ -671,6 +688,7 @@ provisions:
 
   - id: art75-1
     cite: "Article 75(1)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Exclusive competence of the AI Office"
     amended_by_omnibus: "True"
     provenance: "consolidated"
@@ -698,6 +716,7 @@ provisions:
 
   - id: art75-1a
     cite: "Article 75(1a)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Derogation — AI Office as addressee for GPAI-based high-risk systems"
     amended_by_omnibus: true
     text: >-
@@ -720,7 +739,7 @@ provisions:
     title: "Supervisory and enforcement powers of the AI Office over own-model systems"
     amended_by_omnibus: true
     provenance: "consolidated"
-    verified: "2026-09-13 against CELEX 02024R1689-20260727; change marker ▼M1 read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       1. When exercising its tasks of supervision and enforcement laid down in Article
       75(1) of this Regulation, the AI Office shall have all the powers of a market
@@ -748,7 +767,7 @@ provisions:
     title: "Confidentiality"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       1. The Commission, market surveillance authorities and notified bodies and any
       other natural or legal person involved in the application of this Regulation shall,
@@ -780,7 +799,7 @@ provisions:
     title: "Enforcement of the obligations of providers of general-purpose AI models"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-13 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       1. The Commission shall have exclusive powers to supervise and enforce Chapter V,
       taking into account the procedural guarantees under Article 94. The Commission
@@ -798,7 +817,7 @@ provisions:
     title: "Scientific panel alerts of systemic risks"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       1. The scientific panel may provide a qualified alert to the AI Office where it has
       reason to suspect that: (a) a general-purpose AI model poses concrete identifiable
@@ -818,6 +837,7 @@ provisions:
 
   - id: art91
     cite: "Article 91"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Power to request documentation and information"
     amended_by_omnibus: false
     text: >-
@@ -853,7 +873,7 @@ provisions:
     title: "Fines for providers of general-purpose AI models — substantive infringement"
     amended_by_omnibus: "False"
     provenance: "consolidated"
-    verified: "2026-09-12 against CELEX 02024R1689-20260727; change marker read directly"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       The Commission may impose on providers of general-purpose AI models fines not
       exceeding 3 % of their annual total worldwide turnover in the preceding financial
@@ -886,6 +906,7 @@ provisions:
 
   - id: art101-1b
     cite: "Article 101(1), point (b)"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Fines — failure to comply with an Article 91 request"
     amended_by_omnibus: false
     text: >-
@@ -900,6 +921,7 @@ provisions:
 
   - id: art113
     cite: "Article 113"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Entry into force and application"
     amended_by_omnibus: true
     text: >-
@@ -925,6 +947,7 @@ provisions:
 # reader should have been able to tell all along.
   - id: art54
     cite: "Article 54"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Authorised representatives of providers of general-purpose AI models"
     amended_by_omnibus: false
     text: >-
@@ -938,6 +961,7 @@ provisions:
 
   - id: art92
     cite: "Article 92"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Power to conduct evaluations"
     amended_by_omnibus: false
     text: >-
@@ -952,6 +976,7 @@ provisions:
 
   - id: art93
     cite: "Article 93"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Power to request measures"
     amended_by_omnibus: false
     text: >-
@@ -963,6 +988,7 @@ provisions:
 
   - id: art6
     cite: "Article 6"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     title: "Classification rules for high-risk AI systems"
     amended_by_omnibus: true
     text: >-
@@ -1102,7 +1128,7 @@ imported_provisions:
     title: "Definition — 'critical entity'"
     source_celex: "32022L2557"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'critical entity' means a public or private entity which has been identified by a
       Member State in accordance with Article 6 as belonging to one of the categories set
@@ -1118,7 +1144,7 @@ imported_provisions:
     title: "Definition — 'critical infrastructure'"
     source_celex: "32022L2557"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'critical infrastructure' means an asset, a facility, equipment, a network or a
       system, or a part of an asset, a facility, equipment, a network or a system, which
@@ -1134,7 +1160,7 @@ imported_provisions:
     title: "Definition — 'essential service'"
     source_celex: "32022L2557"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       'essential service' means a service which is crucial for the maintenance of vital
       societal functions, economic activities, public health and safety, or the
@@ -1151,7 +1177,7 @@ imported_provisions:
     title: "Risk assessment by Member States — the list of essential services"
     source_celex: "32022L2557"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       The Commission is empowered to adopt a delegated act, in accordance with Article 23,
       by 17 November 2023 to supplement this Directive by establishing a non-exhaustive
@@ -1202,7 +1228,7 @@ imported_provisions:
     title: "Annex — digital infrastructure: categories of entities"
     source_celex: "32022L2557"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against OJ L 333, 27.12.2022"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       [Third column, headed 'Categories of entities', sector 8 'Digital infrastructure':]
       Providers of internet exchange points as defined in Article 6, point (18), of
@@ -1210,10 +1236,11 @@ imported_provisions:
       of Directive (EU) 2022/2555, excluding operators of root name servers;
       top-level-domain name registries as defined in Article 6, point (21), of Directive
       (EU) 2022/2555; Providers of cloud computing services as defined in Article 6, point
-      (30); Providers of data centre services as defined in Article 6, point (31);
-      Providers of content delivery networks as defined in Article 6, point (32); Trust
+      (30), of Directive (EU) 2022/2555; Providers of data centre services as defined in
+      Article 6, point (31), of Directive (EU) 2022/2555; Providers of content delivery
+      networks as defined in Article 6, point (32), of Directive (EU) 2022/2555; Trust
       service providers as defined in Article 3, point (19), of Regulation (EU) No
-      910/2014; Providers of public electronic communications networks as defined in
+      910/2014 [...]; Providers of public electronic communications networks as defined in
       Article 2, point (8) [...]
     notes:
       - >-
@@ -1226,7 +1253,7 @@ recitals:
     cite: "Recital 25"
     source_celex: "32024R1689"
     provenance: "authentic OJ"
-    verified: "2026-09-12 against CELEX 32024R1689"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     text: >-
       This Regulation should support innovation, should respect freedom of science, and
       should not undermine research and development activity. It is therefore necessary to
@@ -1265,6 +1292,7 @@ recitals:
 
   - id: recital-97
     cite: "Recital 97"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     source_celex: "32024R1689"
     text: >-
       [...] It should be understood that the obligations for the providers of
@@ -1308,6 +1336,7 @@ recitals:
 
   - id: recital-114
     cite: "Recital 114"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     source_celex: "32024R1689"
     text: >-
       [...] this Regulation should require providers to perform the necessary model
@@ -1322,6 +1351,7 @@ recitals:
 
   - id: recital-115
     cite: "Recital 115"
+    verified: "2026-09-13 by tools/reverify.py against CELEX_02024R1689-20260727_EN_TXT.pdf, CELEX%3A32024R1689%3AEN%3ATXT.pdf, CELEX%3A32022L2557%3AEN%3ATXT-2.pdf"
     source_celex: "32024R1689"
     text: >-
       [...] If, despite efforts to identify and prevent risks related to a
