@@ -408,8 +408,15 @@ def main():
     args = [a for a in sys.argv[1:] if a != "--fix"]
     fix = "--fix" in sys.argv
 
-    if not args:
+    # Every other tool here prints its docstring for --help or no arguments. This one
+    # treated an unrecognised flag as a filename and handed a stranger a stack trace,
+    # which is a poor first impression from the tool that checks the prose.
+    if not args or {"--help", "-h"} & set(args):
         sys.exit(__doc__)
+    unknown = [a for a in args if a.startswith("-")]
+    if unknown:
+        sys.exit(f"{__doc__}\nNot a flag this understands: {', '.join(unknown)}. "
+                 f"It takes file paths, and --fix.")
 
     # Not a generator: every file should be reported on, not just those up to the
     # first failure.
