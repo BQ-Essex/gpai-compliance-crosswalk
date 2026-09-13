@@ -1,8 +1,16 @@
 # Adversarial review of the instrument
 
-12 September 2026. A reviewer was given the draft Article 91 request and the verified text of Article 91, told to read it as a senior lawyer in the AI Office deciding whether to sign it, and told not to praise it. It had not seen the report, the method, or the reasoning that produced the draft.
+**What this is, stated before anything else, because an earlier version of this file did not state it and a commit message described it as a lawyer.** This review was produced by a **language model**, prompted to read the draft as a senior lawyer in the AI Office deciding whether to sign it. **No lawyer was consulted. Nobody real was contacted.** The reviewer has no legal training, no professional accountability, and no standing. It is recorded as the fifteenth entry in the corrections log at `protocol/01-statutory-foundation.md`.
 
-**Its answer to the only question that matters—could you issue this with light edits—was no.** It is reproduced below as received, ranked as it ranked things, because a review kept only in summary is a review nobody can check. What has been fixed since is marked in the log at `protocol/01-statutory-foundation.md`.
+That is a weakness in this review and it is not a reason to discard it. What the exercise actually is: a second model, given the draft and the verified text of Article 91 and nothing else—not the report, not the method, not the reasoning that produced the draft—and told to find defects and not to praise. That is worth something, and the evidence that it is worth something is that the defects it found were checkable against the text and several of them held. It is worth nothing as an opinion on European law from a qualified person, and this analysis does not offer it as one.
+
+**Two consequences follow, and both matter more than the ranking below.**
+
+*The case-law references in this review are unverified.* It cites *Orkem* (374/87), *AM&S* (155/79), *Akzo Nobel* (C-550/07), *Nilsson* (C-162/97) and *Deutsches Milch-Kontor* (C-136/04). **None has been read. None has been checked against a report.** Confabulated citations are a known failure of the tool that produced them, and this project’s own standard is that a source characterised without being opened is not a source. They are reproduced here because they are what the reviewer said, and they are marked unverified because that is what they are. What would settle them: reading each judgment. Until then, the propositions they are cited for should be treated as directions for a qualified reader to check, not as authority.
+
+*One of its assertions about the enacting text was simply wrong*, and was acted on before being checked—see defect 19 and the fourteenth entry in the corrections log. A review is evidence, not authority.
+
+**Its answer to the only question that matters—could you issue this with light edits—was no.** The review is reproduced below as received and ranked as it ranked things, because a review kept only in summary is a review nobody can check. What has been fixed since is marked in the log.
 
 ---
 
