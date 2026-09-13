@@ -22,6 +22,16 @@ tiers:
 sources:
   - id: openai-disclosure-jul21
     tier: T1
+    document: "OpenAI and Hugging Face partner to address security incident during model evaluation | OpenAI.pdf"
+    sha256: "268735d0deb10474fa2215b38874868f1b5cc66d8c79f0342c242fa35bd4c1fb"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-07-21"
     title: "OpenAI and Hugging Face partner to address security incident during model evaluation"
     url: "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
@@ -34,6 +44,16 @@ sources:
 
   - id: openai-roadahead-aug26
     tier: T1
+    document: "The Hugging Face incident and the road ahead | OpenAI.pdf"
+    sha256: "97b2707f365b7e34bd90e4c21ecf176490615b5633f0317cb08919dcc127b5b5"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-08-26"
     title: "The Hugging Face incident and the road ahead"
     url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
@@ -63,6 +83,16 @@ sources:
 
   - id: openai-wiki-ack-sep5
     tier: T1
+    document: "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure | TechCrunch.pdf"
+    sha256: "064f9174976ad7bcbe25ba7de28309a12047050db256b039d9437faad6a6384f"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-09-05"
     title: "OpenAI public acknowledgment of the wiki incident"
     url: "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/"
@@ -78,6 +108,16 @@ sources:
 
   - id: hf-technical-timeline
     tier: T2
+    document: "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident.pdf"
+    sha256: "2076e18a79fef57bddbb1b5c1df21b94f201ec52d88d8257e84e71f10a40df2b"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-07-27"
     title: "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident"
     url: "https://huggingface.co/blog/agent-intrusion-technical-timeline"
@@ -100,6 +140,16 @@ sources:
 
   - id: metr-redwood-investigation
     tier: T3
+    document: "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI : Hugging Face hacking incident - METR.pdf"
+    sha256: "8b114598caf303e67c08fa9db6f8a6b455017238bc88331d6e7df50b3d9fc7af"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-08-26"
     title: "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident"
     url: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
@@ -237,6 +287,16 @@ sources:
 
   - id: anthropic-evals
     tier: T1
+    document: "Investigating three incidents in our cybersecurity evaluations \ Anthropic.pdf"
+    sha256: "92ca61d499fbfe034bd4f890693152542c57e8d20e2b8534cb86ad0049747e7c"
+    held_from: "2026-09-13"
+    held_note: >-
+      Printed from the archived capture on 13 September 2026 and held from that date.
+      Until then this source was cited and quoted and verified against nothing, which
+      made the evidentiary core the least checked material in the project while every
+      statutory quotation was verified against primary text. Holding the six incident
+      documents took quotecheck.py from 166 to 187 attributed quotations and produced
+      two real defects and one new class of exception.
     date: "2026-07-30"
     title: "Investigating real-world incidents in our cybersecurity evaluations"
     url: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"

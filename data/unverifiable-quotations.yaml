@@ -16,6 +16,15 @@
 #                  record, a foreign statute. Verifiable only by following the citation.
 #   method-text    the method's own language, such as the three permitted verdict
 #                  openers, quoted as a form of words rather than from anywhere.
+#   extraction-    the document IS held and the quotation IS in it, but the PDF's text
+#   artefact       layer mangles the passage: a dropped syllable, a link glyph, a sidebar
+#                  headline interleaved into a sentence by a two-column print. Added
+#                  13 September 2026, when the incident record was first held as files.
+#                  The header above says a fourth kind appearing is a sign the analysis is
+#                  quoting things it has not read. This one is the opposite: it appeared
+#                  the day the analysis started reading things it had only cited. Each
+#                  entry below records the mangled string, so the claim is checkable
+#                  rather than asserted.
 #
 # Every entry needs `quote`, `kind` and `why`. quotecheck.py matches on a normalised
 # prefix, so an entry survives light editing of the surrounding sentence.
@@ -185,4 +194,54 @@ exceptions:
       that review's loose statement about in-house privilege. The words are the reviewer's
       and the reviewer is a language model, so there is no document to check them against;
       what is checkable, and checked, is the Akzo Nobel holding that corrects them.
+
+  - quote: "no other customer-facing models, datasets, Spaces, or packages were affected"
+    kind: extraction-artefact
+    why: >-
+      Held at _sources/Anatomy of a Frontier Lab Agent Intrusion. The quotation is in the
+      document; pdftotext renders it "No other customer-facing models, ets, Spaces, or
+      packages were affected" - "datasets" loses its first five characters. The quotation
+      is right and the text layer is wrong.
+
+  - quote: "heavily delegated [their] analysis to often-unreliable AI agents"
+    kind: extraction-artefact
+    why: >-
+      Held at _sources/Brief independent investigation ... METR. The document reads "We
+      heavily delegated our analysis ▶ to often-unreliable AI agents" - a link glyph sits
+      between "analysis" and "to". [their] is the ordinary editorial substitution for "our".
+
+  - quote: "not yet have a clear standard for how to report misalignment that shows up during training, evaluation, and deployment"
+    kind: extraction-artefact
+    why: >-
+      Held at _sources/OpenAI confirms 'wiki incident' ... TechCrunch. The capture is a
+      two-column print and the extraction interleaves a sidebar headline into the sentence:
+      "do not yet have a clear OpenAI fought dirty on career- standard for how to report
+      misalignment that shows up during training, making math problem, says evaluation, and
+      deployment". The words are all there, in order, with a headline threaded through them.
+
+  - quote: "it was not the first time control over AI agents had been lost"
+    kind: source-unheld
+    why: >-
+      The Commission spokesperson's statement, reported in the press and not held as a file.
+      Absent from all six incident-record documents, checked 13 September 2026. This is a
+      genuine quotation from a source outside the holding, and it is one of the two refusals
+      the analysis relies on, so it should be replaced with a held capture before submission
+      rather than left here.
+
+  - quote: "30% of all OpenAI-attributed visits occur on this day, across 33 different IPs"
+    kind: source-unheld
+    why: >-
+      Von Arx's analysis of the wiki episode, cited throughout and not held as a file.
+      Absent from all six incident-record documents, checked 13 September 2026. The same
+      note applies: this is a holding gap rather than a quotation defect.
+
+  - quote: "intentionally disabled for the cyber evaluations"
+    kind: own-words
+    why: >-
+      This analysis quoting its own superseded draft. The phrase was carried as a quotation
+      marked [T3] until 13 September 2026, when the incident record was first held as files
+      and quotecheck.py could not find it in any of them. No held source says "disabled";
+      they say the evaluation was run "without production classifiers" and that the models
+      "did not have the classifiers and monitoring we usually implement". Recorded as the
+      eighteenth error; the sentence now quotes the sources instead.
 

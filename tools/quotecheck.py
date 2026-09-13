@@ -2,7 +2,7 @@
 """Check that every quotation in the prose appears in a document we actually hold.
 
 `citecheck.py` proves a citation resolves to verified text. It says nothing about the
-sentence around it. Twelve of the seventeen errors in this project's corrections log are the
+sentence around it. Thirteen of the eighteen errors in this project's corrections log are the
 same failure and it is not a citation failure: a source was characterised, or quoted,
 without being opened. A recital was summarised from a mirror. A directive was read
 through a summary. A Commission opinion was described from its landing page. In each
@@ -66,6 +66,18 @@ ATTRIBUTION = (
     (r"\bCER\b|2022/2557", "32022L2557"),
     (r"Pistillo", "Internal-deployment"),
     (r"Omnibus|2026/1744", "32026R1744"),
+    # The incident record, held from 13 September 2026. Until then the EVIDENTIARY core of
+    # this analysis was the least checked thing in it: every statutory quotation verified
+    # against primary text, and every quotation of what the parties actually said verified
+    # against nothing. Over-broad patterns are deliberate here - a quotation found in ANY
+    # held document is verified, so widening the search costs nothing and narrowing it
+    # risks a false alarm on which of two accounts a sentence came from.
+    (r"\bOpenAI\b|the provider(?:'s|s')? (?:own )?(?:account|disclosure)|\bIM1\b|road ahead",
+     "OpenAI"),
+    (r"Hugging Face|technical timeline|the victim|\bT2\b", "Technical Timel"),
+    (r"\bMETR\b|Redwood|\bHPIM\b|independent investigation", "METR"),
+    (r"\bAnthropic\b", "Anthropic"),
+    (r"TechCrunch|wiki incident|spokesperson", "TechCrunch"),
     (r"Nilsson|Milch-Kontor|Orkem|AM ?& ?S|Akzo|C-\d{2,3}/\d{2}|\b\d{3}/\d{2}\b",
      "provisions.yaml"),
     (r"Draft Guidance|GUIDANCE PARA|Article 73 AI Act|119624", "Draft_Guidance_article_73"),
