@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run every check this repository has, and say plainly what a clean run does not mean.
 
-Four checkers, one command:
+Five checkers, one command:
 
     validate.py    the cross-walk rows hold to the verdict discipline
     citecheck.py   every citation in the prose resolves to verified text
@@ -9,10 +9,10 @@ Four checkers, one command:
     infercheck.py  the inference register is structurally sound
     housestyle.py  the prose conventions, including repeated paragraphs
 
-    python3 tools/check.py            # run all four, summarise
+    python3 tools/check.py            # run all five, summarise
     python3 tools/check.py --verbose  # also print each checker's own output
 
-Exit code is the worst of the four, so this is the single thing to run before a commit
+Exit code is the worst of the five, so this is the single thing to run before a commit
 and the single thing to put in CI.
 
 WHAT A GREEN BOARD DOES NOT MEAN, which is the part worth reading. Every one of the
@@ -69,8 +69,25 @@ def run(script, args):
     return result.returncode, (result.stdout + result.stderr).strip()
 
 
+WORDS = {4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight"}
+
+
+def own_count_drift():
+    """This file said "Four checkers" while running five.
+
+    Third instance of the same family, after the corrections log and the statutory
+    register, and the most embarrassing of the three: the tool that reports every other
+    count in this repository was miscounting itself. The docstring is the claim and
+    CHECKS is the fact.
+    """
+    text = __doc__ or ""
+    stated = next((n for n, w in WORDS.items() if f"{w} checkers" in text), None)
+    return None if stated in (None, len(CHECKS)) else (stated, len(CHECKS))
+
+
 def main(argv):
     verbose = "--verbose" in argv
+    mismatch = own_count_drift()
     width = max(len(name) for name, _, _ in CHECKS)
     worst, failures = 0, []
 
@@ -96,6 +113,10 @@ def main(argv):
             print("\n" + output + "\n")
 
     print()
+    if mismatch:
+        print(f"  check.py's own docstring says {mismatch[0]} checkers and it runs "
+              f"{mismatch[1]}. The tool that reports every other count in this\n  repository was miscounting itself.\n")
+        worst = max(worst, 1)
     if failures:
         for script, output in failures:
             print(f"--- {script} ---")
