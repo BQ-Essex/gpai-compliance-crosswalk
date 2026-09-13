@@ -2,7 +2,9 @@
 """Render the enforcement pack to DOCX, because "light edits" happen in Word.
 
 Every Markdown document in `instrument/` is rendered to `instrument/docx/<name>.docx`
-with pandoc. The Markdown stays the source of truth and is what the checkers read; the
+with pandoc, and the report itself to `docs/docx/report-draft.docx` — the submission is
+typeset by pasting into the sprint's own template, and a DOCX pastes with its structure
+intact where Markdown does not. The Markdown stays the source of truth and is what the checkers read; the
 DOCX is what an official opens. Re-run after any edit. The amended template and the
 filled template are already DOCX and are copied alongside.
 
@@ -37,6 +39,17 @@ def main() -> int:
         subprocess.run(["pandoc", str(md), "-o", str(target), "--from", "gfm",
                         "--metadata", f"title={name.replace('-', ' ')}"], check=True)
         done.append(target.name)
+    # The report, for typesetting. Same source of truth, same renderer, so the file an
+    # official opens is never hand-made and never drifts from the Markdown the checkers read.
+    report = ROOT / "docs" / "report-draft.md"
+    if report.exists():
+        report_out = ROOT / "docs" / "docx"
+        report_out.mkdir(exist_ok=True)
+        subprocess.run(["pandoc", str(report), "-o", str(report_out / "report-draft.docx"),
+                        "--from", "gfm", "--toc", "--metadata",
+                        "title=Reached by Recital"], check=True)
+        done.append("docs/docx/report-draft.docx")
+
     for extra in ("model-amended-serious-incident-template.docx", "filled-template.docx"):
         if (SRC / extra).exists():
             shutil.copy2(SRC / extra, OUT / extra)

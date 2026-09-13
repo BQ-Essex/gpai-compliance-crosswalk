@@ -332,11 +332,18 @@ def dangling_appendices(text):
     Only files that define appendices are checked, so prose elsewhere may cite the
     report's appendices freely.
     """
-    defined = set(re.findall(r"^#{2,3}\s+Appendix\s+([A-Z])\b", text, re.M))
+    order = re.findall(r"^#{2,3}\s+Appendix\s+([A-Z])\b", text, re.M)
+    defined = set(order)
     if not defined:
         return []
     cited = set(re.findall(r"\bAppendix\s+([A-Z])\b", text))
-    return sorted(cited - defined)
+    missing = sorted(f"{letter} is cited and not defined" for letter in cited - defined)
+    # Out of order is not dangling, and a reader notices it just as fast. This file ran
+    # A B C D E G F H for a day, because an appendix was inserted ahead of the one it
+    # should follow and nothing looked at the sequence.
+    if order != sorted(order):
+        missing.append("the appendices run " + " ".join(order) + ", which is out of order")
+    return missing
 
 
 def process(path, fix=False):
@@ -384,9 +391,9 @@ def process(path, fix=False):
               f"The corrections log drifted this way once and was made checkable. "
               f"This is the same failure one file over.")
 
-    for letter in dangling:
-        print(f"  cites Appendix {letter}, which this file does not define. A "
-              f"cross-reference is a claim that something exists.")
+    for complaint in dangling:
+        print(f"  {complaint}. A cross-reference is a claim that something exists, and "
+              f"an ordering is a claim a reader checks without meaning to.")
 
     for number, first, opening in echoes:
         print(f"  line {number}: repeats the paragraph at line {first} — “{opening}…”. "
