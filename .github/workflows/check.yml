@@ -1,0 +1,35 @@
+name: check
+
+# Runs the same single command a contributor runs locally. Nothing is pinned to a
+# runner-only path and nothing is skipped quietly.
+#
+# WHAT THIS BUILD DOES NOT ESTABLISH, which matters more than the badge. quotecheck.py
+# verifies quotations against the documents in _sources/, which are cited by URL and
+# pinned by SHA-256 rather than redistributed, so a clean checkout does not hold them.
+# so on a clean checkout it verifies roughly a third of the quotations in this
+# repository and says so in terms: "NOT CHECKED HERE: N quotation(s) are attributed to
+# M document(s) this checkout does not hold." Those are unverifiable here rather than
+# wrong. Statutory quotations are among them: data/provisions.yaml holds ELIDED
+# extracts, and absence from an extract establishes nothing.
+#
+# So a green badge on this workflow means the citations resolve, the inference register
+# is sound, the verdicts hold their register, no paragraph is repeated and no count has
+# drifted. It does NOT mean the quotations are accurate. For that, hold the documents -
+# the SHA-256 hashes in data/sources.yaml say which - and run the same command locally.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml
+      - name: python3 tools/check.py
+        run: python3 tools/check.py --verbose

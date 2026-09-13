@@ -238,8 +238,29 @@ def main(argv):
     if not corpus:
         if not quiet:
             print("No documents held in _sources/ and no register text, so nothing can "
-                  "be verified. That is a finding, not a pass.")
-        return 1
+                  "be verified. That is a finding, not a pass.\n"
+                  "Exit 2 rather than 1: NOTHING WAS CHECKED is a different state from "
+                  "SOMETHING FAILED,\nand a runner that cannot tell them apart teaches "
+                  "people to ignore the red one.")
+        return 2
+
+    def wanted_but_absent(line: str):
+        """Documents this line points at that are NOT held here.
+
+        A quotation attributed to a document nobody holds is UNVERIFIABLE, not wrong, and
+        the difference decides whether a red board means "fix the prose" or "fetch the
+        PDF". Before this existed, a clean checkout - which is what continuous integration
+        and any other reader gets, since _sources/ is cited by hash rather than
+        redistributed - reported sixty defects, every one of them a document it simply did
+        not have. A checker that cries wolf on a fresh clone is a checker nobody runs
+        twice.
+        """
+        missing = []
+        for pattern, needle in ATTRIBUTION:
+            if re.search(pattern, line, re.IGNORECASE):
+                if not any(needle.lower() in n.lower() for n in corpus):
+                    missing.append(needle)
+        return missing
 
     def attributed(line: str):
         """Which held documents this line points at, most specific first."""
@@ -266,6 +287,11 @@ def main(argv):
                    for text, _kind, _why in exceptions)
 
     found, missing, unattributed, skipped, excepted = [], [], [], 0, 0
+    unheld = []
+    register_only = {n for n in corpus if 'provisions.yaml' in n}
+
+
+    act_held = any('2024R1689' in n for n in corpus)
     for path in prose_files():
         text = path.read_text(encoding="utf-8")
         for number, line in logical_lines(path, text):
@@ -277,6 +303,10 @@ def main(argv):
                     skipped += 1
                     continue
                 site = f"{path.relative_to(ROOT)}:{number}"
+                absent = wanted_but_absent(line)
+                if absent:
+                    unheld.append((site, quote, absent))
+                    continue
                 targets = attributed(line)
 
                 def holds(name):
@@ -292,6 +322,20 @@ def main(argv):
                     continue
                 if where:
                     found.append((site, quote, where))
+                elif targets and set(targets) <= register_only and not act_held:
+                    # The only place left to look was the register's own transcription,
+                    # which is an EXTRACT of the statute rather than the statute. Where the
+                    # authentic texts are not held, absence from an extract establishes
+                    # nothing, and calling it a defect would make every clean clone red.
+                    #
+                    # A prefix heuristic was tried here, to rescue the case where the
+                    # register does carry the passage. At six opening words it caught a
+                    # planted wrong word and raised two false positives; at fourteen it
+                    # raised none and caught nothing. The register holds ELIDED extracts,
+                    # so no prefix test separates "covered" from "not covered" honestly,
+                    # and a half-working check is worse than a stated limit. The limit is
+                    # stated instead, in the summary and in the CI workflow.
+                    unheld.append((site, quote, ["the authentic OJ and consolidated texts"]))
                 elif targets:
                     missing.append((site, quote, targets, None))
                 else:
@@ -325,6 +369,17 @@ def main(argv):
         print(f"Unattributable: {len(unattributed)} quotation(s) on lines naming no held "
               f"document — the incident record, foreign statutes, and this project's own "
               f"earlier drafts. Not defects, and not verified either.")
+        if unheld:
+            names = sorted({n for _s, _q, ns in unheld for n in ns})
+            print(f"NOT CHECKED HERE: {len(unheld)} quotation(s) are attributed to "
+                  f"{len(names)} document(s) this checkout does not hold.\nThey are "
+                  f"unverifiable rather than wrong, and the distinction is the whole "
+                  f"point:\na clean clone holds no _sources/, because the documents are "
+                  f"cited by URL and SHA-256\nrather than redistributed. Missing: "
+                  f"{', '.join(names)}.\nList them with --unheld.")
+            if "--unheld" in sys.argv:
+                for site, quote, ns in unheld:
+                    print(f"  {site}  [{', '.join(ns)}]\n    “{quote[:110]}”")
         if excepted:
             print(f"Declared unverifiable, with reasons, in "
                   f"data/unverifiable-quotations.yaml: {excepted}.")

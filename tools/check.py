@@ -102,11 +102,16 @@ def main(argv):
             summary = f"{len(lines)} prose file(s) clean" if code == 0 else ""
         else:
             summary = lines[0] if lines else ""
-        mark = "ok  " if code == 0 else "FAIL"
+        mark = "ok  " if code == 0 else ("CANNOT" if code == 2 else "FAIL")
         print(f"  {script:<{width}}  {mark}      {what}")
         if code == 0 and summary:
             print(f"  {'':<{width}}            {summary[:96]}")
-        if code != 0:
+        if code == 2:
+            # Nothing to check against. Reported, not counted as a failure: the
+            # documents are cited by URL and hash rather than redistributed, so a
+            # runner without them is expected. It is still printed, every time.
+            print(f"  {'':<{width}}            {summary[:96]}")
+        elif code != 0:
             failures.append((script, output))
             worst = max(worst, code)
         if verbose:
