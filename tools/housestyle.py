@@ -212,6 +212,35 @@ REGISTERS = (
      ("inferences.yaml", "inferences"), "inferences"),
 )
 
+# The checkers count itself. check.py guards its own docstring; nothing guarded the six
+# other places that state it, and four of them said five while six were running - one of
+# them inside check.py, below the docstring its self-check reads.
+CHECKER_COUNT = re.compile(r"\b([a-z]+(?:-[a-z]+)?|\d+)\s+checkers\b", re.IGNORECASE)
+
+
+def checker_drift(text, root=None):
+    """Any sentence stating how many checkers there are, against how many there are.
+
+    Returns a list of (stated, actual). The count lives in one tuple in tools/check.py and
+    is quoted in prose, in another tool's docstring, and in the report.
+    """
+    root = Path(root or Path(__file__).resolve().parent.parent)
+    check = root / "tools" / "check.py"
+    if not check.exists():
+        return []
+    body = check.read_text(encoding="utf-8")
+    block = re.search(r"^CHECKS = \((.*?)^\)", body, re.S | re.M)
+    if not block:
+        return []
+    actual = len(re.findall(r'^\s*\("', block.group(1), re.M))
+    found = []
+    for match in CHECKER_COUNT.finditer(text):
+        word = match.group(1).lower()
+        stated = int(word) if word.isdigit() else NUMBERS.get(word)
+        if stated is not None and actual and stated != actual:
+            found.append((stated, actual))
+    return found
+
 
 def register_drift(text, path=None, root=None):
     """Does a count written in prose still match the register it describes?
@@ -408,6 +437,7 @@ def process(path, fix=False):
     registers = register_drift(shelved, path)
     dangling = dangling_appendices(original)
     nowhere = dangling_paths(original, path)
+    checkers = checker_drift(shelved)
 
     if fix and revised != original:
         with open(path, "w", encoding="utf-8") as handle:
@@ -428,6 +458,10 @@ def process(path, fix=False):
               f"A count written in prose drifts from the table it describes, silently, "
               f"and this one already has.")
 
+    for stated, actual in checkers:
+        print(f"  says there are {stated} checkers; check.py runs {actual}. The count lives "
+              f"in one tuple and is quoted in six other places.")
+
     for stated, actual, label in registers:
         print(f"  prose says {stated} {label}; the register holds {actual}. "
               f"The corrections log drifted this way once and was made checkable. "
@@ -447,7 +481,7 @@ def process(path, fix=False):
               f"One of the two is a revision that was never deleted.")
 
     return ((revised == original or fix) and not signposts and not echoes
-            and not drift and not registers and not dangling and not nowhere)
+            and not drift and not registers and not dangling and not nowhere and not checkers)
 
 
 def main():

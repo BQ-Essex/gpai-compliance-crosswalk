@@ -76,7 +76,7 @@ WORDS = {4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight"}
 
 
 def own_count_drift():
-    """This file said "Four checkers" while running five.
+    """This file once said "Four checkers" while running five.
 
     Third instance of the same family, after the corrections log and the statutory
     register, and the most embarrassing of the three: the tool that reports every other

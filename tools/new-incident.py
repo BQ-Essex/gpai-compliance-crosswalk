@@ -3,7 +3,7 @@
 
 The claim this repository makes about itself is that the verification layer transfers
 and the judgement does not. This script is the checkable half of that claim. It creates
-a new directory holding the five checkers, the verified statutory register, the method,
+a new directory holding the six checkers, the verified statutory register, the method,
 the source-register schema and an empty cross-walk, inference register and corrections
 log, and then runs `tools/check.py` inside it so that the first thing a new incident's
 board shows is a clean run over nothing — which is what a clean board means.
