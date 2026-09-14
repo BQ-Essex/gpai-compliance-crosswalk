@@ -4,7 +4,7 @@
 
 ## 1. What was run
 
-`tools/new-incident.py` stood up this directory with the checkers, the verified statutory register and empty registers. Six cross-walk rows, five inferences and a twelve-field form fill were written from Anthropic’s account of 30 July 2026, its alignment assessment of 9 September, Irregular’s account of 14 August, OpenAI’s note of 4 August on the same evaluator, two reports from The Record, and four further press and commentary pieces—ten documents, all held in `_sources/`, hashed in `data/sources.yaml`, with 26 quotations verified against them by `tools/quotecheck.py`. `tools/draft-request.py` produced a five-request draft; `tools/formfill.py` rendered the fill; `tools/objections.py` rendered the load-bearing steps weakest first; `tools/check.py` ran clean. Elapsed: about three hours, most of it reading; the corrections log already has two entries.
+`tools/new-incident.py` stood up this directory with the checkers, the verified statutory register and empty registers. Six cross-walk rows, five inferences and a twelve-field form fill were written from Anthropic’s account of 30 July 2026, its alignment assessment of 9 September, Irregular’s account of 14 August, OpenAI’s note of 4 August on the same evaluator, two reports from The Record, and four further press and commentary pieces—ten documents, all held in `_sources/`, hashed in `data/sources.yaml`, with 26 quotations verified against them by `tools/quotecheck.py`. `tools/draft-request.py` produced a five-request draft; `tools/formfill.py` rendered the fill; `tools/objections.py` rendered the load-bearing steps weakest first; `tools/check.py` ran clean. Elapsed: one session, most of it reading; the corrections log already has two entries.
 
 ## 2. What came out the same
 

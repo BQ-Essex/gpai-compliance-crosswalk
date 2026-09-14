@@ -4,7 +4,7 @@ The statutory register is the first run’s, copied by `tools/new-incident.py` a
 
 ## 0. Corrections log
 
-In total, two errors have been found in this analysis, both within three hours of the first row being written, and both the first run’s failure: a source characterised without being opened.
+In total, two errors have been found in this analysis, both within one session of the first row being written, and both the first run’s failure: a source characterised without being opened.
 
 | Error | Correction |
 |---|---|

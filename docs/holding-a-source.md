@@ -26,7 +26,7 @@ That prints a `data/sources.yaml` entry with the filename, the hash and today’
 
 **5. Say what it establishes—and only after reading it.**
 
-`establishes:` is the register characterising the document. It is the only part no tool can write, and it is where this project has gone wrong most often: **twenty-one of thirty recorded errors were a source described without being opened.** Quote the document’s own words where the words matter.
+`establishes:` is the register characterising the document. It is the only part no tool can write, and it is where this project has gone wrong most often: **twenty-one of thirty-one recorded errors were a source described without being opened.** Quote the document’s own words where the words matter.
 
 Then:
 
