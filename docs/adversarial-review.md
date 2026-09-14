@@ -2,6 +2,8 @@
 
 Two independent passes were run over the finished draft with no sight of the reasoning that produced it. Both were briefed on the target and the standard, neither on what the author believed the answers were. Recorded here because the report relies on them and because a method that claims to catch its own drift should show the catch.
 
+*One of two records of the same review. This file is **what the passes found**; [`correction-scope.md`](correction-scope.md) is **the reasoning behind the one finding that restructured the report**. The canonical index of every error, including these, is the corrections log at [`protocol/01-statutory-foundation.md`](../protocol/01-statutory-foundation.md) §0.*
+
 Date: 11 September 2026. Both findings were then verified directly against EUR-Lex, CELEX `02024R1689-20260727`, before being acted on.
 
 ---

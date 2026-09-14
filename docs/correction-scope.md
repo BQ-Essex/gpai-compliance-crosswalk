@@ -2,6 +2,8 @@
 
 Recorded rather than silently fixed, because the method commits to recording corrections and because this one changes the report.
 
+*One of two records of the same review, 11 September 2026. This file is **the reasoning**; [`adversarial-review.md`](adversarial-review.md) is **what the two passes found**. Both are kept as written. Sections 3 to 5 below were a worklist on the day—corrections to apply, overclaims to correct, untraceable claims to source or cut—and all of them have since been applied; each appears as its own row in the corrections log at [`protocol/01-statutory-foundation.md`](../protocol/01-statutory-foundation.md) §0, which is where to look for the current state. They are left standing here rather than tidied away, because a record edited after the fact to look better is the one thing this method refuses.*
+
 Both adversarial passes ran against the finished draft with no sight of the reasoning that produced it. The legal pass found three errors of fact and one unaddressed provision. Verified directly against EUR-Lex, CELEX `02024R1689-20260727`, 11 September 2026: the reviewer was right on every count.
 
 ---

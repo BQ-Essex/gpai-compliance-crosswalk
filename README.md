@@ -45,7 +45,7 @@ Every tool explains what it checks if you ask it: `python3 tools/<name>.py --hel
 8. **Draft the request from the cross-walk.** `python3 tools/draft-request.py` assembles Article 91(4)’s required parts and one request per unresolved row from that row’s own `would_settle`; a person edits from there. `python3 tools/render-pack.py` renders the pack to DOCX.
 9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently.
 
-A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred, what the change of incident produced, and the two errors the run made in its first hour.
+A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its run report at `runs/anthropic-cyber-evals-2026/docs/run-report.md` says what transferred, what the change of incident produced, and the two errors the run made in its first hour.
 
 Continuous integration is at `.github/workflows/check.yml`. A green badge there means the citations resolve, the inference register is sound, the verdicts hold their register and no count has drifted—**not** that the quotations are accurate, because `_sources/` is cited by hash rather than redistributed and a clean checkout holds none of it.
 

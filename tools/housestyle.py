@@ -346,6 +346,47 @@ def dangling_appendices(text):
     return missing
 
 
+# A path written in prose is a claim that a file is there, and until now nothing checked
+# it. Run by hand twice during the final sweep, it found three apparent breaks that were
+# my own resolver not knowing that "its `docs/run-report.md`" means the run's own root -
+# so the rule below tries every root a reader plausibly would, and only complains when
+# none of them works.
+PATH_IN_PROSE = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./-]*\.(?:md|py|yaml|yml|docx|cff|txt|png|svg))`")
+LINK_IN_PROSE = re.compile(r"\[[^\]]*\]\(([^)#\s]+)\)")
+
+
+def dangling_paths(text, path):
+    """Every file a document points at, checked from each root a reader might use.
+
+    Three roots are legitimate here: the repository root, the directory the document
+    sits in, and - for anything under runs/ - that run's own root, because a second run
+    is a repository in its own right and its prose is written from its own top. A path
+    that resolves from none of them is a pointer to nothing.
+    """
+    root = Path(__file__).resolve().parent.parent
+    here = Path(path).resolve().parent
+    roots = [root, here]
+    parts = Path(path).resolve().parts
+    if "runs" in parts:                       # the run's own root, two levels in
+        i = parts.index("runs")
+        roots.append(Path(*parts[: i + 2]))
+    found = []
+    for pattern in (PATH_IN_PROSE, LINK_IN_PROSE):
+        for match in pattern.finditer(text):
+            target = match.group(1)
+            if target.startswith(("http://", "https://", "mailto:")):
+                continue
+            if any((base / target).exists() for base in roots):
+                continue
+            # A bare filename in prose - `check.py`, `cover-note.md` - is a name, not a
+            # path, and resolves wherever it lives. Only complain about ones with a
+            # directory in them, which are claims about location.
+            if "/" not in target:
+                continue
+            found.append(target)
+    return sorted(set(found))
+
+
 def process(path, fix=False):
     """Apply the mechanical fixes to one file and report what changed or remains.
 
@@ -366,6 +407,7 @@ def process(path, fix=False):
     drift = count_drift(original)
     registers = register_drift(shelved, path)
     dangling = dangling_appendices(original)
+    nowhere = dangling_paths(original, path)
 
     if fix and revised != original:
         with open(path, "w", encoding="utf-8") as handle:
@@ -391,6 +433,11 @@ def process(path, fix=False):
               f"The corrections log drifted this way once and was made checkable. "
               f"This is the same failure one file over.")
 
+    for target in nowhere:
+        print(f"  points at {target}, which is not there from the repository root, from "
+              f"this file's own directory, or from its run's root. A path in prose is a "
+              f"claim that a file exists.")
+
     for complaint in dangling:
         print(f"  {complaint}. A cross-reference is a claim that something exists, and "
               f"an ordering is a claim a reader checks without meaning to.")
@@ -400,7 +447,7 @@ def process(path, fix=False):
               f"One of the two is a revision that was never deleted.")
 
     return ((revised == original or fix) and not signposts and not echoes
-            and not drift and not registers and not dangling)
+            and not drift and not registers and not dangling and not nowhere)
 
 
 def main():
