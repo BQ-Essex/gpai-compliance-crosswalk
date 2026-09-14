@@ -31,7 +31,7 @@ meta:
   extracted: "2026-09-11"
   extended: "2026-09-12"
   verified_against_consolidated: "2026-09-12"
-  amendment_status_cross_checked: "2026-09-12 against the amending act itself, CELEX 32026R1744, not only the consolidated change markers"
+  amendment_status_cross_checked: "2026-09-12 against the amending act itself, CELEX 32026R1744, held at _sources/CELEX%3A32026R1744%3AEN%3ATXT.pdf, not only the consolidated change markers"
   caveat: >-
     The EUR-Lex consolidated text carries the standing notice that it "is meant
     purely as a documentation tool and has no legal effect". Cite the

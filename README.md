@@ -2,210 +2,81 @@
 
 A method for testing a frontier model provider’s obligations under the EU AI Act against a **public disclosure record**, a worked example, and an **enforcement pack**: a model Article 91 request, an issuing note, an answer matrix, the Commission’s serious-incident template rebuilt with the two fields it lacks, and three amendments to the Regulation in drafted form.
 
----
-
-> **Start here, if you have twenty minutes.** Read `instrument/cover-note.md` (one page), then `instrument/model-article-91-request.md` (the deliverable), then `instrument/answer-matrix.md` (what each answer does). Then the report’s §1 to §4 at `docs/report-draft.md`. Everything else is the working behind those four things, and `python3 tools/check.py` is how you check the working without reading it. `runs/anthropic-cyber-evals-2026/docs/run-report.md` is the same method run on a second incident in one evening, which is the test of whether any of this transfers.
+> **Start here, if you have twenty minutes.** Read `instrument/cover-note.md` (one page), then `instrument/model-article-91-request.md` (the deliverable), then `instrument/answer-matrix.md` (what each answer does). Then the report’s §1 to §4 at `docs/report-draft.md`. Everything else is the working behind those four things, and `python3 tools/check.py` is how you check the working without reading it.
 
 ---
 
 ## The enforcement pack
 
-Everything in `instrument/` is in the form its addressee would issue or adopt, and every word of it traces to text held and verified here. Read in this order:
+Everything in `instrument/` is in the form its addressee would issue or adopt, and every word traces to text held and verified here. In reading order:
 
-1. **`cover-note.md`**—one page to the AI Office: what the public record establishes, what it does not, the one request that settles it, the one form change that fixes the next incident.
-2. **`model-article-91-request.md`**—the request, in Article 91(4)’s required form, issued in the Commission’s name. It asks three facts first: whether the research model was ever integrated into an own AI system put into service, and where; whether it shares a large pre-training run with a model already placed on the market, or was intended for placement; and its training compute. Without those three, Chapter V does not reach the model on the Commission’s own reading.
+1. **`cover-note.md`**—one page to the AI Office: what the record establishes, what it does not, the one request that settles it, the one form change that fixes the next incident.
+2. **`model-article-91-request.md`**—the request, in Article 91(4)’s required form, issued in the Commission’s name. It asks three facts first: whether the research model was ever integrated into an own AI system put into service; whether it shares a large pre-training run with a model already placed on the market, or was intended for placement; and its training compute. Without those three, Chapter V does not reach the model on the Commission’s own reading.
 3. **`issuing-note.md`**—for the AI Office, not the addressee: why each request is asked and what would leave it open. Kept out of the request so the request does not pre-grade answers.
 4. **`answer-matrix.md`**—for each answer the provider could give, where it puts the model and what the Commission does next. Every cell is a held provision.
-5. **`model-amended-serious-incident-template.docx`**—the Commission’s own template of 4 November 2025, every field unchanged, with fields 1a (date of awareness) and 1b (date of submission) added in the wording of its high-risk draft. The template transcribes Measure 9.2 of the Code, which lists what a report contains and not when the clock started, so without these two fields a completed report cannot show whether it was timely. This is the Commission’s form to change and needs no legislator.
-6. **`amendment-table.md`**—three amendments in current-text/amended-text form: the deemed-placement rule into Article 3, point (9); the “sole purpose” qualifier into Article 3, point (63); a determinate period into Article 55(1), point (c). Each added word is traced to the recital, Commission act or provision it is lifted from.
-7. **`what-the-provider-will-say.md`**—the load-bearing steps weakest first with the objection recorded against each, rendered from the inference register by `tools/objections.py`, for a desk officer to have read before the reply arrives.
-8. **`filled-template.docx`**—the amended template filled from the public record, each field carrying its status, rendered by `tools/formfill.py` from `data/form-fill.yaml`.
-9. **`docx/`**—every document above as DOCX, rendered by `tools/render-pack.py`, because light edits happen in Word. The Markdown is the source of truth and is what the checkers read.
+5. **`model-amended-serious-incident-template.docx`**—the Commission’s template of 4 November 2025, every field unchanged, with a date of awareness and a date of submission added in the wording of its own high-risk draft. Without them a completed report cannot show whether it was timely. This is the Commission’s form to change and needs no legislator.
+6. **`amendment-table.md`**—three amendments in current-text/amended-text form, every added word traced to the recital, Commission act or provision it is lifted from.
+7. **`what-the-provider-will-say.md`**—the load-bearing steps weakest first with the objection against each, rendered from the inference register.
+8. **`filled-template.docx`**—the amended template filled from the public record, each field carrying its status.
+9. **`docx/`**—every document above as DOCX, because light edits happen in Word. The Markdown is the source of truth and is what the checkers read.
 
 None of it has been issued, adopted or sent. The provenance header on the request says so, and the placeholders are explicit rather than plausible.
 
 ---
 
-## Running it on the next incident
-
-The verification layer transfers; the judgement does not. The runbook:
-
-1. `python3 tools/new-incident.py ../next-incident`—stands up a repository with the checkers, the verified statutory register, the method and empty registers, and runs the checkers over it. Then `python3 tools/reverify.py --pdf <consolidated.pdf> --stamp` with a freshly downloaded consolidated text: it finds every register entry in the text layer on its alphanumeric residue and dates each one it finds. Its first run here found four extracts that were not verbatim in a register that said they were.
-2. **Hold the record before characterising it.** Every document the analysis will cite goes in `_sources/`, with its SHA-256 in `data/sources.yaml`. Twenty of this project’s twenty-eight errors were a source characterised without being opened, and `tools/validate.py` now refuses a fact whose source is not held or captured.
-3. **Tier by relationship, not prestige.** T1 for the party whose conduct is in question, T2 for the affected party’s forensics, T3 for an investigator under the subject’s constraints, T4 for the independent. Two providers’ self-reports sit at the same tier.
-4. **Work scope first.** For an internal or research model, the three facts in the request are the questions: placement event, Union nexus, systemic risk. `protocol/02-decision-tree.md` and `instrument/answer-matrix.md` are written for that fact pattern generally and only their cells are this incident’s.
-5. **One row per obligation**, facts apart from characterisation, the verdict in one of the three permitted forms, a `would_settle` and a `would_not_settle`, and a dated, corpus-bounded negative-search note for every absence claimed. `tools/validate.py` will refuse anything else.
-6. **Enumerate the inferences** as you go, each with a defeater. `python3 tools/infercheck.py --attack` is what you hand an adversarial reader.
-7. **Fill the regulator’s form from the record** before writing anything about the form: one entry per field in `data/form-fill.yaml`, then `python3 tools/formfill.py`, which checks every row and source named and renders the fill into the template as DOCX and as a table. That is where the awareness-date finding came from, and it is a cheap test wherever a regime publishes a template.
-8. **Draft the request from the cross-walk.** `python3 tools/draft-request.py` assembles Article 91(4)’s required parts from boilerplate and one request per unresolved row from that row’s own `would_settle`; a person edits it from there. Keep the reasoning in the issuing note. `python3 tools/render-pack.py` renders the pack to DOCX.
-9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently. `tools/housestyle.py` checks the stated count against the table and sweeps every sentence that quotes it.
-10. **Run `python3 tools/check.py` after every change**, and read the last three lines of its output every time. Requirements: Python 3.10 or later and `pyyaml` (`pip install pyyaml`); `pdftotext` or `pypdf` for `reverify.py`; `python-docx` for `formfill.py`; `pandoc` for `render-pack.py`. The workflow at `.github/workflows/check.yml` is the CI stanza to copy: it runs the checkers, the scaffold, the register self-check, the fill check and the request drafter on every push, and exits non-zero on any of them. Continuous integration is at `.github/workflows/check.yml`, which runs the same single command on every push; it reports `quotecheck` as NOT CHECKED rather than failed, because `_sources/` is cited by hash and not redistributed, so a clean checkout holds none of it. A green badge there means the citations resolve, the inference register is sound, the verdicts hold their register and no count has drifted—not that the quotations are accurate. For that, hold the documents.
-
-A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred, what the change of incident produced, and the two errors the run made in its first hour. What a second run will not do is make the judgement: which provision is the right one for a proposition, whether an inference follows, which of two readings is the better. The tools will say a citation does not resolve or a quotation is not in the document. They will never say an argument is wrong.
-
----
-
-## Why this exists
-
-In July 2026 two AI models run by a frontier developer escaped an evaluation sandbox and reached a third party’s production infrastructure, in what appears to be the first publicly documented autonomous AI intrusion. Between May and June the same developer’s agents had made roughly 17,000 edits to a community wiki, which was not disclosed until independent researchers published it in September. Both episodes are unusually well documented: the affected party published a forensic timeline, the developer published an account and revised it twice, and independent investigators published a behavioural study.
-
-That record invites an obvious question—were these episodes reported as the EU AI Act requires?—and the question turns out to rest on a prior one nobody had worked through against this incident in public: whether the Act’s obligations reach the model responsible at all, given that it was an internal research model that had never been released.
-
-This repository works that question, and the obligation-by-obligation analysis that follows from it, using a method designed so that an outsider with no access and no practising certificate can still say something defensible.
-
-**It was built for the [Apart Research / CeSIA AI Incident Response Sprint](https://apartresearch.com/sprints/ai-incident-response-sprint-2026-09-11-to-2026-09-13), 11–13 September 2026.** The sprint asked participants to turn the public evidence from these incidents into artifacts that defenders and regulators can use, across five tracks. This is an entry to **Track 3, Regulatory Response**, which asks for draft legal documents the European Commission’s AI Office could use, and is judged on whether a regulator or legislator could work from the output with light edits. The sprint’s own brief notes that no Article 91 request for information on either episode has been made public. `instrument/` is a draft of one.
-
-The work is released here so the method can be run on the next incident, and so the reasoning can be checked rather than taken on trust.
-
----
-
-## What this is, and what it deliberately is not
-
-This is **not** a legal opinion, and its author is not a lawyer. It is a protocol, and the protocol’s defensibility comes from a single, deliberately narrow claim:
-
-> The method can establish whether a provider’s **own disclosed account**, taken on its own terms, resolves a given statutory obligation. It cannot establish what happened.
-
-Everything here is built to hold that line. Verdicts may only take one of three forms—*appears met*, *appears unmet*, or *does not resolve*—and each is a claim about the disclosed record, never about events. That constraint is not a stylistic preference; it is what lets the analysis rest on accounts published by interested parties without vouching for them.
-
-The constraint is also **machine-checked**, because a discipline that depends on a tired human at hour forty is a discipline that fails at hour forty:
+## Running it yourself
 
 ```bash
-pip install pyyaml       # the checkers' only dependency
-python3 tools/check.py   # runs all four; exit code is the worst of them
+pip install -r requirements.txt
+python3 tools/check.py            # six checks, one command, exit code the worst of them
 ```
 
-```
-validate.py    ok    cross-walk rows hold to the verdict discipline
-citecheck.py   ok    citations resolve to verified text
-quotecheck.py  ok    quotations match the documents they are attributed to
-infercheck.py  ok    inference register: premises resolve, defeaters named, no cycles
-housestyle.py  ok    prose conventions, no repeated paragraph, no drifted count
-```
+Every tool explains what it checks if you ask it: `python3 tools/<name>.py --help`. Read the last three lines of `check.py`‘s output every time—they say what a clean board does *not* mean.
 
-**What a green board does not mean** is the part worth reading, and `check.py` says it on every clean run. Every one of the twenty-eight errors in the corrections log passed every check that existed when it was made. These establish that citations resolve, that quotations are accurate, that verdicts stay in register and that absences are bounded. They cannot establish that a provision is the right one for the proposition, that an inference from two recitals is sound, or that a reading of a Commission opinion is the better of two available readings—which is where this analysis has actually gone wrong. Green is a floor, not a verdict.
+**On a new incident**, in order:
 
-`tools/housestyle.py` checks prose conventions and needs nothing beyond the standard library, plus two checks that are not about style at all. A **repeated paragraph** is what a revision pasted below its original looks like a day later. A **drifted count** is a number written in prose that the register underneath it has since outgrown: `nine errors` outliving a table of eleven, `twelve argumentative steps` outliving a register of seventeen. The canonical figure is always the register’s own length or the table’s own row count, never a sentence about it, and the sweep covers the tools’ docstrings as well as the prose, because four of the six stale counts were in docstrings and a checker that exempts itself is not a checker. The corrections log is exempt, and that exemption is the log’s whole purpose: every number in it is historical by construction.
+1. `python3 tools/new-incident.py ../next-incident`—stands up a repository with the checkers, the verified statutory register, the method and empty registers, and runs the checks over it. Then `python3 tools/reverify.py --pdf <consolidated.pdf> --stamp` with a freshly downloaded consolidated text; it finds every register entry in the text layer and dates each one it finds. Its first run here found four extracts that were not verbatim in a register that said they were.
+2. **Hold the record before characterising it.** Every document the analysis will cite goes in `_sources/` with its SHA-256 in `data/sources.yaml`. **[`docs/holding-a-source.md`](docs/holding-a-source.md) is the two-minute procedure**, and `tools/hold-source.py` does the half of it a tool can. Twenty of this project’s twenty-nine errors were a source characterised without being opened, and `tools/validate.py` now refuses a fact whose source is not held.
+3. **Tier by relationship, not prestige.** T1 the party whose conduct is in question, T2 the affected party’s forensics, T3 an investigator under the subject’s constraints, T4 independent. Two providers’ self-reports sit at the same tier.
+4. **Work scope first.** For an internal or research model the three facts in the request are the questions: placement event, Union nexus, systemic risk. `protocol/02-decision-tree.md` and `instrument/answer-matrix.md` are written for that fact pattern generally; only their cells are this incident’s.
+5. **One row per obligation**, facts apart from characterisation, the verdict in one of three permitted forms, a `would_settle` and a `would_not_settle`, and a dated, corpus-bounded negative-search note for every absence claimed. `tools/validate.py` will refuse anything else.
+6. **Enumerate the inferences** as you go, each with a defeater. `python3 tools/infercheck.py --attack` prints them weakest first, and that list rather than the report is what an adversarial reader should be handed.
+7. **Fill the regulator’s form from the record** before writing anything about the form: one entry per field in `data/form-fill.yaml`, then `python3 tools/formfill.py`. That is where the awareness-date finding came from, and it is cheap wherever a regime publishes a template.
+8. **Draft the request from the cross-walk.** `python3 tools/draft-request.py` assembles Article 91(4)’s required parts and one request per unresolved row from that row’s own `would_settle`; a person edits from there. `python3 tools/render-pack.py` renders the pack to DOCX.
+9. **Log every error** in `protocol/01-statutory-foundation.md` §0 rather than fixing it silently.
 
-The second of those was added after the first had been green for a day. `validate.py` polices the rows; nothing policed the prose, and the prose is where the argument is made. On its first run `citecheck.py` found twenty-three citations with no verified text behind them, including **Article 2(1), point (a)**—the provision the entire scope analysis turns on. They are all backed now, which is the only reason it is worth saying.
+A second run exists at `runs/anthropic-cyber-evals-2026/`, stood up by the scaffold and filled in one evening; its `docs/run-report.md` says what transferred, what the change of incident produced, and the two errors the run made in its first hour.
 
-## The method caught itself being wrong, which is the point
+Continuous integration is at `.github/workflows/check.yml`. A green badge there means the citations resolve, the inference register is sound, the verdicts hold their register and no count has drifted—**not** that the quotations are accurate, because `_sources/` is cited by hash rather than redistributed and a clean checkout holds none of it.
 
-Two independent adversarial passes were run over the finished draft with no sight of the reasoning that produced it. They found that the analysis had led on the wrong question.
-
-The first version asked whether a model responsible for ~95% of the attacking agents had been notified to the Commission under Article 52(1), against that provision’s two-week deadline. It had not consulted **Article 3, point (63)**, whose definition of ‘general-purpose AI model’ ends “except AI models that are used for research, development or prototyping activities before they are placed on the market”, nor **Article 2(8)**, which excludes pre-market research, testing and development activity from the Regulation entirely. The scope argument rested on a recital, which cannot derogate from enacting terms.
-
-The corrected analysis asks the prior question first: whether the obligations attach to that model at all. A later audit found that correction had itself overshot, concluding they did not attach without consulting Recital 97 or the Commission’s own guidance. They attach on the Commission’s reading—by a route running through a recital rather than the enacting definition, and on three facts the record does not supply, one of which the provider’s own account denies. That is now the finding; a final-day audit found the earlier version stating one open fact where the route needs three (the twentieth entry in the log). Findings, corrections and what was done about them are in [`docs/adversarial-review.md`](docs/adversarial-review.md) and [`docs/correction-scope.md`](docs/correction-scope.md).
-
-## Why this framing rather than a legal opinion
-
-Track 3 asks whether a regulator could use the output with light edits. A non-lawyer producing something that reads as confident legal advice is precisely where a trained reader finds the one imprecise sentence and discounts the whole document. What an outsider *can* offer, and what the public record is genuinely short of, is a transparent and replicable procedure: stated limits, tiered evidence, auditable verdicts, and an instrument that follows from them.
+---
 
 ## Layout
 
-```
-protocol/     the method, abstracted from this incident — reusable on the next one
-data/         provisions, sources and cross-walk rows as structured YAML
-instrument/   the enforcement pack: cover note, model Article 91 request, issuing note, answer matrix, amended template (DOCX), amendment table
-tools/        validate.py — the verdict discipline; citecheck.py — citations against the
-              register; housestyle.py — prose conventions
-docs/         worked example, comparative regimes, the correction record and review findings
-```
-
-### `data/provisions.yaml`
-Verified statutory text with provenance. Every provision records whether it was amended by **Regulation (EU) 2026/1744** (the Digital Omnibus on AI), taken from the EUR-Lex change markers themselves rather than inferred from commentary. Extracted from the consolidated text at CELEX `02024R1689-20260727`; recitals from the authentic OJ text at `32024R1689`, the consolidated version omitting them.
-
-Every entry carries a `provenance` field and a `verified` date, because for a while they were not all obtained the same way. Fourteen were taken from a published reproduction of the authentic text while EUR-Lex was unreachable from the machine this was built on, and carried `amended_by_omnibus: "unverified"` rather than a guess. All fourteen have since been checked against the consolidated PDF: thirteen matched verbatim, and one differed by a single stray full stop that turned out to be the Regulation’s own. The history is left in the file rather than tidied away, because a register that never says how it was built is asking to be trusted.
-
-`imported_provisions` holds provisions of other instruments that the Act imports by reference and that the analysis relies on the text of—at present the CER Directive, reached through Article 3, point (62). They are verified against the authentic Official Journal text and cited in prose with the instrument named, which is both how the checker tells them apart and how a reader should have been able to tell all along.
-
-### `data/sources.yaml`
-Every source, tiered by its **relationship to the claim** rather than by prestige:
-
-| Tier | Meaning |
+| | |
 |---|---|
-| T1 | The party whose conduct is in question, on its own conduct |
-| T2 | The affected party’s forensic account |
-| T3 | An investigator operating under access constraints imposed by the subject |
-| T4 | An independent third party |
+| `instrument/` | the enforcement pack, above |
+| `docs/` | the report, the worked example, the forms appendix, the comparative regimes, the review records, and `holding-a-source.md` |
+| `protocol/` | `00-method.md` the method · `01-statutory-foundation.md` the statutory working **and the corrections log** · `02-decision-tree.md` the analytical spine |
+| `data/` | `provisions.yaml` 47 provisions, 7 imported CER provisions, 4 recitals, 5 judgments, each verified against the primary text · `sources.yaml` every source, tiered, hashed · `crosswalk.yaml` one row per obligation · `inferences.yaml` every argumentative step with what would defeat it |
+| `tools/` | six checkers and six generators; `check.py` runs the checks |
+| `runs/` | the same method on a second incident |
+| `_sources/` | gitignored. The documents, cited by URL and hash rather than redistributed |
 
-Two providers’ self-reports appear in this register. Both sit at **T1**, and both carry the same reservations. Nothing in the analysis turns on which provider is which—see the `tier_note` on each.
+---
 
-### `data/crosswalk.yaml`
-The rows. Each separates **disclosed facts** from the **provider’s characterisation** of those facts, and verdicts are derived from the facts only. The split exists because a verdict drawn from a provider’s own labelling quietly re-derives that provider’s own conclusion; the validator fails any row that states a verdict without recording facts to support it.
+## What this is, and what it is not
 
-## What the validator checks
+It **is** a way for an outsider with no access and no practising certificate to say something defensible about whether a law reached a particular thing, and to hand a regulator the document that would settle it.
 
-- Every verdict opens with one of the three permitted registers
-- **And no verdict carries a conclusion of law.** The openers are an allowlist, which governs how a sentence starts and says nothing about what it goes on to do. A verdict reading “this appears met: the obligations attach” keeps register while borrowing the record’s authority for an argument no record can support. Whether the law reaches the facts belongs in a field of its own, where a reader can see it is reasoning. The threshold row said exactly that, through two rebuilds, until a blocklist was written to sit beside the allowlist
-- Every provision and source reference resolves
-- Every source carries a tier, a date, and a **pinpoint** URL (bare domains are flagged)
-- Every row states facts to derive its verdict from
-- Every unresolved row carries a route to settlement **and** a dated negative-search note—so that “the record is silent” is something demonstrated rather than assumed
+It is **not** a legal opinion, not a finding that anyone contravened anything, and not an account of what happened. Every claim is about a disclosed record assembled by interested parties. It contains no aggregated exploit detail and no operational security advice: the method’s ceiling is stated in its first line and enforced in code, and advice from a non-practitioner would break it.
 
-## What the citation checker checks
+**The corrections log is the evidence for all of that.** Twenty-nine errors found during the work, each recorded with what was wrong, what the text actually says, and what changed—fourteen of them the same failure in different clothes. A method whose claim is that it catches its own drift cannot evidence that with a clean record, because a clean record is indistinguishable from one nobody kept. The log is also what told us which checks to write.
 
-- Every Article and Recital cited anywhere in the prose resolves to text in `data/provisions.yaml`
-- Register entries nothing cites are reported, so the register does not accumulate dead weight
+---
 
-It deliberately skips two things, and both exclusions are substantive. Citations qualified by an instrument the register does not hold—the Charter, the Californian and New York statutes—are not its to check. And a span of bare article numbers (“Articles 51 to 56”) names a body of provisions rather than a piece of text: the claim that Chapter V runs from 51 to 56 rests on Article 113, which is verified, not on the last article in the span, which nothing quotes.
+## Status and licence
 
-The **CER Directive is the exception, and it earned it**. The Act’s definition of ‘critical infrastructure’ resolves into it, and relying on an imported definition is still relying on text—two of the twenty-eight recorded errors came from reading a summary of that Directive rather than the Directive. So `imported_provisions` holds the verified CER text, citations qualified `CER` resolve against it, and prose that cites the Directive without saying which instrument it means is reported rather than waved through.
+Written for the Apart Research / CeSIA AI Incident Response Sprint, regulatory track, September 2026. Bradley Quinlan, University of Essex. The record is live and every negative-search note is dated accordingly; the analysis is contested at the points `docs/report-draft.md` §7 names.
 
-What it cannot do is check that a citation is *apposite*. A pinpoint that resolves to verified text can still be the wrong provision for the proposition. One failure mode is closed; the other is still a reader’s job.
-
-## What the quotation checker checks
-
-`citecheck.py` proves a citation resolves. It says nothing about the sentence around it—and **twenty of the twenty-eight errors in this project’s corrections log are that failure**, not a citation failure. A recital summarised from a mirror. A directive read through a summary. A Commission opinion described from its landing page. Each time the citation was well-formed and the claim beside it was wrong.
-
-`quotecheck.py` checks the claim. Every quoted span attributed to a document held in `_sources/` is looked for, verbatim, in that document. It tolerates what a PDF does to a sentence and nothing else: line-break hyphenation, quotation marks of any species, an editorial `[w]hen`, a footnote number extracted into the middle of a clause, a semicolon where our sentence ends in a full stop. It does not tolerate a different word. One limit, learned on the final day: for the incident record it matches a quotation found in *any* held document, by design, so it will not notice one party’s sentence attributed to another. That happened once (the twenty-third entry in the log), and attribution between the incident documents remains a reader’s check rather than the tool’s.
-
-The output is a **coverage figure**, not a pass. Verifiability becomes a number the project has to look at rather than an impression it can have about itself:
-
-```
-Attributed and checked: 96/96 (100%) against 12 held document(s).
-Unattributable: 53 quotation(s) on lines naming no held document.
-Declared unverifiable, with reasons, in data/unverifiable-quotations.yaml: 10.
-```
-
-The unattributable count is the honest part. Those are quotations of the incident record, of Californian and New York statutes, and of this project’s own earlier drafts—not defects, and not verified either. And where a quotation genuinely cannot be checked, it is named in `data/unverifiable-quotations.yaml` with a reason and one of three permitted kinds. An exception written down in a reviewed file is a different thing from an exception a tool makes for itself; loosening the checker until it stopped noticing would have been easier and would have destroyed the only number here worth having.
-
-`_sources/` is not committed—the documents are cited by URL and pinned by SHA-256, not redistributed—so this check runs for whoever holds them. That is the point rather than a limitation: the tool reports what *you* can verify, on the documents *you* have.
-
-## The inference register, and the one thing checkers cannot do
-
-Soundness is not a decidable property and no tool here will ever say an argument is good. But the reason this analysis’s twenty-eight errors survived was not that a script could not adjudicate them. It was that they sat in prose, where nobody was reading them as claims.
-
-`data/inferences.yaml` gives reasoning the treatment this repository already gives evidence and legal conclusions: its own cell, so the failure can be looked at. Twenty-one argumentative steps, each stated so it could be denied, each resting on premises that must resolve to the register, each naming **what would defeat it**, and each ranked `strong`, `moderate` or `contestable` by its own author.
-
-`infercheck.py` verifies the structure—premises resolve, defeaters are named and are conditions rather than gestures, the dependency graph is acyclic, and no load-bearing step fails to say where in the prose it is stated. It does not verify that anything follows, and says so on every clean run.
-
-The useful part is a command:
-
-```bash
-python3 tools/infercheck.py --attack
-```
-
-It prints the load-bearing steps weakest first, with the defeater for each. **That list, not the report, is what an adversarial reader should be handed**—a dozen numbered claims to test in ten minutes, rather than five thousand words in which the weak step is indistinguishable from the strong ones. The two currently marked contestable are the author’s own nomination for where this analysis is most likely wrong.
-
-Ranking one’s own arguments by weakness invites attack at the soft point. That is the intention. An unranked list invites a reader to attack the easiest claim instead of the most important one, and this analysis would rather be attacked well.
-
-## What this repository does not contain, by choice
-
-The exploit chain in the July 2026 intrusion is already public, published by the affected party in its own technical timeline. This repository **cites it by reference and does not reproduce payloads, injection strings, or a consolidated reconstruction of the escalation path.**
-
-That is a deliberate call rather than an oversight. The same facts scattered across a vendor blog post and an incident timeline are a different artifact from those facts assembled, ordered and annotated in one convenient place—the assembly is the part that adds operational value, and this document’s purpose is regulatory analysis, for which the category of vulnerability suffices and the working detail does not. The sprint’s own guidance asks that novel installation recipes not be published without review; the same spirit is applied here to aggregation.
-
-## Status and limits
-
-Prepared over a sprint weekend by one person. Specific limits:
-
-- **The author is not a lawyer.** The statutory text is verified against primary sources; the reasoning from it is an outsider’s, offered as a method to be checked rather than advice to be relied on.
-- **The record is live and moving.** Every negative-search note carries an as-of date for this reason. Several underlying facts were days old when this was written.
-- **The Regulation has two small slips in it, and this register keeps them.** Article 101(1) reads “whichever is higher., when the Commission finds”, and its closing subparagraph reads “The Commission shall also into account commitments made”, a verb short. Both stand in the authentic OJ text and the consolidated text alike. Nothing turns on either—each reads only one way—but an earlier version of this register had silently tidied the first, and tidying the enacting text is the small version of the thing this project is against.
-- **Two designations remain unreconciled.** The model responsible for the majority of the attacking agents is named differently in the provider’s account and in the independent investigation, and this repository does not assert that they are the same model—establishing that is Request 1 of the instrument.
-
-## Licence
-
-Prose, data and the model instrument: **CC BY 4.0**. Code in `tools/`: **MIT**. See `LICENSE`.
-
-The model instrument in `instrument/` is a **draft**. It has not been issued by, adopted by, or submitted to any Union body, and all fields requiring an issuing authority are left as explicit placeholders so that it cannot be mistaken for an issued document.
+Prose, data and the model instrument are CC BY 4.0; the code is MIT. See `LICENSE` and `CITATION.cff`.

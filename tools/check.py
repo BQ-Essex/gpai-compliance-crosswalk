@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """Run every check this repository has, and say plainly what a clean run does not mean.
 
-Five checkers, one command:
+Six checkers, one command:
 
+    hold-source.py every document the register claims to hold is here, and unchanged
     validate.py    the cross-walk rows hold to the verdict discipline
     citecheck.py   every citation in the prose resolves to verified text
     quotecheck.py  every attributed quotation matches the document it is attributed to
     infercheck.py  the inference register is structurally sound
     housestyle.py  the prose conventions, including repeated paragraphs
 
-    python3 tools/check.py            # run all five, summarise
+    python3 tools/check.py            # run all six, summarise
     python3 tools/check.py --verbose  # also print each checker's own output
 
-Exit code is the worst of the five, so this is the single thing to run before a commit
+Exit code is the worst of the six, so this is the single thing to run before a commit
 and the single thing to put in CI.
 
 WHAT A GREEN BOARD DOES NOT MEAN, which is the part worth reading. Every error in
@@ -47,6 +48,8 @@ ROOT = TOOLS.parent
 PROSE_GLOBS = ("README.md", "docs/*.md", "protocol/*.md", "instrument/*.md")
 
 CHECKS = (
+    # First, because everything after it reads documents this one confirms are there.
+    ("hold-source.py", [], "the register's documents are present and unchanged"),
     ("validate.py", [], "cross-walk rows hold to the verdict discipline"),
     ("citecheck.py", [], "citations resolve to verified text"),
     ("quotecheck.py", [], "quotations match the documents they are attributed to"),

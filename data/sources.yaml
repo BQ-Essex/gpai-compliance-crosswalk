@@ -386,7 +386,7 @@ sources:
 
   - id: anthropic-evals
     tier: T1
-    document: "Investigating three incidents in our cybersecurity evaluations \ Anthropic.pdf"
+    document: 'Investigating three incidents in our cybersecurity evaluations \ Anthropic.pdf'
     sha256: "92ca61d499fbfe034bd4f890693152542c57e8d20e2b8534cb86ad0049747e7c"
     held_from: "2026-09-13"
     held_note: >-
@@ -441,7 +441,7 @@ sources:
     title: "Code of Practice for General-Purpose AI Models — Safety and Security Chapter"
     url: "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
     document_url: "https://ec.europa.eu/newsroom/dae/redirection/document/118119"
-    document: "Code_of_Practice_for_GeneralPurpose_AI_Models_Safety_and_Security_Chapter_118119.pdf"
+    document: "Code_of_Practice_for_GeneralPurpose_AI_Models_Safety_and_Security_Chapter_hchDfNmrzSPiuU5PNh77HCxHu0c_118119.pdf"
     sha256: "d879f9b54c6068aae57ebaead9d90ddaa46f2503312b9185367a724fa8da2f4a"
     establishes:
       - >-
@@ -526,10 +526,10 @@ sources:
         reporting” returned events from 2020 - so a final version published elsewhere
         would not necessarily have been found.
     documents:
-      - file: "Draft_Guidance_article_73_AI_Act__incident_reporting_119624.pdf"
+      - file: "Draft_Guidance_article_73_AI_Act__incident_reporting_BCQRxgzxRCjZ8k9zh98dZhAxQ_119624.pdf"
         sha256: "f1d58ecf69004b361d2201ea44e6219f00c27ba249ad5011965152de9167686d"
         pages: 13
-      - file: "Incident_report_for_serious_incidents_under_the_AI_Act_Highrisk_AI_systems_119623.pdf"
+      - file: "Incident_report_for_serious_incidents_under_the_AI_Act_Highrisk_AI_systems_r6wVzIPNof6Wq48leekYuNHSztY_119623.pdf"
         sha256: "20f90c54a7cd0fb952d08965947dabfa6e423515cab925d9c4b9c81364ed5a82"
         pages: 7
         version_marker: "Reporting Template Version: 1.0.0 (SB-10407)"
@@ -732,10 +732,10 @@ sources:
         It records that for HIGH-RISK AI SYSTEMS the Commission had already published
         draft guidance and a separate reporting template, open for feedback to
         7 November 2025 - a different instrument for a different regime.
-    document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_121268.pdf"
+    document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_QcLpsKQtpT012FpEfBuX1yIqoSk_121268.pdf"
     sha256: "ac0004e887783bd1b743c429e9ce64684478afb527a20fcb57e0ac680f6730f4"
     second_rendition:
-      document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_121270.docx"
+      document: "Report_for_Serious_Incidents_under_the_AI_Act_GeneralPurpose_AI_Models_with_Systemic_Risk_hf5PiYPi8woSqHclFAlC9klV2nw_121270.docx"
       sha256: "ccf778dd3da3da4ea67e047d9a4382ef6acfc8f384a66ce31b98b37d83414b5a"
       note: >-
         Read 12 September 2026 by unpacking the OOXML and extracting every w:t run from
@@ -925,7 +925,7 @@ sources:
       ONE DISCREPANCY LEFT OPEN: the library page gives publication as 18 July 2025 while
       the document itself is headed C(2025) 7719 final, Brussels, 19.11.2025. Both are
       recorded; neither is resolved here, and the paragraph citations are to the file.
-    document: "Guidelines_on_the_scope_of_the_obligations_for_generalpurpose_AI_models_established_by_AI_Act_English.PDF"
+    document: "Guidelines_on_the_scope_of_the_obligations_for_generalpurpose_AI_models_established_by_AI_Act_English_1GXcpQ7pr2sKT4kQl25UpMkOw4A_118340.PDF"
     sha256: "13481bd90108505c477165c8aefb13dbe7a83847bad0e983e09115f78aeefe78"
     pinpoint_note: >-
       The URL resolves to a library landing page, not to the paragraphs cited. Every
@@ -991,7 +991,7 @@ sources:
     retrieved: "2026-09-11"
     title: "General-purpose AI models in the AI Act: questions and answers"
     url: "https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers"
-    document: "General-Purpose AI Models in the AI Act - Questions & Answers.pdf (page capture, 12 September 2026 12:17)"
+    document: "General-Purpose AI Models in the AI Act – Questions & Answers | Shaping Europe’s digital future.pdf"
     sha256: "2a0faddeff0c8cd558ade3204f85cac048dd07ee614b95e8a2abd9d3fb16fb3f"
     capture_note: >-
       An undated page revised in place, so a capture is the only citable form of it. The
